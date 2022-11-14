@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 21.1 842 win32 2022.11.11.22:16:00
+# ACDS 21.1 842 win32 2022.11.14.15:00:58
 
 # ----------------------------------------
 # Initialize variables
@@ -198,8 +198,8 @@ ensure_lib                                              ./libraries/avalon_st_ad
 vmap       avalon_st_adapter_001                        ./libraries/avalon_st_adapter_001/                       
 ensure_lib                                              ./libraries/avalon_st_adapter/                           
 vmap       avalon_st_adapter                            ./libraries/avalon_st_adapter/                           
-ensure_lib                                              ./libraries/daisyled_0_avalon_slave_0_cmd_width_adapter/ 
-vmap       daisyled_0_avalon_slave_0_cmd_width_adapter  ./libraries/daisyled_0_avalon_slave_0_cmd_width_adapter/ 
+ensure_lib                                              ./libraries/DaisyPort_0_avalon_slave_0_rsp_width_adapter/
+vmap       DaisyPort_0_avalon_slave_0_rsp_width_adapter ./libraries/DaisyPort_0_avalon_slave_0_rsp_width_adapter/
 ensure_lib                                              ./libraries/rsp_mux_001/                                 
 vmap       rsp_mux_001                                  ./libraries/rsp_mux_001/                                 
 ensure_lib                                              ./libraries/rsp_mux/                                     
@@ -214,6 +214,8 @@ ensure_lib                                              ./libraries/cmd_demux_00
 vmap       cmd_demux_001                                ./libraries/cmd_demux_001/                               
 ensure_lib                                              ./libraries/cmd_demux/                                   
 vmap       cmd_demux                                    ./libraries/cmd_demux/                                   
+ensure_lib                                              ./libraries/DaisyPort_0_avalon_slave_0_burst_adapter/    
+vmap       DaisyPort_0_avalon_slave_0_burst_adapter     ./libraries/DaisyPort_0_avalon_slave_0_burst_adapter/    
 ensure_lib                                              ./libraries/router_004/                                  
 vmap       router_004                                   ./libraries/router_004/                                  
 ensure_lib                                              ./libraries/router_003/                                  
@@ -248,8 +250,8 @@ ensure_lib                                              ./libraries/nios2_gen2_0
 vmap       nios2_gen2_0                                 ./libraries/nios2_gen2_0/                                
 ensure_lib                                              ./libraries/jtag_uart_0/                                 
 vmap       jtag_uart_0                                  ./libraries/jtag_uart_0/                                 
-ensure_lib                                              ./libraries/daisyled_0/                                  
-vmap       daisyled_0                                   ./libraries/daisyled_0/                                  
+ensure_lib                                              ./libraries/DaisyPort_0/                                 
+vmap       DaisyPort_0                                  ./libraries/DaisyPort_0/                                 
 ensure_lib                                              ./libraries/ClockDivider_0/                              
 vmap       ClockDivider_0                               ./libraries/ClockDivider_0/                              
 
@@ -301,9 +303,9 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"     -work error_adapter_0                             
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter_001.vhd"                -work avalon_st_adapter_001                       
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter.vhd"                    -work avalon_st_adapter                           
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv"                                     -work daisyled_0_avalon_slave_0_cmd_width_adapter 
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work daisyled_0_avalon_slave_0_cmd_width_adapter 
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                -work daisyled_0_avalon_slave_0_cmd_width_adapter 
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv"                                     -work DaisyPort_0_avalon_slave_0_rsp_width_adapter
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work DaisyPort_0_avalon_slave_0_rsp_width_adapter
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                -work DaisyPort_0_avalon_slave_0_rsp_width_adapter
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_rsp_mux_001.sv"                           -work rsp_mux_001                                 
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                        -work rsp_mux_001                                 
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_rsp_mux.sv"                               -work rsp_mux                                     
@@ -315,6 +317,16 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                        -work cmd_mux                                     
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_cmd_demux_001.sv"                         -work cmd_demux_001                               
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_cmd_demux.sv"                             -work cmd_demux                                   
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_uncmpr.sv"                              -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_13_1.sv"                                -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_new.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_incr_burst_converter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_wrap_burst_converter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_default_burst_converter.sv"                                  -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_stage.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter    
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                   -work DaisyPort_0_avalon_slave_0_burst_adapter    
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_004.sv"                            -work router_004                                  
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_003.sv"                            -work router_003                                  
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_002.sv"                            -work router_002                                  
@@ -338,10 +350,8 @@ alias com {
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/system2_onchip_memory2_0.vhd"                                       -work onchip_memory2_0                            
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/system2_nios2_gen2_0.v"                                             -work nios2_gen2_0                                
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/system2_jtag_uart_0.vhd"                                            -work jtag_uart_0                                 
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/daisy_avalon_interface.vhd"                                         -work daisyled_0                                  
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/daisy.vhd"                                                          -work daisyled_0                                  
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/DaisyPort.vhd"                                                      -work DaisyPort_0                                 
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/clockdiv_avalon_interface.vhd"                                      -work ClockDivider_0                              
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/clockdiv.vhd"                                                       -work ClockDivider_0                              
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2.vhd"                                                                                                                     
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2_rst_controller.vhd"                                                                                                      
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2_rst_controller_001.vhd"                                                                                                  
@@ -351,14 +361,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L daisyled_0_avalon_slave_0_cmd_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_003 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L daisyled_0 -L ClockDivider_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L DaisyPort_0_avalon_slave_0_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L DaisyPort_0_avalon_slave_0_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L DaisyPort_0 -L ClockDivider_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -voptargs=+acc option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -voptargs=+acc -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L daisyled_0_avalon_slave_0_cmd_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L router_004 -L router_003 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L daisyled_0 -L ClockDivider_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi $TOP_LEVEL_NAME
+  eval vsim -voptargs=+acc -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L error_adapter_0 -L avalon_st_adapter_001 -L avalon_st_adapter -L DaisyPort_0_avalon_slave_0_rsp_width_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux -L cmd_mux_002 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L DaisyPort_0_avalon_slave_0_burst_adapter -L router_004 -L router_003 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L DaisyPort_0 -L ClockDivider_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

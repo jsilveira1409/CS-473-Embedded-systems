@@ -17,15 +17,7 @@
          type = "int";
       }
    }
-   element clk_0
-   {
-      datum _sortIndex
-      {
-         value = "0";
-         type = "int";
-      }
-   }
-   element daisyled_0
+   element DaisyPort_0
    {
       datum _sortIndex
       {
@@ -33,12 +25,20 @@
          type = "int";
       }
    }
-   element daisyled_0.avalon_slave_0
+   element DaisyPort_0.avalon_slave_0
    {
       datum baseAddress
       {
          value = "12288";
          type = "String";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
       }
    }
    element jtag_uart_0
@@ -177,6 +177,14 @@
          type = "String";
       }
    }
+   element system2
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -199,19 +207,14 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
- <interface
-   name="to_led"
-   internal="daisyled_0.conduit_end"
-   type="conduit"
-   dir="end" />
  <module name="ClockDivider_0" kind="ClockDivider" version="1.0" enabled="1" />
+ <module name="DaisyPort_0" kind="DaisyPort" version="1.0" enabled="1" />
  <module name="clk_0" kind="clock_source" version="21.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module name="daisyled_0" kind="DaisyLed" version="1.0" enabled="1" />
  <module
    name="jtag_uart_0"
    kind="altera_avalon_jtag_uart"
@@ -255,7 +258,7 @@
   <parameter name="dataAddrWidth" value="14" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='daisyled_0.avalon_slave_0' start='0x3000' end='0x3009' type='DaisyLed.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3010' end='0x3018' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='DaisyPort_0.avalon_slave_0' start='0x3000' end='0x3010' type='DaisyPort.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3010' end='0x3018' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -458,7 +461,7 @@
    kind="avalon"
    version="21.1"
    start="nios2_gen2_0.data_master"
-   end="daisyled_0.avalon_slave_0">
+   end="DaisyPort_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x3000" />
   <parameter name="defaultConnection" value="false" />
@@ -506,6 +509,7 @@
    version="21.1"
    start="clk_0.clk"
    end="onchip_memory2_0.clk1" />
+ <connection kind="clock" version="21.1" start="clk_0.clk" end="DaisyPort_0.clock" />
  <connection
    kind="clock"
    version="21.1"
@@ -514,13 +518,8 @@
  <connection
    kind="clock"
    version="21.1"
-   start="clk_0.clk"
-   end="daisyled_0.clock_sink" />
- <connection
-   kind="clock"
-   version="21.1"
    start="ClockDivider_0.clock_source"
-   end="daisyled_0.enable" />
+   end="DaisyPort_0.clock_sink" />
  <connection
    kind="interrupt"
    version="21.1"
@@ -532,7 +531,7 @@
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="daisyled_0.clock_reset" />
+   end="DaisyPort_0.clock_reset" />
  <connection
    kind="reset"
    version="21.1"

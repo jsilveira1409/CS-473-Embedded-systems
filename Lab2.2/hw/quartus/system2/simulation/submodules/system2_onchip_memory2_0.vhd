@@ -68,11 +68,11 @@ GENERIC (
       );
     PORT (
     signal q_a : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+        signal clocken0 : IN STD_LOGIC;
         signal data_a : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
         signal address_a : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-        signal clocken0 : IN STD_LOGIC;
-        signal clock0 : IN STD_LOGIC;
         signal wren_a : IN STD_LOGIC;
+        signal clock0 : IN STD_LOGIC;
         signal byteena_a : IN STD_LOGIC_VECTOR (3 DOWNTO 0)
       );
   end component altsyncram;

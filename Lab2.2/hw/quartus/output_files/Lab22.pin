@@ -204,7 +204,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :      
 GND                          : AE16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
 GND                          : AE18      : gnd    :                   :         :           :                
-KEY[0]                       : AE19      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4A        :                
 VCCIO4A                      : AE21      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                
@@ -491,7 +491,7 @@ GND                          : K2        : gnd    :                   :         
 GND                          : K3        : gnd    :                   :         :           :                
 GND                          : K4        : gnd    :                   :         :           :                
 VCCA_FPLL                    : K5        : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 8A        :                
+KEY[0]                       : K8        : input  : 2.5 V             :         : 8A        : N              
 MSEL4                        : K9        :        :                   :         : 9A        :                
 MSEL3                        : K10       :        :                   :         : 9A        :                
 GND                          : K11       : gnd    :                   :         :           :                

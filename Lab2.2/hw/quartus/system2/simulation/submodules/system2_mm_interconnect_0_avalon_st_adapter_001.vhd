@@ -11,16 +11,16 @@ use IEEE.numeric_std.all;
 
 entity system2_mm_interconnect_0_avalon_st_adapter_001 is
 	generic (
-		inBitsPerSymbol : integer := 74;
+		inBitsPerSymbol : integer := 10;
 		inUsePackets    : integer := 0;
-		inDataWidth     : integer := 74;
+		inDataWidth     : integer := 10;
 		inChannelWidth  : integer := 0;
 		inErrorWidth    : integer := 0;
 		inUseEmptyPort  : integer := 0;
 		inUseValid      : integer := 1;
 		inUseReady      : integer := 1;
 		inReadyLatency  : integer := 0;
-		outDataWidth    : integer := 74;
+		outDataWidth    : integer := 10;
 		outChannelWidth : integer := 0;
 		outErrorWidth   : integer := 1;
 		outUseEmptyPort : integer := 0;
@@ -29,30 +29,30 @@ entity system2_mm_interconnect_0_avalon_st_adapter_001 is
 		outReadyLatency : integer := 0
 	);
 	port (
-		in_clk_0_clk   : in  std_logic                     := '0';             -- in_clk_0.clk
-		in_rst_0_reset : in  std_logic                     := '0';             -- in_rst_0.reset
-		in_0_data      : in  std_logic_vector(73 downto 0) := (others => '0'); --     in_0.data
-		in_0_valid     : in  std_logic                     := '0';             --         .valid
-		in_0_ready     : out std_logic;                                        --         .ready
-		out_0_data     : out std_logic_vector(73 downto 0);                    --    out_0.data
-		out_0_valid    : out std_logic;                                        --         .valid
-		out_0_ready    : in  std_logic                     := '0';             --         .ready
-		out_0_error    : out std_logic_vector(0 downto 0)                      --         .error
+		in_clk_0_clk   : in  std_logic                    := '0';             -- in_clk_0.clk
+		in_rst_0_reset : in  std_logic                    := '0';             -- in_rst_0.reset
+		in_0_data      : in  std_logic_vector(9 downto 0) := (others => '0'); --     in_0.data
+		in_0_valid     : in  std_logic                    := '0';             --         .valid
+		in_0_ready     : out std_logic;                                       --         .ready
+		out_0_data     : out std_logic_vector(9 downto 0);                    --    out_0.data
+		out_0_valid    : out std_logic;                                       --         .valid
+		out_0_ready    : in  std_logic                    := '0';             --         .ready
+		out_0_error    : out std_logic_vector(0 downto 0)                     --         .error
 	);
 end entity system2_mm_interconnect_0_avalon_st_adapter_001;
 
 architecture rtl of system2_mm_interconnect_0_avalon_st_adapter_001 is
 	component system2_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0 is
 		port (
-			clk       : in  std_logic                     := 'X';             -- clk
-			reset_n   : in  std_logic                     := 'X';             -- reset_n
-			in_data   : in  std_logic_vector(73 downto 0) := (others => 'X'); -- data
-			in_valid  : in  std_logic                     := 'X';             -- valid
-			in_ready  : out std_logic;                                        -- ready
-			out_data  : out std_logic_vector(73 downto 0);                    -- data
-			out_valid : out std_logic;                                        -- valid
-			out_ready : in  std_logic                     := 'X';             -- ready
-			out_error : out std_logic_vector(0 downto 0)                      -- error
+			clk       : in  std_logic                    := 'X';             -- clk
+			reset_n   : in  std_logic                    := 'X';             -- reset_n
+			in_data   : in  std_logic_vector(9 downto 0) := (others => 'X'); -- data
+			in_valid  : in  std_logic                    := 'X';             -- valid
+			in_ready  : out std_logic;                                       -- ready
+			out_data  : out std_logic_vector(9 downto 0);                    -- data
+			out_valid : out std_logic;                                       -- valid
+			out_ready : in  std_logic                    := 'X';             -- ready
+			out_error : out std_logic_vector(0 downto 0)                     -- error
 		);
 	end component system2_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0;
 
@@ -60,7 +60,7 @@ architecture rtl of system2_mm_interconnect_0_avalon_st_adapter_001 is
 
 begin
 
-	inbitspersymbol_check : if inBitsPerSymbol /= 74 generate
+	inbitspersymbol_check : if inBitsPerSymbol /= 10 generate
 		assert false report "Supplied generics do not match expected generics" severity Failure;
 	end generate;
 
@@ -68,7 +68,7 @@ begin
 		assert false report "Supplied generics do not match expected generics" severity Failure;
 	end generate;
 
-	indatawidth_check : if inDataWidth /= 74 generate
+	indatawidth_check : if inDataWidth /= 10 generate
 		assert false report "Supplied generics do not match expected generics" severity Failure;
 	end generate;
 
@@ -96,7 +96,7 @@ begin
 		assert false report "Supplied generics do not match expected generics" severity Failure;
 	end generate;
 
-	outdatawidth_check : if outDataWidth /= 74 generate
+	outdatawidth_check : if outDataWidth /= 10 generate
 		assert false report "Supplied generics do not match expected generics" severity Failure;
 	end generate;
 

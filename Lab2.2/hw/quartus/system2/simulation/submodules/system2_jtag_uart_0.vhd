@@ -142,15 +142,15 @@ end component system2_jtag_uart_0_sim_scfifo_w;
 --        use_eab : STRING
 --      );
 --    PORT (
---    signal q : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
---        signal empty : OUT STD_LOGIC;
---        signal full : OUT STD_LOGIC;
+--    signal empty : OUT STD_LOGIC;
+--        signal q : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 --        signal usedw : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
---        signal data : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+--        signal full : OUT STD_LOGIC;
 --        signal rdreq : IN STD_LOGIC;
+--        signal clock : IN STD_LOGIC;
 --        signal aclr : IN STD_LOGIC;
---        signal wrreq : IN STD_LOGIC;
---        signal clock : IN STD_LOGIC
+--        signal data : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+--        signal wrreq : IN STD_LOGIC
 --      );
 --  end component scfifo;
 --synthesis read_comments_as_HDL off
@@ -361,15 +361,15 @@ end component system2_jtag_uart_0_sim_scfifo_r;
 --        use_eab : STRING
 --      );
 --    PORT (
---    signal q : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
---        signal usedw : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+--    signal usedw : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
 --        signal full : OUT STD_LOGIC;
+--        signal q : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 --        signal empty : OUT STD_LOGIC;
---        signal rdreq : IN STD_LOGIC;
---        signal data : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 --        signal aclr : IN STD_LOGIC;
+--        signal data : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+--        signal wrreq : IN STD_LOGIC;
 --        signal clock : IN STD_LOGIC;
---        signal wrreq : IN STD_LOGIC
+--        signal rdreq : IN STD_LOGIC
 --      );
 --  end component scfifo;
 --synthesis read_comments_as_HDL off
@@ -520,15 +520,15 @@ end component system2_jtag_uart_0_scfifo_r;
 --        SLD_AUTO_INSTANCE_INDEX : STRING
 --      );
 --    PORT (
---    signal r_ena : OUT STD_LOGIC;
---        signal t_pause : OUT STD_LOGIC;
+--    signal t_pause : OUT STD_LOGIC;
 --        signal t_dat : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 --        signal t_ena : OUT STD_LOGIC;
+--        signal r_ena : OUT STD_LOGIC;
 --        signal t_dav : IN STD_LOGIC;
---        signal r_dat : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 --        signal rst_n : IN STD_LOGIC;
+--        signal clk : IN STD_LOGIC;
 --        signal r_val : IN STD_LOGIC;
---        signal clk : IN STD_LOGIC
+--        signal r_dat : IN STD_LOGIC_VECTOR (7 DOWNTO 0)
 --      );
 --  end component alt_jtag_atlantic;
 --synthesis read_comments_as_HDL off

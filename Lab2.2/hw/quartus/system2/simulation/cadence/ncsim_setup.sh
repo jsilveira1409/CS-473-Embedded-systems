@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 21.1 842 win32 2022.11.11.22:16:00
+# ACDS 21.1 842 win32 2022.11.14.15:00:58
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 21.1 842 win32 2022.11.11.22:16:00
+# ACDS 21.1 842 win32 2022.11.14.15:00:58
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system2"
@@ -149,7 +149,7 @@ mkdir -p ./libraries/work/
 mkdir -p ./libraries/error_adapter_0/
 mkdir -p ./libraries/avalon_st_adapter_001/
 mkdir -p ./libraries/avalon_st_adapter/
-mkdir -p ./libraries/daisyled_0_avalon_slave_0_cmd_width_adapter/
+mkdir -p ./libraries/DaisyPort_0_avalon_slave_0_rsp_width_adapter/
 mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
 mkdir -p ./libraries/rsp_demux/
@@ -157,6 +157,7 @@ mkdir -p ./libraries/cmd_mux_002/
 mkdir -p ./libraries/cmd_mux/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
+mkdir -p ./libraries/DaisyPort_0_avalon_slave_0_burst_adapter/
 mkdir -p ./libraries/router_004/
 mkdir -p ./libraries/router_003/
 mkdir -p ./libraries/router_002/
@@ -174,7 +175,7 @@ mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
-mkdir -p ./libraries/daisyled_0/
+mkdir -p ./libraries/DaisyPort_0/
 mkdir -p ./libraries/ClockDivider_0/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -247,9 +248,9 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"     -work error_adapter_0                              -cdslib ./cds_libs/error_adapter_0.cds.lib                             
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter_001.vhd"                -work avalon_st_adapter_001                        -cdslib ./cds_libs/avalon_st_adapter_001.cds.lib                       
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_avalon_st_adapter.vhd"                    -work avalon_st_adapter                            -cdslib ./cds_libs/avalon_st_adapter.cds.lib                           
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv"                                     -work daisyled_0_avalon_slave_0_cmd_width_adapter  -cdslib ./cds_libs/daisyled_0_avalon_slave_0_cmd_width_adapter.cds.lib 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work daisyled_0_avalon_slave_0_cmd_width_adapter  -cdslib ./cds_libs/daisyled_0_avalon_slave_0_cmd_width_adapter.cds.lib 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                -work daisyled_0_avalon_slave_0_cmd_width_adapter  -cdslib ./cds_libs/daisyled_0_avalon_slave_0_cmd_width_adapter.cds.lib 
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv"                                     -work DaisyPort_0_avalon_slave_0_rsp_width_adapter -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_rsp_width_adapter.cds.lib
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work DaisyPort_0_avalon_slave_0_rsp_width_adapter -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_rsp_width_adapter.cds.lib
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                -work DaisyPort_0_avalon_slave_0_rsp_width_adapter -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_rsp_width_adapter.cds.lib
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_rsp_mux_001.sv"                           -work rsp_mux_001                                  -cdslib ./cds_libs/rsp_mux_001.cds.lib                                 
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                        -work rsp_mux_001                                  -cdslib ./cds_libs/rsp_mux_001.cds.lib                                 
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_rsp_mux.sv"                               -work rsp_mux                                      -cdslib ./cds_libs/rsp_mux.cds.lib                                     
@@ -261,6 +262,16 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                        -work cmd_mux                                      -cdslib ./cds_libs/cmd_mux.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_cmd_demux_001.sv"                         -work cmd_demux_001                                -cdslib ./cds_libs/cmd_demux_001.cds.lib                               
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_cmd_demux.sv"                             -work cmd_demux                                    -cdslib ./cds_libs/cmd_demux.cds.lib                                   
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_uncmpr.sv"                              -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_13_1.sv"                                -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_new.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_incr_burst_converter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_wrap_burst_converter.sv"                                     -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_default_burst_converter.sv"                                  -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_stage.sv"                                 -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                   -work DaisyPort_0_avalon_slave_0_burst_adapter     -cdslib ./cds_libs/DaisyPort_0_avalon_slave_0_burst_adapter.cds.lib    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_004.sv"                            -work router_004                                   -cdslib ./cds_libs/router_004.cds.lib                                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_003.sv"                            -work router_003                                   -cdslib ./cds_libs/router_003.cds.lib                                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/system2_mm_interconnect_0_router_002.sv"                            -work router_002                                   -cdslib ./cds_libs/router_002.cds.lib                                  
@@ -284,10 +295,8 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/system2_onchip_memory2_0.vhd"                                       -work onchip_memory2_0                             -cdslib ./cds_libs/onchip_memory2_0.cds.lib                            
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/system2_nios2_gen2_0.v"                                             -work nios2_gen2_0                                 -cdslib ./cds_libs/nios2_gen2_0.cds.lib                                
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/system2_jtag_uart_0.vhd"                                            -work jtag_uart_0                                  -cdslib ./cds_libs/jtag_uart_0.cds.lib                                 
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/daisy_avalon_interface.vhd"                                         -work daisyled_0                                   -cdslib ./cds_libs/daisyled_0.cds.lib                                  
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/daisy.vhd"                                                          -work daisyled_0                                   -cdslib ./cds_libs/daisyled_0.cds.lib                                  
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/DaisyPort.vhd"                                                      -work DaisyPort_0                                  -cdslib ./cds_libs/DaisyPort_0.cds.lib                                 
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/clockdiv_avalon_interface.vhd"                                      -work ClockDivider_0                               -cdslib ./cds_libs/ClockDivider_0.cds.lib                              
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/clockdiv.vhd"                                                       -work ClockDivider_0                               -cdslib ./cds_libs/ClockDivider_0.cds.lib                              
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2.vhd"                                                                                                                                                                                             
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2_rst_controller.vhd"                                                                                                                                                                              
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2_rst_controller_001.vhd"                                                                                                                                                                          

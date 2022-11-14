@@ -13,19 +13,16 @@ END DE0_Nano_SoC_top_level;
 
 ARCHITECTURE Structure OF DE0_Nano_SoC_top_level IS
 
-	SIGNAL to_DAISYLED : STD_LOGIC_VECTOR(71 DOWNTO 0);
 	
 	COMPONENT system2 IS
 		PORT ( 	
-					clk_clk 				: IN STD_LOGIC;
-					to_led_readdata 	: OUT std_logic_vector(71 downto 0)         
+					clk_clk 				: IN STD_LOGIC
 				);
 	END COMPONENT system2;
 
 BEGIN
 		U0: system2 PORT MAP (
-					clk_clk 				=> CLOCK_50,
-					to_led_readdata 	=> to_DAISYLED
+					clk_clk 				=> CLOCK_50
 				);
 		
 END Structure;

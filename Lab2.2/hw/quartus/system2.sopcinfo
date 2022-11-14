@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="system2" kind="system2" version="1.0" fabric="QSYS">
  <!-- Format version 21.1 842 (Future versions may contain additional information.) -->
- <!-- 2022.11.14.12:39:05 -->
+ <!-- 2022.11.14.15:08:54 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1668425944</value>
+  <value>1668434934</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -157,10 +157,55 @@ parameters are a RESULT of the module parameters. -->
    <type>clock</type>
    <isStart>false</isStart>
    <port>
-    <name>clock</name>
+    <name>clk</name>
     <direction>Input</direction>
     <width>1</width>
     <role>clk</role>
+   </port>
+  </interface>
+  <interface name="clock_reset" kind="reset_sink" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>DEASSERT</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>false</isStart>
+   <port>
+    <name>reset</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset</role>
    </port>
   </interface>
   <interface name="clock_source" kind="clock_source" version="21.1">
@@ -226,393 +271,20 @@ parameters are a RESULT of the module parameters. -->
    <type>clock</type>
    <isStart>true</isStart>
    <port>
-    <name>enable_out</name>
+    <name>clock_out</name>
     <direction>Output</direction>
     <width>1</width>
     <role>clk</role>
    </port>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>daisyled_0</moduleName>
-    <slaveName>enable</slaveName>
-    <name>daisyled_0.enable</name>
-   </clockDomainMember>
-  </interface>
-  <interface name="clock_reset" kind="reset_sink" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>resetn</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset_n</role>
-   </port>
-  </interface>
- </module>
- <module name="clk_0" kind="clock_source" version="21.1" path="clk_0">
-  <!-- Describes a single module. Module parameters are
-the requested settings for a module instance. -->
-  <parameter name="clockFrequency">
-   <type>long</type>
-   <value>50000000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="clockFrequencyKnown">
-   <type>boolean</type>
-   <value>true</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="inputClockFrequency">
-   <type>long</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>CLOCK_RATE</sysinfo_type>
-   <sysinfo_arg>clk_in</sysinfo_arg>
-  </parameter>
-  <parameter name="resetSynchronousEdges">
-   <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-   <value>NONE</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <interface name="clk_in" kind="clock_sink" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>qsys.ui.export_name</name>
-    <value>clk</value>
-   </assignment>
-   <parameter name="externallyDriven">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="ptfSchematicName">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="clockRateKnown">
-    <type>java.lang.Boolean</type>
-    <value>true</value>
-    <derived>true</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="clockRate">
-    <type>java.lang.Long</type>
-    <value>50000000</value>
-    <derived>true</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>clock</type>
-   <isStart>false</isStart>
-   <port>
-    <name>in_clk</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>clk</role>
-   </port>
-  </interface>
-  <interface name="clk_in_reset" kind="reset_sink" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>qsys.ui.export_name</name>
-    <value>reset</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>NONE</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>reset_n</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset_n</role>
-   </port>
-  </interface>
-  <interface name="clk" kind="clock_source" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedDirectClock">
-    <type>java.lang.String</type>
-    <value>clk_in</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="clockRate">
-    <type>long</type>
-    <value>50000000</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="clockRateKnown">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="externallyDriven">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="ptfSchematicName">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>clock</type>
-   <isStart>true</isStart>
-   <port>
-    <name>clk_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>clk</role>
-   </port>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>nios2_gen2_0</moduleName>
-    <slaveName>clk</slaveName>
-    <name>nios2_gen2_0.clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>jtag_uart_0</moduleName>
-    <slaveName>clk</slaveName>
-    <name>jtag_uart_0.clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>onchip_memory2_0</moduleName>
-    <slaveName>clk1</slaveName>
-    <name>onchip_memory2_0.clk1</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>ClockDivider_0</moduleName>
-    <slaveName>clock</slaveName>
-    <name>ClockDivider_0.clock</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>daisyled_0</moduleName>
+    <moduleName>DaisyPort_0</moduleName>
     <slaveName>clock_sink</slaveName>
-    <name>daisyled_0.clock_sink</name>
+    <name>DaisyPort_0.clock_sink</name>
    </clockDomainMember>
   </interface>
-  <interface name="clk_reset" kind="reset_source" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedDirectReset">
-    <type>java.lang.String</type>
-    <value>clk_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedResetSinks">
-    <type>[Ljava.lang.String;</type>
-    <value>clk_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>NONE</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>true</isStart>
-   <port>
-    <name>reset_n_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>reset_n</role>
-   </port>
-  </interface>
  </module>
- <module name="daisyled_0" kind="DaisyLed" version="1.0" path="daisyled_0">
+ <module name="DaisyPort_0" kind="DaisyPort" version="1.0" path="DaisyPort_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -669,7 +341,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>9</value>
+    <value>16</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -693,7 +365,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock_sink</value>
+    <value>clock</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -966,28 +638,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon</type>
    <isStart>false</isStart>
    <port>
-    <name>byteenable</name>
-    <direction>Input</direction>
-    <width>9</width>
-    <role>byteenable</role>
-   </port>
-   <port>
     <name>writedata</name>
     <direction>Input</direction>
-    <width>72</width>
+    <width>8</width>
     <role>writedata</role>
-   </port>
-   <port>
-    <name>read</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>read</role>
-   </port>
-   <port>
-    <name>readdata</name>
-    <direction>Output</direction>
-    <width>72</width>
-    <role>readdata</role>
    </port>
    <port>
     <name>write</name>
@@ -996,10 +650,10 @@ parameters are a RESULT of the module parameters. -->
     <role>write</role>
    </port>
    <port>
-    <name>chipselect</name>
+    <name>address</name>
     <direction>Input</direction>
-    <width>1</width>
-    <role>chipselect</role>
+    <width>4</width>
+    <role>address</role>
    </port>
   </interface>
   <interface name="clock_reset" kind="reset_sink" version="21.1">
@@ -1008,7 +662,7 @@ particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock_sink</value>
+    <value>clock</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -1045,6 +699,96 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>1</width>
     <role>reset_n</role>
+   </port>
+  </interface>
+  <interface name="conduit_end" kind="conduit_end" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>clock_reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>LedPort</name>
+    <direction>Output</direction>
+    <width>8</width>
+    <role>readdata</role>
+   </port>
+  </interface>
+  <interface name="clock" kind="clock_sink" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="externallyDriven">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="ptfSchematicName">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>clock</type>
+   <isStart>false</isStart>
+   <port>
+    <name>clk</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>clk</role>
    </port>
   </interface>
   <interface name="clock_sink" kind="clock_sink" version="21.1">
@@ -1086,61 +830,74 @@ parameters are a RESULT of the module parameters. -->
    <type>clock</type>
    <isStart>false</isStart>
    <port>
-    <name>clock</name>
+    <name>enable</name>
     <direction>Input</direction>
     <width>1</width>
     <role>clk</role>
    </port>
   </interface>
-  <interface name="conduit_end" kind="conduit_end" version="21.1">
+ </module>
+ <module name="clk_0" kind="clock_source" version="21.1" path="clk_0">
+  <!-- Describes a single module. Module parameters are
+the requested settings for a module instance. -->
+  <parameter name="clockFrequency">
+   <type>long</type>
+   <value>50000000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="clockFrequencyKnown">
+   <type>boolean</type>
+   <value>true</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="inputClockFrequency">
+   <type>long</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>false</visible>
+   <valid>true</valid>
+   <sysinfo_type>CLOCK_RATE</sysinfo_type>
+   <sysinfo_arg>clk_in</sysinfo_arg>
+  </parameter>
+  <parameter name="resetSynchronousEdges">
+   <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+   <value>NONE</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <interface name="clk_in" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock_sink</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>clock_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>Q</name>
-    <direction>Output</direction>
-    <width>72</width>
-    <role>readdata</role>
-   </port>
-  </interface>
-  <interface name="enable" kind="clock_sink" version="21.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
+   <assignment>
+    <name>qsys.ui.export_name</name>
+    <value>clk</value>
+   </assignment>
    <parameter name="externallyDriven">
     <type>boolean</type>
     <value>false</value>
@@ -1173,8 +930,239 @@ parameters are a RESULT of the module parameters. -->
     <visible>true</visible>
     <valid>true</valid>
    </parameter>
+   <parameter name="clockRateKnown">
+    <type>java.lang.Boolean</type>
+    <value>true</value>
+    <derived>true</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="clockRate">
+    <type>java.lang.Long</type>
+    <value>50000000</value>
+    <derived>true</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
    <type>clock</type>
    <isStart>false</isStart>
+   <port>
+    <name>in_clk</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>clk</role>
+   </port>
+  </interface>
+  <interface name="clk_in_reset" kind="reset_sink" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <assignment>
+    <name>qsys.ui.export_name</name>
+    <value>reset</value>
+   </assignment>
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>NONE</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>false</isStart>
+   <port>
+    <name>reset_n</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset_n</role>
+   </port>
+  </interface>
+  <interface name="clk" kind="clock_source" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedDirectClock">
+    <type>java.lang.String</type>
+    <value>clk_in</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="clockRate">
+    <type>long</type>
+    <value>50000000</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="clockRateKnown">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="externallyDriven">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="ptfSchematicName">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>clock</type>
+   <isStart>true</isStart>
+   <port>
+    <name>clk_out</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>clk</role>
+   </port>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>nios2_gen2_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>nios2_gen2_0.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>jtag_uart_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>jtag_uart_0.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>onchip_memory2_0</moduleName>
+    <slaveName>clk1</slaveName>
+    <name>onchip_memory2_0.clk1</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>DaisyPort_0</moduleName>
+    <slaveName>clock</slaveName>
+    <name>DaisyPort_0.clock</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>ClockDivider_0</moduleName>
+    <slaveName>clock</slaveName>
+    <name>ClockDivider_0.clock</name>
+   </clockDomainMember>
+  </interface>
+  <interface name="clk_reset" kind="reset_source" version="21.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedDirectReset">
+    <type>java.lang.String</type>
+    <value>clk_in_reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedResetSinks">
+    <type>[Ljava.lang.String;</type>
+    <value>clk_in_reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>NONE</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>true</isStart>
+   <port>
+    <name>reset_n_out</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>reset_n</role>
+   </port>
   </interface>
  </module>
  <module
@@ -3539,7 +3527,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='daisyled_0.avalon_slave_0' start='0x3000' end='0x3009' type='DaisyLed.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3010' end='0x3018' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x2800' end='0x3000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='DaisyPort_0.avalon_slave_0' start='0x3000' end='0x3010' type='DaisyPort.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3010' end='0x3018' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4215,11 +4203,11 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>daisyled_0</moduleName>
+    <moduleName>DaisyPort_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
-    <name>daisyled_0.avalon_slave_0</name>
+    <name>DaisyPort_0.avalon_slave_0</name>
     <baseAddress>12288</baseAddress>
-    <span>9</span>
+    <span>16</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -6062,11 +6050,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_jtag_slave</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_gen2_0.data_master/daisyled_0.avalon_slave_0"
+   name="nios2_gen2_0.data_master/DaisyPort_0.avalon_slave_0"
    kind="avalon"
    version="21.1"
    start="nios2_gen2_0.data_master"
-   end="daisyled_0.avalon_slave_0">
+   end="DaisyPort_0.avalon_slave_0">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -6109,7 +6097,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-  <endModule>daisyled_0</endModule>
+  <endModule>DaisyPort_0</endModule>
   <endConnectionPoint>avalon_slave_0</endConnectionPoint>
  </connection>
  <connection
@@ -6398,6 +6386,33 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk1</endConnectionPoint>
  </connection>
  <connection
+   name="clk_0.clk/DaisyPort_0.clock"
+   kind="clock"
+   version="21.1"
+   start="clk_0.clk"
+   end="DaisyPort_0.clock">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>DaisyPort_0</endModule>
+  <endConnectionPoint>clock</endConnectionPoint>
+ </connection>
+ <connection
    name="clk_0.clk/ClockDivider_0.clock"
    kind="clock"
    version="21.1"
@@ -6425,38 +6440,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/daisyled_0.clock_sink"
-   kind="clock"
-   version="21.1"
-   start="clk_0.clk"
-   end="daisyled_0.clock_sink">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>daisyled_0</endModule>
-  <endConnectionPoint>clock_sink</endConnectionPoint>
- </connection>
- <connection
-   name="ClockDivider_0.clock_source/daisyled_0.enable"
+   name="ClockDivider_0.clock_source/DaisyPort_0.clock_sink"
    kind="clock"
    version="21.1"
    start="ClockDivider_0.clock_source"
-   end="daisyled_0.enable">
+   end="DaisyPort_0.clock_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -6475,8 +6463,8 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>ClockDivider_0</startModule>
   <startConnectionPoint>clock_source</startConnectionPoint>
-  <endModule>daisyled_0</endModule>
-  <endConnectionPoint>enable</endConnectionPoint>
+  <endModule>DaisyPort_0</endModule>
+  <endConnectionPoint>clock_sink</endConnectionPoint>
  </connection>
  <connection
    name="nios2_gen2_0.irq/jtag_uart_0.irq"
@@ -6514,11 +6502,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/daisyled_0.clock_reset"
+   name="clk_0.clk_reset/DaisyPort_0.clock_reset"
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="daisyled_0.clock_reset">
+   end="DaisyPort_0.clock_reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -6537,7 +6525,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>daisyled_0</endModule>
+  <endModule>DaisyPort_0</endModule>
   <endConnectionPoint>clock_reset</endConnectionPoint>
  </connection>
  <connection
@@ -6773,6 +6761,14 @@ parameters are a RESULT of the module parameters. -->
   <version>21.1</version>
  </plugin>
  <plugin>
+  <instanceCount>5</instanceCount>
+  <name>reset_sink</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Reset Input</displayName>
+  <version>21.1</version>
+ </plugin>
+ <plugin>
   <instanceCount>1</instanceCount>
   <name>clock_source</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -6781,11 +6777,27 @@ parameters are a RESULT of the module parameters. -->
   <version>21.1</version>
  </plugin>
  <plugin>
-  <instanceCount>5</instanceCount>
-  <name>reset_sink</name>
+  <instanceCount>1</instanceCount>
+  <name>DaisyPort</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>DaisyPort</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>4</instanceCount>
+  <name>avalon_slave</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Input</displayName>
+  <displayName>Avalon Memory Mapped Slave</displayName>
+  <version>21.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>conduit_end</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Conduit</displayName>
   <version>21.1</version>
  </plugin>
  <plugin>
@@ -6826,30 +6838,6 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>21.1</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>DaisyLed</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>DaisyLed</displayName>
-  <version>1.0</version>
- </plugin>
- <plugin>
-  <instanceCount>4</instanceCount>
-  <name>avalon_slave</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Slave</displayName>
-  <version>21.1</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>conduit_end</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Conduit</displayName>
   <version>21.1</version>
  </plugin>
  <plugin>

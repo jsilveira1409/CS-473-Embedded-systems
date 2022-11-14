@@ -1,7 +1,6 @@
 	component system2 is
 		port (
-			clk_clk         : in  std_logic                     := 'X'; -- clk
-			to_led_readdata : out std_logic_vector(71 downto 0)         -- readdata
+			clk_clk : in std_logic := 'X'  -- clk
 		);
 	end component system2;
 

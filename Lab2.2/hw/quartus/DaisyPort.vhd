@@ -6,11 +6,13 @@ entity DaisyPort is
 	port(
 	clk			: in std_logic;
 	resetn		: in std_logic;
+	enable		: in std_logic;
 	
 	-- internal interface (avalon slave)
 	address		: in std_logic_vector(3 downto 0);
 	write			: in std_logic;
 	writedata	: in std_logic_vector(7 downto 0);
+	
 	
 	
 	-- external interface (conduit)
@@ -29,11 +31,6 @@ architecture behaviour of DaisyPort is
 
 begin
 
-output : process()
--- declara
-begin
-
-end process output;
 
 
 end behaviour;

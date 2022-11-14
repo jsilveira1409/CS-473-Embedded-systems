@@ -1,23 +1,41 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+  
+entity clockdiv_avalon_interface is
 
-ENTITY clockdiv_avalon_interface IS
-	PORT ( 	
-				clock, resetn		:	IN 	STD_LOGIC;
-				enable_out			:	OUT	STD_LOGIC
+	port ( 
+			clk,reset: in std_logic;
+			clock_out: out std_logic
 			);
-END clockdiv_avalon_interface;
+end clockdiv_avalon_interface;
+  
+architecture behaviour of clockdiv_avalon_interface is
+  
+	signal count	: integer	:=	1;
+	signal tmp 		: std_logic := '0';
+  
+begin
+  
+process(clk,reset)
 
-
-ARCHITECTURE Structure OF clockdiv_avalon_interface IS
+begin
+	if(reset = '1') then
+		count <= 1;
+		tmp   <= '0';
+	elsif (clk'event and clk='1') then
+	
+		count <= count + 1;
 		
-	COMPONENT clockdiv
-		PORT ( 	
-					clock, resetn 	: 	IN 	STD_LOGIC;
-					enable_out		:	OUT	STD_LOGIC
-				);
-	END COMPONENT;
-
-	BEGIN
-				
-END Structure;
+		if (count = 5) then
+			tmp <= NOT tmp;
+			count <= 1;
+		end if;
+		
+	end if;
+	
+	clock_out <= tmp;
+	
+end process;
+  
+end behaviour;

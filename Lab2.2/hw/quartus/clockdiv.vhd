@@ -8,7 +8,7 @@ entity clock_divider is
 			clk,reset: in std_logic;
 			clock_out: out std_logic
 			);
-end clock_divider;
+end clock_divider_avalon_interface;
   
 architecture Behavior of clock_divider is
   
