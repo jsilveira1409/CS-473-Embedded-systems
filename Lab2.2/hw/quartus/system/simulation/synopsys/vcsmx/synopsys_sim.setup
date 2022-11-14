@@ -1,0 +1,5 @@
+
+WORK > DEFAULT
+DEFAULT: ./libraries/work/
+work:    ./libraries/work/
+LIBRARY_SCAN = TRUE

@@ -1,0 +1,54 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\osour\Desktop\CS-473EmbSys\CS-473EmbSys\Lab2.2\hw\quartus\system.qsys --block-symbol-file --output-directory=C:\Users\osour\Desktop\CS-473EmbSys\CS-473EmbSys\Lab2.2\hw\quartus\system --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading quartus/system.qsys
+Progress: Reading input file
+Progress: Adding DaisyLed_0 [DaisyLed 1.0]
+Progress: Parameterizing module DaisyLed_0
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_R[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_G[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_B[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal read appears 3 times (only once is allowed)
+Info: system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\osour\Desktop\CS-473EmbSys\CS-473EmbSys\Lab2.2\hw\quartus\system.qsys --synthesis=VHDL --output-directory=C:\Users\osour\Desktop\CS-473EmbSys\CS-473EmbSys\Lab2.2\hw\quartus\system\synthesis --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading quartus/system.qsys
+Progress: Reading input file
+Progress: Adding DaisyLed_0 [DaisyLed 1.0]
+Progress: Parameterizing module DaisyLed_0
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_R[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_G[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal D1_B[8] of type read must have width [1]
+Warning: system.DaisyLed_0.avalon_slave_0: Signal read appears 3 times (only once is allowed)
+Info: system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system: Generating system "system" for QUARTUS_SYNTH
+Warning: Translator DaisyLed_0_avalon_slave_0_translator failed to match interface DaisyLed_0.avalon_slave_0
+Info: system: Done "system" with 1 modules, 0 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

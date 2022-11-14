@@ -1,0 +1,15 @@
+# system info system on 2022.11.10.16:11:29
+system_info:
+name,value
+DEVICE,5CSEMA4U23C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1668093084
+#
+#
+# Files generated for system on 2022.11.10.16:11:29
+files:
+filepath,kind,attributes,module,is_top
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
