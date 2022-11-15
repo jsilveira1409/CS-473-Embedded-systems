@@ -265,8 +265,6 @@
    type="VHDL"
    library="ClockDivider_0" />
  <file path="simulation/system2.vhd" type="VHDL" />
- <file path="simulation/system2_rst_controller.vhd" type="VHDL" />
- <file path="simulation/system2_rst_controller_001.vhd" type="VHDL" />
  <topLevel name="system2" />
  <deviceFamily name="cyclonev" />
  <modelMap

@@ -1,0 +1,12 @@
+#ifndef 		DAISYPORT_H
+#define 		DAISYPORT_H
+
+
+#define 		DAISY_BASE_ADDRESS 0x00040000
+#define			DAISY_REG_ENABLE_OFF	DAISY_BASE_ADDRESS + 1
+
+
+
+void test();
+
+#endif

@@ -1,0 +1,17 @@
+#include "daisyport.h"
+#include "io.h"
+
+
+void daisy_enable(){
+	uint8_t data = 0x11;
+	IOWR_8DIRECT(DAISY_REG_ENABLE,0,data);
+}
+
+void daisy_disable(){
+
+}
+
+void daisy_all_set_colors(uint8_t red, uint8_t green, uint8_t blue){
+	IOWR_8DIRECT(DAISY_REG_ENABLE,0,);
+
+}

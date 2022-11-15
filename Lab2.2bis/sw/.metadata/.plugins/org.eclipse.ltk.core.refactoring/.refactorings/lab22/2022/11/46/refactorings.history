@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;daisyport.h&apos; to &apos;lab22&apos;" description="Move &apos;daisyport.h&apos; to &apos;lab22&apos;" destination="/lab22" element1="inc/daisyport.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1668504749522" updateReferences="true"/>
+</session>

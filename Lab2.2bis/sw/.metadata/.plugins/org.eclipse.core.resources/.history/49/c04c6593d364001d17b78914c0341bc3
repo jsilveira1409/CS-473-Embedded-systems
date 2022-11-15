@@ -1,0 +1,13 @@
+#include "daisyport.h"
+
+void daisy_enable(){
+	IOWR_8DIRECT(DAISY_REG_ENABLE,
+}
+
+void daisy_disable(){
+
+}
+
+void daisy_all_set_colors(uint8_t red, uint8_t green, uint8_t blue){
+
+}

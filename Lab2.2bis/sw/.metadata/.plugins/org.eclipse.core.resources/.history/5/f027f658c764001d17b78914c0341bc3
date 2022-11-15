@@ -1,0 +1,9 @@
+#ifndef 		DAISYPORT_H
+#define 		DAISYPORT_H
+
+void testa(){
+	uint8_t a = 0;
+	a++;
+}
+
+#endif

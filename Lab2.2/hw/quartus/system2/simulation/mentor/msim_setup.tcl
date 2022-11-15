@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 21.1 842 win32 2022.11.14.15:00:58
+# ACDS 21.1 842 win32 2022.11.14.16:42:16
 
 # ----------------------------------------
 # Initialize variables
@@ -353,8 +353,6 @@ alias com {
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/DaisyPort.vhd"                                                      -work DaisyPort_0                                 
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/submodules/clockdiv_avalon_interface.vhd"                                      -work ClockDivider_0                              
   eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2.vhd"                                                                                                                     
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2_rst_controller.vhd"                                                                                                      
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS        "$QSYS_SIMDIR/system2_rst_controller_001.vhd"                                                                                                  
 }
 
 # ----------------------------------------

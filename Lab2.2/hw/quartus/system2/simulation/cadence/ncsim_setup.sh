@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 21.1 842 win32 2022.11.14.15:00:58
+# ACDS 21.1 842 win32 2022.11.14.16:42:16
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 21.1 842 win32 2022.11.14.15:00:58
+# ACDS 21.1 842 win32 2022.11.14.16:42:16
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system2"
@@ -298,8 +298,6 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/DaisyPort.vhd"                                                      -work DaisyPort_0                                  -cdslib ./cds_libs/DaisyPort_0.cds.lib                                 
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/clockdiv_avalon_interface.vhd"                                      -work ClockDivider_0                               -cdslib ./cds_libs/ClockDivider_0.cds.lib                              
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2.vhd"                                                                                                                                                                                             
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2_rst_controller.vhd"                                                                                                                                                                              
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/system2_rst_controller_001.vhd"                                                                                                                                                                          
 fi
 
 # ----------------------------------------

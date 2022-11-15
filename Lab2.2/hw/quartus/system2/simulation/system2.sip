@@ -5,8 +5,6 @@ set_global_assignment -library "lib_system2" -name SPD_FILE [file join $::quartu
 set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "../../system2.qsys"]
 
 set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "system2.vhd"]
-set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "system2_rst_controller.vhd"]
-set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "system2_rst_controller_001.vhd"]
 set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "lib_system2" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_reset_controller.sdc"]

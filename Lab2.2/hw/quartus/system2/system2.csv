@@ -1,17 +1,15 @@
-# system info system2 on 2022.11.14.15:00:57
+# system info system2 on 2022.11.14.16:42:16
 system_info:
 name,value
 DEVICE,5CSEMA4U23C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1668434443
+GENERATION_ID,1668440521
 #
 #
-# Files generated for system2 on 2022.11.14.15:00:57
+# Files generated for system2 on 2022.11.14.16:42:16
 files:
 filepath,kind,attributes,module,is_top
 simulation/system2.vhd,VHDL,,system2,true
-simulation/system2_rst_controller.vhd,VHDL,,system2,false
-simulation/system2_rst_controller_001.vhd,VHDL,,system2,false
 simulation/submodules/clockdiv_avalon_interface.vhd,VHDL,,system2_ClockDivider_0,false
 simulation/submodules/DaisyPort.vhd,VHDL,,system2_DaisyPort_0,false
 simulation/submodules/system2_jtag_uart_0.vhd,VHDL,,system2_jtag_uart_0,false
@@ -136,6 +134,3 @@ system2.mm_interconnect_0.avalon_st_adapter_001,system2_mm_interconnect_0_avalon
 system2.mm_interconnect_0.avalon_st_adapter_001.error_adapter_0,system2_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0
 system2.irq_mapper,system2_irq_mapper
 system2.rst_controller,altera_reset_controller
-system2.rst_controller_001,altera_reset_controller
-system2.rst_controller,altera_reset_controller
-system2.rst_controller_001,altera_reset_controller

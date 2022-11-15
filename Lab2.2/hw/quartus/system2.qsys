@@ -207,6 +207,11 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface
+   name="daisyport_0_conduit_end"
+   internal="DaisyPort_0.conduit_end"
+   type="conduit"
+   dir="end" />
  <module name="ClockDivider_0" kind="ClockDivider" version="1.0" enabled="1" />
  <module name="DaisyPort_0" kind="DaisyPort" version="1.0" enabled="1" />
  <module name="clk_0" kind="clock_source" version="21.1" enabled="1">
@@ -531,22 +536,22 @@
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="DaisyPort_0.clock_reset" />
- <connection
-   kind="reset"
-   version="21.1"
-   start="clk_0.clk_reset"
    end="ClockDivider_0.clock_reset" />
  <connection
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="nios2_gen2_0.reset" />
+   end="DaisyPort_0.clock_reset" />
  <connection
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
    end="jtag_uart_0.reset" />
+ <connection
+   kind="reset"
+   version="21.1"
+   start="clk_0.clk_reset"
+   end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
    version="21.1"
@@ -557,6 +562,16 @@
    version="21.1"
    start="nios2_gen2_0.debug_reset_request"
    end="clk_0.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="21.1"
+   start="nios2_gen2_0.debug_reset_request"
+   end="ClockDivider_0.clock_reset" />
+ <connection
+   kind="reset"
+   version="21.1"
+   start="nios2_gen2_0.debug_reset_request"
+   end="DaisyPort_0.clock_reset" />
  <connection
    kind="reset"
    version="21.1"

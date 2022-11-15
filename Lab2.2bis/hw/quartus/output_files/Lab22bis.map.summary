@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Nov 15 08:58:50 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : Lab22bis
+Top-level Entity Name : system
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 2016
+Total pins : 3
+Total virtual pins : 0
+Total block memory bits : 1,112,320
+Total DSP Blocks : 3
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
