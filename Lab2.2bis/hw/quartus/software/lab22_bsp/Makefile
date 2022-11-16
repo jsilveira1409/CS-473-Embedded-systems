@@ -101,7 +101,7 @@ ACDS_VERSION := 21.1
 # BUILD_NUMBER: 842
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := c:/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/system.sopcinfo
+SOPC_FILE := C:/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov 15 08:58:50 2022
+Analysis & Synthesis Status : Successful - Wed Nov 16 10:12:18 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Lab22bis
-Top-level Entity Name : system
+Top-level Entity Name : DE0_Nano_SoC_top_level
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 2016
-Total pins : 3
+Total pins : 39
 Total virtual pins : 0
 Total block memory bits : 1,112,320
 Total DSP Blocks : 3

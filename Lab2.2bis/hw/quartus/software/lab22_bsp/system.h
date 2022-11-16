@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'system'
- * SOPC Builder design path: c:/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/system.sopcinfo
+ * SOPC Builder design path: C:/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/system.sopcinfo
  *
- * Generated: Tue Nov 15 09:07:13 CET 2022
+ * Generated: Wed Nov 16 10:44:29 CET 2022
  */
 
 /*
@@ -62,7 +62,7 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x00042820
+#define ALT_CPU_BREAK_ADDR 0x00040820
 #define ALT_CPU_CPU_ARCH_NIOS2_R1
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
@@ -103,7 +103,7 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x00042820
+#define NIOS2_BREAK_ADDR 0x00040820
 #define NIOS2_CPU_ARCH_NIOS2_R1
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
@@ -142,11 +142,11 @@
  */
 
 #define ALT_MODULE_CLASS_DaisyPort_0 DaisyPort
-#define DAISYPORT_0_BASE 0x40000
+#define DAISYPORT_0_BASE 0x41000
 #define DAISYPORT_0_IRQ -1
 #define DAISYPORT_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define DAISYPORT_0_NAME "/dev/DaisyPort_0"
-#define DAISYPORT_0_SPAN 8192
+#define DAISYPORT_0_SPAN 16
 #define DAISYPORT_0_TYPE "DaisyPort"
 
 
@@ -177,19 +177,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x43000
+#define ALT_STDERR_BASE 0x41010
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x43000
+#define ALT_STDIN_BASE 0x41010
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x43000
+#define ALT_STDOUT_BASE 0x41010
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -214,7 +214,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x43000
+#define JTAG_UART_0_BASE 0x41010
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"

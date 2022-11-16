@@ -7728,7 +7728,7 @@ defparam system_nios2_gen2_0_cpu_bht.lpm_file = "system_nios2_gen2_0_cpu_bht_ram
     M_valid_from_E & ~A_pipe_flush) | A_refetch_required;
 
   assign A_pipe_flush_waddr_nxt = (A_refetch_required)? A_pc :
-    (M_exc_break)? 68104 :
+    (M_exc_break)? 66056 :
     (M_exc_any)? 32776 :
     (M_refetch)? M_pc :
     (M_ctrl_jmp_indirect)? M_target_pcb[18 : 2] :

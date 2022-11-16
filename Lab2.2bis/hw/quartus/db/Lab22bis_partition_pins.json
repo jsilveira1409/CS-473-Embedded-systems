@@ -4,11 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clk_clk",
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{
-					"name" : "reset_reset_n",
+					"name" : "KEY_N[0]",
 					"strict" : false
 				}
 			]

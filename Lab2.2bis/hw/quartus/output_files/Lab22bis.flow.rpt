@@ -1,5 +1,5 @@
 Flow report for Lab22bis
-Tue Nov 15 09:05:21 2022
+Wed Nov 16 10:19:02 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 15 09:05:13 2022       ;
+; Flow Status                     ; Successful - Wed Nov 16 10:18:53 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; Lab22bis                                    ;
-; Top-level Entity Name           ; system                                      ;
+; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,378 / 15,880 ( 9 % )                      ;
-; Total registers                 ; 2044                                        ;
-; Total pins                      ; 3 / 314 ( < 1 % )                           ;
+; Logic utilization (in ALMs)     ; 1,374 / 15,880 ( 9 % )                      ;
+; Total registers                 ; 2025                                        ;
+; Total pins                      ; 39 / 314 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,112,320 / 2,764,800 ( 40 % )              ;
 ; Total DSP Blocks                ; 3 / 84 ( 4 % )                              ;
@@ -68,28 +68,28 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/15/2022 08:57:52 ;
+; Start date & time ; 11/16/2022 10:11:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab22bis            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 275469855673403.166849907218568        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; system      ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; system      ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; system      ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; system                                 ; Lab22bis      ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++-------------------------------------+----------------------------------------+---------------+------------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name            ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 275469855673403.166858988015864        ; --            ; --                     ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                     ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                     ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_Nano_SoC_top_level ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_Nano_SoC_top_level ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE0_Nano_SoC_top_level ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                     ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                     ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                     ; --         ;
+; TOP_LEVEL_ENTITY                    ; DE0_Nano_SoC_top_level                 ; Lab22bis      ; --                     ; --         ;
++-------------------------------------+----------------------------------------+---------------+------------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 5106 MB             ; 00:01:37                           ;
-; Fitter               ; 00:06:14     ; 1.1                     ; 7646 MB             ; 00:43:21                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4906 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:07     ; 3.8                     ; 5345 MB             ; 00:00:22                           ;
-; Total                ; 00:07:23     ; --                      ; --                  ; 00:45:26                           ;
+; Analysis & Synthesis ; 00:00:57     ; 1.0                     ; 5103 MB             ; 00:01:42                           ;
+; Fitter               ; 00:06:26     ; 1.1                     ; 7630 MB             ; 00:41:48                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4910 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:08     ; 3.4                     ; 5335 MB             ; 00:00:22                           ;
+; Total                ; 00:07:37     ; --                      ; --                  ; 00:43:58                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

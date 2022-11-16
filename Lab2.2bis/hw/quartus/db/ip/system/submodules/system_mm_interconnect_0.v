@@ -23,7 +23,7 @@ module system_mm_interconnect_0 (
 		input  wire        nios2_gen2_0_instruction_master_read,           //                                         .read
 		output wire [31:0] nios2_gen2_0_instruction_master_readdata,       //                                         .readdata
 		output wire        nios2_gen2_0_instruction_master_readdatavalid,  //                                         .readdatavalid
-		output wire [12:0] DaisyPort_0_avalon_slave_0_address,             //               DaisyPort_0_avalon_slave_0.address
+		output wire [3:0]  DaisyPort_0_avalon_slave_0_address,             //               DaisyPort_0_avalon_slave_0.address
 		output wire        DaisyPort_0_avalon_slave_0_write,               //                                         .write
 		output wire [7:0]  DaisyPort_0_avalon_slave_0_writedata,           //                                         .writedata
 		output wire [0:0]  jtag_uart_0_avalon_jtag_slave_address,          //            jtag_uart_0_avalon_jtag_slave.address
@@ -586,7 +586,7 @@ module system_mm_interconnect_0 (
 	);
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (13),
+		.AV_ADDRESS_W                   (4),
 		.AV_DATA_W                      (8),
 		.UAV_DATA_W                     (8),
 		.AV_BURSTCOUNT_W                (1),
