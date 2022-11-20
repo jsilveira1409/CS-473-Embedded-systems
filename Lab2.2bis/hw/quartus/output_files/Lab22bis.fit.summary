@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Nov 16 10:18:45 2022
+Fitter Status : Successful - Sat Nov 19 23:23:57 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Lab22bis
 Top-level Entity Name : DE0_Nano_SoC_top_level
 Family : Cyclone V
 Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,374 / 15,880 ( 9 % )
-Total registers : 2025
+Logic utilization (in ALMs) : 1,378 / 15,880 ( 9 % )
+Total registers : 2031
 Total pins : 39 / 314 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 1,112,320 / 2,764,800 ( 40 % )

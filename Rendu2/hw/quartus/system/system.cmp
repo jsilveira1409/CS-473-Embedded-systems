@@ -1,0 +1,7 @@
+	component system is
+		port (
+			clk_clk                  : in  std_logic := 'X'; -- clk
+			daisy_0_conduit_end_name : out std_logic         -- name
+		);
+	end component system;
+

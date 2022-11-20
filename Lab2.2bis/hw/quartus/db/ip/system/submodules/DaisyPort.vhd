@@ -2,170 +2,76 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+
 entity DaisyPort is
 	port(
 		clk			: in std_logic;
 		nReset		: in std_logic;
-		clk_enable		: in std_logic;
 		
 		-- internal interface (avalon slave)
 		address		: in std_logic_vector(3 downto 0);
 		write			: in std_logic;
-		writedata	: in std_logic_vector(7 downto 0);
+		writedata	: in std_logic_vector(23 downto 0);
 	
 		-- external interface (conduit)
 		LEDPort 		: out std_logic
 	);
 end DaisyPort;
 
-architecture behaviour of DaisyPort is
-	signal iRegEnable		: std_logic_vector(7 downto 0);
-	signal iRegD1Green	: std_logic_vector(7 downto 0);
-	signal iRegD1Red		: std_logic_vector(7 downto 0);
-	signal iRegD1Blue		: std_logic_vector(7 downto 0);
-	signal iRegD2Green	: std_logic_vector(7 downto 0);
-	signal iRegD2Red		: std_logic_vector(7 downto 0);
-	signal iRegD2Blue		: std_logic_vector(7 downto 0);
-	signal iRegD3Green	: std_logic_vector(7 downto 0);
-	signal iRegD3Red		: std_logic_vector(7 downto 0);
-	signal iRegD3Blue		: std_logic_vector(7 downto 0);
-	signal iRegD4Green	: std_logic_vector(7 downto 0);
-	signal iRegD4Red		: std_logic_vector(7 downto 0);
-	signal iRegD4Blue		: std_logic_vector(7 downto 0);
-	signal Q				   : std_logic_vector(71 downto 0);
-	signal tmp				: std_logic;
 
+architecture behaviour of DaisyPort is 
+	type StateType is (Idle,LED1,LED2,LED3,LED4);			--define states
+	signal iRegEnable		: std_logic_vector(23 downto 0);
+	signal iRegD1			: std_logic_vector(23 downto 0);
+	signal iRegD2			: std_logic_vector(23 downto 0);
+	signal iRegD3			: std_logic_vector(23 downto 0);
+	signal iRegD4			: std_logic_vector(23 downto 0);
+	signal send				: std_logic;
+	signal output_val		: std_logic_vector(23 downto 0);
+	signal output			: std_logic;
+	signal clk_enable 	: std_logic;
+	signal clk_div_counter : std_logic_vector(10 downto 0);
+	
+	constant CounterMaxValue 	: integer := 5;
+		
 begin
 
-
-	-- stock every LED values.
-	process(iRegEnable)
+	-- clock divider
+	process (clk, nReset)
+		variable e : std_logic;
 	begin
-		if iRegEnable(0) = '1'then
-			Q(7 downto 0) <= iRegD1Green;
-		else
-			Q(7 downto 0) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(1) = '1'then
-			Q(15 downto 8) <= iRegD1Red; 
-		else
-			Q(15 downto 8) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(2) = '1'then
-			Q(23 downto 16) <= iRegD1Blue;
-		else
-			Q(23 downto 16) <= "ZZZZZZZZ"; 	
-		end if;
-		if iRegEnable(0) = '1'then
-			Q(31 downto 24) <= iRegD2Green;
-		else
-			Q(31 downto 24) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(1) = '1'then
-			Q(39 downto 32) <= iRegD2Red; 
-		else
-			Q(39 downto 32) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(2) = '1'then
-			Q(47 downto 40) <= iRegD2Blue; 
-		else
-			Q(47 downto 40) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(0) = '1'then
-			Q(55 downto 48) <= iRegD3Green; 
-		else
-			Q(55 downto 48) <= "ZZZZZZZZ"; 
-		end if;
-		if iRegEnable(1) = '1'then
-			Q(63 downto 56) <= iRegD3Red;
-		else
-			Q(63 downto 56) <= "ZZZZZZZZ"; 	
-		end if;
-		if iRegEnable(2) = '1'then
-			Q(71 downto 64) <= iRegD3Blue;
-		else
-			Q(71 downto 64) <= "ZZZZZZZZ"; 	
-		end if;
-	end process;
-	
-
-	-- Generate PWM value
-	process(clk,Q)
-	begin
-		for i in 0 to 71 loop
-			if Q(i) = '1' then
-				for i in 0 to 3 loop
-					
-						if clk_enable = '1' then
-							tmp <= '1';
-							LEDPort <= tmp;
-						end if;
-					
-				end loop;
-				for i in 0 to 7 loop
-					
-						if clk_enable = '1' then
-							tmp <= '0';
-							LEDPort <= tmp;
-						end if;
-					
-				end loop;	
+		if nReset = '0' then
+			clk_div_counter <= (others => '0' );
+		elsif rising_edge(clk) then
+			e := '0';
+			if to_integer(unsigned(clk_div_counter)) = CounterMaxValue then
+				e := '1';
+				clk_div_counter <= (others => '0' );
 			else
-				for i in 0 to 6 loop
-					
-						if clk_enable = '1' then
-							tmp <= '1';
-							LEDPort <= tmp;
-						end if;
-					
-				end loop;
-				for i in 0 to 5 loop
-					
-						if clk_enable = '1' then
-							tmp <= '0';
-							LEDPort <= tmp;
-						end if;
-					
-				end loop;		--generate 0 pwm
+				clk_div_counter <= std_logic_vector(unsigned(clk_div_counter) + 1);
 			end if;
-		end loop;
+			clk_enable <= e;
+		end if;
 	end process;
-
 	
 	-- Avalon slave write to registers.
 	process(clk, nReset)
 	begin
 		if nReset = '0' then
 			iRegEnable	<= (others => '0');
-			iRegD1Green <= (others => '0');
-			iRegD1Red	<= (others => '0');
-			iRegD1Blue	<= (others => '0');
-			iRegD2Green <= (others => '0');
-			iRegD2Red	<= (others => '0');
-			iRegD2Blue	<= (others => '0');
-			iRegD3Green <= (others => '0');
-			iRegD3Red	<= (others => '0');
-			iRegD3Blue	<= (others => '0');
-			iRegD4Green <= (others => '0');
-			iRegD4Red	<= (others => '0');
-			iRegD4Blue	<= (others => '0');
+			iRegD1	<= (others => '0');
+			iRegD2	<= (others => '0');
+			iRegD3	<= (others => '0');
+			iRegD4	<= (others => '0');
 		elsif rising_edge(clk) then
 			if clk_enable = '1' then
 				if write = '1' then
 					case Address is
 						when "0000" => iRegEnable   <= writedata;
-						when "0001" => iRegD1Green  <= writedata;
-						when "0010" => iRegD1Red	 <= writedata;
-						when "0011" => iRegD1Blue	 <= writedata;
-						when "0100" => iRegD2Green  <= writedata;
-						when "0101" => iRegD2Red	 <= writedata;
-						when "0110" => iRegD2Blue	 <= writedata;
-						when "0111" => iRegD3Green  <= writedata;
-						when "1000" => iRegD3Red	 <= writedata;
-						when "1001" => iRegD3Blue	 <= writedata;
-						when "1010" => iRegD4Green  <= writedata;
-						when "1011" => iRegD4Red	 <= writedata;
-						when "1100" => iRegD4Blue	 <= writedata;
+						when "0001" => iRegD1		 <= writedata;
+						when "0010" => iRegD2		 <= writedata;
+						when "0011" => iRegD3		 <= writedata;
+						when "0100" => iRegD4		 <= writedata;
 						when others => null;
 					end case;
 				end if;
@@ -173,4 +79,57 @@ begin
 		end if;
 	end process;
 	
+	--send 1 or 0 depending on send
+	process(send, clk_enable, nReset)
+
+	variable count : integer := 0;
+	
+	begin
+		if nReset = '1' then
+			LEDPort <= '0';
+		elsif rising_edge(clk_enable) then
+			if send = '1' then
+
+				if count <= 6 then
+					LEDPort <= '1';
+				elsif count > 6 and count <= 12 then
+					LEDPort <= '0';
+				else 
+					count := 0;
+				end if;
+			
+			elsif send = '0' then
+	
+				if count <= 3 then
+					LEDPort <= '1';
+				elsif count > 3 and count <= 11 then
+					LEDPort <= '0';
+				else 
+					count := 0;
+				end if;
+
+			end if;
+			count := count + 1;
+		end if;
+end  process;
+	
+-- send output
+process(nReset,output_val, clk_enable)
+	begin
+		if nReset = '1' then
+			send <= '0';
+		elsif rising_edge(clk_enable) then
+			for index in 0 to 23 loop
+				if output_val(index) = '1' then
+					send <= '1';
+				else
+					send <= '0';
+				end if;	
+			end loop;
+		end if;
+end process;
+
+	
+	
 end behaviour;
+

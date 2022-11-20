@@ -1,10 +1,10 @@
 
 module system (
 	clk_clk,
-	daisyport_0_conduit_end_writeresponsevalid_n,
-	reset_reset_n);	
+	reset_reset_n,
+	daisyport_0_conduit_end_name);	
 
 	input		clk_clk;
-	output		daisyport_0_conduit_end_writeresponsevalid_n;
 	input		reset_reset_n;
+	output		daisyport_0_conduit_end_name;
 endmodule

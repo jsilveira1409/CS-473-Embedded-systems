@@ -1,8 +1,8 @@
 	component system is
 		port (
-			clk_clk                                      : in  std_logic := 'X'; -- clk
-			daisyport_0_conduit_end_writeresponsevalid_n : out std_logic;        -- writeresponsevalid_n
-			reset_reset_n                                : in  std_logic := 'X'  -- reset_n
+			clk_clk                      : in  std_logic := 'X'; -- clk
+			daisyport_0_conduit_end_name : out std_logic;        -- name
+			reset_reset_n                : in  std_logic := 'X'  -- reset_n
 		);
 	end component system;
 

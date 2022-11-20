@@ -7,6 +7,8 @@ JedecChain;
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
 		Device PartName(5CSEMA4U23) Path("C:/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/output_files/") File("Lab22bis.sof") MfrSpec(OpMask(1));
+	P ActionCode(Ign)
+		Device PartName(5CSEMA4) MfrSpec(OpMask(0));
 
 ChainEnd;
 

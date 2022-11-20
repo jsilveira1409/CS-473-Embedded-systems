@@ -3,13 +3,14 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="159" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <inputclock preferredWidth="237" />
    <export preferredWidth="234" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1920" height="1020" x="0" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="1938" height="1038" x="-9" y="-9" />
  <hdlexample language="VHDL" />
+ <generation synthesis="VHDL" />
 </preferences>

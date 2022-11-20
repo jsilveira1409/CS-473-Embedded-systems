@@ -1,9 +1,9 @@
-10:50:16 **** Incremental Build of configuration Nios II for project lab22 ****
+10:31:54 **** Incremental Build of configuration Nios II for project lab22 ****
 wsl make all 
 Info: Building /mnt/c/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/software/lab22_bsp/
 make --no-print-directory -C /mnt/c/Users/osour/Desktop/EmbSys/Lab2.2bis/hw/quartus/software/lab22_bsp/
 [BSP build complete]
 [lab22 build complete]
 
-10:50:21 Build Finished (took 4s.990ms)
+10:31:56 Build Finished (took 1s.251ms)
 
