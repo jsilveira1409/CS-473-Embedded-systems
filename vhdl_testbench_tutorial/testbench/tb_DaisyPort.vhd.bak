@@ -1,0 +1,125 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_daisyport is
+end tb_daisyport;
+architecture behaviour of tb_daisyport is
+
+constant CLK_PERIOD : time := 100 ns;
+
+-- Signal used to end simulator when we finished submitting our test cases
+signal sim_finished : boolean := false;
+
+signal clk : std_logic;
+signal nReset : std_logic;
+
+-- internal interface (avalon slave)
+signal address : std_logic_vector(3 downto 0);
+signal write : std_logic;
+signal writedata : std_logic_vector(31 downto 0);
+
+-- external interface (conduit)
+signal LEDPort : std_logic;
+
+begin
+
+dut : entity work.daisyport
+port map(clk => clk,
+nReset => nReset,
+address => address,
+write => write,
+writedata => writedata,
+LEDPort => LEDPort);
+
+clk_generation : process
+
+begin
+
+	if not sim_finished then
+		clk <= '1';
+		wait for CLK_PERIOD / 2;
+		clk <= '0';
+		wait for CLK_PERIOD / 2;
+	else
+		wait;
+	end if;
+end process clk_generation;
+
+
+-- Test daisyport
+simulation : process
+
+procedure async_reset is
+
+begin
+
+wait until rising_edge(clk);
+wait for CLK_PERIOD / 4;
+nReset <= '0';
+wait for CLK_PERIOD / 2;
+nReset <= '1';
+end procedure async_reset;
+
+procedure send(constant in1 : in natural;
+constant in2 : in natural) is
+
+begin
+-- Our circuit is sensitive to the rising edge of the CLK, so we
+-- need to be sure to assign signal values such that they are stable
+-- at the next rising edge of the CLK.
+wait until rising_edge(clk);
+-- Assign values to circuit inputs.
+address <= std_logic_vector(to_unsigned(in1, address'length));
+writedata <= std_logic_vector(to_unsigned(in2, writedata'length));
+
+write <= '1';
+-- OP1, OP2 and START are NOT yet assigned. We have to wait for some
+-- time for the simulator to "propagate" their values. Any
+-- infinitesimal period would work for the simulator to "propagate"
+-- the values. However, our circuit is a sequential circuit
+-- sensitive to the rising edge of CLK, so we need to hold our
+-- signal assignments until the next rising edge of CLK so the
+-- circuit can see them.
+wait until rising_edge(clk);
+-- Remove values from circuit inputs. The circuit works with a PULSE
+-- on its START input, which means that data on the inputs only
+-- needs to be valid when START is high.
+address <= (others => '0');
+writedata <= (others => '0');
+write <= '0';
+end procedure send;
+
+begin
+-- Default values
+address <= (others => '0');
+writedata <= (others => '0');
+nReset <= '0';
+write <= '0';
+wait for CLK_PERIOD;
+-- Reset the circuit.
+async_reset;
+-- Check test vectors 
+send(0,255);
+send(1,65280);
+send(2,255);
+send(3,65280);
+
+wait for CLK_PERIOD*100;
+
+send(0,65280);
+send(1,255);
+send(2,65280);
+send(3,255);
+
+wait for CLK_PERIOD*100;
+
+-- Instruct "clk_generation" process to halt execution.
+sim_finished <= true;
+-- Make this process wait indefinitely (it will never re-execute from
+-- its beginning again).
+wait;
+end process simulation;
+end architecture behaviour;
+
+

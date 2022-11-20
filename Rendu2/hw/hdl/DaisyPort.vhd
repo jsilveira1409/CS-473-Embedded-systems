@@ -86,7 +86,7 @@ process(send, clk_enable, nReset)
 	variable count : integer := 0;
 	
 	begin
-		if nReset = '1' then
+		if nReset = '0' then
 			LEDPort <= '0';
 		elsif rising_edge(clk_enable) then
 			if send = '1' then
@@ -118,7 +118,7 @@ end  process;
 process(nReset,output_val, clk_enable, clk)
 
 	begin
-		if nReset = '1' then
+		if nReset = '0' then
 			send <= '0';
 		elsif rising_edge(clk) then
 			for index in 0 to 23 loop
