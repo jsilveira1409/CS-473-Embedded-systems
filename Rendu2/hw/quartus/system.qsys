@@ -81,6 +81,14 @@
          type = "String";
       }
    }
+   element system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -108,6 +116,7 @@
    internal="Daisy_0.conduit_end"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <module name="Daisy_0" kind="Daisy" version="1.0" enabled="1" />
  <module name="clk_0" kind="clock_source" version="21.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
@@ -437,11 +446,6 @@
    version="21.1"
    start="clk_0.clk_reset"
    end="Daisy_0.reset_sink" />
- <connection
-   kind="reset"
-   version="21.1"
-   start="nios2_gen2_0.debug_reset_request"
-   end="clk_0.clk_in_reset" />
  <connection
    kind="reset"
    version="21.1"
