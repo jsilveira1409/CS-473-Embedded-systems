@@ -1,0 +1,420 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/modelsim
+Eadder_combinatorial
+Z1 w1668766235
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_combinatorial.vhd
+Z5 FC:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_combinatorial.vhd
+l0
+L14
+VI65zCG]=M830NIg^GYcg_3
+!s100 Pha?lJA;Z<9N;C]Jz0XHF1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1668851393
+!i10b 1
+Z8 !s108 1668851393.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_combinatorial.vhd|
+Z10 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_combinatorial.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Aripple_carry
+Z13 DEx4 work 10 full_adder 0 22 [X`[ROAfSboG`?0Jnb>T]0
+R2
+R3
+Z14 DEx4 work 19 adder_combinatorial 0 22 I65zCG]=M830NIg^GYcg_3
+l29
+L25
+VG5M:UP2?aolidlSo?3NNL2
+!s100 6LzoScR^>K77ZGZc@;__c2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder_sequential
+R1
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z16 8C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_sequential.vhd
+Z17 FC:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_sequential.vhd
+l0
+L15
+VgL:c4IfL>H^Qz?h1zZ82c3
+!s100 <[B`Y?5bVNBC]So@z[nAW2
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_sequential.vhd|
+Z19 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/adder_sequential.vhd|
+!i113 1
+R11
+R12
+Artl
+R13
+R15
+R2
+R3
+Z20 DEx4 work 16 adder_sequential 0 22 gL:c4IfL>H^Qz?h1zZ82c3
+l58
+L30
+VVzDXWFb`5eRkfGI3IE]@A2
+!s100 elo8QC3hJLWhWL3?df^Hn0
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Eclockdiv_avalon_interface
+Z21 w1668853913
+R15
+R2
+R3
+R0
+Z22 8C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab2.2bis\hw\hdl\clockdiv_avalon_interface.vhd
+Z23 FC:\Users\maxim\OneDrive\Desktop\EmbSys\Lab2.2bis\hw\hdl\clockdiv_avalon_interface.vhd
+l0
+L5
+V2YN73aWSbKWF@FL@o7nHH3
+!s100 QXR8cFU_3<NkeH@OPzBO>2
+R6
+32
+Z24 !s110 1668862993
+!i10b 1
+Z25 !s108 1668862993.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab2.2bis\hw\hdl\clockdiv_avalon_interface.vhd|
+Z27 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab2.2bis\hw\hdl\clockdiv_avalon_interface.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R15
+R2
+R3
+Z28 DEx4 work 25 clockdiv_avalon_interface 0 22 2YN73aWSbKWF@FL@o7nHH3
+l18
+L13
+VFG[CznU8A14n3YQBa`K7>0
+!s100 n=fB]GB?n1Jg6aM[D4>bh3
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Edaisyport
+Z29 w1669047815
+R15
+R2
+R3
+R0
+Z30 8C:\Users\maxim\OneDrive\Desktop\EmbSys\Rendu2\hw\hdl\DaisyPort.vhd
+Z31 FC:\Users\maxim\OneDrive\Desktop\EmbSys\Rendu2\hw\hdl\DaisyPort.vhd
+l0
+L6
+V0>:6@3`lYUW]RH[fcR>J[2
+!s100 ZIGiX9hP0MLe19;K0`1Z50
+R6
+32
+Z32 !s110 1669047823
+!i10b 1
+Z33 !s108 1669047823.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\Rendu2\hw\hdl\DaisyPort.vhd|
+Z35 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\Rendu2\hw\hdl\DaisyPort.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R15
+R2
+R3
+Z36 DEx4 work 9 daisyport 0 22 0>:6@3`lYUW]RH[fcR>J[2
+l34
+L24
+VXLYff<NagCbMTUnN6>dMj0
+!s100 bT:]PbD<4G97nWABTIk6n0
+R6
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R11
+R12
+Ede0_nano_soc_top_level
+Z37 w1668935680
+R2
+R3
+R0
+Z38 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd
+Z39 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd
+l0
+L6
+VHQOE01:LdbbhbT28bb>;[3
+!s100 BO>9W4M]49T8NOHRWZFm32
+R6
+32
+R32
+!i10b 1
+R33
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd|
+Z41 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 22 de0_nano_soc_top_level 0 22 HQOE01:LdbbhbT28bb>;[3
+l29
+L19
+Vef<a:C5a2jeQ2[cW9n_7G3
+!s100 UK:[eWaCADYQYkbW[ab;D0
+R6
+32
+R32
+!i10b 1
+R33
+R40
+R41
+!i113 1
+R11
+R12
+Efull_adder
+R1
+R2
+R3
+R0
+Z42 8C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/full_adder.vhd
+Z43 FC:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/full_adder.vhd
+l0
+L14
+V[X`[ROAfSboG`?0Jnb>T]0
+!s100 g2N3@Jko[H9l<CQ9d3AKd1
+R6
+32
+R7
+!i10b 1
+R8
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/full_adder.vhd|
+Z45 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/vhdl/full_adder.vhd|
+!i113 1
+R11
+R12
+Artl
+R2
+R3
+R13
+l25
+L24
+V3Mj6kY=4NVd3?_4nZFY4C2
+!s100 bOI^YdjMcWok`9F_JW6Ta1
+R6
+32
+R7
+!i10b 1
+R8
+R44
+R45
+!i113 1
+R11
+R12
+Etb_adder_combinatorial
+Z46 w1668850848
+R15
+R2
+R3
+R0
+Z47 8C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_combinatorial.vhd
+Z48 FC:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_combinatorial.vhd
+l0
+L6
+VNVzh_;75ZiXk`4bIePm[d2
+!s100 b2eXVeE=7gGX6T0JA`^<O2
+R6
+32
+R7
+!i10b 1
+R8
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_combinatorial.vhd|
+Z50 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_combinatorial.vhd|
+!i113 1
+R11
+R12
+Atest
+R14
+R15
+R2
+R3
+DEx4 work 22 tb_adder_combinatorial 0 22 NVzh_;75ZiXk`4bIePm[d2
+l22
+L10
+VRB;Q?cb0Bi1G:f1MO`GiV0
+!s100 TE:R@<9`VgQbD9XIfYenl3
+R6
+32
+R7
+!i10b 1
+R8
+R49
+R50
+!i113 1
+R11
+R12
+Etb_adder_sequential
+Z51 w1668851391
+R15
+R2
+R3
+R0
+Z52 8C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_sequential.vhd
+Z53 FC:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_sequential.vhd
+l0
+L4
+Vol0SoJT[Qj:l@Co7G1^e81
+!s100 Tg`<7AK[FflLV7mOO?hUJ3
+R6
+32
+Z54 !s110 1668862994
+!i10b 1
+Z55 !s108 1668862994.000000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_sequential.vhd|
+Z57 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_adder_sequential.vhd|
+!i113 1
+R11
+R12
+Atest
+R20
+R15
+R2
+R3
+DEx4 work 19 tb_adder_sequential 0 22 ol0SoJT[Qj:l@Co7G1^e81
+l20
+L6
+Vz002B[5a?d7[QRn4AeH8e1
+!s100 9h_Ei2>9[_MhWRmbE=E]F0
+R6
+32
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R11
+R12
+Etb_clock_div_avalon
+Z58 w1668854824
+R15
+R2
+R3
+R0
+Z59 8C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/testbench/tb_clockdiv_avalon.vhd
+Z60 FC:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/testbench/tb_clockdiv_avalon.vhd
+l0
+L6
+V4BJ5aCVkWP7H8PiziB7?@3
+!s100 >z_0EPTCa?_11?YM3@70G3
+R6
+32
+R54
+!i10b 1
+R55
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/testbench/tb_clockdiv_avalon.vhd|
+Z62 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/vhdl_testbench_tutorial/testbench/tb_clockdiv_avalon.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R28
+R15
+R2
+R3
+DEx4 work 19 tb_clock_div_avalon 0 22 4BJ5aCVkWP7H8PiziB7?@3
+l18
+L9
+V3Uj9cmF80ZOC>ACUeR8mK0
+!s100 D1Zb?z9o0QcB@F[:c8Xdc1
+R6
+32
+R54
+!i10b 1
+R55
+R61
+R62
+!i113 1
+R11
+R12
+Etb_daisyport
+Z63 w1669047787
+R15
+R2
+R3
+R0
+Z64 8C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_DaisyPort.vhd
+Z65 FC:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_DaisyPort.vhd
+l0
+L5
+V`:1;D]hjE2a<<?b^:0b8I1
+!s100 RKDMo_7oTJ<]ITR>15kVm3
+R6
+32
+R32
+!i10b 1
+R33
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_DaisyPort.vhd|
+Z67 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\vhdl_testbench_tutorial\testbench\tb_DaisyPort.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R36
+R15
+R2
+R3
+Z68 DEx4 work 12 tb_daisyport 0 22 `:1;D]hjE2a<<?b^:0b8I1
+l27
+L7
+VGT^^TH<LH7=0gMg__PIQn3
+!s100 L_M2IJM2RXE2CHO0S?Heo0
+R6
+32
+R32
+!i10b 1
+R33
+R66
+R67
+!i113 1
+R11
+R12
