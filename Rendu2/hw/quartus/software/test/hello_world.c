@@ -37,6 +37,7 @@ int main()
   printf("Hello from Nios II!\n");
 
 
+
   daisy_enable(0);
   daisy_all_set(0, 255, 0);
   daisy_enable(1);

@@ -14,7 +14,7 @@ entity DaisyPort is
 		writedata	: in std_logic_vector(31 downto 0);
 	
 		-- external interface (conduit)
-		LEDPort 		: out std_logic
+		LEDPort 		: out std_logic;
 	);
 end DaisyPort;
 
@@ -24,7 +24,6 @@ architecture behaviour of DaisyPort is
 	signal iRegD2			: std_logic_vector(31 downto 0);
 	signal iRegD3			: std_logic_vector(31 downto 0);
 	signal iRegD4			: std_logic_vector(31 downto 0);
-	signal enable			: std_logic;
 	signal output_val		: std_logic_vector(95 downto 0);
 	signal output			: std_logic;
 	signal next_send 		: std_logic;
@@ -71,7 +70,6 @@ process(clk, nReset)
 			count := 1;
 		elsif rising_edge(clk) then
 			if write = '0' then
-				if enable = '1' then
 					if next_send = '1' then
 						output <= output_val(index);
 						index := index + 1;
@@ -85,11 +83,10 @@ process(clk, nReset)
 					-- send data
 					if next_send = '0' then
 						if reset_diode = '0' then
-						--send 1
-							if output = '1' then
-
+						--send 0
+							if output = '0' then
 								if count <= 18 then
-										LEDPort <= '1';
+									LEDPort <= '1';
 									count := count + 1;
 								elsif count > 18 and count <= 58 then
 									LEDPort <= '0';
@@ -99,8 +96,8 @@ process(clk, nReset)
 									next_send <= '1';
 								end if;
 						
-						-- send 0
-							elsif output = '0' then
+						-- send 1
+							elsif output = '1' then
 			
 								if count <= 35 then
 									LEDPort <= '1';
@@ -127,7 +124,6 @@ process(clk, nReset)
 								next_send <= '1';
 							end if;
 						end if;
-					end if;
 				end if;
 			end if;
 		end if;
@@ -140,16 +136,13 @@ process (clk, nReset)
 begin
 		if nReset = '0' then
 			output_val <= (others => '0');
-			enable <= '0';
+			enablePort <= '0';
 		elsif rising_edge(clk) then
-			if write = '0' then
-				if enable = '0' then
-					output_val(23 downto 0) <= iRegD1(23 downto 0);
-					output_val(47 downto 24) <= iRegD2(23 downto 0);
-					output_val(71 downto 48) <= iRegD3(23 downto 0);
-					output_val(95 downto 72) <= iRegD4(23 downto 0);
-					enable <= '1';
-				end if;
+			if write = '0' then				
+				output_val(23 downto 0) <= iRegD1(23 downto 0);
+				output_val(47 downto 24) <= iRegD2(23 downto 0);
+				output_val(71 downto 48) <= iRegD3(23 downto 0);
+				output_val(95 downto 72) <= iRegD4(23 downto 0);
 			end if;
 		end if;
 

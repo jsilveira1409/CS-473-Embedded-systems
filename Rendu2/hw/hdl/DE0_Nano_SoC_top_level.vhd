@@ -17,7 +17,7 @@ ARCHITECTURE Structure OF DE0_Nano_SoC_top_level IS
         port (
             clk_clk                  : in  std_logic := 'X'; -- clk
             daisy_0_conduit_end_name : out std_logic;         -- name
-				 reset_reset_n            : in  std_logic := 'X'  -- reset_n
+				reset_reset_n            : in  std_logic := 'X'  -- reset_n
         );
     end component system;
 

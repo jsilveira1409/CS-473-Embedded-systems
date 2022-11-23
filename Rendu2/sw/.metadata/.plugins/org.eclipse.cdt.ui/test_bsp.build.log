@@ -1,18 +1,6 @@
-09:06:46 **** Incremental Build of configuration Nios II for project test_bsp ****
+10:19:32 **** Build of configuration Nios II for project test_bsp ****
 wsl make all 
-Makefile not up to date.
-/mnt/c/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/system.sopcinfo has been modified since the BSP was generated.
+[BSP build complete]
 
-Generate the BSP to update the Makefile, and then build again.
-
-To generate from Eclipse:
- 1. Right-click the BSP project.
- 2. In the Nios II Menu, click Generate BSP.
-
-To generate from the command line:
- nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
-
-make: *** [Makefile:545: public.mk] Error 1
-
-09:06:47 Build Finished (took 702ms)
+10:19:33 Build Finished (took 1s.213ms)
 

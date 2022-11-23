@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/output_files/") File("Rendu2_time_limited.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/output_files/") File("Rendu2.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

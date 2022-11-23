@@ -1,0 +1,186 @@
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 2 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tb_daisyport2
+# vsim -gui work.tb_daisyport2 
+# Start time: 09:03:42 on Nov 23,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+add wave sim:/tb_daisyport2/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 2 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 2 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+add wave sim:/tb_daisyport2/*
+add wave sim:/tb_daisyport2/*
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd was successful.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport2(behaviour)
+# Loading work.daisyport2(behaviour)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# Compile of DaisyPort2.vhd failed with 1 errors.
+# Compile of tb_DaisyPort2.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+vsim -gui work.tb_daisyport
+# End time: 09:30:15 on Nov 23,2022, Elapsed time: 0:26:33
+# Errors: 0, Warnings: 4
+# vsim -gui work.tb_daisyport 
+# Start time: 09:30:15 on Nov 23,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_daisyport(behaviour)
+# Loading work.daisyport(behaviour)
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport(behaviour)
+# Loading work.daisyport(behaviour)
+add wave sim:/tb_daisyport/*
+run -all
+restart -f
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd failed with 4 errors.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd failed with 8 errors.
+# 2 compiles, 1 failed with 8 errors.
+# Compile of DaisyPort.vhd was successful.
+# Compile of tb_DaisyPort.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_daisyport(behaviour)
+# Loading work.daisyport(behaviour)
+
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 10:15:27 on Nov 23,2022, Elapsed time: 0:45:12
+# Errors: 0, Warnings: 1
