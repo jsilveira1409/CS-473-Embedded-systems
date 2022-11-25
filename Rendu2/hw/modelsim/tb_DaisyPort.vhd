@@ -98,10 +98,11 @@ writedata <= (others => '0');
 nReset <= '0'; 
 write <= '1'; 
 wait for CLK_PERIOD; 
+
 -- Reset the circuit. 
 async_reset; 
+
 -- Check test vectors  
- 
 send(1,8421504); 
 send(2,8421504); 
 send(3,8421504); 
@@ -109,12 +110,6 @@ send(4,8421504);
 write <= '0'; 
 wait for CLK_PERIOD*10000000; 
 write <= '1'; 
---send(1,11184810); 
---write <= '0'; 
---wait for CLK_PERIOD*10000; 
---send(3,11184810); 
---send(4,11184810); 
---write <= '1'; 
  
 -- Instruct "clk_generation" process to halt execution. 
 sim_finished <= true; 

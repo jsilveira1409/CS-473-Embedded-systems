@@ -4,10 +4,9 @@
 
 `timescale 1 ps / 1 ps
 module system (
-		input  wire  clk_clk,                    //                   clk.clk
-		output wire  daisy_0_conduit_end_name,   //   daisy_0_conduit_end.name
-		output wire  daisy_0_conduit_end_1_name, // daisy_0_conduit_end_1.name
-		input  wire  reset_reset_n               //                 reset.reset_n
+		input  wire  clk_clk,                  //                 clk.clk
+		output wire  daisy_0_conduit_end_name, // daisy_0_conduit_end.name
+		input  wire  reset_reset_n             //               reset.reset_n
 	);
 
 	wire  [31:0] nios2_gen2_0_data_master_readdata;                           // mm_interconnect_0:nios2_gen2_0_data_master_readdata -> nios2_gen2_0:d_readdata
@@ -59,8 +58,7 @@ module system (
 		.write     (mm_interconnect_0_daisy_0_avalon_slave_0_write),     //               .write
 		.writedata (mm_interconnect_0_daisy_0_avalon_slave_0_writedata), //               .writedata
 		.LEDPort   (daisy_0_conduit_end_name),                           //    conduit_end.name
-		.nReset    (~rst_controller_reset_out_reset),                    //     reset_sink.reset_n
-		.clkPort   (daisy_0_conduit_end_1_name)                          //  conduit_end_1.name
+		.nReset    (~rst_controller_reset_out_reset)                     //     reset_sink.reset_n
 	);
 
 	system_jtag_uart_0 jtag_uart_0 (
