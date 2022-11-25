@@ -3,8 +3,9 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="143" />
-   <irq preferredWidth="34" />
+   <connections preferredWidth="255" />
+   <irq preferredWidth="47" />
+   <export preferredWidth="305" />
   </columns>
  </systemtable>
  <library expandedCategories="Project,Library" />

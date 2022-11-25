@@ -15,7 +15,7 @@ entity DaisyPort is
 	
 		-- external interface (conduit)
 		LEDPort 		: out std_logic;
-		enablePort	:	out std_logic
+		clkPort		: out std_logic
 	);
 end DaisyPort;
 
@@ -131,13 +131,23 @@ process(clk, nReset)
 end process;
 	
 
-
+process(clk, nReset)
+	variable tmp : std_logic;
+begin
+	if nReset = '0' then 
+		clkPort <= '0';
+		tmp := '0';
+	elsif rising_edge(clk) then
+		tmp := not(tmp);		
+	end if;
+	clkPort <= tmp;
+end process;
 
 process (clk, nReset)
+
 begin
 		if nReset = '0' then
 			output_val <= (others => '0');
-			enablePort <= '0';
 		elsif rising_edge(clk) then
 			if write = '0' then				
 				output_val(23 downto 0) <= iRegD1(23 downto 0);

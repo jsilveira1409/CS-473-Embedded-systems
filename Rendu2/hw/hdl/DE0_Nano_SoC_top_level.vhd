@@ -15,9 +15,10 @@ ARCHITECTURE Structure OF DE0_Nano_SoC_top_level IS
 
 	component system is
         port (
-            clk_clk                  : in  std_logic := 'X'; -- clk
-            daisy_0_conduit_end_name : out std_logic;         -- name
-				reset_reset_n            : in  std_logic := 'X'  -- reset_n
+             clk_clk                    : in  std_logic := 'X'; -- clk
+            daisy_0_conduit_end_name   : out std_logic;        -- name
+            daisy_0_conduit_end_1_name : out std_logic;        -- name
+            reset_reset_n              : in  std_logic := 'X'  -- reset_n
         );
     end component system;
 
@@ -28,7 +29,7 @@ BEGIN
         port map (
 				clk_clk                  => FPGA_CLK1_50,                      --                     clk.clk
             daisy_0_conduit_end_name => GPIO_0(0),-- daisyport_0_conduit_end.name
-				reset_reset_n            => KEY_N(0)
+				reset_reset_n            => KEY_N(0),
+				daisy_0_conduit_end_1_name => GPIO_0(1)-- daisyport_0_conduit_end.name
 			);
-
 END Structure;

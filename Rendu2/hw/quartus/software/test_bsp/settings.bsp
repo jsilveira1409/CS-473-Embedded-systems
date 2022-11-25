@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>23 nov. 2022 10:44:03</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1669196643890</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>24 nov. 2022 10:56:39</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1669283799035</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\osour\Desktop\EmbSys\Rendu2\hw\quartus\software\test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\osour\Desktop\EmbSys\Rendu2\hw\quartus\system.sopcinfo</SopcDesignFile>

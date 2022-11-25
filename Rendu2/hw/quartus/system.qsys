@@ -32,6 +32,11 @@
          value = "0";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element jtag_uart_0
    {
@@ -89,6 +94,14 @@
          type = "String";
       }
    }
+   element system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -114,6 +127,11 @@
  <interface
    name="daisy_0_conduit_end"
    internal="Daisy_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="daisy_0_conduit_end_1"
+   internal="Daisy_0.conduit_end_1"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />

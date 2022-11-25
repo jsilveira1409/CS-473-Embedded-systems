@@ -17,6 +17,5 @@
 <stringAttribute key="processorCableName" value="DE-SoC on localhost [USB-1]"/>
 <stringAttribute key="processorDeviceIndex" value="2"/>
 <stringAttribute key="processorInstanceId" value="0"/>
-<booleanAttribute key="resetHardware" value="true"/>
 <booleanAttribute key="runProgram" value="true"/>
 </launchConfiguration>

@@ -8,7 +8,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_CLK2_50",
+					"name" : "GPIO_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{

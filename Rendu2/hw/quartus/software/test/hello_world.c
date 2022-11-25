@@ -18,42 +18,14 @@
 #include "daisyport.h"
 #include <time.h>
 
-void delay(int number_of_seconds)
-{
-    // Converting time into milli_seconds
-    int milli_seconds = 1000 * number_of_seconds;
-
-    // Storing start time
-    clock_t start_time = clock();
-
-    // looping till required time is not achieved
-    while (clock() < start_time + milli_seconds)
-        ;
-}
-
 
 int main()
 {
-  printf("Hello from Nios II!\n");
+	daisy_all_set(0, 0, 0);
+	printf("Hello from Nios II!\n");
 
+	daisy_d1_set(120, 120, 120);
+	daisy_d2_set(255, 00, 0);
 
-
-  daisy_enable(0);
-  daisy_all_set(0, 255, 0);
-  daisy_enable(1);
-  while(1){
-	  daisy_enable(0);
-	  daisy_all_set(255, 0, 0);
-	  daisy_enable(1);
-	  delay(2);
-	  daisy_enable(0);
-	  daisy_all_set(0, 255, 0);
-	  daisy_enable(1);
-	  delay(2);
-	  daisy_enable(0);
-	  daisy_all_set(0, 0, 255);
-	  daisy_enable(1);
-	  delay(2);
-  }
   return 0;
 }

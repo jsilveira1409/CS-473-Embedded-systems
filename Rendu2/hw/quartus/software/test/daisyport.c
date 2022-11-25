@@ -28,8 +28,3 @@ void daisy_all_set(uint8_t red, uint8_t green, uint8_t blue){
 	daisy_d3_set(red, green, blue);
 	daisy_d4_set(red, green, blue);
 }
-
-
-void daisy_enable(uint32_t enable){
-	IOWR_32DIRECT(DAISY_BASE_ADDRESS,4 * DAISY_REG_ENABLE_OFFSET,enable);
-}

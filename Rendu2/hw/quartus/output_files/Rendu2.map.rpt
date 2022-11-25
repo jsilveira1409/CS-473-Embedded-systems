@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Rendu2
-Wed Nov 23 10:51:58 2022
+Thu Nov 24 10:04:01 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -144,11 +144,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 136. Port Connectivity Checks: "system:u0|system_nios2_gen2_0:nios2_gen2_0"
 137. Port Connectivity Checks: "system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic"
 138. Port Connectivity Checks: "system:u0|system_jtag_uart_0:jtag_uart_0"
-139. Port Connectivity Checks: "system:u0|DaisyPort:daisy_0"
-140. Post-Synthesis Netlist Statistics for Top Partition
-141. Elapsed Time Per Partition
-142. Analysis & Synthesis Messages
-143. Analysis & Synthesis Suppressed Messages
+139. Post-Synthesis Netlist Statistics for Top Partition
+140. Elapsed Time Per Partition
+141. Analysis & Synthesis Messages
+142. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -175,13 +174,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 23 10:51:58 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 24 10:04:01 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; Rendu2                                      ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1143                                        ;
+; Total registers                 ; 1144                                        ;
 ; Total pins                      ; 39                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,059,840                                   ;
@@ -402,16 +401,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimate of Logic utilization (ALMs needed) ; 945                ;
+; Estimate of Logic utilization (ALMs needed) ; 946                ;
 ;                                             ;                    ;
 ; Combinational ALUT usage for logic          ; 1420               ;
 ;     -- 7 input functions                    ; 48                 ;
-;     -- 6 input functions                    ; 291                ;
+;     -- 6 input functions                    ; 292                ;
 ;     -- 5 input functions                    ; 322                ;
 ;     -- 4 input functions                    ; 264                ;
-;     -- <=3 input functions                  ; 495                ;
+;     -- <=3 input functions                  ; 494                ;
 ;                                             ;                    ;
-; Dedicated logic registers                   ; 1143               ;
+; Dedicated logic registers                   ; 1144               ;
 ;                                             ;                    ;
 ; I/O pins                                    ; 39                 ;
 ; Total MLAB memory bits                      ; 0                  ;
@@ -419,9 +418,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                    ;
 ; Total DSP Blocks                            ; 0                  ;
 ;                                             ;                    ;
-; Maximum fan-out node                        ; FPGA_CLK2_50~input ;
-; Maximum fan-out                             ; 1214               ;
-; Total fan-out                               ; 14345              ;
+; Maximum fan-out node                        ; FPGA_CLK1_50~input ;
+; Maximum fan-out                             ; 1215               ;
+; Total fan-out                               ; 14351              ;
 ; Average fan-out                             ; 4.90               ;
 +---------------------------------------------+--------------------+
 
@@ -431,17 +430,17 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                               ; Entity Name                                    ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+--------------+
-; |DE0_Nano_SoC_top_level                                                                                                                 ; 1420 (1)            ; 1143 (0)                  ; 1059840           ; 0          ; 39   ; 0            ; |DE0_Nano_SoC_top_level                                                                                                                                                                                                                                                                                                                                                                                           ; DE0_Nano_SoC_top_level                         ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 113 (1)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                                          ; sld_hub                                        ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 112 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                                                          ; alt_sld_fab_with_jtag_input                    ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 112 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                                                       ; alt_sld_fab                                    ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 112 (1)             ; 83 (6)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                                                   ; alt_sld_fab_alt_sld_fab                        ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 111 (0)             ; 77 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                                                       ; alt_sld_fab_alt_sld_fab_sldfabric              ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 111 (76)            ; 77 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                                          ; sld_jtag_hub                                   ; work         ;
+; |DE0_Nano_SoC_top_level                                                                                                                 ; 1420 (1)            ; 1144 (0)                  ; 1059840           ; 0          ; 39   ; 0            ; |DE0_Nano_SoC_top_level                                                                                                                                                                                                                                                                                                                                                                                           ; DE0_Nano_SoC_top_level                         ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 112 (1)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                                          ; sld_hub                                        ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 111 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                                                          ; alt_sld_fab_with_jtag_input                    ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 111 (0)             ; 83 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                                                       ; alt_sld_fab                                    ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 111 (1)             ; 83 (6)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                                                   ; alt_sld_fab_alt_sld_fab                        ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 110 (0)             ; 77 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                                                       ; alt_sld_fab_alt_sld_fab_sldfabric              ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 110 (75)            ; 77 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                                          ; sld_jtag_hub                                   ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg                                                  ; sld_rom_sr                                     ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 19 (19)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm                                                ; sld_shadow_jsm                                 ; altera_sld   ;
-;    |system:u0|                                                                                                                          ; 1306 (0)            ; 1060 (0)                  ; 1059840           ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0                                                                                                                                                                                                                                                                                                                                                                                 ; system                                         ; system       ;
-;       |DaisyPort:daisy_0|                                                                                                               ; 300 (300)           ; 260 (260)                 ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0|DaisyPort:daisy_0                                                                                                                                                                                                                                                                                                                                                               ; DaisyPort                                      ; system       ;
+;    |system:u0|                                                                                                                          ; 1307 (0)            ; 1061 (0)                  ; 1059840           ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0                                                                                                                                                                                                                                                                                                                                                                                 ; system                                         ; system       ;
+;       |DaisyPort:daisy_0|                                                                                                               ; 301 (301)           ; 261 (261)                 ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0|DaisyPort:daisy_0                                                                                                                                                                                                                                                                                                                                                               ; DaisyPort                                      ; system       ;
 ;       |altera_reset_controller:rst_controller|                                                                                          ; 7 (6)               ; 16 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0|altera_reset_controller:rst_controller                                                                                                                                                                                                                                                                                                                                          ; altera_reset_controller                        ; system       ;
 ;          |altera_reset_synchronizer:alt_rst_req_sync_uq1|                                                                               ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1                                                                                                                                                                                                                                                                                           ; altera_reset_synchronizer                      ; system       ;
 ;          |altera_reset_synchronizer:alt_rst_sync_uq1|                                                                                   ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE0_Nano_SoC_top_level|system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                                                                                                                                                                                                                               ; altera_reset_synchronizer                      ; system       ;
@@ -741,15 +740,15 @@ Encoding Type:  One-Hot
 ; system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_nios2_avalon_reg:the_system_nios2_gen2_0_cpu_nios2_avalon_reg|oci_ienable[29]                                                                                      ; Merged with system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_nios2_avalon_reg:the_system_nios2_gen2_0_cpu_nios2_avalon_reg|oci_ienable[30]                                                                                      ;
 ; system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_nios2_avalon_reg:the_system_nios2_gen2_0_cpu_nios2_avalon_reg|oci_ienable[30]                                                                                      ; Merged with system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_nios2_avalon_reg:the_system_nios2_gen2_0_cpu_nios2_avalon_reg|oci_ienable[31]                                                                                      ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][61]                                                                                                                                                                                                                  ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                                  ;
-; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                                  ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                                  ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][55]                                                                                                                                                                                                                  ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                                  ;
-; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][55]                                                                                                                                                                                                         ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                         ;
+; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                                  ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory2_0_s1_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                                  ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                         ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                         ;
+; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][55]                                                                                                                                                                                                         ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                         ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][61]                                                                                                                                                                                                         ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2_gen2_0_debug_mem_slave_agent_rsp_fifo|mem[1][77]                                                                                                                                                                                                         ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:daisy_0_avalon_slave_0_agent_rsp_fifo|mem[1][61]                                                                                                                                                                                                               ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:daisy_0_avalon_slave_0_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                               ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:daisy_0_avalon_slave_0_agent_rsp_fifo|mem[1][55]                                                                                                                                                                                                               ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:daisy_0_avalon_slave_0_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                               ;
-; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][61]                                                                                                                                                                                                        ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                        ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][55]                                                                                                                                                                                                        ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                        ;
+; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][61]                                                                                                                                                                                                        ; Merged with system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem[1][62]                                                                                                                                                                                                        ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2_gen2_0_data_master_agent|hold_waitrequest                                                                                                                                                                                                           ; Merged with system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic|rst1                                                                                                                                                                                                                                      ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2_gen2_0_instruction_master_agent|hold_waitrequest                                                                                                                                                                                                    ; Merged with system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic|rst1                                                                                                                                                                                                                                      ;
 ; system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:daisy_0_avalon_slave_0_translator|waitrequest_reset_override                                                                                                                                                                                          ; Merged with system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic|rst1                                                                                                                                                                                                                                      ;
@@ -934,10 +933,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1143  ;
+; Total registers                              ; 1144  ;
 ; Number of registers using Synchronous Clear  ; 274   ;
 ; Number of registers using Synchronous Load   ; 162   ;
-; Number of registers using Asynchronous Clear ; 807   ;
+; Number of registers using Asynchronous Clear ; 808   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 638   ;
 ; Number of registers using Preset             ; 0     ;
@@ -3378,22 +3377,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "system:u0|DaisyPort:daisy_0"                                                                                   ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                  ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; enableport ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1060                        ;
-;     CLR               ; 205                         ;
+; arriav_ff             ; 1061                        ;
+;     CLR               ; 206                         ;
 ;     CLR SCLR          ; 63                          ;
 ;     CLR SCLR SLD      ; 11                          ;
 ;     CLR SLD           ; 68                          ;
@@ -3407,7 +3397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 32                          ;
 ;     plain             ; 96                          ;
 ; arriav_io_obuf        ; 36                          ;
-; arriav_lcell_comb     ; 1307                        ;
+; arriav_lcell_comb     ; 1308                        ;
 ;     arith             ; 206                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 98                          ;
@@ -3416,9 +3406,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 64                          ;
 ;     extend            ; 46                          ;
 ;         7 data inputs ; 46                          ;
-;     normal            ; 1055                        ;
+;     normal            ; 1056                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 13                          ;
+;         1 data inputs ; 14                          ;
 ;         2 data inputs ; 130                         ;
 ;         3 data inputs ; 158                         ;
 ;         4 data inputs ; 185                         ;
@@ -3447,37 +3437,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Nov 23 10:51:07 2022
+    Info: Processing started: Thu Nov 24 10:03:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Rendu2 -c Rendu2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12248): Elaborating Platform Designer system entity "system.qsys"
-Info (12250): 2022.11.23.10:51:18 Progress: Loading quartus/system.qsys
-Info (12250): 2022.11.23.10:51:19 Progress: Reading input file
-Info (12250): 2022.11.23.10:51:19 Progress: Adding Daisy_0 [Daisy 1.0]
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing module Daisy_0
-Info (12250): 2022.11.23.10:51:20 Progress: Adding clk_0 [clock_source 21.1]
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing module clk_0
-Info (12250): 2022.11.23.10:51:20 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2022.11.23.10:51:20 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing module nios2_gen2_0
-Info (12250): 2022.11.23.10:51:20 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2022.11.23.10:51:20 Progress: Building connections
-Info (12250): 2022.11.23.10:51:20 Progress: Parameterizing connections
-Info (12250): 2022.11.23.10:51:20 Progress: Validating
-Info (12250): 2022.11.23.10:51:21 Progress: Done reading input file
+Info (12250): 2022.11.24.10:03:19 Progress: Loading quartus/system.qsys
+Info (12250): 2022.11.24.10:03:20 Progress: Reading input file
+Info (12250): 2022.11.24.10:03:20 Progress: Adding Daisy_0 [Daisy 1.0]
+Info (12250): 2022.11.24.10:03:20 Progress: Parameterizing module Daisy_0
+Info (12250): 2022.11.24.10:03:20 Progress: Adding clk_0 [clock_source 21.1]
+Info (12250): 2022.11.24.10:03:20 Progress: Parameterizing module clk_0
+Info (12250): 2022.11.24.10:03:20 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
+Info (12250): 2022.11.24.10:03:20 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2022.11.24.10:03:20 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
+Info (12250): 2022.11.24.10:03:21 Progress: Parameterizing module nios2_gen2_0
+Info (12250): 2022.11.24.10:03:21 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
+Info (12250): 2022.11.24.10:03:21 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2022.11.24.10:03:21 Progress: Building connections
+Info (12250): 2022.11.24.10:03:21 Progress: Parameterizing connections
+Info (12250): 2022.11.24.10:03:21 Progress: Validating
+Info (12250): 2022.11.24.10:03:21 Progress: Done reading input file
 Info (12250): System.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info (12250): System: Generating system "system" for QUARTUS_SYNTH
 Info (12250): Daisy_0: "system" instantiated Daisy "Daisy_0"
 Info (12250): Jtag_uart_0: Starting RTL generation for module 'system_jtag_uart_0'
-Info (12250): Jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_jtag_uart_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0003_jtag_uart_0_gen//system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_jtag_uart_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0003_jtag_uart_0_gen//system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Jtag_uart_0: Done RTL generation for module 'system_jtag_uart_0'
 Info (12250): Jtag_uart_0: "system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info (12250): Nios2_gen2_0: "system" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info (12250): Onchip_memory2_0: Starting RTL generation for module 'system_onchip_memory2_0'
-Info (12250): Onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_onchip_memory2_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0004_onchip_memory2_0_gen//system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_onchip_memory2_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0004_onchip_memory2_0_gen//system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Onchip_memory2_0: Done RTL generation for module 'system_onchip_memory2_0'
 Info (12250): Onchip_memory2_0: "system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -3488,13 +3478,13 @@ Info (12250): Mm_interconnect_0: "system" instantiated altera_mm_interconnect "m
 Info (12250): Irq_mapper: "system" instantiated altera_irq_mapper "irq_mapper"
 Info (12250): Rst_controller: "system" instantiated altera_reset_controller "rst_controller"
 Info (12250): Cpu: Starting RTL generation for module 'system_nios2_gen2_0_cpu'
-Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/21.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/21.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_nios2_gen2_0_cpu --dir=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0007_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/21.1/quartus/bin64/ --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9319_5771391486744918575.dir/0007_cpu_gen//system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info (12250): Cpu: # 2022.11.23 10:51:35 (*) Starting Nios II generation
-Info (12250): Cpu: # 2022.11.23 10:51:35 (*)   Elaborating CPU configuration settings
-Info (12250): Cpu: # 2022.11.23 10:51:35 (*)   Creating all objects for CPU
-Info (12250): Cpu: # 2022.11.23 10:51:36 (*)   Generating RTL from CPU objects
-Info (12250): Cpu: # 2022.11.23 10:51:36 (*)   Creating plain-text RTL
-Info (12250): Cpu: # 2022.11.23 10:51:36 (*) Done Nios II generation
+Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/21.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/21.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_nios2_gen2_0_cpu --dir=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0007_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/21.1/quartus/bin64/ --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9320_8420484418919804816.dir/0007_cpu_gen//system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2022.11.24 10:03:38 (*) Starting Nios II generation
+Info (12250): Cpu: # 2022.11.24 10:03:38 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2022.11.24 10:03:38 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2022.11.24 10:03:39 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2022.11.24 10:03:39 (*)   Creating plain-text RTL
+Info (12250): Cpu: # 2022.11.24 10:03:39 (*) Done Nios II generation
 Info (12250): Cpu: Done RTL generation for module 'system_nios2_gen2_0_cpu'
 Info (12250): Cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info (12250): Nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -3625,15 +3615,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/system/system.v
     Info (12023): Found entity 1: system File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 6
 Info (12127): Elaborating entity "DE0_Nano_SoC_top_level" for the top level hierarchy
-Info (12128): Elaborating entity "system" for hierarchy "system:u0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 27
-Info (12128): Elaborating entity "DaisyPort" for hierarchy "system:u0|DaisyPort:daisy_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 62
+Info (12128): Elaborating entity "system" for hierarchy "system:u0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 28
+Info (12128): Elaborating entity "DaisyPort" for hierarchy "system:u0|DaisyPort:daisy_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 64
 Warning (10631): VHDL Process Statement warning at daisyport.vhd(37): inferring latch(es) for signal or variable "iRegD1", which holds its previous value in one or more paths through the process File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 37
 Warning (10631): VHDL Process Statement warning at daisyport.vhd(37): inferring latch(es) for signal or variable "iRegD2", which holds its previous value in one or more paths through the process File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 37
 Warning (10631): VHDL Process Statement warning at daisyport.vhd(37): inferring latch(es) for signal or variable "iRegD3", which holds its previous value in one or more paths through the process File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 37
 Warning (10631): VHDL Process Statement warning at daisyport.vhd(37): inferring latch(es) for signal or variable "iRegD4", which holds its previous value in one or more paths through the process File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 37
-Warning (10631): VHDL Process Statement warning at daisyport.vhd(136): inferring latch(es) for signal or variable "enablePort", which holds its previous value in one or more paths through the process File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 136
-Info (10041): Inferred latch for "enablePort" at daisyport.vhd(136) File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/daisyport.vhd Line: 136
-Info (12128): Elaborating entity "system_jtag_uart_0" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 75
+Info (12128): Elaborating entity "system_jtag_uart_0" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 77
 Info (12128): Elaborating entity "system_jtag_uart_0_scfifo_w" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_jtag_uart_0.v Line: 420
 Info (12128): Elaborating entity "scfifo" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|scfifo:wfifo" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_jtag_uart_0.v Line: 139
 Info (12130): Elaborated megafunction instantiation "system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|scfifo:wfifo" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_jtag_uart_0.v Line: 139
@@ -3675,7 +3663,7 @@ Info (12133): Instantiated megafunction "system:u0|system_jtag_uart_0:jtag_uart_
     Info (12134): Parameter "SLD_AUTO_INSTANCE_INDEX" = "YES"
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_jtag_atlantic.v Line: 276
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "system_nios2_gen2_0" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 104
+Info (12128): Elaborating entity "system_nios2_gen2_0" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 106
 Info (12128): Elaborating entity "system_nios2_gen2_0_cpu" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_nios2_gen2_0.v Line: 65
 Info (12128): Elaborating entity "system_nios2_gen2_0_cpu_test_bench" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_test_bench:the_system_nios2_gen2_0_cpu_test_bench" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_nios2_gen2_0_cpu.v Line: 3558
 Info (12128): Elaborating entity "system_nios2_gen2_0_cpu_register_bank_a_module" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_register_bank_a_module:system_nios2_gen2_0_cpu_register_bank_a" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_nios2_gen2_0_cpu.v Line: 4074
@@ -3756,7 +3744,7 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "system:u
 Info (12131): Elaborated megafunction instantiation "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_debug_slave_wrapper:the_system_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:system_nios2_gen2_0_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_debug_slave_wrapper:the_system_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:system_nios2_gen2_0_cpu_debug_slave_phy" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_debug_slave_wrapper:the_system_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:system_nios2_gen2_0_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "system:u0|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_debug_slave_wrapper:the_system_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:system_nios2_gen2_0_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "system_onchip_memory2_0" for hierarchy "system:u0|system_onchip_memory2_0:onchip_memory2_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 118
+Info (12128): Elaborating entity "system_onchip_memory2_0" for hierarchy "system:u0|system_onchip_memory2_0:onchip_memory2_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 120
 Info (12128): Elaborating entity "altsyncram" for hierarchy "system:u0|system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_onchip_memory2_0.v Line: 69
 Info (12130): Elaborated megafunction instantiation "system:u0|system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_onchip_memory2_0.v Line: 69
 Info (12133): Instantiated megafunction "system:u0|system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter: File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_onchip_memory2_0.v Line: 69
@@ -3782,7 +3770,7 @@ Info (12128): Elaborating entity "decode_8la" for hierarchy "system:u0|system_on
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5hb.tdf
     Info (12023): Found entity 1: mux_5hb File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/mux_5hb.tdf Line: 23
 Info (12128): Elaborating entity "mux_5hb" for hierarchy "system:u0|system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_6dn1:auto_generated|mux_5hb:mux2" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/altsyncram_6dn1.tdf Line: 45
-Info (12128): Elaborating entity "system_mm_interconnect_0" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 160
+Info (12128): Elaborating entity "system_mm_interconnect_0" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 162
 Info (12128): Elaborating entity "altera_merlin_master_translator" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2_gen2_0_data_master_translator" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0.v Line: 418
 Info (12128): Elaborating entity "altera_merlin_master_translator" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2_gen2_0_instruction_master_translator" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0.v Line: 478
 Info (12128): Elaborating entity "altera_merlin_slave_translator" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:jtag_uart_0_avalon_jtag_slave_translator" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0.v Line: 542
@@ -3816,12 +3804,12 @@ Info (12128): Elaborating entity "system_mm_interconnect_0_rsp_mux_001" for hier
 Info (12128): Elaborating entity "altera_merlin_arbitrator" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|system_mm_interconnect_0_rsp_mux_001:rsp_mux_001|altera_merlin_arbitrator:arb" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0_rsp_mux_001.sv Line: 310
 Info (12128): Elaborating entity "system_mm_interconnect_0_avalon_st_adapter" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|system_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0.v Line: 1797
 Info (12128): Elaborating entity "system_mm_interconnect_0_avalon_st_adapter_error_adapter_0" for hierarchy "system:u0|system_mm_interconnect_0:mm_interconnect_0|system_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|system_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/system_mm_interconnect_0_avalon_st_adapter.v Line: 200
-Info (12128): Elaborating entity "system_irq_mapper" for hierarchy "system:u0|system_irq_mapper:irq_mapper" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 167
-Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "system:u0|altera_reset_controller:rst_controller" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 230
+Info (12128): Elaborating entity "system_irq_mapper" for hierarchy "system:u0|system_irq_mapper:irq_mapper" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 169
+Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "system:u0|altera_reset_controller:rst_controller" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/system.v Line: 232
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/system/submodules/altera_reset_controller.v Line: 220
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.11.23.10:51:45 Progress: Loading slded92777a/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.11.24.10:03:49 Progress: Loading slded92777a/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3844,11 +3832,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/slded92777a/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slded92777a/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/db/ip/slded92777a/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[0]" and its non-tri-state driver. File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_0[1]" and its non-tri-state driver. File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
     Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
     Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
     Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
@@ -3885,6 +3873,7 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GPIO_0[0]~synth" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
+    Warning (13010): Node "GPIO_0[1]~synth" File: C:/Users/osour/Desktop/EmbSys/Rendu2/hw/hdl/DE0_Nano_SoC_top_level.vhd Line: 8
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 37 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/osour/Desktop/EmbSys/Rendu2/hw/quartus/output_files/Rendu2.map.smsg
@@ -3899,10 +3888,10 @@ Info (21057): Implemented 2273 device resources after synthesis - the final reso
     Info (21061): Implemented 1989 logic cells
     Info (21064): Implemented 240 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 5048 megabytes
-    Info: Processing ended: Wed Nov 23 10:51:58 2022
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:01:38
+    Info: Peak virtual memory: 5054 megabytes
+    Info: Processing ended: Thu Nov 24 10:04:01 2022
+    Info: Elapsed time: 00:00:52
+    Info: Total CPU time (on all processors): 00:01:31
 
 
 +------------------------------------------+

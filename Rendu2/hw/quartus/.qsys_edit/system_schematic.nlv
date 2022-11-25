@@ -8,13 +8,14 @@ preplace inst system.onchip_memory2_0 -pg 1 -lvl 3 -y 180
 preplace inst system.nios2_gen2_0 -pg 1 -lvl 1 -y 70
 preplace inst system.Daisy_0 -pg 1 -lvl 3 -y 260
 preplace inst system -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst system.clk_0 -pg 1 -lvl 2 -y 240
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.daisy_0_conduit_end,(SLAVE)Daisy_0.conduit_end) 1 0 3 NJ 330 NJ 330 NJ
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 250 NJ
-preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)jtag_uart_0.clk,(SLAVE)Daisy_0.clock,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1,(MASTER)clk_0.clk) 1 0 3 160 30 NJ 100 820
-preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)jtag_uart_0.reset,(SLAVE)Daisy_0.reset_sink,(SLAVE)nios2_gen2_0.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset) 1 0 3 180 230 540 140 800
-preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_gen2_0.data_master,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)Daisy_0.avalon_slave_0) 1 0 3 160 210 560 120 840
-preplace netloc POINT_TO_POINT<net_container>system</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 1 2 NJ 160 860
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)system.reset) 1 0 2 NJ 270 NJ
-levelinfo -pg 1 0 130 1060
-levelinfo -hier system 140 300 610 910 1050
+preplace inst system.clk_0 -pg 1 -lvl 2 -y 260
+preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)onchip_memory2_0.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)Daisy_0.clock,(MASTER)clk_0.clk,(SLAVE)jtag_uart_0.clk) 1 0 3 170 30 NJ 100 830
+preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)jtag_uart_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)Daisy_0.reset_sink,(SLAVE)nios2_gen2_0.reset,(MASTER)clk_0.clk_reset,(MASTER)nios2_gen2_0.debug_reset_request) 1 0 3 190 230 550 140 810
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)system.clk) 1 0 2 NJ 270 NJ
+preplace netloc POINT_TO_POINT<net_container>system</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 1 2 NJ 160 870
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)system.reset) 1 0 2 NJ 290 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)Daisy_0.conduit_end_1,(SLAVE)system.daisy_0_conduit_end_1) 1 0 3 NJ 330 NJ 330 NJ
+preplace netloc INTERCONNECT<net_container>system</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)Daisy_0.avalon_slave_0,(SLAVE)onchip_memory2_0.s1) 1 0 3 170 210 570 120 850
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)Daisy_0.conduit_end,(SLAVE)system.daisy_0_conduit_end) 1 0 3 NJ 250 NJ 250 NJ
+levelinfo -pg 1 0 140 1070
+levelinfo -hier system 150 310 620 920 1060
