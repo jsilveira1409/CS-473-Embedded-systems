@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+newApplicationWizardPage.defaultLocation=F\:\\LCD\\DE0_Nano_LT24\\software\\lt24_painter
+newBspWizardPage.defaultLocation=F\:\\LCD\\DE0_Nano_LT24\\software\\lt24_painter_bsp
+newBspWizardPage.sopcinfoFile=F\:\\LCD\\DE0_Nano_LT24\\DE0_Nano_SOPC.sopcinfo
+newSoftwareExampleWizardPage.defaultLocation=C\:\\virtiual_disk\\Dee\\DE0_nano\\EPCS\\DE0_Nano_SDRAM_LT24_Painter\\software\\LT24_Test
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\virtiual_disk\\Dee\\DE0_nano\\EPCS\\DE0_Nano_SDRAM_LT24_Painter\\DE0_Nano_SOPC.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\virtiual_disk\\Dee\\DE0_nano\\EPCS\\DE0_Nano_SDRAM_LT24_Painter\\software\\LT24_Test_bsp

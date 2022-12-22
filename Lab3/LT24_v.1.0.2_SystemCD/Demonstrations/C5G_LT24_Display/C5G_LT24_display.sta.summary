@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50_B6A'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 846.304
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50_B6A'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.829
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B6A'
+Slack : 9.239
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 425.910
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50_B6A'
+Slack : 2.349
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 846.453
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50_B6A'
+Slack : -0.006
+TNS   : -0.006
+
+Type  : Slow 1100mV 0C Model Hold 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.879
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B6A'
+Slack : 9.342
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 425.820
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50_B6A'
+Slack : 3.760
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 849.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50_B6A'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50_B6A'
+Slack : 9.123
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 426.211
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50_B6A'
+Slack : 4.232
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 849.613
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50_B6A'
+Slack : -0.086
+TNS   : -0.086
+
+Type  : Fast 1100mV 0C Model Hold 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50_B6A'
+Slack : 9.083
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'lt24_display|timer|pll_50M_to_100K|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 426.205
+TNS   : 0.000
+
+------------------------------------------------------------

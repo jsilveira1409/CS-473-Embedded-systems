@@ -1,0 +1,119 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY "DE2_115_LT24_display"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "14.0"
+set_global_assignment -name LAST_QUARTUS_VERSION "14.0"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:41:14 OCTOBER 03,2014"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 780
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name SDC_FILE DE2_115_LT24_display.SDC
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+#============================================================
+# Include Files
+#============================================================
+set_global_assignment -name VERILOG_FILE DE2_115_lt24_display.v
+set_global_assignment -name VERILOG_FILE ./IP/lt24_display.v
+set_global_assignment -name VERILOG_FILE ./IP/cmd2lcd.v
+set_global_assignment -name VERILOG_FILE ./IP/display.v
+set_global_assignment -name VERILOG_FILE ./IP/pat_update.v
+set_global_assignment -name VERILOG_FILE ./IP/timer.v
+set_global_assignment -name SDC_FILE DE2_115_lt24_display.SDC
+set_global_assignment -name QIP_FILE ./lib/pll_50M_to_100K.qip
+
+#============================================================
+# CLOCK
+#============================================================
+set_location_assignment PIN_Y2 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_location_assignment PIN_AG14 -to CLOCK2_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50
+set_location_assignment PIN_AG15 -to CLOCK3_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50
+
+#============================================================
+# KEY
+#============================================================
+set_location_assignment PIN_M23 -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_location_assignment PIN_M21 -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+set_location_assignment PIN_N21 -to KEY[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2]
+set_location_assignment PIN_R24 -to KEY[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
+
+#============================================================
+# GPIO, GPIO connect to LT24 - 2.4" LCD and Touch
+#============================================================
+set_location_assignment PIN_AB22 -to LT24_ADC_PENIRQ_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_PENIRQ_N
+set_location_assignment PIN_AC15 -to LT24_ADC_DOUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_DOUT
+set_location_assignment PIN_AB21 -to LT24_ADC_BUSY
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_BUSY
+set_location_assignment PIN_Y17 -to LT24_ADC_DIN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_DIN
+set_location_assignment PIN_AC21 -to LT24_ADC_DCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_DCLK
+set_location_assignment PIN_Y16 -to LT24_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[3]
+set_location_assignment PIN_AD21 -to LT24_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[2]
+set_location_assignment PIN_AE16 -to LT24_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[1]
+set_location_assignment PIN_AD15 -to LT24_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[0]
+set_location_assignment PIN_AC19 -to LT24_RD_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_RD_N
+set_location_assignment PIN_AF16 -to LT24_WR_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_WR_N
+set_location_assignment PIN_AD19 -to LT24_RS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_RS
+set_location_assignment PIN_AF15 -to LT24_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[4]
+set_location_assignment PIN_AF24 -to LT24_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[5]
+set_location_assignment PIN_AE21 -to LT24_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[6]
+set_location_assignment PIN_AF25 -to LT24_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[7]
+set_location_assignment PIN_AC22 -to LT24_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[8]
+set_location_assignment PIN_AE22 -to LT24_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[9]
+set_location_assignment PIN_AF21 -to LT24_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[10]
+set_location_assignment PIN_AF22 -to LT24_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[11]
+set_location_assignment PIN_AD22 -to LT24_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[12]
+set_location_assignment PIN_AG25 -to LT24_D[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[13]
+set_location_assignment PIN_AD25 -to LT24_D[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[14]
+set_location_assignment PIN_AH25 -to LT24_D[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_D[15]
+set_location_assignment PIN_AE25 -to LT24_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_CS_N
+set_location_assignment PIN_AH26 -to LT24_RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_RESET_N
+set_location_assignment PIN_AH23 -to LT24_ADC_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_ADC_CS_N
+set_location_assignment PIN_AG26 -to LT24_LCD_ON
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LT24_LCD_ON
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -1,0 +1,10 @@
+parameter CMD_NOP              = 8'h00 ;    // ; LCD command -- NOP
+parameter CMD_SLPIN            = 8'h10 ;    // ; LCD command -- SLPIN
+parameter CMD_SLPOUT           = 8'h11 ;    // ; LCD command -- SLPOUT
+parameter CMD_RDDSDR           = 8'h0F ;    // ; LCD command -- RDDSDR
+parameter CMD_DISPON           = 8'h29 ;    // ; LCD command -- DISPON
+parameter CMD_CASET            = 8'h2A ;    // ; LCD command -- CASET
+parameter CMD_PASET            = 8'h2B ;    // ; LCD command -- PASET
+parameter CMD_RAMWR            = 8'h2C ;    // ; LCD command -- RAMWR
+parameter CMD_RGBSET           = 8'h2D ;    // ; LCD command -- RGBSET
+parameter CMD_PIXSET           = 8'h3A ;    // ; LCD command -- PIXSET

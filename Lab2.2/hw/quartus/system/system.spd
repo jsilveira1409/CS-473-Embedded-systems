@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
- <topLevel name="system" />
- <deviceFamily name="cyclonev" />
- <modelMap
-   controllerPath="system.onchip_memory2_0"
-   modelPath="system.onchip_memory2_0" />
-</simPackage>

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed May 27 12:01:04 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE2_LT24_Painter
+Top-level Entity Name : DE2_LT24_Painter
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 4,353 / 33,216 ( 13 % )
+    Total combinational functions : 3,824 / 33,216 ( 12 % )
+    Dedicated logic registers : 2,887 / 33,216 ( 9 % )
+Total registers : 2955
+Total pins : 421 / 475 ( 89 % )
+Total virtual pins : 0
+Total memory bits : 65,472 / 483,840 ( 14 % )
+Embedded Multiplier 9-bit elements : 4 / 70 ( 6 % )
+Total PLLs : 1 / 4 ( 25 % )

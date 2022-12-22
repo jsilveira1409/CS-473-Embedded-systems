@@ -1,0 +1,37 @@
+!SESSION 2015-05-27 11:47:54.104 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-05-27 11:49:17.112
+!MESSAGE Indexed 'DE2_SDRAM_LT24_Painter_bsp' (82 sources, 62 headers) in 1.05 sec: 975 declarations; 2,487 references; 118 unresolved inclusions; 5 syntax errors; 206 unresolved names (5.62%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-05-27 11:49:19.587
+!MESSAGE Indexed 'DE2_SDRAM_LT24_Painter' (1 sources, 13 headers) in 0.01 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 11:52:55.322
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x8001090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 11:52:57.217
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x8001090 /cygdrive/f/LT24/DE2_SDRAM_LT24_Painter/software/DE2_SDRAM_LT24_Painter/DE2_SDRAM_LT24_Painter.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:01:45.482
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:01:46.262
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x8001090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:01:48.073
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x8001090 /cygdrive/f/LT24/DE2_SDRAM_LT24_Painter/software/DE2_SDRAM_LT24_Painter/DE2_SDRAM_LT24_Painter.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:02:05.372
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:02:05.971
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x8001090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2015-05-27 12:02:07.793
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x8001090 /cygdrive/f/LT24/DE2_SDRAM_LT24_Painter/software/DE2_SDRAM_LT24_Painter/DE2_SDRAM_LT24_Painter.elf]

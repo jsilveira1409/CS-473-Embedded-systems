@@ -1,0 +1,583 @@
+!SESSION 2014-04-28 12:00:11.938 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-28 12:01:07.957
+!MESSAGE Indexed 'lt24_painter' (84 sources, 64 headers) in 1.17 sec: 1,143 declarations; 3,042 references; 121 unresolved inclusions; 5 syntax errors; 215 unresolved names (4.89%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-28 12:02:10.506
+!MESSAGE Indexed 'lt24_painter_bsp' (84 sources, 64 headers) in 0.60 sec: 1,143 declarations; 3,042 references; 121 unresolved inclusions; 5 syntax errors; 215 unresolved names (4.89%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-28 12:02:32.867
+!MESSAGE Indexed 'lt24_painter' (0 sources, 13 headers) in 0.01 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 12:05:00.943
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4000050 --id=0x0 --timestamp=1398651590]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 12:05:06.854
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4000050 --id=0x0 --timestamp=1398651590 /cygdrive/f/LCD/DE0_Nano_LT24/software/lt24_painter/lt24_painter.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 12:09:01.621
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4000050 --id=0x0 --timestamp=1398651590]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 12:09:07.005
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4000050 --id=0x0 --timestamp=1398651590 /cygdrive/f/LCD/DE0_Nano_LT24/software/lt24_painter/lt24_painter.elf]
+!SESSION 2014-04-28 13:41:49.753 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 13:42:16.990
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4000050 --id=0x0 --timestamp=1398651590]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 13:42:22.542
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4000050 --id=0x0 --timestamp=1398651590 /cygdrive/f/LCD/DE0_Nano_LT24/software/lt24_painter/lt24_painter.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 13:51:32.758
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-04-28 13:51:42.206
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 13:52:28.055
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x4000050]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-04-28 13:52:32.431
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x4000050 /cygdrive/f/LCD/DE0_Nano_LT24/software/lt24_painter/lt24_painter.elf]
+!SESSION 2014-06-20 19:15:36.952 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-20 19:15:51.435
+!MESSAGE Indexed 'lt24_painter' (13 sources, 25 headers) in 0.46 sec: 1,454 declarations; 3,926 references; 43 unresolved inclusions; 0 syntax errors; 356 unresolved names (6.21%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-20 19:15:51.864
+!MESSAGE Indexed 'lt24_painter_bsp' (84 sources, 64 headers) in 0.37 sec: 1,143 declarations; 3,042 references; 121 unresolved inclusions; 5 syntax errors; 215 unresolved names (4.89%)
+!SESSION 2014-06-20 19:32:55.828 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-20 19:34:42.446
+!MESSAGE Indexed 'LT24_Test_bsp' (85 sources, 110 headers) in 0.88 sec: 1,910 declarations; 4,033 references; 80 unresolved inclusions; 198 syntax errors; 196 unresolved names (3.19%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-20 19:34:43.140
+!MESSAGE Indexed 'LT24_Test' (1 sources, 13 headers) in 0.01 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:35:15.101
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403259237]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:35:16.986
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403259237 /cygdrive/d/Home/User/Desktop/DE0_Nano_LT24_Painter_try/software/LT24_Test/LT24_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-06-20 19:37:20.351
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-06-20 19:37:20.355
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-06-20 19:41:42.109 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:42:49.996
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:42:51.947
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/DE0_Nano_LT24_Painter_try/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-06-20 19:46:12.474 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:47:50.515
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:47:52.464
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/DE0_Nano_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-06-20 19:48:24.741 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:48:37.759
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-06-20 19:48:39.669
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/DE0_Nano_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 15:34:02.585 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 15:34:15.223
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 15:34:16.275
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 15:34:16.275
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 15:34:16.275
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 15:34:16.275
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 15:34:16.275
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:34:16.275
+!MESSAGE OK
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2014-07-01 15:34:24.153
+!MESSAGE Usage data upload to http://udc.eclipse.org/upload.php failed with error code 404.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:35:15.863
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:35:17.895
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:37:26.149
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:37:28.144
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 15:37:50.737 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 15:37:54.870
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 15:37:56.095
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 15:37:56.095
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 15:37:56.095
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 15:37:56.095
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 15:37:56.095
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:37:56.095
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:38:01.505
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:38:03.429
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 15:42:11.288 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 15:42:16.602
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 15:42:17.785
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 15:42:17.785
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 15:42:17.785
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 15:42:17.785
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 15:42:17.785
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:42:17.785
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:43:35.579
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:43:37.547
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 15:46:32.501 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 15:46:38.177
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 15:46:39.296
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:46:39.296
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:46:39.296
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:46:39.296
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:46:39.296
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 15:46:39.296
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 15:46:39.296
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 15:46:39.297
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 15:46:39.297
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:46:39.297
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:46:44.764
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:46:46.729
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 15:47:00.779 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 15:47:04.265
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 15:47:05.560
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 15:47:05.560
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 15:47:05.560
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 15:47:05.560
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 15:47:05.560
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 15:47:05.560
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:47:11.921
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x5000050 --id=0x0 --timestamp=1403264366]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-07-01 15:47:13.939
+!MESSAGE Executing: [C:/altera/13.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x5000050 --id=0x0 --timestamp=1403264366 /cygdrive/d/Home/User/Desktop/Test/DE0_Nano_SDRAM_LT24_Painter/software/LT24_Test/LT24_Test.elf]
+!SESSION 2014-07-01 17:15:45.276 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-07-01 17:16:07.338
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-07-01 17:16:09.658
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-07-01 17:16:09.658
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-07-01 17:16:09.658
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-07-01 17:16:09.658
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-07-01 17:16:09.658
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-07-01 17:16:09.658
+!MESSAGE OK
+!SESSION 2014-07-02 13:50:54.658 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 4 567 2014-07-02 13:50:57.610
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2014-07-02 13:50:57.610
+!MESSAGE Could not read metadata for 'LT24_Test'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'LT24_Test' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2503)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2014-07-02 13:50:57.611
+!MESSAGE The project description file (.project) for 'LT24_Test' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2014-07-02 13:50:57.611
+!MESSAGE Could not read metadata for 'LT24_Test_bsp'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'LT24_Test_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2503)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2014-07-02 13:50:57.611
+!MESSAGE The project description file (.project) for 'LT24_Test_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-07-02 13:52:09.927
+!MESSAGE Indexed 'LT24_Test_bsp' (85 sources, 106 headers) in 1.20 sec: 2,008 declarations; 3,985 references; 95 unresolved inclusions; 50 syntax errors; 193 unresolved names (3.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-07-02 13:52:11.362
+!MESSAGE Indexed 'LT24_Test' (0 sources, 13 headers) in 0.01 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

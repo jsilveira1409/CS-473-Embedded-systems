@@ -1,7 +1,0 @@
-	component system2 is
-		port (
-			clk_clk                                      : in  std_logic := 'X'; -- clk
-			daisyport_0_conduit_end_writeresponsevalid_n : out std_logic         -- writeresponsevalid_n
-		);
-	end component system2;
-

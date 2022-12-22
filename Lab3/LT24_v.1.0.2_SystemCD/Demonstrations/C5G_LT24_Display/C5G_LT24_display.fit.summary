@@ -1,0 +1,19 @@
+Fitter Status : Successful - Fri Oct 03 16:39:58 2014
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
+Revision Name : C5G_LT24_display
+Top-level Entity Name : C5G_LT24_display
+Family : Cyclone V
+Device : 5CGXFC5C6F27C7
+Timing Models : Final
+Logic utilization (in ALMs) : 331 / 29,080 ( 1 % )
+Total registers : 446
+Total pins : 39 / 364 ( 11 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 4,567,040 ( 0 % )
+Total DSP Blocks : 1 / 150 ( < 1 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 1 / 12 ( 8 % )
+Total DLLs : 0 / 4 ( 0 % )
