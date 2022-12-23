@@ -110,7 +110,7 @@ entity lcd_controller is
 							RESX <= '0';
 							reset_flag_reset <= '0';
 							reset_cnt <= reset_cnt + 1;
-							current_state <= RESET
+							current_state <= RESET;
 							
 						else 
 							RESX <= '1';
