@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project DE2_SDRAM_LT24_Painter ****
+
+make all 
+Info: Building ../DE2_SDRAM_LT24_Painter_bsp/
+make --no-print-directory -C ../DE2_SDRAM_LT24_Painter_bsp/
+[BSP build complete]
+[DE2_SDRAM_LT24_Painter build complete]
+
+**** Build Finished ****

@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Failed - Fri Dec 23 18:04:13 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : ES_mini_project_TRDB_D5M_LT24
+Top-level Entity Name : DE0_Nano_SoC_TRDB_D5M_LT24_top_level
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge

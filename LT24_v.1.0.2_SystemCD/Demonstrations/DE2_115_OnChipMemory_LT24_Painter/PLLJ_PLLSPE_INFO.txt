@@ -1,0 +1,5 @@
+PLL_Name	lt24_qsys:u0|lt24_qsys_altpll_sys:altpll_sys|lt24_qsys_altpll_sys_altpll_oka2:sd1|pll7
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,182 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 608 496)
+	(text "lt24_qsys" (rect 276 -1 316 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 480 20 492)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 272 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "key_external_connection_export[3..0]" (rect 0 0 149 12)(font "Arial" (font_size 8)))
+		(text "key_external_connection_export[3..0]" (rect 4 101 220 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 272 112)(line_width 3))
+	)
+	(port
+		(pt 0 296)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 285 82 296)(font "Arial" (font_size 8)))
+		(line (pt 0 296)(pt 272 296)(line_width 1))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "touch_panel_busy_external_connection_export" (rect 0 0 187 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_busy_external_connection_export" (rect 4 325 262 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 272 336)(line_width 1))
+	)
+	(port
+		(pt 0 376)
+		(input)
+		(text "touch_panel_pen_irq_n_external_connection_export" (rect 0 0 207 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_pen_irq_n_external_connection_export" (rect 4 365 292 376)(font "Arial" (font_size 8)))
+		(line (pt 0 376)(pt 272 376)(line_width 1))
+	)
+	(port
+		(pt 0 416)
+		(input)
+		(text "touch_panel_spi_external_MISO" (rect 0 0 129 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_spi_external_MISO" (rect 4 405 178 416)(font "Arial" (font_size 8)))
+		(line (pt 0 416)(pt 272 416)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "lcd_reset_n_export" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "lcd_reset_n_export" (rect 4 141 112 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 272 152)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "lt24_controller_0_conduit_end_cs" (rect 0 0 134 12)(font "Arial" (font_size 8)))
+		(text "lt24_controller_0_conduit_end_cs" (rect 4 181 196 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 272 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(output)
+		(text "lt24_controller_0_conduit_end_rs" (rect 0 0 133 12)(font "Arial" (font_size 8)))
+		(text "lt24_controller_0_conduit_end_rs" (rect 4 197 196 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 272 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "lt24_controller_0_conduit_end_rd" (rect 0 0 133 12)(font "Arial" (font_size 8)))
+		(text "lt24_controller_0_conduit_end_rd" (rect 4 213 196 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 272 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "lt24_controller_0_conduit_end_wr" (rect 0 0 134 12)(font "Arial" (font_size 8)))
+		(text "lt24_controller_0_conduit_end_wr" (rect 4 229 196 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 272 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "lt24_controller_0_conduit_end_data[15..0]" (rect 0 0 165 12)(font "Arial" (font_size 8)))
+		(text "lt24_controller_0_conduit_end_data[15..0]" (rect 4 245 250 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 272 256)(line_width 3))
+	)
+	(port
+		(pt 0 432)
+		(output)
+		(text "touch_panel_spi_external_MOSI" (rect 0 0 129 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_spi_external_MOSI" (rect 4 421 178 432)(font "Arial" (font_size 8)))
+		(line (pt 0 432)(pt 272 432)(line_width 1))
+	)
+	(port
+		(pt 0 448)
+		(output)
+		(text "touch_panel_spi_external_SCLK" (rect 0 0 132 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_spi_external_SCLK" (rect 4 437 178 448)(font "Arial" (font_size 8)))
+		(line (pt 0 448)(pt 272 448)(line_width 1))
+	)
+	(port
+		(pt 0 464)
+		(output)
+		(text "touch_panel_spi_external_SS_n" (rect 0 0 128 12)(font "Arial" (font_size 8)))
+		(text "touch_panel_spi_external_SS_n" (rect 4 453 178 464)(font "Arial" (font_size 8)))
+		(line (pt 0 464)(pt 272 464)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 257 43 532 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 277 67 572 144)(font "Arial" (color 0 0 0)))
+		(text "key_external_connection" (rect 130 83 398 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 107 590 224)(font "Arial" (color 0 0 0)))
+		(text "lcd_reset_n" (rect 204 123 474 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 147 590 304)(font "Arial" (color 0 0 0)))
+		(text "lt24_controller_0_conduit_end" (rect 97 163 368 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "cs" (rect 277 187 566 384)(font "Arial" (color 0 0 0)))
+		(text "rs" (rect 277 203 566 416)(font "Arial" (color 0 0 0)))
+		(text "rd" (rect 277 219 566 448)(font "Arial" (color 0 0 0)))
+		(text "wr" (rect 277 235 566 480)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 277 251 578 512)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 243 267 516 547)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 277 291 596 592)(font "Arial" (color 0 0 0)))
+		(text "touch_panel_busy_external_connection" (rect 45 307 306 627)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 331 590 672)(font "Arial" (color 0 0 0)))
+		(text "touch_panel_pen_irq_n_external_connection" (rect 13 347 272 707)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 371 590 752)(font "Arial" (color 0 0 0)))
+		(text "touch_panel_spi_external" (rect 124 387 392 787)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "MISO" (rect 277 411 578 832)(font "Arial" (color 0 0 0)))
+		(text "MOSI" (rect 277 427 578 864)(font "Arial" (color 0 0 0)))
+		(text "SCLK" (rect 277 443 578 896)(font "Arial" (color 0 0 0)))
+		(text "SS_n" (rect 277 459 578 928)(font "Arial" (color 0 0 0)))
+		(text " lt24_qsys " (rect 562 480 1190 970)(font "Arial" ))
+		(line (pt 272 32)(pt 336 32)(line_width 1))
+		(line (pt 336 32)(pt 336 480)(line_width 1))
+		(line (pt 272 480)(pt 336 480)(line_width 1))
+		(line (pt 272 32)(pt 272 480)(line_width 1))
+		(line (pt 273 52)(pt 273 76)(line_width 1))
+		(line (pt 274 52)(pt 274 76)(line_width 1))
+		(line (pt 273 92)(pt 273 116)(line_width 1))
+		(line (pt 274 92)(pt 274 116)(line_width 1))
+		(line (pt 273 132)(pt 273 156)(line_width 1))
+		(line (pt 274 132)(pt 274 156)(line_width 1))
+		(line (pt 273 172)(pt 273 260)(line_width 1))
+		(line (pt 274 172)(pt 274 260)(line_width 1))
+		(line (pt 273 276)(pt 273 300)(line_width 1))
+		(line (pt 274 276)(pt 274 300)(line_width 1))
+		(line (pt 273 316)(pt 273 340)(line_width 1))
+		(line (pt 274 316)(pt 274 340)(line_width 1))
+		(line (pt 273 356)(pt 273 380)(line_width 1))
+		(line (pt 274 356)(pt 274 380)(line_width 1))
+		(line (pt 273 396)(pt 273 468)(line_width 1))
+		(line (pt 274 396)(pt 274 468)(line_width 1))
+		(line (pt 0 0)(pt 608 0)(line_width 1))
+		(line (pt 608 0)(pt 608 496)(line_width 1))
+		(line (pt 0 496)(pt 608 496)(line_width 1))
+		(line (pt 0 0)(pt 0 496)(line_width 1))
+	)
+)

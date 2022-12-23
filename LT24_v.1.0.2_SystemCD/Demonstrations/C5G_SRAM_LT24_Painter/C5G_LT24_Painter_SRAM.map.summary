@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Jun 23 08:46:11 2014
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : C5G_LT24_Painter_SRAM
+Top-level Entity Name : C5G_LT24_Painter_SRAM
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 2581
+Total pins : 168
+Total virtual pins : 0
+Total block memory bits : 64,128
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 1
+Total DLLs : 0

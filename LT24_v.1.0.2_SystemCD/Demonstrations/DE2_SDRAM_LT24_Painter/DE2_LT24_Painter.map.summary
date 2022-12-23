@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 27 12:00:35 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE2_LT24_Painter
+Top-level Entity Name : DE2_LT24_Painter
+Family : Cyclone II
+Total logic elements : 4,866
+    Total combinational functions : 3,817
+    Dedicated logic registers : 3,003
+Total registers : 3003
+Total pins : 421
+Total virtual pins : 0
+Total memory bits : 65,472
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1
