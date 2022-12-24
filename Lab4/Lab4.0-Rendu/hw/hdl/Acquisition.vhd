@@ -1,8 +1,10 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
+use work.lcd_package.all;
 
-entity AcquModule is
+
+entity acq_controller is
     port(
     clk : in std_logic;
     nReset : in std_logic;
@@ -19,6 +21,9 @@ entity AcquModule is
     AS_Read : in std_logic ; 
     AS_DataWrite : in std_logic_vector(31 downto 0) ; 
     AS_DataRead : out std_logic_vector(31 downto 0) ; 
+	 AS_reset_flag_cmd : in std_logic;
+	 AS_reset_flag_enable : in std_logic;
+    AS_reset_flag_reset : in std_logic
 
     -- Avalon Master : 
     AM_Address : out std_logic_vector(31 downto 0);
@@ -35,10 +40,11 @@ entity AcquModule is
     FIFO_Almost_Full : in std_logic
     );
 
-end AcquModule;
+end acq_controller;
 
-Architecture Comp of AcquModule is 
-TYPE AcqState is (Idle, WaitData, WaitFifo, Request, AcqData); 
+Architecture Comp of acq_controller is 
+
+
 Signal AcqAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal AcqLength: STD_LOGIC_VECTOR(31 downto 0); 
 Signal CntAddress: STD_LOGIC_VECTOR(31 downto 0); 

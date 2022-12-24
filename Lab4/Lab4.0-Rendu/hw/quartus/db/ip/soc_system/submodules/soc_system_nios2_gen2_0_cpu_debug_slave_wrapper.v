@@ -108,6 +108,7 @@ wire             take_no_action_break_b;
 wire             take_no_action_break_c;
 wire             take_no_action_ocimem_a;
 wire             vji_cdr;
+wire             vji_e1dr;
 wire    [  1: 0] vji_ir_in;
 wire    [  1: 0] vji_ir_out;
 wire             vji_rti;
@@ -115,8 +116,9 @@ wire             vji_sdr;
 wire             vji_tck;
 wire             vji_tdi;
 wire             vji_tdo;
-wire             vji_udr;
 wire             vji_uir;
+wire             vs_e1dr_d1;
+wire             vs_uir_d1;
   //Change the sld_virtual_jtag_basic's defparams to
   //switch between a regular Nios II or an internally embedded Nios II.
   //For a regular Nios II, sld_mfg_id = 70, sld_type_id = 34.
@@ -152,8 +154,11 @@ wire             vji_uir;
       .trigbrktype        (trigbrktype),
       .trigger_state_1    (trigger_state_1),
       .vs_cdr             (vji_cdr),
+      .vs_e1dr            (vji_e1dr),
+      .vs_e1dr_d1         (vs_e1dr_d1),
       .vs_sdr             (vji_sdr),
-      .vs_uir             (vji_uir)
+      .vs_uir             (vji_uir),
+      .vs_uir_d1          (vs_uir_d1)
     );
 
   soc_system_nios2_gen2_0_cpu_debug_slave_sysclk the_soc_system_nios2_gen2_0_cpu_debug_slave_sysclk
@@ -172,8 +177,8 @@ wire             vji_uir;
       .take_no_action_break_b  (take_no_action_break_b),
       .take_no_action_break_c  (take_no_action_break_c),
       .take_no_action_ocimem_a (take_no_action_ocimem_a),
-      .vs_udr                  (vji_udr),
-      .vs_uir                  (vji_uir)
+      .vs_e1dr_d1              (vs_e1dr_d1),
+      .vs_uir_d1               (vs_uir_d1)
     );
 
 
@@ -185,7 +190,7 @@ wire             vji_uir;
   assign vji_cdr = 1'b0;
   assign vji_rti = 1'b0;
   assign vji_uir = 1'b0;
-  assign vji_udr = 1'b0;
+  assign vji_e1dr = 1'b0;
   assign vji_ir_in = 2'b0;
 
 //////////////// END SIMULATION-ONLY CONTENTS
@@ -201,8 +206,8 @@ wire             vji_uir;
 //      .tdi (vji_tdi),
 //      .tdo (vji_tdo),
 //      .virtual_state_cdr (vji_cdr),
+//      .virtual_state_e1dr (vji_e1dr),
 //      .virtual_state_sdr (vji_sdr),
-//      .virtual_state_udr (vji_udr),
 //      .virtual_state_uir (vji_uir)
 //    );
 //

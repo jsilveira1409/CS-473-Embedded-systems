@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ES_mini_project_TRDB_D5M_LT24
-Fri Dec 23 18:04:13 2022
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Fri Dec 23 19:05:40 2022
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -18,7 +18,7 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,22 +35,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Dec 23 18:04:13 2022           ;
-; Quartus Prime Version       ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
-; Revision Name               ; ES_mini_project_TRDB_D5M_LT24               ;
-; Top-level Entity Name       ; DE0_Nano_SoC_TRDB_D5M_LT24_top_level        ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-----------------------------+------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Dec 23 19:05:40 2022              ;
+; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name               ; ES_mini_project_TRDB_D5M_LT24                  ;
+; Top-level Entity Name       ; DE0_Nano_SoC_TRDB_D5M_LT24_top_level           ;
+; Family                      ; Cyclone V                                      ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -145,8 +145,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,34 +161,34 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Dec 23 18:02:28 2022
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Fri Dec 23 19:04:18 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ES_mini_project_TRDB_D5M_LT24 -c ES_mini_project_TRDB_D5M_LT24
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12248): Elaborating Platform Designer system entity "soc_system.qsys"
-Info (12250): 2022.12.23.18:02:41 Progress: Loading quartus/soc_system.qsys
-Info (12250): 2022.12.23.18:02:42 Progress: Reading input file
-Info (12250): 2022.12.23.18:02:42 Progress: Adding address_span_extender_0 [altera_address_span_extender 21.1]
-Info (12250): 2022.12.23.18:02:43 Progress: Parameterizing module address_span_extender_0
-Info (12250): 2022.12.23.18:02:43 Progress: Adding clk_0 [clock_source 21.1]
-Info (12250): 2022.12.23.18:02:43 Progress: Parameterizing module clk_0
-Info (12250): 2022.12.23.18:02:43 Progress: Adding hps_0 [altera_hps 21.1]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module hps_0
-Info (12250): 2022.12.23.18:02:45 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2022.12.23.18:02:45 Progress: Adding lcd_component_0 [lcd_component 1.0]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module lcd_component_0
-Info (12250): 2022.12.23.18:02:45 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module nios2_gen2_0
-Info (12250): 2022.12.23.18:02:45 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2022.12.23.18:02:45 Progress: Adding pio_leds [altera_avalon_pio 21.1]
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing module pio_leds
-Info (12250): 2022.12.23.18:02:45 Progress: Building connections
-Info (12250): 2022.12.23.18:02:45 Progress: Parameterizing connections
-Info (12250): 2022.12.23.18:02:45 Progress: Validating
-Info (12250): 2022.12.23.18:02:56 Progress: Done reading input file
+Info (12250): 2022.12.23.19:04:32 Progress: Loading quartus/soc_system.qsys
+Info (12250): 2022.12.23.19:04:32 Progress: Reading input file
+Info (12250): 2022.12.23.19:04:33 Progress: Adding address_span_extender_0 [altera_address_span_extender 22.1]
+Info (12250): 2022.12.23.19:04:34 Progress: Parameterizing module address_span_extender_0
+Info (12250): 2022.12.23.19:04:34 Progress: Adding clk_0 [clock_source 22.1]
+Info (12250): 2022.12.23.19:04:34 Progress: Parameterizing module clk_0
+Info (12250): 2022.12.23.19:04:34 Progress: Adding hps_0 [altera_hps 22.1]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module hps_0
+Info (12250): 2022.12.23.19:04:36 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 22.1]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2022.12.23.19:04:36 Progress: Adding lcd_component_0 [lcd_component 1.0]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module lcd_component_0
+Info (12250): 2022.12.23.19:04:36 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module nios2_gen2_0
+Info (12250): 2022.12.23.19:04:36 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 22.1]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2022.12.23.19:04:36 Progress: Adding pio_leds [altera_avalon_pio 22.1]
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing module pio_leds
+Info (12250): 2022.12.23.19:04:36 Progress: Building connections
+Info (12250): 2022.12.23.19:04:36 Progress: Parameterizing connections
+Info (12250): 2022.12.23.19:04:36 Progress: Validating
+Info (12250): 2022.12.23.19:04:48 Progress: Done reading input file
 Warning (12251): Soc_system.hps_0: Setting the slave port width of interface f2h_sdram0 to 32 results in bandwidth under-utilization.  Altera recommends you set the interface data width to 64-bit or greater.
 Info (12250): Soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
 Info (12250): Soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
@@ -208,17 +208,17 @@ Warning (12251): Hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desi
 Warning (12251): Hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info (12250): Hps_0: "soc_system" instantiated altera_hps "hps_0"
 Info (12250): Jtag_uart_0: Starting RTL generation for module 'soc_system_jtag_uart_0'
-Info (12250): Jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0003_jtag_uart_0_gen//soc_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0:   Generation command is [exec /root/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /root/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_0 --dir=/tmp/alt9349_2058057063690266850.dir/0003_jtag_uart_0_gen/ --quartus_dir=/root/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9349_2058057063690266850.dir/0003_jtag_uart_0_gen//soc_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Jtag_uart_0: Done RTL generation for module 'soc_system_jtag_uart_0'
 Info (12250): Jtag_uart_0: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info (12250): Lcd_component_0: "soc_system" instantiated lcd_component "lcd_component_0"
 Info (12250): Nios2_gen2_0: "soc_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info (12250): Onchip_memory2_0: Starting RTL generation for module 'soc_system_onchip_memory2_0'
-Info (12250): Onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0005_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0:   Generation command is [exec /root/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /root/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_memory2_0 --dir=/tmp/alt9349_2058057063690266850.dir/0005_onchip_memory2_0_gen/ --quartus_dir=/root/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9349_2058057063690266850.dir/0005_onchip_memory2_0_gen//soc_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Onchip_memory2_0: Done RTL generation for module 'soc_system_onchip_memory2_0'
 Info (12250): Onchip_memory2_0: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info (12250): Pio_leds: Starting RTL generation for module 'soc_system_pio_leds'
-Info (12250): Pio_leds:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_leds --dir=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0006_pio_leds_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0006_pio_leds_gen//soc_system_pio_leds_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_leds:   Generation command is [exec /root/intelFPGA_lite/22.1std/quartus/linux64/perl/bin/perl -I /root/intelFPGA_lite/22.1std/quartus/linux64/perl/lib -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /root/intelFPGA_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_leds --dir=/tmp/alt9349_2058057063690266850.dir/0006_pio_leds_gen/ --quartus_dir=/root/intelFPGA_lite/22.1std/quartus --verilog --config=/tmp/alt9349_2058057063690266850.dir/0006_pio_leds_gen//soc_system_pio_leds_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_leds: Done RTL generation for module 'soc_system_pio_leds'
 Info (12250): Pio_leds: "soc_system" instantiated altera_avalon_pio "pio_leds"
 Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -235,21 +235,21 @@ Info (12250): Rst_controller: "soc_system" instantiated altera_reset_controller 
 Info (12250): Fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
 Info (12250): Hps_io: "hps_0" instantiated altera_hps_io "hps_io"
 Info (12250): Cpu: Starting RTL generation for module 'soc_system_nios2_gen2_0_cpu'
-Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/21.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/21.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_0_cpu --dir=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/21.1/quartus/bin64/ --verilog --config=C:/Users/osour/AppData/Local/Temp/alt9349_2830897055899635430.dir/0010_cpu_gen//soc_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*) Starting Nios II generation
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)   Elaborating CPU configuration settings
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)   Creating all objects for CPU
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)     Testbench
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)     Instruction decoding
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)       Instruction fields
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)       Instruction decodes
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)       Signals for RTL simulation waveforms
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)       Instruction controls
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)     Pipeline frontend
-Info (12250): Cpu: # 2022.12.23 18:03:38 (*)     Pipeline backend
-Info (12250): Cpu: # 2022.12.23 18:03:40 (*)   Generating RTL from CPU objects
-Info (12250): Cpu: # 2022.12.23 18:03:40 (*)   Creating plain-text RTL
-Info (12250): Cpu: # 2022.12.23 18:03:41 (*) Done Nios II generation
+Info (12250): Cpu:   Generation command is [exec /root/intelFPGA_lite/22.1std/quartus/linux64//perl/bin/perl -I /root/intelFPGA_lite/22.1std/quartus/linux64//perl/lib -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin/europa -I /root/intelFPGA_lite/22.1std/quartus/sopc_builder/bin -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /root/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /root/intelFPGA_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=soc_system_nios2_gen2_0_cpu --dir=/tmp/alt9349_2058057063690266850.dir/0010_cpu_gen/ --quartus_bindir=/root/intelFPGA_lite/22.1std/quartus/linux64/ --verilog --config=/tmp/alt9349_2058057063690266850.dir/0010_cpu_gen//soc_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2022.12.23 19:05:07 (*) Starting Nios II generation
+Info (12250): Cpu: # 2022.12.23 19:05:07 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)     Testbench
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)     Instruction decoding
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)       Instruction fields
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)       Instruction decodes
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)       Signals for RTL simulation waveforms
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)       Instruction controls
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)     Pipeline frontend
+Info (12250): Cpu: # 2022.12.23 19:05:08 (*)     Pipeline backend
+Info (12250): Cpu: # 2022.12.23 19:05:10 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2022.12.23 19:05:10 (*)   Creating plain-text RTL
+Info (12250): Cpu: # 2022.12.23 19:05:11 (*) Done Nios II generation
 Info (12250): Cpu: Done RTL generation for module 'soc_system_nios2_gen2_0_cpu'
 Info (12250): Cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info (12250): Lcd_component_0_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "lcd_component_0_avalon_master_translator"
@@ -265,373 +265,318 @@ Info (12250): Router_004: "mm_interconnect_0" instantiated altera_merlin_router 
 Info (12250): Router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info (12250): Router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
 Info (12250): Nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_sc_fifo.v
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_sc_fifo.v
 Info (12250): Lcd_component_0_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "lcd_component_0_slave_burst_adapter"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_base.v
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_base.v
 Info (12250): Cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info (12250): Cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info (12250): Cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info (12250): Cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info (12250): Cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info (12250): Rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
 Info (12250): Rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Lcd_component_0_avalon_master_to_address_span_extender_0_windowed_slave_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "lcd_component_0_avalon_master_to_address_span_extender_0_windowed_slave_cmd_width_adapter"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_address_alignment.sv
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_uncompressor.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_address_alignment.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_uncompressor.sv
 Info (12250): Avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info (12250): Avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
 Info (12250): Router: "mm_interconnect_1" instantiated altera_merlin_router "router"
 Info (12250): Router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
 Info (12250): Cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info (12250): Cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
-Info (12250): Reusing file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: Error during execution of "{C:/intelfpga_lite/21.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt": child process exited abnormally
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: Execution of command "{C:/intelfpga_lite/21.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt" failed
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: /mnt/c/intelfpga_lite/21.1/quartus/bin64/uniphy_mcc.exe -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer/sequencer_auto_inst_init.c -DAC_ROM_USER_ADD_0=0_0000_0000_0000 -DAC_ROM_USER_ADD_1=0_0000_0000_1000 -DAC_ROM_MR0=0010000110001 -DAC_ROM_MR0_CALIB= -DAC_ROM_MR0_DLL_RESET=0010100110000 -DAC_ROM_MR1=0000001000100 -DAC_ROM_MR1_OCD_ENABLE= -DAC_ROM_MR2=0000000010000 -DAC_ROM_MR3=0000000000000 -DAC_ROM_MR0_MIRR=0010001001001 -DAC_ROM_MR0_DLL_RESET_MIRR=0010011001000 -DAC_ROM_MR1_MIRR=0000000100100 -DAC_ROM_MR2_MIRR=0000000001000 -DAC_ROM_MR3_MIRR=0000000000000 -DQUARTER_RATE=0 -DHALF_RATE=0 -DFULL_RATE=1 -DNON_DES_CAL=0 -DAP_MODE=0 -DGUARANTEED_READ_BRINGUP_TEST=0 -DMEM_ADDR_WIDTH=13 -DHARD_PHY=1
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: UniPHY Sequencer Microcode Compiler
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: Copyright (C) 2021  Intel Corporation. All rights reserved.
-Info (12250): Reading sequencer_mc/ac_rom.s ...
-Info (12250): Reading sequencer_mc/inst_rom.s ...
-Info (12250): Writing ../hps_AC_ROM.hex ...
-Info (12250): Writing ../hps_inst_ROM.hex ...
-Info (12250): Writing sequencer/sequencer_auto_ac_init.c ...
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: seq: child process exited abnormally
-Error (12252): Border: Error during execution of script generate_hps_sdram.tcl: Generation stopped, 3 or more modules remaining
-Error (12252): Border: Execution of script generate_hps_sdram.tcl failed
-Error (12252): Border: 2022.12.23.18:03:45 Info:
-Error (12252): Border: ********************************************************************************************************************
-Error (12252): Border: 
-Error (12252): Border: Use qsys-generate for a simpler command-line interface for generating IP.
-Error (12252): Border: 
-Error (12252): Border: Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
-Error (12252): Border: 
-Error (12252): Border: ********************************************************************************************************************
-Warning (12251): Ignored parameter assignment device=5CSEMA4U23C6
-Warning (12251): Ignored parameter assignment extended_family_support=true
-Warning (12251): Hps_sdram: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
-Warning (12251): Hps_sdram.seq: This module has no ports or interfaces
-Warning (12251): Hps_sdram.p0: p0.scc must be exported, or connected to a matching conduit.
-Warning (12251): Hps_sdram.as: as.afi_init_cal_req must be exported, or connected to a matching conduit.
-Warning (12251): Hps_sdram.as: as.tracking must be exported, or connected to a matching conduit.
-Warning (12251): Hps_sdram.c0: c0.status must be exported, or connected to a matching conduit.
-Warning (12251): Hps_sdram.p0: p0.avl must be connected to an Avalon-MM master
-Info (12250): Hps_sdram: Generating altera_mem_if_hps_emif "hps_sdram" for QUARTUS_SYNTH
-Info (12250): Pll: "hps_sdram" instantiated altera_mem_if_hps_pll "pll"
-Info (12250): P0: Generating clock pair generator
-Info (12250): P0: Generating hps_sdram_p0_altdqdqs
-Info (12250): P0:
-Info (12250): P0: *****************************
-Info (12250): P0:
-Info (12250): P0: Remember to run the hps_sdram_p0_pin_assignments.tcl
-Info (12250): P0: script after running Synthesis and before Fitting.
-Info (12250): P0:
-Info (12250): P0: *****************************
-Info (12250): P0:
-Info (12250): P0: "hps_sdram" instantiated altera_mem_if_ddr3_hard_phy_core "p0"
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: Error during execution of "{C:/intelfpga_lite/21.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt": child process exited abnormally
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: Execution of command "{C:/intelfpga_lite/21.1/quartus/../nios2eds/Nios II Command Shell.bat} make all 2>> stderr.txt" failed
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: /mnt/c/intelfpga_lite/21.1/quartus/bin64/uniphy_mcc.exe -ac_code sequencer_mc/ac_rom.s -inst_code sequencer_mc/inst_rom.s -ac_rom ../hps_AC_ROM.hex -inst_rom ../hps_inst_ROM.hex -header sequencer/sequencer_auto.h -vheader ../sequencer_auto_h.sv -ac_rom_init sequencer/sequencer_auto_ac_init.c -inst_rom_init sequencer/sequencer_auto_inst_init.c -DAC_ROM_USER_ADD_0=0_0000_0000_0000 -DAC_ROM_USER_ADD_1=0_0000_0000_1000 -DAC_ROM_MR0=0010000110001 -DAC_ROM_MR0_CALIB= -DAC_ROM_MR0_DLL_RESET=0010100110000 -DAC_ROM_MR1=0000001000100 -DAC_ROM_MR1_OCD_ENABLE= -DAC_ROM_MR2=0000000010000 -DAC_ROM_MR3=0000000000000 -DAC_ROM_MR0_MIRR=0010001001001 -DAC_ROM_MR0_DLL_RESET_MIRR=0010011001000 -DAC_ROM_MR1_MIRR=0000000100100 -DAC_ROM_MR2_MIRR=0000000001000 -DAC_ROM_MR3_MIRR=0000000000000 -DQUARTER_RATE=0 -DHALF_RATE=0 -DFULL_RATE=1 -DNON_DES_CAL=0 -DAP_MODE=0 -DGUARANTEED_READ_BRINGUP_TEST=0 -DMEM_ADDR_WIDTH=13 -DHARD_PHY=1
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: UniPHY Sequencer Microcode Compiler
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: Copyright (C) 2021  Intel Corporation. All rights reserved.
-Info (12250): Reading sequencer_mc/ac_rom.s ...
-Info (12250): Reading sequencer_mc/inst_rom.s ...
-Info (12250): Writing ../hps_AC_ROM.hex ...
-Info (12250): Writing ../hps_inst_ROM.hex ...
-Info (12250): Writing sequencer/sequencer_auto_ac_init.c ...
-Error (12252): Border: 2022.12.23.18:04:03 Error: seq: child process exited abnormally
-Info (12250): Seq: "hps_sdram" instantiated altera_mem_if_hhp_ddr3_qseq "seq"
-Error (12252): Border: 2022.12.23.18:04:03 Error: Generation stopped, 3 or more modules remaining
-Info (12250): Hps_sdram: Done "hps_sdram" with 7 modules, 38 files
+Info (12250): Reusing file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
 Info (12250): Border: "hps_io" instantiated altera_interface_generator "border"
-Error (12252): Generation stopped, 2 or more modules remaining
-Info (12250): Soc_system: Done "soc_system" with 51 modules, 124 files
+Info (12250): Error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info (12250): Error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
+Info (12250): Soc_system: Done "soc_system" with 51 modules, 129 files
 Info (12249): Finished elaborating Platform Designer system entity "soc_system.qsys"
-Info (12021): Found 1 design units, including 0 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/lcd_pkg.vhd
-    Info (12022): Found design unit 1: lcd_package File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_pkg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/acquisition.vhd
-    Info (12022): Found design unit 1: AcquModule-Comp File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 40
-    Info (12023): Found entity 1: AcquModule File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/de0_nano_soc_trdb_d5m_lt24_top_level.vhd
-    Info (12022): Found design unit 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level-rtl File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 125
-    Info (12023): Found entity 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 20
-Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/lcd_controller.vhd
-    Info (12022): Found design unit 1: lcd_controller-arch_lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 44
-    Info (12023): Found entity 1: lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/lcd_slave.vhd
-    Info (12022): Found design unit 1: lcd_slave-lcd_slave_architecture File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_slave.vhd Line: 35
-    Info (12023): Found entity 1: lcd_slave File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_slave.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/top.vhd
-    Info (12022): Found design unit 1: top_entity-top_architecture File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 40
-    Info (12023): Found entity 1: top_entity File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 7
+Info (12021): Found 1 design units, including 0 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_pkg.vhd
+    Info (12022): Found design unit 1: lcd_package File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_pkg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd
+    Info (12022): Found design unit 1: acq_controller-Comp File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 40
+    Info (12023): Found entity 1: acq_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
+    Info (12022): Found design unit 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level-rtl File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 125
+    Info (12023): Found entity 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd
+    Info (12022): Found design unit 1: lcd_controller-arch_lcd_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 44
+    Info (12023): Found entity 1: lcd_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_slave.vhd
+    Info (12022): Found design unit 1: lcd_slave-lcd_slave_architecture File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_slave.vhd Line: 35
+    Info (12023): Found entity 1: lcd_slave File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_slave.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd
+    Info (12022): Found design unit 1: top-top_architecture File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 40
+    Info (12023): Found entity 1: top File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/soc_system.v
-    Info (12023): Found entity 1: soc_system File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/soc_system.v Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/acquisition.vhd
-    Info (12022): Found design unit 1: AcquModule-Comp File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/acquisition.vhd Line: 40
-    Info (12023): Found entity 1: AcquModule File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/acquisition.vhd Line: 5
+    Info (12023): Found entity 1: soc_system File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/soc_system.v Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/Acquisition.vhd
+    Info (12022): Found design unit 1: acq_controller-Comp File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/Acquisition.vhd Line: 40
+    Info (12023): Found entity 1: acq_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/Acquisition.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv
-    Info (12023): Found entity 1: altdq_dqs2_acv_connect_to_hard_phy_cyclonev File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv Line: 19
+    Info (12023): Found entity 1: altdq_dqs2_acv_connect_to_hard_phy_cyclonev File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_address_span_extender.sv
-    Info (12023): Found entity 1: altera_address_span_extender File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_address_span_extender.sv Line: 39
+    Info (12023): Found entity 1: altera_address_span_extender File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_address_span_extender.sv Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_avalon_sc_fifo.v
-    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_sc_fifo.v Line: 21
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_sc_fifo.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_avalon_st_pipeline_base.v
-    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_base.v Line: 22
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_base.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_avalon_st_pipeline_stage.sv
-    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_default_burst_converter.sv
-    Info (12023): Found entity 1: altera_default_burst_converter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_default_burst_converter.sv Line: 30
+    Info (12023): Found entity 1: altera_default_burst_converter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_default_burst_converter.sv Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_incr_burst_converter.sv
-    Info (12023): Found entity 1: altera_incr_burst_converter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_incr_burst_converter.sv Line: 28
+    Info (12023): Found entity 1: altera_incr_burst_converter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_mem_if_dll_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_dll_cyclonev File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_mem_if_dll_cyclonev.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_hard_memory_controller_top_cyclonev File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_mem_if_hhp_qseq_synth_top.v
-    Info (12023): Found entity 1: altera_mem_if_hhp_qseq_synth_top File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_mem_if_hhp_qseq_synth_top.v Line: 15
+    Info (12023): Found entity 1: altera_mem_if_hhp_qseq_synth_top File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_mem_if_hhp_qseq_synth_top.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_mem_if_oct_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_oct_cyclonev File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_mem_if_oct_cyclonev.sv Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_address_alignment.sv
-    Info (12023): Found entity 1: altera_merlin_address_alignment File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_address_alignment.sv Line: 26
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_address_alignment.sv Line: 26
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/altera_merlin_arbitrator.sv
-    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv Line: 103
-    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv Line: 228
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_arbitrator.sv Line: 228
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_burst_adapter.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter.sv Line: 21
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter.sv Line: 21
 Info (12021): Found 5 design units, including 5 entities, in source file db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
-    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
-    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
-    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
-    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_burst_adapter_new.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_new.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_burst_adapter_uncmpr.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_burst_uncompressor.sv
-    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_burst_uncompressor.sv Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_master_agent.sv
-    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_master_agent.sv Line: 28
+    Info (12023): Found entity 1: altera_merlin_master_agent File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_master_agent.sv Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_master_translator.sv
-    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_master_translator.sv Line: 32
+    Info (12023): Found entity 1: altera_merlin_master_translator File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_master_translator.sv Line: 32
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/altera_merlin_reorder_memory.sv
-    Info (12023): Found entity 1: altera_merlin_reorder_memory File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_reorder_memory.sv Line: 28
-    Info (12023): Found entity 2: memory_pointer_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_reorder_memory.sv Line: 185
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_reorder_memory.sv Line: 185
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_slave_agent.sv
-    Info (12023): Found entity 1: altera_merlin_slave_agent File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_slave_agent.sv Line: 34
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_slave_agent.sv Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_slave_translator.sv
-    Info (12023): Found entity 1: altera_merlin_slave_translator File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_slave_translator.sv Line: 35
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_slave_translator.sv Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_traffic_limiter.sv
-    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_traffic_limiter.sv Line: 49
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_traffic_limiter.sv Line: 49
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_merlin_width_adapter.sv
-    Info (12023): Found entity 1: altera_merlin_width_adapter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_width_adapter.sv Line: 25
+    Info (12023): Found entity 1: altera_merlin_width_adapter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_merlin_width_adapter.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_nios2_gen2_rtl_module.sv
-    Info (12023): Found entity 1: altera_nios2_gen2_rtl_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_nios2_gen2_rtl_module.sv Line: 14
+    Info (12023): Found entity 1: altera_nios2_gen2_rtl_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_nios2_gen2_rtl_module.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_reset_controller.v
-    Info (12023): Found entity 1: altera_reset_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_reset_controller.v Line: 42
+    Info (12023): Found entity 1: altera_reset_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_reset_controller.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_reset_synchronizer.v
-    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_reset_synchronizer.v Line: 24
+    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_reset_synchronizer.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/altera_wrap_burst_converter.sv
-    Info (12023): Found entity 1: altera_wrap_burst_converter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_wrap_burst_converter.sv Line: 27
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/altera_wrap_burst_converter.sv Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/fifo.vhd
-    Info (12022): Found design unit 1: fifo-SYN File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/fifo.vhd Line: 59
-    Info (12023): Found entity 1: fifo File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/fifo.vhd Line: 43
+    Info (12022): Found design unit 1: fifo-SYN File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/fifo.vhd Line: 59
+    Info (12023): Found entity 1: fifo File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/fifo.vhd Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram.v
-    Info (12023): Found entity 1: hps_sdram File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram.v Line: 9
+    Info (12023): Found entity 1: hps_sdram File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0.sv
-    Info (12023): Found entity 1: hps_sdram_p0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0.sv Line: 18
+    Info (12023): Found entity 1: hps_sdram_p0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_addr_cmd_pads File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_addr_cmd_pads File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_io_pads.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_io_pads File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_io_pads File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_memphy.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_memphy File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_memphy.v Line: 21
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_memphy File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_hard_memphy.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_acv_ldc.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_ldc File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_ldc.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_acv_ldc File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_acv_ldc.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_altdqdqs.v
-    Info (12023): Found entity 1: hps_sdram_p0_altdqdqs File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_altdqdqs.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_altdqdqs File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_altdqdqs.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_clock_pair_generator.v
-    Info (12023): Found entity 1: hps_sdram_p0_clock_pair_generator File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_clock_pair_generator.v Line: 29
+    Info (12023): Found entity 1: hps_sdram_p0_clock_pair_generator File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_clock_pair_generator.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_generic_ddio.v
-    Info (12023): Found entity 1: hps_sdram_p0_generic_ddio File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_generic_ddio.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_generic_ddio File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_generic_ddio.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_iss_probe.v
-    Info (12023): Found entity 1: hps_sdram_p0_iss_probe File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_iss_probe.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_iss_probe File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_iss_probe.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_phy_csr.sv
-    Info (12023): Found entity 1: hps_sdram_p0_phy_csr File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_phy_csr.sv Line: 31
+    Info (12023): Found entity 1: hps_sdram_p0_phy_csr File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_phy_csr.sv Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_reset.v
-    Info (12023): Found entity 1: hps_sdram_p0_reset File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_reset.v Line: 18
+    Info (12023): Found entity 1: hps_sdram_p0_reset File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_reset.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_p0_reset_sync.v
-    Info (12023): Found entity 1: hps_sdram_p0_reset_sync File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_reset_sync.v Line: 17
+    Info (12023): Found entity 1: hps_sdram_p0_reset_sync File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_p0_reset_sync.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/hps_sdram_pll.sv
-    Info (12023): Found entity 1: hps_sdram_pll File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_pll.sv Line: 25
+    Info (12023): Found entity 1: hps_sdram_pll File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_pll.sv Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/lcd_controller.vhd
-    Info (12022): Found design unit 1: lcd_controller-arch_lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_controller.vhd Line: 44
-    Info (12023): Found entity 1: lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_controller.vhd Line: 7
+    Info (12022): Found design unit 1: lcd_controller-arch_lcd_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_controller.vhd Line: 44
+    Info (12023): Found entity 1: lcd_controller File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_controller.vhd Line: 7
 Info (12021): Found 1 design units, including 0 entities, in source file db/ip/soc_system/submodules/lcd_pkg.vhd
-    Info (12022): Found design unit 1: lcd_package (soc_system) File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_pkg.vhd Line: 5
+    Info (12022): Found design unit 1: lcd_package (soc_system) File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_pkg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/lcd_slave.vhd
-    Info (12022): Found design unit 1: lcd_slave-lcd_slave_architecture File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_slave.vhd Line: 35
-    Info (12023): Found entity 1: lcd_slave File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_slave.vhd Line: 6
+    Info (12022): Found design unit 1: lcd_slave-lcd_slave_architecture File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_slave.vhd Line: 35
+    Info (12023): Found entity 1: lcd_slave File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/lcd_slave.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_hps_0.v
-    Info (12023): Found entity 1: soc_system_hps_0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0.v Line: 9
+    Info (12023): Found entity 1: soc_system_hps_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_hps_0_fpga_interfaces.sv
-    Info (12023): Found entity 1: soc_system_hps_0_fpga_interfaces File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_fpga_interfaces.sv Line: 14
+    Info (12023): Found entity 1: soc_system_hps_0_fpga_interfaces File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_fpga_interfaces.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_hps_0_hps_io.v
-    Info (12023): Found entity 1: soc_system_hps_0_hps_io File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_hps_io.v Line: 9
+    Info (12023): Found entity 1: soc_system_hps_0_hps_io File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_hps_io.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_hps_0_hps_io_border.sv
-    Info (12023): Found entity 1: soc_system_hps_0_hps_io_border File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_hps_io_border.sv Line: 14
+    Info (12023): Found entity 1: soc_system_hps_0_hps_io_border File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_hps_0_hps_io_border.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_irq_mapper.sv
-    Info (12023): Found entity 1: soc_system_irq_mapper File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_irq_mapper.sv Line: 31
+    Info (12023): Found entity 1: soc_system_irq_mapper File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_irq_mapper.sv Line: 31
 Info (12021): Found 5 design units, including 5 entities, in source file db/ip/soc_system/submodules/soc_system_jtag_uart_0.v
-    Info (12023): Found entity 1: soc_system_jtag_uart_0_sim_scfifo_w File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 21
-    Info (12023): Found entity 2: soc_system_jtag_uart_0_scfifo_w File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 78
-    Info (12023): Found entity 3: soc_system_jtag_uart_0_sim_scfifo_r File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 164
-    Info (12023): Found entity 4: soc_system_jtag_uart_0_scfifo_r File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 243
-    Info (12023): Found entity 5: soc_system_jtag_uart_0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 331
+    Info (12023): Found entity 1: soc_system_jtag_uart_0_sim_scfifo_w File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 21
+    Info (12023): Found entity 2: soc_system_jtag_uart_0_scfifo_w File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 78
+    Info (12023): Found entity 3: soc_system_jtag_uart_0_sim_scfifo_r File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 164
+    Info (12023): Found entity 4: soc_system_jtag_uart_0_scfifo_r File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 243
+    Info (12023): Found entity 5: soc_system_jtag_uart_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_jtag_uart_0.v Line: 331
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0.v Line: 9
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_005.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_005 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_005.v Line: 9
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_005 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_005.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_001.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_001.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_002.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_002 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_002.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_002 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_demux_002.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_001.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_001.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_005.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_005 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_005.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_005 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_cmd_mux_005.sv Line: 51
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_001_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_001.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_001.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_001_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_001.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_002.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_002_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_002 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_002_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_002 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_003.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_003_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_003 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_003_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_003 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_004.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_004_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_004.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_004 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_004.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_004_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_004.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_004 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_004.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_005.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_005_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_005 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_005_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_005 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_008.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_008_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_008.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_008 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_008.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_008_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_008.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_008 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_router_008.sv Line: 84
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux_001.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_demux_001.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_001.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_001.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_002.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_002 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_002.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_002 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_0_rsp_mux_002.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1.v Line: 9
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_demux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_demux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_demux.sv Line: 43
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_demux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_demux.sv Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_mux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_mux.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_mux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_cmd_mux.sv Line: 51
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router.sv Line: 84
 Info (12021): Found 2 design units, including 2 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router_001.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_001_default_decode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router_001 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 84
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_001_default_decode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router_001 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 84
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_mm_interconnect_1_rsp_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_1_rsp_mux File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_rsp_mux.sv Line: 51
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_rsp_mux File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_mm_interconnect_1_rsp_mux.sv Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0.v Line: 9
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0.v Line: 9
 Info (12021): Found 27 design units, including 27 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_ic_data_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 21
-    Info (12023): Found entity 2: soc_system_nios2_gen2_0_cpu_ic_tag_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 89
-    Info (12023): Found entity 3: soc_system_nios2_gen2_0_cpu_bht_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 158
-    Info (12023): Found entity 4: soc_system_nios2_gen2_0_cpu_register_bank_a_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 227
-    Info (12023): Found entity 5: soc_system_nios2_gen2_0_cpu_register_bank_b_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 293
-    Info (12023): Found entity 6: soc_system_nios2_gen2_0_cpu_dc_tag_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 359
-    Info (12023): Found entity 7: soc_system_nios2_gen2_0_cpu_dc_data_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 425
-    Info (12023): Found entity 8: soc_system_nios2_gen2_0_cpu_dc_victim_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 494
-    Info (12023): Found entity 9: soc_system_nios2_gen2_0_cpu_nios2_oci_debug File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 562
-    Info (12023): Found entity 10: soc_system_nios2_gen2_0_cpu_nios2_oci_break File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 721
-    Info (12023): Found entity 11: soc_system_nios2_gen2_0_cpu_nios2_oci_xbrk File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1014
-    Info (12023): Found entity 12: soc_system_nios2_gen2_0_cpu_nios2_oci_dbrk File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1275
-    Info (12023): Found entity 13: soc_system_nios2_gen2_0_cpu_nios2_oci_itrace File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1464
-    Info (12023): Found entity 14: soc_system_nios2_gen2_0_cpu_nios2_oci_td_mode File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1647
-    Info (12023): Found entity 15: soc_system_nios2_gen2_0_cpu_nios2_oci_dtrace File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1715
-    Info (12023): Found entity 16: soc_system_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1797
-    Info (12023): Found entity 17: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1869
-    Info (12023): Found entity 18: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1912
-    Info (12023): Found entity 19: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1959
-    Info (12023): Found entity 20: soc_system_nios2_gen2_0_cpu_nios2_oci_pib File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2445
-    Info (12023): Found entity 21: soc_system_nios2_gen2_0_cpu_nios2_oci_im File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2468
-    Info (12023): Found entity 22: soc_system_nios2_gen2_0_cpu_nios2_performance_monitors File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2538
-    Info (12023): Found entity 23: soc_system_nios2_gen2_0_cpu_nios2_avalon_reg File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2555
-    Info (12023): Found entity 24: soc_system_nios2_gen2_0_cpu_ociram_sp_ram_module File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2648
-    Info (12023): Found entity 25: soc_system_nios2_gen2_0_cpu_nios2_ocimem File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2713
-    Info (12023): Found entity 26: soc_system_nios2_gen2_0_cpu_nios2_oci File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2894
-    Info (12023): Found entity 27: soc_system_nios2_gen2_0_cpu File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 3439
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_ic_data_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 21
+    Info (12023): Found entity 2: soc_system_nios2_gen2_0_cpu_ic_tag_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 89
+    Info (12023): Found entity 3: soc_system_nios2_gen2_0_cpu_bht_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 158
+    Info (12023): Found entity 4: soc_system_nios2_gen2_0_cpu_register_bank_a_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 227
+    Info (12023): Found entity 5: soc_system_nios2_gen2_0_cpu_register_bank_b_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 293
+    Info (12023): Found entity 6: soc_system_nios2_gen2_0_cpu_dc_tag_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 359
+    Info (12023): Found entity 7: soc_system_nios2_gen2_0_cpu_dc_data_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 425
+    Info (12023): Found entity 8: soc_system_nios2_gen2_0_cpu_dc_victim_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 494
+    Info (12023): Found entity 9: soc_system_nios2_gen2_0_cpu_nios2_oci_debug File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 562
+    Info (12023): Found entity 10: soc_system_nios2_gen2_0_cpu_nios2_oci_break File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 721
+    Info (12023): Found entity 11: soc_system_nios2_gen2_0_cpu_nios2_oci_xbrk File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1014
+    Info (12023): Found entity 12: soc_system_nios2_gen2_0_cpu_nios2_oci_dbrk File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1275
+    Info (12023): Found entity 13: soc_system_nios2_gen2_0_cpu_nios2_oci_itrace File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1464
+    Info (12023): Found entity 14: soc_system_nios2_gen2_0_cpu_nios2_oci_td_mode File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1655
+    Info (12023): Found entity 15: soc_system_nios2_gen2_0_cpu_nios2_oci_dtrace File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1723
+    Info (12023): Found entity 16: soc_system_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1805
+    Info (12023): Found entity 17: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1877
+    Info (12023): Found entity 18: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1920
+    Info (12023): Found entity 19: soc_system_nios2_gen2_0_cpu_nios2_oci_fifo File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 1967
+    Info (12023): Found entity 20: soc_system_nios2_gen2_0_cpu_nios2_oci_pib File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2453
+    Info (12023): Found entity 21: soc_system_nios2_gen2_0_cpu_nios2_oci_im File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2476
+    Info (12023): Found entity 22: soc_system_nios2_gen2_0_cpu_nios2_performance_monitors File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2546
+    Info (12023): Found entity 23: soc_system_nios2_gen2_0_cpu_nios2_avalon_reg File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2563
+    Info (12023): Found entity 24: soc_system_nios2_gen2_0_cpu_ociram_sp_ram_module File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2656
+    Info (12023): Found entity 25: soc_system_nios2_gen2_0_cpu_nios2_ocimem File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2721
+    Info (12023): Found entity 26: soc_system_nios2_gen2_0_cpu_nios2_oci File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 2902
+    Info (12023): Found entity 27: soc_system_nios2_gen2_0_cpu File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu.v Line: 3447
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_sysclk.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_sysclk File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_sysclk.v Line: 21
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_sysclk File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_sysclk.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_tck.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_tck File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_tck.v Line: 21
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_tck File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_tck.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_wrapper.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_wrapper File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_wrapper.v Line: 21
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_debug_slave_wrapper File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_debug_slave_wrapper.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_mult_cell.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_mult_cell File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_mult_cell.v Line: 21
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_mult_cell File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_mult_cell.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_test_bench.v
-    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_test_bench File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_test_bench.v Line: 21
+    Info (12023): Found entity 1: soc_system_nios2_gen2_0_cpu_test_bench File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_nios2_gen2_0_cpu_test_bench.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_onchip_memory2_0.v
-    Info (12023): Found entity 1: soc_system_onchip_memory2_0 File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_onchip_memory2_0.v Line: 21
+    Info (12023): Found entity 1: soc_system_onchip_memory2_0 File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_onchip_memory2_0.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/soc_system/submodules/soc_system_pio_leds.v
-    Info (12023): Found entity 1: soc_system_pio_leds File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_pio_leds.v Line: 21
+    Info (12023): Found entity 1: soc_system_pio_leds File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/soc_system_pio_leds.v Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/soc_system/submodules/top.vhd
-    Info (12022): Found design unit 1: top_entity-top_architecture File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/top.vhd Line: 40
-    Info (12023): Found entity 1: top_entity File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/top.vhd Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_pll.sv Line: 168
-Info (12127): Elaborating entity "DE0_Nano_SoC_TRDB_D5M_LT24_top_level" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(23): used implicit default value for signal "ADC_CONVST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(24): used implicit default value for signal "ADC_SCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 24
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(25): used implicit default value for signal "ADC_SDI" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 25
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(48): used implicit default value for signal "GPIO_0_LT24_ADC_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 48
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(49): used implicit default value for signal "GPIO_0_LT24_ADC_DCLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 49
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(50): used implicit default value for signal "GPIO_0_LT24_ADC_DIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 50
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(53): used implicit default value for signal "GPIO_0_LT24_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 53
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(54): used implicit default value for signal "GPIO_0_LT24_D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 54
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(55): used implicit default value for signal "GPIO_0_LT24_LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 55
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(56): used implicit default value for signal "GPIO_0_LT24_RD_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(57): used implicit default value for signal "GPIO_0_LT24_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 57
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(58): used implicit default value for signal "GPIO_0_LT24_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 58
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(59): used implicit default value for signal "GPIO_0_LT24_WR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 59
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(66): used implicit default value for signal "GPIO_1_D5M_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 66
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(70): used implicit default value for signal "GPIO_1_D5M_TRIGGER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 70
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(71): used implicit default value for signal "GPIO_1_D5M_XCLKIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 71
-Error (12153): Can't elaborate top-level user hierarchy
-Info (144001): Generated suppressed messages file C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 25 errors, 34 warnings
-    Error: Peak virtual memory: 4880 megabytes
-    Error: Processing ended: Fri Dec 23 18:04:13 2022
-    Error: Elapsed time: 00:01:45
-    Error: Total CPU time (on all processors): 00:03:08
+    Info (12022): Found design unit 1: top-top_architecture File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/top.vhd Line: 40
+    Info (12023): Found entity 1: top File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/top.vhd Line: 7
+Error (10349): VHDL Association List error at top.vhd(201): formal "AS_Address" does not exist File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 201
+Error (10346): VHDL error at top.vhd(193): formal port or parameter "readdata" must have actual or default value File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 193
+Error (10784): HDL error at top.vhd(84): see declaration for object "readdata" File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 84
+Error (10346): VHDL error at top.vhd(193): formal port or parameter "readdatavalid" must have actual or default value File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 193
+Error (10784): HDL error at top.vhd(85): see declaration for object "readdatavalid" File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 85
+Error (10346): VHDL error at top.vhd(193): formal port or parameter "wait_req" must have actual or default value File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 193
+Error (10784): HDL error at top.vhd(86): see declaration for object "wait_req" File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 86
+Error (10346): VHDL error at top.vhd(193): formal port or parameter "fifo_almost_full" must have actual or default value File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 193
+Error (10784): HDL error at top.vhd(93): see declaration for object "fifo_almost_full" File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/db/ip/soc_system/submodules/hps_sdram_pll.sv Line: 168
+Info (144001): Generated suppressed messages file /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 9 warnings
+    Error: Peak virtual memory: 520 megabytes
+    Error: Processing ended: Fri Dec 23 19:05:40 2022
+    Error: Elapsed time: 00:01:22
+    Error: Total CPU time (on all processors): 00:03:03
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.map.smsg.
+The suppressed messages can be found in /home/jsilveira/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.map.smsg.
 
 

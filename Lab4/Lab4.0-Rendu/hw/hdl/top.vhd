@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use work.lcd_package.all;
 
 
-entity top_entity is
+entity top is
 	
 	port(
 		--global signals
@@ -34,10 +34,10 @@ entity top_entity is
 		CSX : out std_logic
 	);
 	
-end top_entity;
+end top;
 
 
-architecture top_architecture of top_entity is
+architecture top_architecture of top is
 
 	component lcd_controller port(
 		clk : in std_logic;
@@ -67,7 +67,8 @@ architecture top_architecture of top_entity is
 		
 	);
 	end component lcd_controller;
-	component dma_controller 
+	
+	component acq_controller 
 		port(
 			clk : in std_logic;
 			nReset : in std_logic;
@@ -93,7 +94,7 @@ architecture top_architecture of top_entity is
 			fifo_almost_full : in std_logic
 		) ;
 		
-	end component dma_controller;
+	end component acq_controller;
 	
 	
 	component lcd_slave 
@@ -113,7 +114,7 @@ architecture top_architecture of top_entity is
 			img_length : out std_logic_vector(31 downto 0);
 			flag : out std_logic_vector( 15 downto 0);
 			cmd_reg : out std_logic_vector(15 downto 0);
-			nb_param : out std_logic_vector(15 downto 0);
+			nb_param_reg : out std_logic_vector(15 downto 0);
 			param : out RF;
 			
 			reset_flag_reset : in std_logic;
@@ -171,7 +172,7 @@ architecture top_architecture of top_entity is
 			img_length => img_length_tmp,
 			flag => flag_tmp,
 			cmd_reg => cmd_reg_tmp,
-			nb_param => nb_param_tmp,
+			nb_param_reg => nb_param_tmp,
 			param => param_tmp,
 			reset_flag_reset => reset_flag_reset_tmp,
 			reset_flag_cmd => reset_flag_cmd_tmp,
@@ -190,7 +191,7 @@ architecture top_architecture of top_entity is
 			q => q_tmp
 		);
 		
-	dma_instance : component dma_controller
+	acq_instance : component acq_controller
 		port map(
 			clk => clk,
 			nReset => nReset,
@@ -198,7 +199,7 @@ architecture top_architecture of top_entity is
 			img_address => img_address_tmp,
 			img_length => img_length_tmp,
 			reset_flag_enable => reset_flag_enable_tmp,
-			address => address,
+			AS_Address => address,
 			read => read,
 			readdata => readdata,
 			readdatavalid => readdatavalid,
