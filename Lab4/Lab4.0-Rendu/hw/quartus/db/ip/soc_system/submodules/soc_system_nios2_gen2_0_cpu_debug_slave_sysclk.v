@@ -23,8 +23,8 @@ module soc_system_nios2_gen2_0_cpu_debug_slave_sysclk (
                                                          clk,
                                                          ir_in,
                                                          sr,
-                                                         vs_udr,
-                                                         vs_uir,
+                                                         vs_e1dr_d1,
+                                                         vs_uir_d1,
 
                                                         // outputs:
                                                          jdo,
@@ -55,17 +55,17 @@ module soc_system_nios2_gen2_0_cpu_debug_slave_sysclk (
   input            clk;
   input   [  1: 0] ir_in;
   input   [ 37: 0] sr;
-  input            vs_udr;
-  input            vs_uir;
+  input            vs_e1dr_d1;
+  input            vs_uir_d1;
 
 
-reg              enable_action_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\""  */;
-reg     [  1: 0] ir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,R101\""  */;
-reg     [ 37: 0] jdo /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,R101\""  */;
-reg              jxuir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\""  */;
-reg              sync2_udr /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\""  */;
-reg              sync2_uir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\""  */;
-wire             sync_udr;
+reg              enable_action_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\"" preserve dont_replicate dont_retime ""  */;
+reg     [  1: 0] ir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,R101\"" preserve dont_replicate dont_retime ""  */;
+reg     [ 37: 0] jdo /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,R101\"" preserve dont_replicate dont_retime ""  */;
+reg              jxuir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\"" preserve dont_replicate dont_retime ""  */;
+reg              sync2_e1dr /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\"" preserve dont_replicate dont_retime ""  */;
+reg              sync2_uir /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\"" preserve dont_replicate dont_retime ""  */;
+wire             sync_e1dr;
 wire             sync_uir;
 wire             take_action_break_a;
 wire             take_action_break_b;
@@ -79,13 +79,13 @@ wire             take_no_action_break_c;
 wire             take_no_action_ocimem_a;
 wire             unxunused_resetxx4;
 wire             unxunused_resetxx5;
-reg              update_jdo_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\""  */;
+reg              update_jdo_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=\"D101,D103\"" preserve dont_replicate dont_retime ""  */;
   assign unxunused_resetxx4 = 1'b1;
   altera_std_synchronizer the_altera_std_synchronizer4
     (
       .clk (clk),
-      .din (vs_udr),
-      .dout (sync_udr),
+      .din (vs_e1dr_d1),
+      .dout (sync_e1dr),
       .reset_n (unxunused_resetxx4)
     );
 
@@ -95,7 +95,7 @@ reg              update_jdo_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_
   altera_std_synchronizer the_altera_std_synchronizer5
     (
       .clk (clk),
-      .din (vs_uir),
+      .din (vs_uir_d1),
       .dout (sync_uir),
       .reset_n (unxunused_resetxx5)
     );
@@ -104,8 +104,8 @@ reg              update_jdo_strobe /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_
 
   always @(posedge clk)
     begin
-      sync2_udr <= sync_udr;
-      update_jdo_strobe <= sync_udr & ~sync2_udr;
+      sync2_e1dr <= sync_e1dr;
+      update_jdo_strobe <= sync_e1dr & ~sync2_e1dr;
       enable_action_strobe <= update_jdo_strobe;
       sync2_uir <= sync_uir;
       jxuir <= sync_uir & ~sync2_uir;

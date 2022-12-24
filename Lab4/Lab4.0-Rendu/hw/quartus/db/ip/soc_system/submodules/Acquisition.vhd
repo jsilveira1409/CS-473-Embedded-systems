@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-entity AcquModule is
+entity acq_controller is
     port(
     clk : in std_logic;
     nReset : in std_logic;
@@ -35,9 +35,9 @@ entity AcquModule is
     FIFO_Almost_Full : in std_logic
     );
 
-end AcquModule;
+end acq_controller;
 
-Architecture Comp of AcquModule is 
+Architecture Comp of acq_controller is 
 TYPE AcqState is (Idle, WaitData, WaitFifo, Request, AcqData); 
 Signal AcqAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal AcqLength: STD_LOGIC_VECTOR(31 downto 0); 

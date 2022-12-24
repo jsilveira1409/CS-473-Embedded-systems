@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use work.lcd_package.all;
 
 
-entity top_entity is
+entity top is
 	
 	port(
 		--global signals
@@ -36,7 +36,7 @@ entity top_entity is
 		CSX : out std_logic
 	);
 	
-end top_entity;
+end top;
 
 
 architecture top_architecture of top_entity is

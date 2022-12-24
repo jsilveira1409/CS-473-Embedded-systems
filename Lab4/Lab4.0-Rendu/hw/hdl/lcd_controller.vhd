@@ -45,7 +45,7 @@ entity lcd_controller is
 		signal reset_cnt : unsigned(31 downto 0);
 		signal current_param : unsigned(7 downto 0);
 		
-		signal clock_cycles : unsigned(3 downto 0);
+		signal clock_cycles : unsigned(2 downto 0);
 		
 		signal bytes_remaining : unsigned(31 downto 0);
 		signal current_state : LCDFSM := Idle;
@@ -73,9 +73,9 @@ entity lcd_controller is
 				DCX <= '0';
 				WRX <= '0';
 				RESX <= '0';
-				CSX <= '0';
+				--CSX <= '0';
 				
-				clock_cycles <= x"000";
+				clock_cycles <= "000";
 				current_param <= x"00";
 				reset_cnt <= x"00000000";
 				reset_flag_reset <= '1';
@@ -142,7 +142,7 @@ entity lcd_controller is
 							clock_cycles <= clock_cycles + 1;
 							current_state <= CMD_READ;
 						else 
-							clock_cycles <= x"000";
+							clock_cycles <= "000";
 							current_state <= CMD_SEND;
 						end if;
 						
@@ -150,7 +150,7 @@ entity lcd_controller is
 						WRX <= '1';
 						
 						if current_param = unsigned(nb_param_reg) then
-							clock_cycles <= x"000";
+							clock_cycles <= "000";
 							reset_flag_cmd <= '0';
 							current_state <= RESET_REGS;
 						elsif clock_cycles < 5 then
@@ -158,7 +158,7 @@ entity lcd_controller is
 							current_state <= CMD_SEND;
 						else 
 							current_state <= PARAM_GET;
-							clock_cycles <= x"000";
+							clock_cycles <= "000";
 						end if;							
 						
 					when PARAM_GET =>
@@ -171,7 +171,7 @@ entity lcd_controller is
 							clock_cycles <= clock_cycles + 1;
 						else
 							current_param <= current_param + 1;
-							clock_cycles <= x"000";
+							clock_cycles <= "000";
 							current_state <= CMD_SEND;
 						end if;
 						
