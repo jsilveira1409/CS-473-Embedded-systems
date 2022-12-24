@@ -11,20 +11,22 @@ entity top_entity is
 		clk : in std_logic;
 		nReset : in std_logic;
 		
-		-- avalon master interface(DMA)
-		address : out std_logic_vector(31 downto 0);
-		read : out std_logic;
-		readdata : in std_logic_vector(15 downto 0);
-		readdatavalid : in std_logic;
-		wait_req : in std_logic;
-		burstcount : out std_logic_vector(4 downto 0);
 		
-		-- avalon slave interface(lcd_slave)
-		address_slave : in std_logic_vector(6 downto 0);
-		write : in std_logic;
-		read_slave : in std_logic;
-		writedata : in std_logic_vector(15 downto 0 );
-		readdata_slave : out std_logic_vector(15 downto 0);
+		-- avalon slave interface
+		AS_Address : in std_logic;
+		AS_CS : in std_logic;
+		AS_Write : in std_logic;
+		AS_Read : in std_logic;
+		AS_DataWrite : in std_logic_vector(31 downto 0);
+		AS_DataRead : out std_logic_vector(31 downto 0);
+		AS_NewData : in std_logic;
+
+		-- avalon master interface(DMA)
+		AM_Address : out std_logic_vector(31 downto 0);
+		AM_ByteEnable : out std_logic_vector(3 downto 0);
+		AM_Read : out std_logic;
+		AM_DataRead : in std_logic_vector(7 downto 0);
+		AM_WaitRequest : in std_logic;
 		
 		--lcd signals(gpio)
 		D : out std_logic_vector(15 downto 0);
@@ -38,197 +40,100 @@ end top_entity;
 
 
 architecture top_architecture of top_entity is
+	-- internal signals linking internal modules
+	signal DataTransfer : std_logic_vector(15 downto 0);  	-- data to be sent to the fifo	
+	signal DataSend : std_logic; 							-- signal to send data to the fifo
+	signal FIFO_Almost_Full : std_logic; 					-- signal to indicate that the fifo is almost full
 
-	component lcd_controller port(
-		clk : in std_logic;
-		nReset : in std_logic;
-		
-		-- slave interface signals
-		img_length : in std_logic_vector(31 downto 0);
-		flag : in std_logic_vector(15 downto 0);
-		cmd_reg : in std_logic_vector(15 downto 0);
-		nb_param : in std_logic_vector (15 downto 0);
-		param : in RF;
-		
-		reset_flag_reset : out std_logic;
-		reset_flag_cmd : out std_logic;
-		
-		-- fifo
-		fifo_q : in std_logic_vector(15 downto 0);
-		fifo_read_req : out std_logic;
-		fifo_empty : in std_logic;
-		
-		-- outputs
-		D: out std_logic_vector(15 downto 0);
-		DCX : out std_logic;
-		CSX : out std_logic;
-		RESX : out std_logic;
-		WRX : out std_logic
-		
-	);
-	end component lcd_controller;
-	component dma_controller 
-		port(
+
+	component AcquModule port(
+			-- global signals
 			clk : in std_logic;
 			nReset : in std_logic;
-			
-			-- slave interface signals
-			flag : in std_logic_vector(15 downto 0);
-			img_address : in std_logic_vector(31 downto 0);
-			img_length : in std_logic_vector(31 downto 0);
-			reset_flag_enable : out std_logic;
-			
-			-- master interface signals
-			address : out std_logic_vector(31 downto 0);
-			read : out std_logic;
-			readdata : in std_logic_vector(15 downto 0);
-			readdatavalid : in std_logic;
-			wait_req : in std_logic;
-			
-			burstcount : out std_logic_vector(4 downto 0);
-			
-			--signals to fifo
-			fifo_data: out std_logic_vector(15 downto 0);
-			fifo_write_req : out std_logic;
-			fifo_almost_full : in std_logic
-		) ;
-		
-	end component dma_controller;
-	
-	
-	component lcd_slave 
-		port(
-			clk : in std_logic;
-			nReset : in std_logic;
-			
-			--slave interface
-			address : in std_logic_vector(6 downto 0);
-			write: in std_logic;
-			read : in std_logic;
-			writedata: in std_logic_vector(15 downto 0);
-			readdata: out std_logic_vector(15 downto 0);
-			
-			--output regs for controller and dma
-			img_address : out std_logic_vector(31 downto 0);
-			img_length : out std_logic_vector(31 downto 0);
-			flag : out std_logic_vector( 15 downto 0);
-			cmd_reg : out std_logic_vector(15 downto 0);
-			nb_param : out std_logic_vector(15 downto 0);
-			param : out RF;
-			
-			reset_flag_reset : in std_logic;
-			reset_flag_cmd : in std_logic;
-			reset_flag_enable :in std_logic
-			
-		);
-	end component lcd_slave;
-	
-	
-	component fifo 
-		port(
-			clk : in std_logic;
-			data : in std_logic_vector(15 downto 0);
-			read_req : in std_logic;
-			write_req : in std_logic;
-			almost_full : out std_logic;
-			empty : out std_logic;
-			full : out std_logic;
-			q : out std_logic_vector( 15 downto 0);
-			usedw : out std_logic_vector(7 downto 0)
+
+			--Acquisition signals from DMA
+			DataAcquisition : out std_logic_vector(7 downto 0);
+			NewData : in std_logic := '0';
+			ImageDone : in std_logic;
+						
+			-- Avalon Slave : 
+			AS_Address : in std_logic; 
+			AS_CS : in std_logic ; 
+			AS_Write : in std_logic ; 
+			AS_Read : in std_logic ; 
+			AS_DataWrite : in std_logic_vector(31 downto 0) ; 
+			AS_DataRead : out std_logic_vector(31 downto 0) ; 
+
+			-- Avalon Master : 
+			AM_Address : out std_logic_vector(31 downto 0);
+			AM_ByteEnable : out std_logic_vector(3 downto 0);
+			AM_Read : out std_logic;
+			AM_DataRead : in std_logic_vector(7 downto 0);
+			AM_WaitRequest : in std_logic;
+
+			-- Output signals to FIFO
+			DataTransfer : out std_logic_vector(15 downto 0);
+			DataSend : out std_logic;    
+			FIFO_Almost_Full : in std_logic
 		);
 	end component;
-	
-	signal img_length_tmp : std_logic_vector(31 downto 0);
-	signal flag_tmp : std_logic_vector(15 downto 0);
-	signal img_address_tmp : std_logic_vector(31 downto 0);
-	signal cmd_reg_tmp : std_logic_vector(15 downto 0);
-	signal nb_param_tmp : std_logic_vector(15 downto 0);
-	signal param_tmp : RF (0 to 63);
-	signal reset_flag_reset_tmp : std_logic;
-	signal reset_flag_cmd_tmp : std_logic;
-	signal reset_flag_enable_tmp : std_logic;
-	
-	signal fifo_data_tmp : std_logic_vector(15 downto 0);
-	signal write_req_tmp : std_logic;
-	signal read_req_tmp : std_logic;
-	signal almost_full_tmp : std_logic;
-	signal empty_tmp : std_logic;
-	signal q_tmp : std_logic_vector(15 downto 0);
-	
-	
+
+	component fifo PORT(
+		clock		: IN STD_LOGIC ;
+		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		rdreq		: IN STD_LOGIC ;
+		wrreq		: IN STD_LOGIC ;
+		almost_full	: OUT STD_LOGIC ;
+		empty		: OUT STD_LOGIC ;
+		full		: OUT STD_LOGIC ; --not needed
+		q			: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+		usedw		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0) --not needed
+	);
+    end component;
+
+
+
 	begin
 	
-	slave_interface_instance : component lcd_slave
-		port map(
-			clk => clk,
-			nReset => nReset,
-			address => address_slave,
-			write => write, 
-			read => read_slave, 
-			writedata => writedata,
-			readdata => readdata_slave,
-			img_address => img_address_tmp,
-			img_length => img_length_tmp,
-			flag => flag_tmp,
-			cmd_reg => cmd_reg_tmp,
-			nb_param => nb_param_tmp,
-			param => param_tmp,
-			reset_flag_reset => reset_flag_reset_tmp,
-			reset_flag_cmd => reset_flag_cmd_tmp,
-			reset_flag_enable => reset_flag_enable_tmp
-		);
+	
+	avalon_interface : component AcquModule
+	port map(
+	-- global signals
+		clk => clk,
+		nReset => nReset,
+	-- Avalon Master interface
+		AM_Address => AM_Address,
+		AM_ByteEnable => AM_ByteEnable,
+		AM_Read => AM_Read,
+		AM_DataRead => AM_DataRead,
+		AM_WaitRequest => AM_WaitRequest,
+	-- Avalon Slave interface
+		AS_Address => AS_Address,
+		AS_CS => AS_CS,
+		AS_Write => AS_Write,
+		AS_Read => AS_Read,
+		AS_DataWrite => AS_DataWrite,
+		AS_DataRead => AS_DataRead,
+		NewData => AS_NewData,
+	-- Output signals to FIFO
+		DataTransfer => DataTransfer,
+		DataSend => DataSend,
+		FIFO_Almost_Full => FIFO_Almost_Full
+	);
 
-
-	fifo_instance : component fifo
-		port map(
-			clk => clk,
-			data => fifo_data_tmp,
-			write_req => write_req_tmp,
-			read_req => read_req_tmp,
-			almost_full => almost_full_tmp,
-			empty => empty_tmp,
-			q => q_tmp
-		);
-		
-	dma_instance : component dma_controller
-		port map(
-			clk => clk,
-			nReset => nReset,
-			flag => flag_tmp,
-			img_address => img_address_tmp,
-			img_length => img_length_tmp,
-			reset_flag_enable => reset_flag_enable_tmp,
-			address => address,
-			read => read,
-			readdata => readdata,
-			readdatavalid => readdatavalid,
-			wait_req => wait_req,
-			burstcount => burstcount,
-			fifo_data => fifo_data_tmp,
-			fifo_write_req => write_req_tmp,
-			fifo_almost_full => almost_full_tmp
-		);
-		
-	lcd_instance : component lcd_controller
-		port map(
-			clk => clk,
-			nReset => nReset, 
-			img_length =>img_length_tmp,
-			flag => flag_tmp,
-			cmd_reg => cmd_reg_tmp,
-			nb_param => nb_param_tmp,
-			param => param_tmp,
-			reset_flag_reset => reset_flag_reset_tmp,
-			reset_flag_cmd => reset_flag_cmd_tmp,
-			fifo_q => q_tmp,
-			fifo_read_req => read_req_tmp,
-			fifo_empty => empty_tmp,
-			D => D,
-			DCX => DCX,
-			WRX => WRX, 
-			CSX => CSX,
-			RESX =>RESX
-		);
+	-- FIFO
+	fifo_inst : fifo
+	port map(
+		clock => clk,
+		data => DataTransfer,
+		rdreq => '0',
+		wrreq => DataSend,
+		almost_full => FIFO_Almost_Full,
+		empty => '0',
+		full => '0',
+		q => D,
+		usedw => '0'
+	);
 
 
 end architecture top_architecture ;
