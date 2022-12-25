@@ -19,9 +19,9 @@ entity lcd_controller is
 		WRX : out std_logic;
 		
 		-- FIFO input signals
-		fifo_q : in std_logic_vector(15 downto 0);
-		fifo_read_req : out std_logic;
-		fifo_empty : in std_logic;
+		LCD_q : in std_logic_vector(15 downto 0);
+		LCD_ReadReq : out std_logic;
+		LCD_Empty : in std_logic;
 		
 		-- Register Signals
 		img_length : in std_logic_vector(31 downto 0);
@@ -31,11 +31,7 @@ entity lcd_controller is
 		param : in RF(0 to 63);
 		
 		reset_flag_reset : out std_logic;
-		reset_flag_cmd : out std_logic;
-		
-		-- Debug signals
-		lcd_current_state_out : out LCDFSM
-		
+		reset_flag_cmd : out std_logic
 	);
 	
 	end lcd_controller;
@@ -57,7 +53,7 @@ entity lcd_controller is
 	
 	
 		-- FSM for the LCD controller
-		process (clk, nReset, flag, command_reg, nb_param_reg, param, current_param, fifo_empty, img_length)
+		process (clk, nReset, flag, command_reg, nb_param_reg, param, current_param, LCD_Empty, img_length)
 		
 			variable bytes_left: unsigned(31 downto 0);
 			
@@ -190,7 +186,7 @@ entity lcd_controller is
 						
 						if flag(0) = '0' then
 							current_state <= IDLE;
-						elsif fifo_empty = '0' then
+						elsif LCD_Empty = '0' then
 							current_state <= PIXEL_WRITE;
 						else
 							current_state <= IMG_DISPLAY;
@@ -215,28 +211,27 @@ entity lcd_controller is
 						WRX <= '0';
 						
 						if clock_cycles < 2 then
-							fifo_read_req <= '0';
+							LCD_ReadReq <= '0';
 							clock_cycles <= clock_cycles + 1;
 							current_state <= PIXEL_GET;
 						elsif clock_cycles = 2 then
-							fifo_read_req <= '1';
+							LCD_ReadReq <= '1';
 							clock_cycles <= clock_cycles + 1;
 							current_state <= PIXEL_GET;
 						elsif clock_cycles = 3 then
 							clock_cycles <=  clock_cycles + 1;
 							current_state <= PIXEL_GET;
-							fifo_read_req <= '0';
-							D <= fifo_q;
+							LCD_ReadReq <= '0';
+							D <= LCD_q;
 						else 
 							clock_cycles <= "000";
 							current_state <= PIXEL_WRITE;
-							fifo_read_req <= '0';
+							LCD_ReadReq <= '0';
 						end if;
 				end case;
 			end if;
 		end process;
 	
-	lcd_current_state_out <= current_state;
-		
+
 		
 	end arch_lcd_controller;

@@ -51,26 +51,26 @@ preplace inst soc_system.hps_0.timer -pg 1
 preplace inst soc_system.hps_0.gpio1 -pg 1
 preplace inst soc_system.hps_0.timer3 -pg 1
 preplace inst soc_system.hps_0.arm_a9_1 -pg 1
-preplace inst soc_system.address_span_extender_0 -pg 1 -lvl 3 -y 330
+preplace inst soc_system.address_span_extender_0 -pg 1 -lvl 3 -y 350
 preplace inst soc_system.hps_0.nand0 -pg 1
 preplace inst soc_system.hps_0.gpio2 -pg 1
 preplace inst soc_system.hps_0.arm_gic_0 -pg 1
-preplace inst soc_system.hps_0 -pg 1 -lvl 2 -y 280
+preplace inst soc_system.hps_0 -pg 1 -lvl 2 -y 290
 preplace inst soc_system.clk_0 -pg 1 -lvl 1 -y 160
 preplace inst soc_system.onchip_memory2_0 -pg 1 -lvl 3 -y 30
 preplace inst soc_system.hps_0.f2s_periph_ref_clk -pg 1
 preplace inst soc_system.hps_0.fpga_interfaces -pg 1
 preplace inst soc_system.jtag_uart_0 -pg 1 -lvl 3 -y 110
 preplace inst soc_system.hps_0.axi_sdram -pg 1
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)hps_0.f2h_sdram0_clock,(MASTER)clk_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)address_span_extender_0.clock,(SLAVE)pio_leds.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)lcd_component_0.clock) 1 1 2 390 440 870
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_ddr,(SLAVE)hps_0.memory) 1 0 2 NJ 350 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 N
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 N
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_ddr,(SLAVE)hps_0.memory) 1 0 2 NJ 360 NJ
 preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)address_span_extender_0.expanded_master,(SLAVE)hps_0.f2h_sdram0_data) 1 1 3 430 420 NJ 420 1130
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_0_io) 1 0 2 NJ 330 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)hps_0.h2f_reset,(SLAVE)jtag_uart_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)pio_leds.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)address_span_extender_0.reset,(SLAVE)lcd_component_0.reset_sink) 1 1 2 410 230 830
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)lcd_component_0.slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)address_span_extender_0.windowed_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)pio_leds.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)onchip_memory2_0.s1,(MASTER)lcd_component_0.avalon_master) 1 1 3 430 210 850 320 1130
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)pio_leds.external_connection,(SLAVE)soc_system.pio_leds_external_connection) 1 0 3 NJ 490 NJ 490 NJ
-levelinfo -pg 1 0 180 1170
-levelinfo -hier soc_system 190 220 570 940 1150
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)address_span_extender_0.expanded_master,(SLAVE)hps_0.f2h_sdram0_data) 1 1 3 430 250 NJ 340 1110
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_system.hps_0_io) 1 0 2 NJ 340 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)soc_system.clk) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)lcd_component_0.reset_sink,(SLAVE)nios2_gen2_0.reset,(SLAVE)address_span_extender_0.reset,(MASTER)hps_0.h2f_reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)pio_leds.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)jtag_uart_0.reset) 1 1 2 410 230 830
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)nios2_gen2_0.data_master,(MASTER)lcd_component_0.AM,(SLAVE)lcd_component_0.AS,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)address_span_extender_0.windowed_slave,(SLAVE)onchip_memory2_0.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)pio_leds.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave) 1 1 3 430 210 850 320 1110
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)jtag_uart_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)address_span_extender_0.clock,(MASTER)clk_0.clk,(SLAVE)pio_leds.clk,(SLAVE)lcd_component_0.clock,(SLAVE)nios2_gen2_0.clk) 1 1 2 390 410 870
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)pio_leds.external_connection,(SLAVE)soc_system.pio_leds_external_connection) 1 0 3 NJ 460 NJ 460 NJ
+levelinfo -pg 1 0 180 1150
+levelinfo -hier soc_system 190 220 570 940 1130
