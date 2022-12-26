@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ES_mini_project_TRDB_D5M_LT24
-Sun Dec 25 19:04:52 2022
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Sun Dec 25 20:48:12 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,9 +17,9 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -29,16 +29,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Dec 25 19:04:52 2022           ;
-; Quartus Prime Version       ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Failed - Sun Dec 25 20:48:12 2022           ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; ES_mini_project_TRDB_D5M_LT24               ;
 ; Top-level Entity Name       ; DE0_Nano_SoC_TRDB_D5M_LT24_top_level        ;
 ; Family                      ; Cyclone V                                   ;
@@ -160,34 +159,34 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sun Dec 25 19:04:12 2022
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Dec 25 20:47:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ES_mini_project_TRDB_D5M_LT24 -c ES_mini_project_TRDB_D5M_LT24
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12248): Elaborating Platform Designer system entity "soc_system.qsys"
-Info (12250): 2022.12.25.19:04:23 Progress: Loading quartus/soc_system.qsys
-Info (12250): 2022.12.25.19:04:24 Progress: Reading input file
-Info (12250): 2022.12.25.19:04:24 Progress: Adding address_span_extender_0 [altera_address_span_extender 21.1]
-Info (12250): 2022.12.25.19:04:25 Progress: Parameterizing module address_span_extender_0
-Info (12250): 2022.12.25.19:04:25 Progress: Adding clk_0 [clock_source 21.1]
-Info (12250): 2022.12.25.19:04:25 Progress: Parameterizing module clk_0
-Info (12250): 2022.12.25.19:04:25 Progress: Adding hps_0 [altera_hps 21.1]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module hps_0
-Info (12250): 2022.12.25.19:04:26 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2022.12.25.19:04:26 Progress: Adding lcd_component_0 [lcd_component 1.0]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module lcd_component_0
-Info (12250): 2022.12.25.19:04:26 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module nios2_gen2_0
-Info (12250): 2022.12.25.19:04:26 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2022.12.25.19:04:26 Progress: Adding pio_leds [altera_avalon_pio 21.1]
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing module pio_leds
-Info (12250): 2022.12.25.19:04:26 Progress: Building connections
-Info (12250): 2022.12.25.19:04:26 Progress: Parameterizing connections
-Info (12250): 2022.12.25.19:04:26 Progress: Validating
-Info (12250): 2022.12.25.19:04:35 Progress: Done reading input file
+Info (12250): 2022.12.25.20:47:38 Progress: Loading quartus/soc_system.qsys
+Info (12250): 2022.12.25.20:47:39 Progress: Reading input file
+Info (12250): 2022.12.25.20:47:39 Progress: Adding address_span_extender_0 [altera_address_span_extender 18.1]
+Info (12250): 2022.12.25.20:47:41 Progress: Parameterizing module address_span_extender_0
+Info (12250): 2022.12.25.20:47:41 Progress: Adding clk_0 [clock_source 18.1]
+Info (12250): 2022.12.25.20:47:41 Progress: Parameterizing module clk_0
+Info (12250): 2022.12.25.20:47:41 Progress: Adding hps_0 [altera_hps 18.1]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module hps_0
+Info (12250): 2022.12.25.20:47:42 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2022.12.25.20:47:42 Progress: Adding lcd_component_0 [lcd_component 1.0]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module lcd_component_0
+Info (12250): 2022.12.25.20:47:42 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module nios2_gen2_0
+Info (12250): 2022.12.25.20:47:42 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2022.12.25.20:47:42 Progress: Adding pio_leds [altera_avalon_pio 18.1]
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing module pio_leds
+Info (12250): 2022.12.25.20:47:42 Progress: Building connections
+Info (12250): 2022.12.25.20:47:42 Progress: Parameterizing connections
+Info (12250): 2022.12.25.20:47:42 Progress: Validating
+Info (12250): 2022.12.25.20:47:53 Progress: Done reading input file
 Warning (12251): Soc_system.hps_0: Setting the slave port width of interface f2h_sdram0 to 32 results in bandwidth under-utilization.  Altera recommends you set the interface data width to 64-bit or greater.
 Info (12250): Soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
 Info (12250): Soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
@@ -195,7 +194,6 @@ Warning (12251): Soc_system.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequ
 Warning (12251): Soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info (12250): Soc_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Warning (12251): Soc_system.lcd_component_0.AS: Signal address appears 2 times (only once is allowed)
-Warning (12251): Soc_system.lcd_component_0: lcd_component_0.conduit_end must be exported, or connected to a matching conduit.
 Info (12250): Soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
 Warning (12251): Translator lcd_component_0_AS_translator failed to match interface lcd_component_0.AS
 Info (12250): Interconnect is inserted between master address_span_extender_0.expanded_master and slave hps_0.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 30 bit wide.
@@ -213,14 +211,17 @@ Info (12250):     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLi
 Info (12250):     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.main(SbGenerate.java:981)
 Info (12250): Soc_system: Done "soc_system" with 1 modules, 0 files
 Info (12249): Finished elaborating Platform Designer system entity "soc_system.qsys"
+Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/fifo.vhd
+    Info (12022): Found design unit 1: fifo-SYN File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/fifo.vhd Line: 59
+    Info (12023): Found entity 1: fifo File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/fifo.vhd Line: 43
 Info (12021): Found 1 design units, including 0 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/lcd_pkg.vhd
     Info (12022): Found design unit 1: lcd_package File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_pkg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/acquisition.vhd
     Info (12022): Found design unit 1: AcquModule-Comp File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 53
     Info (12023): Found entity 1: AcquModule File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/Acquisition.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/de0_nano_soc_trdb_d5m_lt24_top_level.vhd
-    Info (12022): Found design unit 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level-rtl File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 125
-    Info (12023): Found entity 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 20
+    Info (12022): Found design unit 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level-rtl File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 127
+    Info (12023): Found entity 1: DE0_Nano_SoC_TRDB_D5M_LT24_top_level File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file /users/osour/desktop/embsys/lab4/lab4.0-rendu/hw/hdl/lcd_controller.vhd
     Info (12022): Found design unit 1: lcd_controller-arch_lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 40
     Info (12023): Found entity 1: lcd_controller File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/lcd_controller.vhd Line: 7
@@ -231,27 +232,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: top-top_architecture File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 41
     Info (12023): Found entity 1: top File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/top.vhd Line: 7
 Info (12127): Elaborating entity "DE0_Nano_SoC_TRDB_D5M_LT24_top_level" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(23): used implicit default value for signal "ADC_CONVST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(24): used implicit default value for signal "ADC_SCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 24
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(25): used implicit default value for signal "ADC_SDI" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 25
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(48): used implicit default value for signal "GPIO_0_LT24_ADC_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 48
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(49): used implicit default value for signal "GPIO_0_LT24_ADC_DCLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 49
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(50): used implicit default value for signal "GPIO_0_LT24_ADC_DIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 50
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(53): used implicit default value for signal "GPIO_0_LT24_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 53
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(54): used implicit default value for signal "GPIO_0_LT24_D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 54
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(55): used implicit default value for signal "GPIO_0_LT24_LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 55
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(56): used implicit default value for signal "GPIO_0_LT24_RD_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(57): used implicit default value for signal "GPIO_0_LT24_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 57
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(58): used implicit default value for signal "GPIO_0_LT24_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 58
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(59): used implicit default value for signal "GPIO_0_LT24_WR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 59
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(66): used implicit default value for signal "GPIO_1_D5M_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 66
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(70): used implicit default value for signal "GPIO_1_D5M_TRIGGER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 70
-Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(71): used implicit default value for signal "GPIO_1_D5M_XCLKIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 71
-Error (12006): Node instance "u0" instantiates undefined entity "soc_system". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 201
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 23 warnings
-    Error: Peak virtual memory: 4861 megabytes
-    Error: Processing ended: Sun Dec 25 19:04:52 2022
-    Error: Elapsed time: 00:00:40
-    Error: Total CPU time (on all processors): 00:01:21
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(25): used implicit default value for signal "ADC_CONVST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(26): used implicit default value for signal "ADC_SCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(27): used implicit default value for signal "ADC_SDI" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(50): used implicit default value for signal "GPIO_0_LT24_ADC_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 50
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(51): used implicit default value for signal "GPIO_0_LT24_ADC_DCLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 51
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(52): used implicit default value for signal "GPIO_0_LT24_ADC_DIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 52
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(55): used implicit default value for signal "GPIO_0_LT24_CS_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 55
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(56): used implicit default value for signal "GPIO_0_LT24_D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 56
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(57): used implicit default value for signal "GPIO_0_LT24_LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 57
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(58): used implicit default value for signal "GPIO_0_LT24_RD_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 58
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(59): used implicit default value for signal "GPIO_0_LT24_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(60): used implicit default value for signal "GPIO_0_LT24_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 60
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(61): used implicit default value for signal "GPIO_0_LT24_WR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(68): used implicit default value for signal "GPIO_1_D5M_RESET_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 68
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(72): used implicit default value for signal "GPIO_1_D5M_TRIGGER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 72
+Warning (10541): VHDL Signal Declaration warning at DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd(73): used implicit default value for signal "GPIO_1_D5M_XCLKIN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 73
+Error (12006): Node instance "u0" instantiates undefined entity "soc_system". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/osour/Desktop/EmbSys/Lab4/Lab4.0-Rendu/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd Line: 203
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 22 warnings
+    Error: Peak virtual memory: 4851 megabytes
+    Error: Processing ended: Sun Dec 25 20:48:12 2022
+    Error: Elapsed time: 00:00:50
+    Error: Total CPU time (on all processors): 00:01:32
 
 

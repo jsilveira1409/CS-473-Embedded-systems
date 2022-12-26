@@ -16,6 +16,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use work.lcd_package.all;
+
 
 entity DE0_Nano_SoC_TRDB_D5M_LT24_top_level is
     port(

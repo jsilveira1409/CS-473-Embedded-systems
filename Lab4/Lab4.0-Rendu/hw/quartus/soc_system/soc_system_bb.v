@@ -65,6 +65,11 @@ module soc_system (
 	hps_0_io_hps_io_gpio_inst_GPIO53,
 	hps_0_io_hps_io_gpio_inst_GPIO54,
 	hps_0_io_hps_io_gpio_inst_GPIO61,
+	lcd_component_0_conduit_end_new_signal,
+	lcd_component_0_conduit_end_new_signal_1,
+	lcd_component_0_conduit_end_new_signal_2,
+	lcd_component_0_conduit_end_new_signal_3,
+	lcd_component_0_conduit_end_new_signal_4,
 	pio_leds_external_connection_export,
 	reset_reset_n);	
 
@@ -133,6 +138,11 @@ module soc_system (
 	inout		hps_0_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO54;
 	inout		hps_0_io_hps_io_gpio_inst_GPIO61;
+	output		lcd_component_0_conduit_end_new_signal;
+	output	[15:0]	lcd_component_0_conduit_end_new_signal_1;
+	output		lcd_component_0_conduit_end_new_signal_2;
+	output		lcd_component_0_conduit_end_new_signal_3;
+	output		lcd_component_0_conduit_end_new_signal_4;
 	output	[7:0]	pio_leds_external_connection_export;
 	input		reset_reset_n;
 endmodule

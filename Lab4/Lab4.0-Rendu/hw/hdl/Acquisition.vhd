@@ -143,18 +143,16 @@ Begin
                     CntAddress <= AcqAddress; 
                     CntLength <= AcqLength; 
                     end if; 
-                when WaitData => 
+                    when WaitData => 
                     if NewData = '1' then 
                         SM <= WaitFifo; 
                         AM_Address <= CntAddress; 
                         AM_Write <= '1'; 
-                        AM_DataWrite(7 downto 0) <= DataAcquisition;
-                        AM_DataWrite(15 downto 8) <= DataAcquisition;
-                        AM_DataWrite(23 downto 16) <= DataAcquisition;
-                        AM_DataWrite(31 downto 24) <= DataAcquisition;
+                        DataTransfer(7 downto 0) <= DataAcquisition;
+                        DataTransfer(15 downto 8) <= DataAcquisition;
                         AM_ByteEnable <= "0000"; 
-                        Indice := to_integer(unsigned(CntAddress(1 downto 0))); 
-                        AM_ByteEnable(Indice) <= '1'; 
+                        Indice := to_integer(unsigned(CntAddress(0 downto 0))); 
+                        AM_ByteEnable(Indice) <= '1';
                     --elsif AcqLength = X"0000_0000" then 
                     --    SM <= Idle;
                     end if; 
