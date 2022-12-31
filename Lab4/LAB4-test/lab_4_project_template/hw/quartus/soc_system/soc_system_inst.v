@@ -64,11 +64,6 @@
 		.hps_0_io_hps_io_gpio_inst_GPIO53    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),    //                             .hps_io_gpio_inst_GPIO53
 		.hps_0_io_hps_io_gpio_inst_GPIO54    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO54>),    //                             .hps_io_gpio_inst_GPIO54
 		.hps_0_io_hps_io_gpio_inst_GPIO61    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO61>),    //                             .hps_io_gpio_inst_GPIO61
-		.lcd_0_conduit_end_name              (<connected-to-lcd_0_conduit_end_name>),              //            lcd_0_conduit_end.name
-		.lcd_0_conduit_end_name3             (<connected-to-lcd_0_conduit_end_name3>),             //                             .name3
-		.lcd_0_conduit_end_name2             (<connected-to-lcd_0_conduit_end_name2>),             //                             .name2
-		.lcd_0_conduit_end_new_signal        (<connected-to-lcd_0_conduit_end_new_signal>),        //                             .new_signal
-		.lcd_0_conduit_end_new_signal_1      (<connected-to-lcd_0_conduit_end_new_signal_1>),      //                             .new_signal_1
 		.pio_leds_external_connection_export (<connected-to-pio_leds_external_connection_export>), // pio_leds_external_connection.export
 		.reset_reset_n                       (<connected-to-reset_reset_n>)                        //                        reset.reset_n
 	);

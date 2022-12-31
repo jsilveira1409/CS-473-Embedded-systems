@@ -65,11 +65,6 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
-			lcd_0_conduit_end_name              : out   std_logic;                                        -- name
-			lcd_0_conduit_end_name3             : out   std_logic;                                        -- name3
-			lcd_0_conduit_end_name2             : out   std_logic;                                        -- name2
-			lcd_0_conduit_end_new_signal        : out   std_logic;                                        -- new_signal
-			lcd_0_conduit_end_new_signal_1      : in    std_logic_vector(15 downto 0) := (others => 'X'); -- new_signal_1
 			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
 			reset_reset_n                       : in    std_logic                     := 'X'              -- reset_n
 		);

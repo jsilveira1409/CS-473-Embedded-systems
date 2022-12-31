@@ -1,0 +1,213 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.lcd_package.all;
+
+entity tb_top is
+end tb_top;
+
+architecture test of tb_top is
+
+    CONSTANT CLK_PERIOD : time := 20 ns;
+    --global signals
+    SIGNAL clk : std_logic;
+    SIGNAL nReset : std_logic;
+
+    -- avalon slave terface
+    SIGNAL AS_Address :  std_logic_vector;
+    SIGNAL AS_CS :  std_logic;
+    SIGNAL AS_Write :  std_logic;
+    SIGNAL AS_Read :  std_logic;
+    SIGNAL AS_DataWrite :  std_logic_vector(31 downto 0);
+    SIGNAL AS_DataRead :  std_logic_vector(31 downto 0);
+    -- avalon master terface(DMA)
+    SIGNAL AM_Address :  std_logic_vector(31 downto 0);
+    SIGNAL AM_ByteEnable :  std_logic_vector(3 downto 0);
+    SIGNAL AM_Read :  std_logic;
+    SIGNAL AM_ReadData :  std_logic_vector(7 downto 0);
+    SIGNAL AM_ReadDataValid :  std_logic;
+    SIGNAL AM_WaitRequest :  std_logic;
+
+    --lcd signals(gpio)
+    SIGNAL D :  std_logic_vector(15 downto 0);
+    SIGNAL DCX :  std_logic;
+    SIGNAL WRX :  std_logic;
+    SIGNAL RESX :   std_logic;
+    SIGNAL CSX :  std_logic;
+
+begin
+
+top : entity work.top
+    port map(
+        clk => clk,
+        nReset => nReset,
+
+        AS_Address => AS_Address,
+        AS_CS => AS_CS,
+        AS_Write => AS_Write,
+        AS_Read => AS_Read,
+        AS_DataWrite => AS_DataWrite,
+        AS_DataRead => AS_DataRead,
+
+        AM_Address => AM_Address,
+        AM_ByteEnable => AM_ByteEnable,
+        AM_Read => AM_Read,
+        AM_ReadData => AM_ReadData,
+        AM_ReadDataValid => AM_ReadDataValid,
+        AM_WaitRequest => AM_WaitRequest,
+
+        D => D,
+        DCX => DCX,
+        WRX => WRX,
+        RESX => RESX,
+        CSX => CSX
+    );
+
+    clk_gen : process
+	begin
+		clk <= '1';
+		wait for CLK_PERIOD / 2;
+		clk <= '0';
+		wait for CLK_PERIOD / 2;
+	end process clk_gen;    
+
+    simulation : process
+    procedure async_reset is
+    begin
+        wait until rising_edge(clk);
+        wait for CLK_PERIOD / 4;
+        nReset <= '0';
+        wait for CLK_PERIOD / 2;
+        nReset <= '1';
+        Flags <= x"0000";
+        CommandReg <= x"0000";
+        NParamReg <= x"0000";
+        Params <= (others => x"0000");
+    end procedure async_reset;	
+
+    begin
+        wait for CLK_PERIOD;
+
+--		-- Reset procedure
+--		Flags(2) <= '1';
+--
+--		wait until reset_flag_reset = '0';
+--		Flags(2) <= '0';
+--
+--		-- Sending 2 commands to LT24
+--		CommandReg <= x"00aa";
+--		NParamReg <= x"0003";
+--		Params(0) <= x"1111";
+--		Params(1) <= x"2222";
+--		Params(2) <= x"3333";
+--		Flags(1) <= '1';
+--		wait until reset_flag_cmd = '0';
+--		Flags(1) <= '0';
+--		wait for CLK_PERIOD;
+--		CommandReg <= x"00bb";
+--		NParamReg <= x"0002";
+--		Params(0) <= x"3333";
+--		Params(1) <= x"4444";
+--		Flags(1) <= '1';
+--		wait until reset_flag_cmd = '0';
+--		Flags(1) <= '0';
+--		wait for CLK_PERIOD;
+
+
+    -- Starting display
+    ImageAddress <= x"12345678";
+    ImageLength <= x"00000040";
+
+    Flags(0) <= '1'; --changer ca pour lcd enable
+
+    -- Simulating Slave response to DMA request
+    wait until read = '1';
+    wait for CLK_PERIOD * 2;
+    waitRequest <= '0';
+    AM_ReadData <= x"1111";
+    AM_ReadDatavalid <= '0';
+    wait for CLK_PERIOD * 4;
+    AM_ReadDatavalid <= '1';
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"2222";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"3333";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"4444";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"5555";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"6666";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"7777";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"8888";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"9999";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"AAAA";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"BBBB";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"CCCC";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"DDDD";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"EEEE";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"FFFF";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"ABCD";
+    wait for CLK_PERIOD;
+    AM_ReadDatavalid <= '0';
+
+    -- Second burst of pixels
+    wait until read = '1';
+    wait for CLK_PERIOD * 2;
+    waitRequest <= '0';
+    AM_ReadData <= x"1111";
+    AM_ReadDatavalid <= '0';
+    wait for CLK_PERIOD * 4;
+    AM_ReadDatavalid <= '1';
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"2222";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"3333";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"4444";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"5555";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"6666";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"7777";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"8888";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"9999";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"AAAA";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"BBBB";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"CCCC";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"DDDD";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"EEEE";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"FFFF";
+    wait for CLK_PERIOD;
+    AM_ReadData <= x"ABCD";
+    wait for CLK_PERIOD;
+    AM_ReadDatavalid <= '0';
+
+    wait until reset_flag_lcdenable = '0';
+    Flags(0) <= '0';
+
+
+    wait;
+
+
+
+    end process simulation;

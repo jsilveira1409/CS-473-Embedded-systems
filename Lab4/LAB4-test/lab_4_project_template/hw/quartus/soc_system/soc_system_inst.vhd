@@ -65,11 +65,6 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
-			lcd_0_conduit_end_name              : out   std_logic;                                        -- name
-			lcd_0_conduit_end_name3             : out   std_logic;                                        -- name3
-			lcd_0_conduit_end_name2             : out   std_logic;                                        -- name2
-			lcd_0_conduit_end_new_signal        : out   std_logic;                                        -- new_signal
-			lcd_0_conduit_end_new_signal_1      : in    std_logic_vector(15 downto 0) := (others => 'X'); -- new_signal_1
 			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
 			reset_reset_n                       : in    std_logic                     := 'X'              -- reset_n
 		);
@@ -142,11 +137,6 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO53,    --                             .hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO54,    --                             .hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO61,    --                             .hps_io_gpio_inst_GPIO61
-			lcd_0_conduit_end_name              => CONNECTED_TO_lcd_0_conduit_end_name,              --            lcd_0_conduit_end.name
-			lcd_0_conduit_end_name3             => CONNECTED_TO_lcd_0_conduit_end_name3,             --                             .name3
-			lcd_0_conduit_end_name2             => CONNECTED_TO_lcd_0_conduit_end_name2,             --                             .name2
-			lcd_0_conduit_end_new_signal        => CONNECTED_TO_lcd_0_conduit_end_new_signal,        --                             .new_signal
-			lcd_0_conduit_end_new_signal_1      => CONNECTED_TO_lcd_0_conduit_end_new_signal_1,      --                             .new_signal_1
 			pio_leds_external_connection_export => CONNECTED_TO_pio_leds_external_connection_export, -- pio_leds_external_connection.export
 			reset_reset_n                       => CONNECTED_TO_reset_reset_n                        --                        reset.reset_n
 		);

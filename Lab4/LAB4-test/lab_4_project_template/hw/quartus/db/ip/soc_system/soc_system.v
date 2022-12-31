@@ -73,7 +73,7 @@ module soc_system (
 		output wire        lcd_0_conduit_end_name3,             //                             .name3
 		output wire        lcd_0_conduit_end_name2,             //                             .name2
 		output wire        lcd_0_conduit_end_new_signal,        //                             .new_signal
-		input  wire [15:0] lcd_0_conduit_end_new_signal_1,      //                             .new_signal_1
+		output wire [15:0] lcd_0_conduit_end_new_signal_1,      //                             .new_signal_1
 		output wire [7:0]  pio_leds_external_connection_export, // pio_leds_external_connection.export
 		input  wire        reset_reset_n                        //                        reset.reset_n
 	);
@@ -88,7 +88,7 @@ module soc_system (
 	wire  [31:0] nios2_gen2_0_data_master_readdata;                                      // mm_interconnect_0:nios2_gen2_0_data_master_readdata -> nios2_gen2_0:d_readdata
 	wire         nios2_gen2_0_data_master_waitrequest;                                   // mm_interconnect_0:nios2_gen2_0_data_master_waitrequest -> nios2_gen2_0:d_waitrequest
 	wire         nios2_gen2_0_data_master_debugaccess;                                   // nios2_gen2_0:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_gen2_0_data_master_debugaccess
-	wire  [28:0] nios2_gen2_0_data_master_address;                                       // nios2_gen2_0:d_address -> mm_interconnect_0:nios2_gen2_0_data_master_address
+	wire  [34:0] nios2_gen2_0_data_master_address;                                       // nios2_gen2_0:d_address -> mm_interconnect_0:nios2_gen2_0_data_master_address
 	wire   [3:0] nios2_gen2_0_data_master_byteenable;                                    // nios2_gen2_0:d_byteenable -> mm_interconnect_0:nios2_gen2_0_data_master_byteenable
 	wire         nios2_gen2_0_data_master_read;                                          // nios2_gen2_0:d_read -> mm_interconnect_0:nios2_gen2_0_data_master_read
 	wire         nios2_gen2_0_data_master_write;                                         // nios2_gen2_0:d_write -> mm_interconnect_0:nios2_gen2_0_data_master_write
@@ -106,9 +106,8 @@ module soc_system (
 	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_write;         // mm_interconnect_0:address_span_extender_0_windowed_slave_write -> address_span_extender_0:avs_s0_write
 	wire  [31:0] mm_interconnect_0_address_span_extender_0_windowed_slave_writedata;     // mm_interconnect_0:address_span_extender_0_windowed_slave_writedata -> address_span_extender_0:avs_s0_writedata
 	wire   [6:0] mm_interconnect_0_address_span_extender_0_windowed_slave_burstcount;    // mm_interconnect_0:address_span_extender_0_windowed_slave_burstcount -> address_span_extender_0:avs_s0_burstcount
-	wire         mm_interconnect_0_lcd_0_as_chipselect;                                  // mm_interconnect_0:lcd_0_AS_chipselect -> lcd_0:AS_CS
 	wire  [31:0] mm_interconnect_0_lcd_0_as_readdata;                                    // lcd_0:AS_DataRead -> mm_interconnect_0:lcd_0_AS_readdata
-	wire   [0:0] mm_interconnect_0_lcd_0_as_address;                                     // mm_interconnect_0:lcd_0_AS_address -> lcd_0:AS_Address
+	wire  [31:0] mm_interconnect_0_lcd_0_as_address;                                     // mm_interconnect_0:lcd_0_AS_address -> lcd_0:AS_Address
 	wire         mm_interconnect_0_lcd_0_as_read;                                        // mm_interconnect_0:lcd_0_AS_read -> lcd_0:AS_Read
 	wire         mm_interconnect_0_lcd_0_as_write;                                       // mm_interconnect_0:lcd_0_AS_write -> lcd_0:AS_Write
 	wire  [31:0] mm_interconnect_0_lcd_0_as_writedata;                                   // mm_interconnect_0:lcd_0_AS_writedata -> lcd_0:AS_DataWrite
@@ -299,26 +298,25 @@ module soc_system (
 	);
 
 	top lcd_0 (
-		.clk              (clk_clk),                               //       clock.clk
-		.AM_Address       (lcd_0_am_address),                      //          AM.address
-		.AM_ByteEnable    (lcd_0_am_byteenable),                   //            .byteenable
-		.AM_Read          (lcd_0_am_read),                         //            .read
-		.AM_WaitRequest   (lcd_0_am_waitrequest),                  //            .waitrequest
-		.tmp_imagedone    (lcd_0_am_beginbursttransfer),           //            .beginbursttransfer
-		.AM_ReadData      (lcd_0_am_readdata),                     //            .readdata
-		.AM_ReadDataValid (lcd_0_am_readdatavalid),                //            .readdatavalid
-		.AS_Address       (mm_interconnect_0_lcd_0_as_address),    //          AS.address
-		.AS_Write         (mm_interconnect_0_lcd_0_as_write),      //            .write
-		.AS_Read          (mm_interconnect_0_lcd_0_as_read),       //            .read
-		.AS_CS            (mm_interconnect_0_lcd_0_as_chipselect), //            .chipselect
-		.AS_DataRead      (mm_interconnect_0_lcd_0_as_readdata),   //            .readdata
-		.AS_DataWrite     (mm_interconnect_0_lcd_0_as_writedata),  //            .writedata
-		.DCX              (lcd_0_conduit_end_name),                // conduit_end.name
-		.RESX             (lcd_0_conduit_end_name3),               //            .name3
-		.WRX              (lcd_0_conduit_end_name2),               //            .name2
-		.CSX              (lcd_0_conduit_end_new_signal),          //            .new_signal
-		.D                (lcd_0_conduit_end_new_signal_1),        //            .new_signal_1
-		.nReset           (~rst_controller_reset_out_reset)        //  reset_sink.reset_n
+		.clk              (clk_clk),                              //       clock.clk
+		.AM_Address       (lcd_0_am_address),                     //          AM.address
+		.AM_ByteEnable    (lcd_0_am_byteenable),                  //            .byteenable
+		.AM_Read          (lcd_0_am_read),                        //            .read
+		.AM_WaitRequest   (lcd_0_am_waitrequest),                 //            .waitrequest
+		.tmp_imagedone    (lcd_0_am_beginbursttransfer),          //            .beginbursttransfer
+		.AM_ReadData      (lcd_0_am_readdata),                    //            .readdata
+		.AM_ReadDataValid (lcd_0_am_readdatavalid),               //            .readdatavalid
+		.AS_Address       (mm_interconnect_0_lcd_0_as_address),   //          AS.address
+		.AS_Write         (mm_interconnect_0_lcd_0_as_write),     //            .write
+		.AS_Read          (mm_interconnect_0_lcd_0_as_read),      //            .read
+		.AS_DataRead      (mm_interconnect_0_lcd_0_as_readdata),  //            .readdata
+		.AS_DataWrite     (mm_interconnect_0_lcd_0_as_writedata), //            .writedata
+		.DCX              (lcd_0_conduit_end_name),               // conduit_end.name
+		.RESX             (lcd_0_conduit_end_name3),              //            .name3
+		.WRX              (lcd_0_conduit_end_name2),              //            .name2
+		.CSX              (lcd_0_conduit_end_new_signal),         //            .new_signal
+		.D                (lcd_0_conduit_end_new_signal_1),       //            .new_signal_1
+		.nReset           (~rst_controller_reset_out_reset)       //  reset_sink.reset_n
 	);
 
 	soc_system_nios2_gen2_0 nios2_gen2_0 (
@@ -418,7 +416,6 @@ module soc_system (
 		.lcd_0_AS_read                                        (mm_interconnect_0_lcd_0_as_read),                                        //                                       .read
 		.lcd_0_AS_readdata                                    (mm_interconnect_0_lcd_0_as_readdata),                                    //                                       .readdata
 		.lcd_0_AS_writedata                                   (mm_interconnect_0_lcd_0_as_writedata),                                   //                                       .writedata
-		.lcd_0_AS_chipselect                                  (mm_interconnect_0_lcd_0_as_chipselect),                                  //                                       .chipselect
 		.nios2_gen2_0_debug_mem_slave_address                 (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_address),                 //           nios2_gen2_0_debug_mem_slave.address
 		.nios2_gen2_0_debug_mem_slave_write                   (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write),                   //                                       .write
 		.nios2_gen2_0_debug_mem_slave_read                    (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_read),                    //                                       .read

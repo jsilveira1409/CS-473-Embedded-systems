@@ -43,8 +43,8 @@
 //   ARBITRATION_SHARES:  1 1 1 1 1 1
 //   ARBITRATION_SCHEME   "no-arb"
 //   PIPELINE_ARB:        0
-//   PKT_TRANS_LOCK:      72 (arbitration locking enabled)
-//   ST_DATA_W:           114
+//   PKT_TRANS_LOCK:      75 (arbitration locking enabled)
+//   ST_DATA_W:           117
 //   ST_CHANNEL_W:        6
 // ------------------------------------------
 
@@ -54,42 +54,42 @@ module soc_system_mm_interconnect_0_rsp_mux_001
     // Sinks
     // ----------------------
     input                       sink0_valid,
-    input [114-1   : 0]  sink0_data,
+    input [117-1   : 0]  sink0_data,
     input [6-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
-    input [114-1   : 0]  sink1_data,
+    input [117-1   : 0]  sink1_data,
     input [6-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
     output                      sink1_ready,
 
     input                       sink2_valid,
-    input [114-1   : 0]  sink2_data,
+    input [117-1   : 0]  sink2_data,
     input [6-1: 0]  sink2_channel,
     input                       sink2_startofpacket,
     input                       sink2_endofpacket,
     output                      sink2_ready,
 
     input                       sink3_valid,
-    input [114-1   : 0]  sink3_data,
+    input [117-1   : 0]  sink3_data,
     input [6-1: 0]  sink3_channel,
     input                       sink3_startofpacket,
     input                       sink3_endofpacket,
     output                      sink3_ready,
 
     input                       sink4_valid,
-    input [114-1   : 0]  sink4_data,
+    input [117-1   : 0]  sink4_data,
     input [6-1: 0]  sink4_channel,
     input                       sink4_startofpacket,
     input                       sink4_endofpacket,
     output                      sink4_ready,
 
     input                       sink5_valid,
-    input [114-1   : 0]  sink5_data,
+    input [117-1   : 0]  sink5_data,
     input [6-1: 0]  sink5_channel,
     input                       sink5_startofpacket,
     input                       sink5_endofpacket,
@@ -100,7 +100,7 @@ module soc_system_mm_interconnect_0_rsp_mux_001
     // Source
     // ----------------------
     output                      src_valid,
-    output [114-1    : 0] src_data,
+    output [117-1    : 0] src_data,
     output [6-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
@@ -112,13 +112,13 @@ module soc_system_mm_interconnect_0_rsp_mux_001
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 114 + 6 + 2;
+    localparam PAYLOAD_W        = 117 + 6 + 2;
     localparam NUM_INPUTS       = 6;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
-    localparam ST_DATA_W        = 114;
+    localparam ST_DATA_W        = 117;
     localparam ST_CHANNEL_W     = 6;
-    localparam PKT_TRANS_LOCK   = 72;
+    localparam PKT_TRANS_LOCK   = 75;
 
     // ------------------------------------------
     // Signals
@@ -155,12 +155,12 @@ module soc_system_mm_interconnect_0_rsp_mux_001
     // ------------------------------------------
     reg [NUM_INPUTS - 1 : 0] lock;
     always @* begin
-      lock[0] = sink0_data[72];
-      lock[1] = sink1_data[72];
-      lock[2] = sink2_data[72];
-      lock[3] = sink3_data[72];
-      lock[4] = sink4_data[72];
-      lock[5] = sink5_data[72];
+      lock[0] = sink0_data[75];
+      lock[1] = sink1_data[75];
+      lock[2] = sink2_data[75];
+      lock[3] = sink3_data[75];
+      lock[4] = sink4_data[75];
+      lock[5] = sink5_data[75];
     end
 
     assign last_cycle = src_valid & src_ready & src_endofpacket & ~(|(lock & grant));

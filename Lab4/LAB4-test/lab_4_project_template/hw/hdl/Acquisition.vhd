@@ -16,7 +16,7 @@ entity AcquModule is
     ImageDone : in std_logic; 
 
     -- Avalon Slave : 
-    AS_Address : in std_logic_vector(31 downto 0); 
+    AS_Address : in std_logic_vector(9 downto 0); 
     AS_CS : in std_logic ; 
     AS_Write : in std_logic ; 
     AS_Read : in std_logic ; 
@@ -36,7 +36,7 @@ entity AcquModule is
 
     -- Avalon Master : 
     AM_Address : out std_logic_vector(31 downto 0);
-    AM_ByteEnable : out std_logic_vector(3 downto 0);
+    AM_ByteEnable : out std_logic;
     AM_Read : out std_logic;
     AM_WaitRequest : in std_logic;
     AM_Write : out std_logic ; 
@@ -130,7 +130,7 @@ Begin
         SM <= Idle; 
         AM_Write <= '0'; 
         AM_Read <= '0'; 
-        AM_ByteEnable <= "0000"; 
+        AM_ByteEnable <= '0'; 
         CntAddress <= (others => '0'); 
         CntLength <= (others => '0'); 
     elsif rising_edge(clk) then 
@@ -150,7 +150,7 @@ Begin
                         AM_Write <= '1'; 
                         DataTransfer(7 downto 0) <= DataAcquisition;
                         DataTransfer(15 downto 8) <= DataAcquisition;
-                        AM_ByteEnable <= "0000"; 
+                        AM_ByteEnable <= '0'; 
                         Indice := to_integer(unsigned(CntAddress(0 downto 0))); 
                         AM_ByteEnable(Indice) <= '1';
                     --elsif AcqLength = X"0000_0000" then 
@@ -165,7 +165,7 @@ Begin
                     if AM_WaitRequest = '0' then 
                         SM <= AcqData; 
                         AM_Write <= '0'; 
-                        AM_ByteEnable <= "0000"; 
+                        AM_ByteEnable <= '0'; 
                         DataAck <= '1'; 
                     end if; 
                 when AcqData => 

@@ -115,13 +115,6 @@ refer to the applicable agreement for further details.
 		(line (pt 0 688)(pt 224 688)(line_width 1))
 	)
 	(port
-		(pt 0 968)
-		(input)
-		(text "lcd_0_conduit_end_new_signal_1[15..0]" (rect 0 0 155 12)(font "Arial" (font_size 8)))
-		(text "lcd_0_conduit_end_new_signal_1[15..0]" (rect 4 957 226 968)(font "Arial" (font_size 8)))
-		(line (pt 0 968)(pt 224 968)(line_width 3))
-	)
-	(port
 		(pt 0 1048)
 		(input)
 		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
@@ -330,6 +323,13 @@ refer to the applicable agreement for further details.
 		(text "lcd_0_conduit_end_new_signal" (rect 0 0 122 12)(font "Arial" (font_size 8)))
 		(text "lcd_0_conduit_end_new_signal" (rect 4 941 172 952)(font "Arial" (font_size 8)))
 		(line (pt 0 952)(pt 224 952)(line_width 1))
+	)
+	(port
+		(pt 0 968)
+		(output)
+		(text "lcd_0_conduit_end_new_signal_1[15..0]" (rect 0 0 155 12)(font "Arial" (font_size 8)))
+		(text "lcd_0_conduit_end_new_signal_1[15..0]" (rect 4 957 226 968)(font "Arial" (font_size 8)))
+		(line (pt 0 968)(pt 224 968)(line_width 3))
 	)
 	(port
 		(pt 0 1008)

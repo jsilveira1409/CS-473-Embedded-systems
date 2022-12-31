@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2022.12.26.11:29:50</td>
+    <td class="l">2022.12.26.16:11:49</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -85,10 +85,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
     </table>
    </div><span style="display:inline-block ; width:28px"> </span>
-   <div style="display:inline-block ; text-align:left"><span>Processor
-     <br/>&#160;&#160;
-     <a href="#module_nios2_gen2_0"><b>nios2_gen2_0</b>
-     </a> Nios II 18.1
+   <div style="display:inline-block ; text-align:left"><span>
      <br/>All Components
      <br/>&#160;&#160;
      <a href="#module_address_span_extender_0"><b>address_span_extender_0</b>
@@ -1104,7 +1101,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
-    <td class="addr"><span style="color:#989898">0x</span>10000808</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000000400000000</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -28479,11 +28476,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">shifterType</td>
-        <td class="parametervalue">medium_le_shift</td>
+        <td class="parametervalue">fast_le_shift</td>
        </tr>
        <tr>
         <td class="parametername">multiplierType</td>
-        <td class="parametervalue">no_mul</td>
+        <td class="parametervalue">mul_fast32</td>
        </tr>
        <tr>
         <td class="parametername">mul_shift_choice</td>
@@ -28803,15 +28800,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">resetAbsoluteAddr</td>
-        <td class="parametervalue">269484032</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">exceptionAbsoluteAddr</td>
-        <td class="parametervalue">269484064</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">breakAbsoluteAddr</td>
-        <td class="parametervalue">268435488</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">mmu_TLBMissExcAbsAddr</td>
@@ -28827,7 +28824,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">breakSlave_derived</td>
-        <td class="parametervalue">nios2_gen2_0.debug_mem_slave</td>
+        <td class="parametervalue">None</td>
        </tr>
        <tr>
         <td class="parametername">dcache_lineSize_derived</td>
@@ -28875,7 +28872,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataAddrWidth</td>
-        <td class="parametervalue">29</td>
+        <td class="parametervalue">35</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0AddrWidth</td>
@@ -28927,7 +28924,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='hps_0_bridges.f2h_sdram0_data' start='0x0' end='0x10000000' type='hps_bridge_avalon.f2h_sdram0_data' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x10000000' end='0x10000800' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x10000800' end='0x10000808' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;slave name='lcd_0.AS' start='0x10000808' end='0x10000810' type='lcd.AS' /&gt;&lt;slave name='pio_leds.s1' start='0x10000810' end='0x10000820' type='altera_avalon_pio.s1' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10100000' end='0x10120000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='hps_0_bridges.f2h_sdram0_data' start='0x0' end='0x10000000' type='hps_bridge_avalon.f2h_sdram0_data' /&gt;&lt;slave name='nios2_gen2_0.debug_mem_slave' start='0x10000000' end='0x10000800' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='jtag_uart_0.avalon_jtag_slave' start='0x10000800' end='0x10000808' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;slave name='pio_leds.s1' start='0x10000810' end='0x10000820' type='altera_avalon_pio.s1' /&gt;&lt;slave name='onchip_memory2_0.s1' start='0x10100000' end='0x10120000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='lcd_0.AS' start='0x400000000' end='0x800000000' type='lcd.AS' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -29032,122 +29029,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <table class="flowbox">
     <tr>
      <td class="parametersbox">
-      <h2>Software Assignments</h2>
-      <table>
-       <tr>
-        <td class="parametername">BIG_ENDIAN</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">BREAK_ADDR</td>
-        <td class="parametervalue">0x10000020</td>
-       </tr>
-       <tr>
-        <td class="parametername">CPU_ARCH_NIOS2_R1</td>
-        <td class="parametervalue"></td>
-       </tr>
-       <tr>
-        <td class="parametername">CPU_FREQ</td>
-        <td class="parametervalue">50000000u</td>
-       </tr>
-       <tr>
-        <td class="parametername">CPU_ID_SIZE</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">CPU_ID_VALUE</td>
-        <td class="parametervalue">0x00000000</td>
-       </tr>
-       <tr>
-        <td class="parametername">CPU_IMPLEMENTATION</td>
-        <td class="parametervalue">"tiny"</td>
-       </tr>
-       <tr>
-        <td class="parametername">DATA_ADDR_WIDTH</td>
-        <td class="parametervalue">29</td>
-       </tr>
-       <tr>
-        <td class="parametername">DCACHE_LINE_SIZE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DCACHE_LINE_SIZE_LOG2</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">DCACHE_SIZE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">EXCEPTION_ADDR</td>
-        <td class="parametervalue">0x10100020</td>
-       </tr>
-       <tr>
-        <td class="parametername">FLASH_ACCELERATOR_LINES</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FLASH_ACCELERATOR_LINE_SIZE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">FLUSHDA_SUPPORTED</td>
-        <td class="parametervalue"></td>
-       </tr>
-       <tr>
-        <td class="parametername">HARDWARE_DIVIDE_PRESENT</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">HARDWARE_MULTIPLY_PRESENT</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">HARDWARE_MULX_PRESENT</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_DEBUG_CORE</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_DEBUG_STUB</td>
-        <td class="parametervalue"></td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_ILLEGAL_INSTRUCTION_EXCEPTION</td>
-        <td class="parametervalue"></td>
-       </tr>
-       <tr>
-        <td class="parametername">HAS_JMPI_INSTRUCTION</td>
-        <td class="parametervalue"></td>
-       </tr>
-       <tr>
-        <td class="parametername">ICACHE_LINE_SIZE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">ICACHE_LINE_SIZE_LOG2</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">ICACHE_SIZE</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">INST_ADDR_WIDTH</td>
-        <td class="parametervalue">29</td>
-       </tr>
-       <tr>
-        <td class="parametername">OCI_VERSION</td>
-        <td class="parametervalue">1</td>
-       </tr>
-       <tr>
-        <td class="parametername">RESET_ADDR</td>
-        <td class="parametervalue">0x10100000</td>
-       </tr>
-      </table>
-     </td>
+      <h2>Software Assignments</h2>(none)</td>
     </tr>
    </table>
   </div>
@@ -29655,8 +29537,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.02 seconds</td>
-    <td class="r">rendering took 0.43 seconds</td>
+    <td class="l">generation took 0.01 seconds</td>
+    <td class="r">rendering took 0.28 seconds</td>
    </tr>
   </table>
  </body>

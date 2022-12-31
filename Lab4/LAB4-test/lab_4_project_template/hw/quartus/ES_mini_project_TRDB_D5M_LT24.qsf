@@ -314,140 +314,140 @@ set_location_assignment PIN_D5   -to HPS_USB_NXT
 set_location_assignment PIN_C5   -to HPS_USB_STP
 
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_CONV_USB_N
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[0]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[1]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_1
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[2]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_2
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[3]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_3
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[4]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_4
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[5]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_5
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[6]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_6
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[7]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_7
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[8]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_8
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[9]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_9
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[10]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_10
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[11]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_11
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[12]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_12
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[13]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_13
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[14]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR_14
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[0]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA_0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[1]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA_1
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[2]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA_2
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CAS_N -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CKE -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_N -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_P -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CS_N -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CAS_N
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CKE
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_N
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_P
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CS_N
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[0]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM_0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[1]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM_1
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[2]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM_2
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[3]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM_3
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[0]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[1]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_1
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[2]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_2
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[3]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_3
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[4]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_4
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[5]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_5
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[6]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_6
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[7]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_7
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[8]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_8
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[9]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_9
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[10]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_10
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[11]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_11
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[12]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_12
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[13]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_13
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[14]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_14
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[15] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[15]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_15
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[16] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[16]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_16
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[17] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[17]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_17
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[18] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[18]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_18
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[19] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[19]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_19
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[20] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[20]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_20
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[21] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[21]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_21
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[22] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[22]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_22
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[23] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[23]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_23
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[24] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[24]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_24
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[25] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[25]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_25
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[26] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[26]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_26
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[27] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[27]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_27
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[28] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[28]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_28
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[29] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[29]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_29
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[30] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[30]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_30
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[31] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[31]
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ_31
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[0]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N_0
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[1]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N_1
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[2]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N_2
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[3]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N_3
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[0]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P_0
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[1]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P_1
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[2]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P_2
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[3]
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P_3
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ODT -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RAS_N -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RESET_N -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RZQ -tag __hps_sdram_p0
-set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_WE_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ODT
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RAS_N
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RESET_N
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RZQ
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_WE_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_GTX_CLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_INT_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_MDC
@@ -971,4 +971,294 @@ set_global_assignment -name VHDL_FILE ../hdl/Acquisition.vhd
 set_global_assignment -name VHDL_FILE ../hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
 set_global_assignment -name QSYS_FILE soc_system.qsys
 set_global_assignment -name SDC_FILE ES_mini_project.sdc
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_location_assignment PIN_V12 -to GPIO_0[0]
+set_location_assignment PIN_V12 -to GPIO_0_0
+set_location_assignment PIN_AF7 -to GPIO_0[1]
+set_location_assignment PIN_AF7 -to GPIO_0_1
+set_location_assignment PIN_W12 -to GPIO_0[2]
+set_location_assignment PIN_W12 -to GPIO_0_2
+set_location_assignment PIN_AF8 -to GPIO_0[3]
+set_location_assignment PIN_AF8 -to GPIO_0_3
+set_location_assignment PIN_Y8 -to GPIO_0[4]
+set_location_assignment PIN_Y8 -to GPIO_0_4
+set_location_assignment PIN_AB4 -to GPIO_0[5]
+set_location_assignment PIN_AB4 -to GPIO_0_5
+set_location_assignment PIN_W8 -to GPIO_0[6]
+set_location_assignment PIN_W8 -to GPIO_0_6
+set_location_assignment PIN_Y4 -to GPIO_0[7]
+set_location_assignment PIN_Y4 -to GPIO_0_7
+set_location_assignment PIN_Y5 -to GPIO_0[8]
+set_location_assignment PIN_Y5 -to GPIO_0_8
+set_location_assignment PIN_U11 -to GPIO_0[9]
+set_location_assignment PIN_U11 -to GPIO_0_9
+set_location_assignment PIN_T8 -to GPIO_0[10]
+set_location_assignment PIN_T8 -to GPIO_0_10
+set_location_assignment PIN_T12 -to GPIO_0[11]
+set_location_assignment PIN_T12 -to GPIO_0_11
+set_location_assignment PIN_AH5 -to GPIO_0[12]
+set_location_assignment PIN_AH5 -to GPIO_0_12
+set_location_assignment PIN_AH6 -to GPIO_0[13]
+set_location_assignment PIN_AH6 -to GPIO_0_13
+set_location_assignment PIN_AH4 -to GPIO_0[14]
+set_location_assignment PIN_AH4 -to GPIO_0_14
+set_location_assignment PIN_AG5 -to GPIO_0[15]
+set_location_assignment PIN_AG5 -to GPIO_0_15
+set_location_assignment PIN_AH3 -to GPIO_0[16]
+set_location_assignment PIN_AH3 -to GPIO_0_16
+set_location_assignment PIN_AH2 -to GPIO_0[17]
+set_location_assignment PIN_AH2 -to GPIO_0_17
+set_location_assignment PIN_AF4 -to GPIO_0[18]
+set_location_assignment PIN_AF4 -to GPIO_0_18
+set_location_assignment PIN_AG6 -to GPIO_0[19]
+set_location_assignment PIN_AG6 -to GPIO_0_19
+set_location_assignment PIN_AF5 -to GPIO_0[20]
+set_location_assignment PIN_AF5 -to GPIO_0_20
+set_location_assignment PIN_AE4 -to GPIO_0[21]
+set_location_assignment PIN_AE4 -to GPIO_0_21
+set_location_assignment PIN_T13 -to GPIO_0[22]
+set_location_assignment PIN_T13 -to GPIO_0_22
+set_location_assignment PIN_T11 -to GPIO_0[23]
+set_location_assignment PIN_T11 -to GPIO_0_23
+set_location_assignment PIN_AE7 -to GPIO_0[24]
+set_location_assignment PIN_AE7 -to GPIO_0_24
+set_location_assignment PIN_AF6 -to GPIO_0[25]
+set_location_assignment PIN_AF6 -to GPIO_0_25
+set_location_assignment PIN_AF9 -to GPIO_0[26]
+set_location_assignment PIN_AF9 -to GPIO_0_26
+set_location_assignment PIN_AE8 -to GPIO_0[27]
+set_location_assignment PIN_AE8 -to GPIO_0_27
+set_location_assignment PIN_AD10 -to GPIO_0[28]
+set_location_assignment PIN_AD10 -to GPIO_0_28
+set_location_assignment PIN_AE9 -to GPIO_0[29]
+set_location_assignment PIN_AE9 -to GPIO_0_29
+set_location_assignment PIN_AD11 -to GPIO_0[30]
+set_location_assignment PIN_AD11 -to GPIO_0_30
+set_location_assignment PIN_AF10 -to GPIO_0[31]
+set_location_assignment PIN_AF10 -to GPIO_0_31
+set_location_assignment PIN_AD12 -to GPIO_0[32]
+set_location_assignment PIN_AD12 -to GPIO_0_32
+set_location_assignment PIN_AE11 -to GPIO_0[33]
+set_location_assignment PIN_AE11 -to GPIO_0_33
+set_location_assignment PIN_AF11 -to GPIO_0[34]
+set_location_assignment PIN_AF11 -to GPIO_0_34
+set_location_assignment PIN_AE12 -to GPIO_0[35]
+set_location_assignment PIN_AE12 -to GPIO_0_35
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_13
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_14
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_15
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_16
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_17
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_18
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_19
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_20
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_21
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_22
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_23
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_24
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_25
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_26
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_27
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_28
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_29
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_30
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_31
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_32
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_33
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_34
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_35
+set_location_assignment PIN_Y15 -to GPIO_1[0]
+set_location_assignment PIN_Y15 -to GPIO_1_0
+set_location_assignment PIN_AG28 -to GPIO_1[1]
+set_location_assignment PIN_AG28 -to GPIO_1_1
+set_location_assignment PIN_AA15 -to GPIO_1[2]
+set_location_assignment PIN_AA15 -to GPIO_1_2
+set_location_assignment PIN_AH27 -to GPIO_1[3]
+set_location_assignment PIN_AH27 -to GPIO_1_3
+set_location_assignment PIN_AG26 -to GPIO_1[4]
+set_location_assignment PIN_AG26 -to GPIO_1_4
+set_location_assignment PIN_AH24 -to GPIO_1[5]
+set_location_assignment PIN_AH24 -to GPIO_1_5
+set_location_assignment PIN_AF23 -to GPIO_1[6]
+set_location_assignment PIN_AF23 -to GPIO_1_6
+set_location_assignment PIN_AE22 -to GPIO_1[7]
+set_location_assignment PIN_AE22 -to GPIO_1_7
+set_location_assignment PIN_AF21 -to GPIO_1[8]
+set_location_assignment PIN_AF21 -to GPIO_1_8
+set_location_assignment PIN_AG20 -to GPIO_1[9]
+set_location_assignment PIN_AG20 -to GPIO_1_9
+set_location_assignment PIN_AG19 -to GPIO_1[10]
+set_location_assignment PIN_AG19 -to GPIO_1_10
+set_location_assignment PIN_AF20 -to GPIO_1[11]
+set_location_assignment PIN_AF20 -to GPIO_1_11
+set_location_assignment PIN_AC23 -to GPIO_1[12]
+set_location_assignment PIN_AC23 -to GPIO_1_12
+set_location_assignment PIN_AG18 -to GPIO_1[13]
+set_location_assignment PIN_AG18 -to GPIO_1_13
+set_location_assignment PIN_AH26 -to GPIO_1[14]
+set_location_assignment PIN_AH26 -to GPIO_1_14
+set_location_assignment PIN_AA19 -to GPIO_1[15]
+set_location_assignment PIN_AA19 -to GPIO_1_15
+set_location_assignment PIN_AG24 -to GPIO_1[16]
+set_location_assignment PIN_AG24 -to GPIO_1_16
+set_location_assignment PIN_AF25 -to GPIO_1[17]
+set_location_assignment PIN_AF25 -to GPIO_1_17
+set_location_assignment PIN_AH23 -to GPIO_1[18]
+set_location_assignment PIN_AH23 -to GPIO_1_18
+set_location_assignment PIN_AG23 -to GPIO_1[19]
+set_location_assignment PIN_AG23 -to GPIO_1_19
+set_location_assignment PIN_AE19 -to GPIO_1[20]
+set_location_assignment PIN_AE19 -to GPIO_1_20
+set_location_assignment PIN_AF18 -to GPIO_1[21]
+set_location_assignment PIN_AF18 -to GPIO_1_21
+set_location_assignment PIN_AD19 -to GPIO_1[22]
+set_location_assignment PIN_AD19 -to GPIO_1_22
+set_location_assignment PIN_AE20 -to GPIO_1[23]
+set_location_assignment PIN_AE20 -to GPIO_1_23
+set_location_assignment PIN_AE24 -to GPIO_1[24]
+set_location_assignment PIN_AE24 -to GPIO_1_24
+set_location_assignment PIN_AD20 -to GPIO_1[25]
+set_location_assignment PIN_AD20 -to GPIO_1_25
+set_location_assignment PIN_AF22 -to GPIO_1[26]
+set_location_assignment PIN_AF22 -to GPIO_1_26
+set_location_assignment PIN_AH22 -to GPIO_1[27]
+set_location_assignment PIN_AH22 -to GPIO_1_27
+set_location_assignment PIN_AH19 -to GPIO_1[28]
+set_location_assignment PIN_AH19 -to GPIO_1_28
+set_location_assignment PIN_AH21 -to GPIO_1[29]
+set_location_assignment PIN_AH21 -to GPIO_1_29
+set_location_assignment PIN_AG21 -to GPIO_1[30]
+set_location_assignment PIN_AG21 -to GPIO_1_30
+set_location_assignment PIN_AH18 -to GPIO_1[31]
+set_location_assignment PIN_AH18 -to GPIO_1_31
+set_location_assignment PIN_AD23 -to GPIO_1[32]
+set_location_assignment PIN_AD23 -to GPIO_1_32
+set_location_assignment PIN_AE23 -to GPIO_1[33]
+set_location_assignment PIN_AE23 -to GPIO_1_33
+set_location_assignment PIN_AA18 -to GPIO_1[34]
+set_location_assignment PIN_AA18 -to GPIO_1_34
+set_location_assignment PIN_AC22 -to GPIO_1[35]
+set_location_assignment PIN_AC22 -to GPIO_1_35
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_8
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_9
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_10
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_11
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_12
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_13
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_14
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_15
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_16
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_17
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_18
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_19
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_20
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_21
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_22
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_23
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_24
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_25
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_26
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_27
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_28
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_29
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_30
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_31
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_32
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_33
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_34
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_35
+set_global_assignment -name TCL_SCRIPT_FILE ES_mini_project_TRDB_D5M_LT24.tcl
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
