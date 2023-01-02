@@ -19,8 +19,8 @@ entity AcquModule is
     AS_CS : in std_logic ; 
     AS_Write : in std_logic ; 
     AS_Read : in std_logic ; 
-    AS_DataWrite : in std_logic_vector(31 downto 0) ; 
-    AS_DataRead : out std_logic_vector(31 downto 0) ; 
+    AS_DataWrite : in std_logic_vector(15 downto 0) ; 
+    AS_DataRead : out std_logic_vector(15 downto 0) ; 
 
     ResetFlagCMD : in std_logic ;
     ResetFlagReset : in std_logic ;
@@ -80,11 +80,12 @@ begin
         Reg_Param <= (others => (others => '0'));
         tmp := (others => (others => '0'));
     elsif rising_edge(clk) then
-        tmp := registers;
+        --tmp := registers;
+        --registers <= tmp;
         if AS_Write = '1' then
             case to_integer(unsigned(AS_Address)) is
                 when 0 to 70 =>
-                    tmp(to_integer(unsigned(AS_Address))) := AS_DataWrite;
+                    registers(to_integer(unsigned(AS_Adddress))) <= AS_DataWrite;
                 when others =>
                     null;
                 
@@ -131,9 +132,9 @@ Begin
             case SM is 
                 when Idle => 
                     if AcqLength /= X"0000_0000" then 
-                    SM <= WaitData; 
-                    CntAddress <= AcqAddress; 
-                    CntLength <= AcqLength; 
+                        SM <= WaitData; 
+                        CntAddress <= AcqAddress; 
+                        CntLength <= AcqLength; 
                     end if; 
                 when WaitData => 
                     if NewData = '1' then 

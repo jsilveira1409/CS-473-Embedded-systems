@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1
 Eacqumodule
-Z0 w1672403330
+Z0 w1672663329
 Z1 DPx4 work 11 lcd_package 0 22 54D3@MV9D_UbKUBJbTFia1
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
@@ -21,13 +21,13 @@ Z8 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
 Z9 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
 l0
 L8
-VA`<ed96X@3F^_A6:Pk5gi2
-!s100 :XG3g`h4HzA<4Q<ZZecf61
+VZ6:YgY8YO:z;hknFZSI]_0
+!s100 C]Cl8Rij4>c6[iGOETmTY2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1672403338
+Z11 !s110 1672663875
 !i10b 1
-Z12 !s108 1672403338.000000
+Z12 !s108 1672663875.000000
 Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
 Z14 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
 !i113 1
@@ -40,11 +40,11 @@ R3
 R4
 R5
 R6
-DEx4 work 10 acqumodule 0 22 A`<ed96X@3F^_A6:Pk5gi2
+DEx4 work 10 acqumodule 0 22 Z6:YgY8YO:z;hknFZSI]_0
 l68
 L55
-VFmYZN;IkM^V7Ka0fJXQ_S3
-!s100 L0zVGFff4Akj3@T0B[`0H0
+V@QV?b>KXSj0IDDKK`HYTa2
+!s100 1^Rjg]BH0JE^zAPjF_mho2
 R10
 32
 R11
@@ -56,7 +56,7 @@ R14
 R15
 R16
 Efifo
-Z17 w1672393661
+Z17 w1672663592
 R5
 R6
 R7
@@ -82,8 +82,8 @@ R6
 DEx4 work 4 fifo 0 22 C_cCBYKNgln?VFWzcjCn11
 l99
 L59
-VIM0:ehRAL_g92@U`hOGiW0
-!s100 <<F74;Ea65ze2gPd5E21Z2
+VTQnT=X92HW<4T:@n@Q`0G1
+!s100 aRjTjbfJebFg:[X34>VoI2
 R10
 32
 R11
@@ -153,14 +153,14 @@ R10
 32
 R11
 !i10b 1
-!s108 1672403337.000000
+R12
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
 !i113 1
 R15
 R16
 Etb_top
-Z27 w1672393568
+Z27 w1672663868
 R1
 R4
 R5
@@ -183,16 +183,16 @@ Z31 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
 R15
 R16
 Atest
-Z32 DEx4 work 3 top 0 22 [U3^@<efUkQYC6KZ_Rhf;3
+Z32 DEx4 work 3 top 0 22 ^4]KoiJ]::zE?VHJ5W8j^0
 R1
 R4
 R5
 R6
 Z33 DEx4 work 6 tb_top 0 22 X9he6:cB@ES6V?zZH_KOa3
-l43
+l47
 L9
-Z34 VJYic6T?j?LZ2De_:AnJZb1
-Z35 !s100 5`EMia;iTOKR7S=foG^Ld0
+VQn7_c]Xd4@d53eSfhPNVh2
+!s100 @^P[IVn`S@7YI=f?e@CR60
 R10
 32
 R11
@@ -204,25 +204,25 @@ R31
 R15
 R16
 Etop
-Z36 w1672391055
+Z34 w1672663849
 R1
 R4
 R5
 R6
 R7
-Z37 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
-Z38 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Z35 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Z36 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
 l0
 L7
-V[U3^@<efUkQYC6KZ_Rhf;3
-!s100 D<5d8c^OBC?9U?;PGd9`K1
+V^4]KoiJ]::zE?VHJ5W8j^0
+!s100 Bl90M0VR5HOGjf_0iF32?2
 R10
 32
 R11
 !i10b 1
 R12
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
-Z40 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
+Z38 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
 !i113 1
 R15
 R16
@@ -232,17 +232,17 @@ R4
 R5
 R6
 R32
-l159
-L47
-Vhg:YALfQ0Y9mmSL;Na]=`0
-!s100 QGh7Kk]=ZV;jH4G7:dK?X1
+l165
+L53
+V@:kf_I`RHS8NaeFPeMA6n2
+!s100 gJ?KM1d?]Nhf]URFS9eIS3
 R10
 32
 R11
 !i10b 1
 R12
-R39
-R40
+R37
+R38
 !i113 1
 R15
 R16

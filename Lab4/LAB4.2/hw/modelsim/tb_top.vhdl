@@ -18,8 +18,8 @@ architecture test of tb_top is
     SIGNAL AS_CS :  std_logic;
     SIGNAL AS_Write :  std_logic;
     SIGNAL AS_Read :  std_logic;
-    SIGNAL AS_DataWrite :  std_logic_vector(31 downto 0);
-    SIGNAL AS_DataRead :  std_logic_vector(31 downto 0);
+    SIGNAL AS_DataWrite :  std_logic_vector(15 downto 0);
+    SIGNAL AS_DataRead :  std_logic_vector(15 downto 0);
     -- avalon master terface(DMA)
     SIGNAL AM_Address :  std_logic_vector(31 downto 0);
     SIGNAL AM_ByteEnable :  std_logic;
@@ -36,9 +36,13 @@ architecture test of tb_top is
     SIGNAL CSX :  std_logic;
     
     -- debug
-    SIGNAL debug_fifo_out : std_logic;
+    SIGNAL debug_fifo_out_empty : std_logic;
+    SIGNAL debug_fifo_out_full : std_logic;
+    signal debug_fifo_out_q : std_logic_vector(15 downto 0);
+    signal debug_fifo_usedw : std_logic_vector(7 downto 0);
     SIGNAL debug_lcd_state : LCDFSM;
     SIGNAL debug_dma_state : AcqState;
+    signal debug_acq_data_transfer : std_logic_vector(15 downto 0);
 
 begin
 
@@ -67,9 +71,13 @@ top : entity work.top
         RESX => RESX,
         CSX => CSX,
 
-        debug_fifo_out => debug_fifo_out,
+        debug_fifo_out_empty => debug_fifo_out_empty,
+        debug_fifo_out_full => debug_fifo_out_full,
         debug_lcd_state => debug_lcd_state,
-        debug_dma_state => debug_dma_state
+        debug_dma_state => debug_dma_state,
+        debug_fifo_out_q => debug_fifo_out_q,
+        debug_fifo_usedw => debug_fifo_usedw,
+        debug_acq_data_transfer => debug_acq_data_transfer
 
     );
 
@@ -128,43 +136,47 @@ top : entity work.top
     async_reset;
 
 -- Restart display
-    --AS_Address <= x"0008";
-    --AS_CS <= '1';
-    --AS_Write <= '1';
-    --AS_Read <= '0';
-    --AS_DataWrite <= x"00000004";
-    --wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    --wait for CLK_PERIOD * 10;
+   -- AS_Address <= x"0008";
+   -- AS_CS <= '1';
+   -- AS_Write <= '1';
+   -- AS_Read <= '0';
+   -- AS_DataWrite <= x"0004";
+   -- wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+   -- wait for CLK_PERIOD * 10;
+----
+   -- AS_Address <= x"0008";
+   -- AS_CS <= '1';
+   -- AS_Write <= '1';
+   -- AS_Read <= '0';
+   -- AS_DataWrite <= x"0000";
+   -- wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+   -- wait for CLK_PERIOD * 10;
 --
-    --AS_Address <= x"0008";
-    --AS_CS <= '1';
-    --AS_Write <= '1';
-    --AS_Read <= '0';
-    --AS_DataWrite <= x"00000000";
-    --wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    --wait for CLK_PERIOD * 10;
+   -- wait for 20ms;
 
     
--- Image length register 
-    --set to 10 (bytes ? )
-    AS_Address <= x"0004";
-    AS_CS <= '1';
-    AS_Write <= '1';
-    AS_Read <= '0';
-    AS_DataWrite <= x"0000000A";
-    wait for CLK_PERIOD * 2;
-    AS_CS <= '0';
-    wait for CLK_PERIOD * 4;
 
 -- Image address register 
     --set to 0x0
-    AS_Address <= x"0000";
+    AS_Address <= x"0000";      -- 0b0000000000000000
     AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000000";
+    AS_DataWrite <= x"0000";    -- 0b0000000000000000
+    wait for CLK_PERIOD * 2;
+    AS_CS <= '0';
+    wait for CLK_PERIOD * 4;
+    
+    
+-- Image length register 
+    --set to 10 (bytes ? )
+    AS_Address <= x"0004";      -- 0b0000000000000100
+    AS_CS <= '1';
+    AS_Write <= '1';
+    AS_Read <= '0';
+    AS_DataWrite <= x"000A";    -- 0b0000000000001010
     wait for CLK_PERIOD * 2;
     AS_CS <= '0';
     wait for CLK_PERIOD * 4;
@@ -173,11 +185,11 @@ top : entity work.top
 
 -- AS flag register
     -- set lcd enable bit( = flag_reg(0)) to 1 in AS
-    AS_Address <= x"0008";
+    AS_Address <= x"0008";      -- 0b0000000000001000
     AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000001";
+    AS_DataWrite <= x"0001";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
     AS_CS <= '0';
@@ -186,42 +198,43 @@ top : entity work.top
 
   --  -- Simulating Slave response to DMA request
  --  wait until read = '1';
-    wait for CLK_PERIOD * 2;
+    AM_ReadDatavalid <= '1';
     AM_WaitRequest <= '0';
-    AM_ReadData <= x"11";
+    AM_ReadData <= x"11";       -- 0b00010001
+    wait for CLK_PERIOD * 2;
     AM_ReadDatavalid <= '0';
     wait for CLK_PERIOD * 4;
     AM_ReadDatavalid <= '1';
     wait for CLK_PERIOD;
-    AM_ReadData <= x"22";
+    AM_ReadData <= x"22";       -- 0b00010010
     wait for CLK_PERIOD;
-    AM_ReadData <= x"33";
+    AM_ReadData <= x"33";       -- 0b00010011
     wait for CLK_PERIOD;
-    AM_ReadData <= x"44";
+    AM_ReadData <= x"44";       -- 0b00010100
     wait for CLK_PERIOD;
-    AM_ReadData <= x"55";
+    AM_ReadData <= x"55";       -- 0b00010101
     wait for CLK_PERIOD;
-    AM_ReadData <= x"66";
+    AM_ReadData <= x"66";       -- 0b00010110
     wait for CLK_PERIOD;
-    AM_ReadData <= x"77";
+    AM_ReadData <= x"77";       -- 0b00010111
     wait for CLK_PERIOD;
-    AM_ReadData <= x"88";
+    AM_ReadData <= x"88";       -- 0b00011000
     wait for CLK_PERIOD;
-    AM_ReadData <= x"99";
+    AM_ReadData <= x"99";       -- 0b00011001
     wait for CLK_PERIOD;
-    AM_ReadData <= x"AA";
+    AM_ReadData <= x"AA";       -- 0b00011010
     wait for CLK_PERIOD;
-    AM_ReadData <= x"BB";
+    AM_ReadData <= x"BB";       -- 0b00011011
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CC";
+    AM_ReadData <= x"CC";       -- 0b00011100
     wait for CLK_PERIOD;
-    AM_ReadData <= x"DD";
+    AM_ReadData <= x"DD";       -- 0b00011101
     wait for CLK_PERIOD;
-    AM_ReadData <= x"EE";
+    AM_ReadData <= x"EE";       -- 0b00011110
     wait for CLK_PERIOD;
-    AM_ReadData <= x"FF";
+    AM_ReadData <= x"FF";       -- 0b00011111
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CD";
+    AM_ReadData <= x"CD";       -- 0b00000000
     wait for CLK_PERIOD;
     AM_ReadDatavalid <= '0';
 --

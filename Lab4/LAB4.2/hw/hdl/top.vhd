@@ -16,8 +16,8 @@ entity top is
 		AS_CS : in std_logic;
 		AS_Write : in std_logic;
 		AS_Read : in std_logic;
-		AS_DataWrite : in std_logic_vector(31 downto 0);
-		AS_DataRead : out std_logic_vector(31 downto 0);
+		AS_DataWrite : in std_logic_vector(15 downto 0);
+		AS_DataRead : out std_logic_vector(15 downto 0);
 
 		-- avalon master interface(DMA)
 		AM_Address : out std_logic_vector(31 downto 0);
@@ -35,9 +35,15 @@ entity top is
 		CSX : out std_logic;
 
 		-- debug signals
-		debug_fifo_out : out std_logic;
+		--debug_fifo_out : out std_logic;
+		debug_fifo_out_empty : out std_logic;
+		debug_fifo_out_full : out std_logic;
+		debug_fifo_out_q : out std_logic_vector(15 downto 0);
+		debug_fifo_usedw : out std_logic_vector(7 downto 0);
 		debug_lcd_state : out LCDFSM;
-		debug_dma_state : out AcqState
+		debug_dma_state : out AcqState;
+		debug_acq_data_transfer : out std_logic_vector(15 downto 0)
+
 	);
 
 	
@@ -77,8 +83,8 @@ architecture top_architecture of top is
 			AS_CS : in std_logic ; 
 			AS_Write : in std_logic ; 
 			AS_Read : in std_logic ; 
-			AS_DataWrite : in std_logic_vector(31 downto 0) ; 
-			AS_DataRead : out std_logic_vector(31 downto 0) ; 
+			AS_DataWrite : in std_logic_vector(15 downto 0) ; 
+			AS_DataRead : out std_logic_vector(15 downto 0) ; 
 
 			ResetFlagCMD : in std_logic ;
 			ResetFlagReset : in std_logic ;
@@ -158,7 +164,11 @@ architecture top_architecture of top is
 
 	begin
 	
-	debug_fifo_out <= signal_FIFO_Empty;
+	--debug_fifo_out <= signal_FIFO_Empty;
+	debug_fifo_out_empty <= signal_FIFO_Empty;
+	debug_fifo_out_full <= signal_FIFO_Almost_Full;
+	debug_fifo_out_q <= signal_FIFO_Q;
+	debug_acq_data_transfer <= signal_DataTransfer;
 
 	avalon_interface : component AcquModule
 	port map(

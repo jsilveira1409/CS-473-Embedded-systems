@@ -14,17 +14,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling package lcd_package
 
-} {} {}} C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package lcd_package
--- Compiling entity tb_top
--- Compiling architecture test of tb_top
--- Loading entity top
-
 } {} {}} C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -34,5 +23,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package lcd_package
 -- Compiling entity lcd_controller
 -- Compiling architecture arch_lcd_controller of lcd_controller
+
+} {} {}} C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package lcd_package
+-- Compiling entity top
+-- Compiling architecture top_architecture of top
 
 } {} {}}
