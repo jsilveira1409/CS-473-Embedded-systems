@@ -124,9 +124,7 @@ entity DE0_Nano_SoC_TRDB_D5M_LT24_top_level is
 end entity DE0_Nano_SoC_TRDB_D5M_LT24_top_level;
 
 architecture rtl of DE0_Nano_SoC_TRDB_D5M_LT24_top_level is
-    
-    --constant lcd_on : std_logic := '1';
-    signal signal_lcd_on : std_logic := '1';
+
     
     component soc_system is
         port (
@@ -198,11 +196,12 @@ architecture rtl of DE0_Nano_SoC_TRDB_D5M_LT24_top_level is
             hps_0_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';
             pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);
 
-            lcd_0_csx_id1                       : out   std_logic;                                        -- id1
-			lcd_0_dcx_id3                       : out   std_logic;                                        -- id3
-			lcd_0_dd_id2                        : out   std_logic_vector(15 downto 0);                    -- id2
-			lcd_0_resx_id4                      : out   std_logic;                                        -- id4
-			lcd_0_wrx_id5                       : out   std_logic                                       -- id5
+            lcd_0_output_debug : out std_logic;
+            lcd_0_output_csx                       : out   std_logic;                                        -- id1
+			lcd_0_output_dcx                       : out   std_logic;                                        -- id3
+			lcd_0_output_d                        : out   std_logic_vector(15 downto 0);                    -- id2
+			lcd_0_output_resx                      : out   std_logic;                                        -- id4
+			lcd_0_output_wrx                       : out   std_logic                                       -- id5
             
 
         );
@@ -227,7 +226,8 @@ begin
 
     port map(
         clk_clk                             => FPGA_CLK1_50,
-        reset_reset_n                       => '1',
+        --reset_reset_n                       => '1',
+		  reset_reset_n							=> KEY_N(0),
         hps_0_ddr_mem_a                     => HPS_DDR3_ADDR,
         hps_0_ddr_mem_ba                    => HPS_DDR3_BA,
         hps_0_ddr_mem_ck                    => HPS_DDR3_CK_P,
@@ -302,11 +302,13 @@ begin
         --    GPIO_0_LT24_ADC_DIN      -- not used
         --    GPIO_0_LT24_ADC_DOUT     --
         --    GPIO_0_LT24_ADC_PENIRQ_N -- not used    
-        lcd_0_csx_id1   =>      GPIO_0_LT24_CS_N,         -- chip select active low
-        lcd_0_dd_id2    =>      GPIO_0_LT24_D,            -- data bus
-        lcd_0_resx_id4  =>      GPIO_0_LT24_RESET_N,      -- lcd reset active low
-        lcd_0_wrx_id5   =>      GPIO_0_LT24_WR_N,         -- write signal active low
-        lcd_0_dcx_id3   =>      GPIO_0_LT24_RS           -- data/command select    
+        lcd_0_output_debug    =>      GPIO_1_D5M_RESET_N,
+		lcd_0_output_csx    =>      GPIO_0_LT24_CS_N,         -- chip select active low
+        lcd_0_output_d      =>      GPIO_0_LT24_D,            -- data bus
+        lcd_0_output_resx   =>      GPIO_0_LT24_RESET_N,      -- lcd reset active low
+        lcd_0_output_wrx    =>      GPIO_0_LT24_WR_N,         -- write signal active low
+        lcd_0_output_dcx     =>      GPIO_0_LT24_RS           -- data/command select    
+		  
         
         
         

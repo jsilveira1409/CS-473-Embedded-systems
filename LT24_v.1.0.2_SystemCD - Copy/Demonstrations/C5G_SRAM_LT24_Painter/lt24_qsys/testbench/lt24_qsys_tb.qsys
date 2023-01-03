@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element lt24_qsys_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_key_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_lcd_reset_n_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_lt24_controller_0_conduit_end_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_pll_qsys_locked_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_touch_panel_busy_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_touch_panel_pen_irq_n_external_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element lt24_qsys_inst_touch_panel_spi_external_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element sram_external_mem_bfm
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element sram_external_mem_bfm_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element tristate_conduit_bridge_tcb_translator
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element tristate_conduit_pin_sharer_sram_pin_divider
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CGXFC5C6F27C7" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="7_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName">C5G_LT24_Painter_SRAM.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module kind="lt24_qsys" version="1.0" enabled="1" name="lt24_qsys_inst">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="lt24_qsys" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CGXFC5C6F27C7" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_clk_bfm">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   kind="altera_avalon_reset_source"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_reset_bfm">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_lcd_reset_n_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_touch_panel_pen_irq_n_external_connection_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_touch_panel_busy_external_connection_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_touch_panel_spi_external_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="MISO,MOSI,SCLK,SS_n" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+  <parameter name="SIGNAL_DIRECTIONS">output,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_key_external_connection_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="4" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_lt24_controller_0_conduit_end_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="cs,rs,rd,wr,data" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1,16" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,input,input,input</parameter>
+ </module>
+ <module
+   kind="altera_conduit_bfm"
+   version="13.1"
+   enabled="1"
+   name="lt24_qsys_inst_pll_qsys_locked_bfm">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+ </module>
+ <module
+   kind="altera_tristate_conduit_bridge_translator"
+   version="13.1"
+   enabled="1"
+   name="tristate_conduit_bridge_tcb_translator">
+  <parameter name="CHAIN_LENGTH" value="4" />
+  <parameter name="MODULE_ORIGIN_LIST">tristate_conduit_pin_sharer_sram.tcm,tristate_conduit_pin_sharer_sram.tcm,tristate_conduit_pin_sharer_sram.tcm,tristate_conduit_pin_sharer_sram.tcm,tristate_conduit_pin_sharer_sram.tcm,tristate_conduit_pin_sharer_sram.tcm</parameter>
+  <parameter name="SIGNAL_ORIGIN_LIST">sram_tcm_data_out,sram_tcm_address_out,sram_tcm_outputenable_n_out,sram_tcm_chipselect_n_out,sram_tcm_byteenable_n_out,sram_tcm_write_n_out</parameter>
+  <parameter name="SIGNAL_ORIGIN_TYPE">Bidirectional,Output,Output,Output,Output,Output</parameter>
+  <parameter name="SIGNAL_ORIGIN_WIDTH" value="16,19,1,1,2,1" />
+ </module>
+ <module
+   kind="altera_conduit_pin_divider"
+   version="13.1"
+   enabled="1"
+   name="tristate_conduit_pin_sharer_sram_pin_divider">
+  <parameter name="CHAIN_LENGTH" value="4" />
+  <parameter name="MODULE_ORIGIN_LIST">sram.tcm,sram.tcm,sram.tcm,sram.tcm,sram.tcm,sram.tcm</parameter>
+  <parameter name="SIGNAL_ORIGIN_LIST">sram_tcm_address_out,sram_tcm_outputenable_n_out,sram_tcm_byteenable_n_out,sram_tcm_write_n_out,sram_tcm_data_out,sram_tcm_chipselect_n_out</parameter>
+  <parameter name="SIGNAL_ORIGIN_TYPE">Output,Output,Output,Output,Bidirectional,Output</parameter>
+  <parameter name="SIGNAL_ORIGIN_WIDTH" value="19,1,2,1,16,1" />
+  <parameter name="SHARED_SIGNAL_LIST" value="" />
+ </module>
+ <module
+   kind="altera_external_memory_bfm"
+   version="13.1"
+   enabled="1"
+   name="sram_external_mem_bfm">
+  <parameter name="USE_BYTEENABLE" value="1" />
+  <parameter name="USE_CHIPSELECT" value="1" />
+  <parameter name="USE_WRITE" value="1" />
+  <parameter name="USE_READ" value="0" />
+  <parameter name="USE_OUTPUTENABLE" value="1" />
+  <parameter name="USE_BEGINTRANSFER" value="0" />
+  <parameter name="USE_RESET" value="0" />
+  <parameter name="ACTIVE_LOW_BYTEENABLE" value="1" />
+  <parameter name="ACTIVE_LOW_CHIPSELECT" value="1" />
+  <parameter name="ACTIVE_LOW_WRITE" value="1" />
+  <parameter name="ACTIVE_LOW_READ" value="0" />
+  <parameter name="ACTIVE_LOW_OUTPUTENABLE" value="1" />
+  <parameter name="ACTIVE_LOW_BEGINTRANSFER" value="0" />
+  <parameter name="ACTIVE_LOW_RESET" value="0" />
+  <parameter name="SIGNAL_ADDRESS_ROLES" value="tcm_address_out" />
+  <parameter name="SIGNAL_DATA_ROLES" value="tcm_data_out" />
+  <parameter name="SIGNAL_WRITE_ROLES" value="tcm_write_n_out" />
+  <parameter name="SIGNAL_READ_ROLES" value="tcm_read_out" />
+  <parameter name="SIGNAL_BYTEENABLE_ROLES">tcm_byteenable_n_out</parameter>
+  <parameter name="SIGNAL_CHIPSELECT_ROLES">tcm_chipselect_n_out</parameter>
+  <parameter name="SIGNAL_OUTPUTENABLE_ROLES">tcm_outputenable_n_out</parameter>
+  <parameter name="SIGNAL_BEGINTRANSFER_ROLES">tcm_begintransfer_out</parameter>
+  <parameter name="SIGNAL_RESET_ROLES" value="tcm_reset_out" />
+  <parameter name="CDT_ADDRESS_W" value="19" />
+  <parameter name="CDT_SYMBOL_W" value="8" />
+  <parameter name="CDT_NUMSYMBOLS" value="2" />
+  <parameter name="INIT_FILE">altera_external_memory_bfm.hex</parameter>
+  <parameter name="CDT_READ_LATENCY" value="0" />
+  <parameter name="VHDL_ID" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="altera_avalon_clock_source"
+   version="13.1"
+   enabled="1"
+   name="sram_external_mem_bfm_clk_bfm">
+  <parameter name="CLOCK_RATE" value="100000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <connection
+   kind="clock"
+   version="13.1"
+   start="lt24_qsys_inst_clk_bfm.clk"
+   end="lt24_qsys_inst.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="lt24_qsys_inst_clk_bfm.clk"
+   end="lt24_qsys_inst_reset_bfm.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="lt24_qsys_inst_reset_bfm.reset"
+   end="lt24_qsys_inst.reset" />
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_lcd_reset_n_bfm.conduit"
+   end="lt24_qsys_inst.lcd_reset_n">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_touch_panel_pen_irq_n_external_connection_bfm.conduit"
+   end="lt24_qsys_inst.touch_panel_pen_irq_n_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_touch_panel_busy_external_connection_bfm.conduit"
+   end="lt24_qsys_inst.touch_panel_busy_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_touch_panel_spi_external_bfm.conduit"
+   end="lt24_qsys_inst.touch_panel_spi_external">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_key_external_connection_bfm.conduit"
+   end="lt24_qsys_inst.key_external_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_lt24_controller_0_conduit_end_bfm.conduit"
+   end="lt24_qsys_inst.lt24_controller_0_conduit_end">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="lt24_qsys_inst_pll_qsys_locked_bfm.conduit"
+   end="lt24_qsys_inst.pll_qsys_locked">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="tristate_conduit_bridge_tcb_translator.in"
+   end="lt24_qsys_inst.tristate_conduit_bridge_out">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="tristate_conduit_pin_sharer_sram_pin_divider.in"
+   end="tristate_conduit_bridge_tcb_translator.out">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="sram_external_mem_bfm.conduit"
+   end="tristate_conduit_pin_sharer_sram_pin_divider.sram_tcm">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.1"
+   start="sram_external_mem_bfm_clk_bfm.clk"
+   end="sram_external_mem_bfm.clk" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

@@ -30,17 +30,25 @@
 
 
 
+void delay(){
+	   int c;
+
+	for (c = 1; c <= 32767; c++){}
+
+}
+
 void lcd_flag_set (uint16_t flag){
-	uint16_t reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	IOWR_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS, reg_flag_val | flag);
+	//uint16_t reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//IOWR_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS, reg_flag_val | flag);
+	IOWR_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS,flag);
 }
 
 void lcd_reset(){
 	lcd_flag_set(0x04);
-	uint16_t reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	while( reg_flag_val & 0x04){
-		reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	}
+	//uint16_t reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//while( reg_flag_val & 0x04){
+	//	reg_flag_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//}
 }
 
 void send_command(uint16_t cmd, uint16_t n, uint16_t* params)
@@ -57,46 +65,70 @@ void send_command(uint16_t cmd, uint16_t n, uint16_t* params)
 	}
 
 	IOWR_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS, 0x2);
-	uint16_t reg_flags = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	while(reg_flags & 0x2){
-		reg_flags = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	}
+	//uint16_t reg_flags = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//while(reg_flags & 0x2){
+	//	reg_flags = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//}
 }
 
 void start_lcd(){
 	lcd_flag_set(0x01);
-	uint16_t reg_flags_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//uint16_t reg_flags_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
 
-	while(reg_flags_val & 0x1){
-		reg_flags_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
-	}
+	//while(reg_flags_val & 0x1){
+	//	reg_flags_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	//}
 }
 
 void init_lcd(){
 	send_command(0x11, 0, (uint16_t []){ 0x09, 0x0a});
+	delay();	
 	send_command(0xcf, 3, (uint16_t []){ 0x0, 0x81, 0xc0});
+	delay();	
 	send_command(0xed, 4, (uint16_t []){ 0x64, 0x03, 0x12, 0x81});
+	delay();	
 	send_command(0xe8, 3, (uint16_t []){ 0x85, 0x01, 0x0798});
+	delay();	
 	send_command(0xcb, 5, (uint16_t []){ 0x39, 0x2c, 0x00, 0x34, 0x02});
+	delay();	
 	send_command(0xf7, 1, (uint16_t []){ 0x20});
+	delay();	
 	send_command(0xea, 2, (uint16_t []){ 0x00, 0x00});
+	delay();	
 	send_command(0xb1, 2, (uint16_t []){ 0x00, 0x1b});
+	delay();	
 	send_command(0xb6, 2, (uint16_t []){ 0x0a, 0xa2});
+	delay();	
 	send_command(0xc0, 1, (uint16_t []){ 0x05});
+	delay();	
 	send_command(0xc1, 1, (uint16_t []){ 0x11});
+	delay();	
 	send_command(0xc5, 2, (uint16_t []){ 0x45, 0x45});
+	delay();	
 	send_command(0xc7, 1, (uint16_t []){ 0xa2});
+	delay();	
 	send_command(0x36, 1, (uint16_t []){ 0x08}); //BGR (originally rgb with 0x48)
+	delay();	
 	send_command(0xf2, 1, (uint16_t []){ 0x00});
+	delay();	
 	send_command(0x26, 1, (uint16_t []){ 0x01});
+	delay();	
 	send_command(0xe0, 15, (uint16_t []){ 0xf, 0x26, 0x24, 0xb, 0xe, 0x8, 0x4b, 0xa8, 0x3b, 0x0a, 0x14, 0x06, 0x10, 0x09, 0x00});
+	delay();	
 	send_command(0xe1, 15, (uint16_t []){ 0x0, 0x1c, 0x20, 0x4, 0x10, 0x8, 0x34, 0x47, 0x44, 0x05, 0xb, 0x9, 0x2f, 0x36, 0x0f});
+	delay();	
 	send_command(0x2a, 4, (uint16_t []){ 0x0, 0x0, 0x0, 0xef});
+	delay();	
 	send_command(0x2b, 4, (uint16_t []){ 0x0, 0x0, 0x01, 0x3f});
+	delay();	
 	send_command(0x3a, 1, (uint16_t []){ 0x55}); //RGB
+	delay();	
 	send_command(0xf6, 3, (uint16_t []){ 0x01, 0x30, 0x0});
+	delay();	
 	send_command(0x29, 0, (uint16_t []){ 0x09, 0x0a});
+	delay();	
 	send_command(0x2c, 0, (uint16_t []){ 0x09, 0x0a});
+	delay();	
 }
 
 void configure_image(uint32_t image_address, uint32_t image_size){
@@ -118,10 +150,10 @@ void init_image(uint32_t image_address, uint32_t rows, uint32_t cols){
 		while(j < cols * sizeof(uint16_t))
 		{
 			IOWR_16DIRECT(image_address, i * cols + j, color);
-			if(IORD_16DIRECT(image_address, i * cols + j) != color)
-			{
-				printf("Error writing to extender\n");
-			}
+			//if(IORD_16DIRECT(image_address, i * cols + j) != color)
+			//{
+			//	printf("Error writing to extender\n");
+			//}
 			j += 2;
 		}
 
@@ -129,26 +161,52 @@ void init_image(uint32_t image_address, uint32_t rows, uint32_t cols){
 	}
 }
 
+
+
 int main(){
-	lcd_reset();
-	//delay(1000);
+	while(1){
+		IOWR_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS,0xFFFFFFFF);
+		delay();
+		uint32_t reg_flag_val = IORD_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+		printf("%lu", (unsigned long)reg_flag_val);
+	}
+	/*
+	IOWR_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS,0x00000004);
+	delay();
+	uint32_t reg_flag_val = IORD_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+	printf("%lu", (unsigned long)reg_flag_val);
 
-	printf("Initializing LCD\n");
+	IOWR_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS,0x00000000);
+	delay();
+
+	//init lcd
 	init_lcd();
-	printf("LCD Initialized\n");
+	delay();
 
+	//img address register
+	uint32_t image_address = 0x000000FF;
+	IOWR_32DIRECT(LCD_0_BASE, LCD_REG_IMG_ADDRESS,image_address);
+	delay();
+	
+	//img length register
 	uint32_t image_size = 320 * 240 * sizeof(uint16_t);
-	uint32_t image_address = HPS_0_BRIDGES_BASE;
+	init_image(image_address, 240, 320);
+	IOWR_32DIRECT(LCD_0_BASE, LCD_REG_IMG_LENGTH,image_size);
+	delay();
 
-	printf("Setting image address and size\n");
-	init_image(image_address, 320, 240);
-	printf("Image address and size set\n");
+	//lcd enable 0xF800
+	IOWR_32DIRECT(LCD_0_BASE, LCD_REG_FLAGS,0x00000001);
+	delay();
+	delay();
+	delay();
+	delay();
+	delay();
+	delay();
+	delay();
 
-	printf("Configuring default image\n");
-//	configure_image(image_address, image_size);
-	printf("Default image configured... starting LCD\n");
-//	start_lcd();
+
+	
+	*/
 	printf("Display Stopped\n");
-
 	return 0;
 }

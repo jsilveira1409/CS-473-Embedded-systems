@@ -107,8 +107,8 @@ BEGIN
 	scfifo_component : scfifo
 	GENERIC MAP (
 		add_ram_output_register => "OFF",
-		almost_empty_value => 1,			-- 10
-		almost_full_value => 10,			-- 200
+		almost_empty_value => 240,			-- 10
+		almost_full_value => 245,			-- 200
 		intended_device_family => "Cyclone V",
 		lpm_numwords => 256,
 		lpm_showahead => "OFF",

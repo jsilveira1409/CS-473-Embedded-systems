@@ -65,7 +65,7 @@ entity lcd_controller is
 			
 				current_state <= Reset;
 				
-			elsif nReset ='0' then
+			elsif nReset ='1' then
 			
 				current_state <= IDLE;
 				D <= x"0000";

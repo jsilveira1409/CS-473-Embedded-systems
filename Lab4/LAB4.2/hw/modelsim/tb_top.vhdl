@@ -18,13 +18,13 @@ architecture test of tb_top is
     SIGNAL AS_CS :  std_logic;
     SIGNAL AS_Write :  std_logic;
     SIGNAL AS_Read :  std_logic;
-    SIGNAL AS_DataWrite :  std_logic_vector(15 downto 0);
-    SIGNAL AS_DataRead :  std_logic_vector(15 downto 0);
+    SIGNAL AS_DataWrite :  std_logic_vector(31 downto 0);
+    SIGNAL AS_DataRead :  std_logic_vector(31 downto 0);
     -- avalon master terface(DMA)
     SIGNAL AM_Address :  std_logic_vector(31 downto 0);
     SIGNAL AM_ByteEnable :  std_logic;
     SIGNAL AM_Read :  std_logic;
-    SIGNAL AM_ReadData :  std_logic_vector(7 downto 0);
+    SIGNAL AM_ReadData :  std_logic_vector(15 downto 0);
     SIGNAL AM_ReadDataValid :  std_logic;
     SIGNAL AM_WaitRequest :  std_logic;
 
@@ -52,7 +52,7 @@ top : entity work.top
         nReset => nReset,
 
         AS_Address => AS_Address,
-        AS_CS => AS_CS,
+        --AS_CS => AS_CS,
         AS_Write => AS_Write,
         AS_Read => AS_Read,
         AS_DataWrite => AS_DataWrite,
@@ -144,7 +144,6 @@ top : entity work.top
    -- wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
    -- wait for CLK_PERIOD * 10;
-----
    -- AS_Address <= x"0008";
    -- AS_CS <= '1';
    -- AS_Write <= '1';
@@ -153,46 +152,82 @@ top : entity work.top
    -- wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
    -- wait for CLK_PERIOD * 10;
---
    -- wait for 20ms;
-
-    
-
--- Image address register 
-    --set to 0x0
-    AS_Address <= x"0000";      -- 0b0000000000000000
-    AS_CS <= '1';
+ 
+-- send command
+    --set cmd reg to cmd 0x11
+    AS_Address <= x"000A";      -- 0b0000000000001010
+    --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0000";    -- 0b0000000000000000
+    AS_DataWrite <= x"0000AA11";  
     wait for CLK_PERIOD * 2;
-    AS_CS <= '0';
+    --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
+    -- set cmd nb param to 0
+    AS_Address <= x"000C";      -- 0b0000000000001010
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    AS_Read <= '0';
+    AS_DataWrite <= x"00000000";    -- 0b0000000000000000
+    wait for CLK_PERIOD * 2;
+    --AS_CS <= '0';
+    wait for CLK_PERIOD * 4;
+    -- set cmd param to 0
+    --AS_Address <= x"000E";      -- 0b0000000000001010
+    --AS_CS <= '1';
+    --AS_Write <= '1';
+    --AS_Read <= '0';
+    --AS_DataWrite <= x"00000000";    -- 0b0000000000000000
+    --wait for CLK_PERIOD * 2;
+    --AS_CS <= '0';
+    --wait for CLK_PERIOD * 4;
     
+    -- send command flag
+    AS_Address <= x"0008";      -- 0b0000000000001000
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    AS_Read <= '0';
+    AS_DataWrite <= x"00000002";    -- 0b0000000000000001
     
+    wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+    wait for CLK_PERIOD * 4;   
+
+
+
+-- Image address register 
+    AS_Address <= x"0000";      -- 0b0000000000000100
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    AS_Read <= '0';
+    AS_DataWrite <= x"0000000A";    -- 0b0000000000001010
+    wait for CLK_PERIOD * 2;
+    --AS_CS <= '0';
+    wait for CLK_PERIOD * 4;
+
 -- Image length register 
     --set to 10 (bytes ? )
     AS_Address <= x"0004";      -- 0b0000000000000100
-    AS_CS <= '1';
+    --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"000A";    -- 0b0000000000001010
+    AS_DataWrite <= x"00000020";    
     wait for CLK_PERIOD * 2;
-    AS_CS <= '0';
+    --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
-
 
 
 -- AS flag register
     -- set lcd enable bit( = flag_reg(0)) to 1 in AS
     AS_Address <= x"0008";      -- 0b0000000000001000
-    AS_CS <= '1';
+    --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0001";    -- 0b0000000000000001
+    AS_DataWrite <= x"00000001";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
-    AS_CS <= '0';
+    --AS_CS <= '0';
     wait for CLK_PERIOD * 4;   
 
 
@@ -200,82 +235,79 @@ top : entity work.top
  --  wait until read = '1';
     AM_ReadDatavalid <= '1';
     AM_WaitRequest <= '0';
-    AM_ReadData <= x"11";       -- 0b00010001
+    AM_ReadData <= x"0011";       -- 0b00010001
     wait for CLK_PERIOD * 2;
     AM_ReadDatavalid <= '0';
+    
     wait for CLK_PERIOD * 4;
     AM_ReadDatavalid <= '1';
     wait for CLK_PERIOD;
-    AM_ReadData <= x"22";       -- 0b00010010
+    AM_ReadData <= x"0022";       -- 0b00010010
     wait for CLK_PERIOD;
-    AM_ReadData <= x"33";       -- 0b00010011
+    AM_ReadData <= x"0033";       -- 0b00010011
     wait for CLK_PERIOD;
-    AM_ReadData <= x"44";       -- 0b00010100
+    AM_ReadData <= x"0044";       -- 0b00010100
     wait for CLK_PERIOD;
-    AM_ReadData <= x"55";       -- 0b00010101
+    AM_ReadData <= x"0055";       -- 0b00010101
     wait for CLK_PERIOD;
-    AM_ReadData <= x"66";       -- 0b00010110
+    AM_ReadData <= x"0066";       -- 0b00010110
     wait for CLK_PERIOD;
-    AM_ReadData <= x"77";       -- 0b00010111
+    AM_ReadData <= x"0077";       -- 0b00010111
     wait for CLK_PERIOD;
-    AM_ReadData <= x"88";       -- 0b00011000
+    AM_ReadData <= x"0088";       -- 0b00011000
     wait for CLK_PERIOD;
-    AM_ReadData <= x"99";       -- 0b00011001
+    AM_ReadData <= x"0099";       -- 0b00011001
     wait for CLK_PERIOD;
-    AM_ReadData <= x"AA";       -- 0b00011010
+    AM_ReadData <= x"00AA";       -- 0b00011010
     wait for CLK_PERIOD;
-    AM_ReadData <= x"BB";       -- 0b00011011
+    AM_ReadData <= x"00BB";       -- 0b00011011
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CC";       -- 0b00011100
+    AM_ReadData <= x"00CC";       -- 0b00011100
     wait for CLK_PERIOD;
-    AM_ReadData <= x"DD";       -- 0b00011101
+    AM_ReadData <= x"00DD";       -- 0b00011101
     wait for CLK_PERIOD;
-    AM_ReadData <= x"EE";       -- 0b00011110
+    AM_ReadData <= x"00EE";       -- 0b00011110
     wait for CLK_PERIOD;
-    AM_ReadData <= x"FF";       -- 0b00011111
+    AM_ReadData <= x"00FF";       -- 0b00011111
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CD";       -- 0b00000000
+    AM_ReadData <= x"00CD";       -- 0b00000000
     wait for CLK_PERIOD;
-    AM_ReadDatavalid <= '0';
---
+    
   --  -- Second burst of pixels
-    --wait until read = '1';
     wait for CLK_PERIOD * 2;
     AM_WaitRequest <= '0';
-    AM_ReadData <= x"11";
-    AM_ReadDatavalid <= '0';
+    AM_ReadData <= x"0011";
     wait for CLK_PERIOD * 4;
-    AM_ReadDatavalid <= '1';
     wait for CLK_PERIOD;
-    AM_ReadData <= x"22";
+    AM_ReadData <= x"0022";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"33";
+    AM_ReadData <= x"0033";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"44";
+    AM_ReadData <= x"0044";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"55";
+    AM_ReadData <= x"0055";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"66";
+    AM_ReadData <= x"0066";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"77";
+    AM_ReadData <= x"0077";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"88";
+    AM_ReadData <= x"0088";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"99";
+    AM_ReadData <= x"0099";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"AA";
+    AM_ReadData <= x"00AA";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"BB";
+    AM_ReadData <= x"00BB";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CC";
+    AM_ReadData <= x"00CC";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"DD";
+    AM_ReadData <= x"00DD";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"EE";
+    AM_ReadData <= x"00EE";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"FF";
+    AM_ReadData <= x"00FF";
     wait for CLK_PERIOD;
-    AM_ReadData <= x"CD";
+    AM_ReadData <= x"00CD";
     wait for CLK_PERIOD;
     AM_ReadDatavalid <= '0';
 --
@@ -284,8 +316,6 @@ top : entity work.top
 
 
     wait;
-
-
 
     end process simulation;
     end architecture test;

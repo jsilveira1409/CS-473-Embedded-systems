@@ -64,11 +64,12 @@
 		.hps_0_io_hps_io_gpio_inst_GPIO53    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO53>),    //                             .hps_io_gpio_inst_GPIO53
 		.hps_0_io_hps_io_gpio_inst_GPIO54    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO54>),    //                             .hps_io_gpio_inst_GPIO54
 		.hps_0_io_hps_io_gpio_inst_GPIO61    (<connected-to-hps_0_io_hps_io_gpio_inst_GPIO61>),    //                             .hps_io_gpio_inst_GPIO61
-		.lcd_0_csx_id1                       (<connected-to-lcd_0_csx_id1>),                       //                    lcd_0_csx.id1
-		.lcd_0_dcx_id3                       (<connected-to-lcd_0_dcx_id3>),                       //                    lcd_0_dcx.id3
-		.lcd_0_dd_id2                        (<connected-to-lcd_0_dd_id2>),                        //                     lcd_0_dd.id2
-		.lcd_0_resx_id4                      (<connected-to-lcd_0_resx_id4>),                      //                   lcd_0_resx.id4
-		.lcd_0_wrx_id5                       (<connected-to-lcd_0_wrx_id5>),                       //                    lcd_0_wrx.id5
+		.lcd_0_output_csx                    (<connected-to-lcd_0_output_csx>),                    //                 lcd_0_output.csx
+		.lcd_0_output_dcx                    (<connected-to-lcd_0_output_dcx>),                    //                             .dcx
+		.lcd_0_output_d                      (<connected-to-lcd_0_output_d>),                      //                             .d
+		.lcd_0_output_resx                   (<connected-to-lcd_0_output_resx>),                   //                             .resx
+		.lcd_0_output_wrx                    (<connected-to-lcd_0_output_wrx>),                    //                             .wrx
+		.lcd_0_output_debug                  (<connected-to-lcd_0_output_debug>),                  //                             .debug
 		.pio_leds_external_connection_export (<connected-to-pio_leds_external_connection_export>), // pio_leds_external_connection.export
 		.reset_reset_n                       (<connected-to-reset_reset_n>)                        //                        reset.reset_n
 	);

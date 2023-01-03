@@ -1,0 +1,260 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:/Home/User/Desktop/DE2_115_LT24_Painter/ --output-directory=D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/ --report-file=bsf:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.bsf --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE115F29C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.qsys
+Progress: Loading DE2_115_LT24_Painter/lt24_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 13.1]
+Progress: Parameterizing module clk_50
+Progress: Adding nios2_qsys [altera_nios2_qsys 13.1]
+Progress: Parameterizing module nios2_qsys
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory
+Progress: Adding LCD_RESET_N [altera_avalon_pio 13.1]
+Progress: Parameterizing module LCD_RESET_N
+Progress: Adding timer [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer
+Progress: Adding touch_panel_spi [altera_avalon_spi 13.1]
+Progress: Parameterizing module touch_panel_spi
+Progress: Adding touch_panel_pen_irq_n [altera_avalon_pio 13.1]
+Progress: Parameterizing module touch_panel_pen_irq_n
+Progress: Adding touch_panel_busy [altera_avalon_pio 13.1]
+Progress: Parameterizing module touch_panel_busy
+Progress: Adding altpll_sys [altpll 13.1]
+Progress: Parameterizing module altpll_sys
+Progress: Adding key [altera_avalon_pio 13.1]
+Progress: Parameterizing module key
+Progress: Adding LT24_Controller_0 [LT24_Controller 1.0]
+Progress: Parameterizing module LT24_Controller_0
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: lt24_qsys.touch_panel_pen_irq_n: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.touch_panel_busy: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.key: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: lt24_qsys.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:/Home/User/Desktop/DE2_115_LT24_Painter/ --output-directory=D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.html --report-file=sopcinfo:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.sopcinfo --report-file=cmp:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.cmp --report-file=qip:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/lt24_qsys.qip --report-file=svd --report-file=regmap:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/lt24_qsys.regmap --report-file=debuginfo:D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/lt24_qsys.debuginfo --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE115F29C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys.qsys --language=VERILOG
+Progress: Loading DE2_115_LT24_Painter/lt24_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 13.1]
+Progress: Parameterizing module clk_50
+Progress: Adding nios2_qsys [altera_nios2_qsys 13.1]
+Progress: Parameterizing module nios2_qsys
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory
+Progress: Adding LCD_RESET_N [altera_avalon_pio 13.1]
+Progress: Parameterizing module LCD_RESET_N
+Progress: Adding timer [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer
+Progress: Adding touch_panel_spi [altera_avalon_spi 13.1]
+Progress: Parameterizing module touch_panel_spi
+Progress: Adding touch_panel_pen_irq_n [altera_avalon_pio 13.1]
+Progress: Parameterizing module touch_panel_pen_irq_n
+Progress: Adding touch_panel_busy [altera_avalon_pio 13.1]
+Progress: Parameterizing module touch_panel_busy
+Progress: Adding altpll_sys [altpll 13.1]
+Progress: Parameterizing module altpll_sys
+Progress: Adding key [altera_avalon_pio 13.1]
+Progress: Parameterizing module key
+Progress: Adding LT24_Controller_0 [LT24_Controller 1.0]
+Progress: Parameterizing module LT24_Controller_0
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: lt24_qsys.touch_panel_pen_irq_n: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.touch_panel_busy: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.key: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: lt24_qsys.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: lt24_qsys.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: lt24_qsys: Generating lt24_qsys "lt24_qsys" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 13 modules, 43 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 13 modules, 39 connections
+Info: merlin_translator_transform: After transform: 27 modules, 84 connections
+Info: merlin_domain_transform: After transform: 64 modules, 265 connections
+Info: merlin_router_transform: After transform: 78 modules, 310 connections
+Info: merlin_traffic_limiter_transform: After transform: 80 modules, 320 connections
+Info: merlin_network_to_switch_transform: After transform: 107 modules, 379 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src1 and cmd_xbar_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src1 and cmd_xbar_mux_001.sink1
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src2 and cmd_xbar_mux_002.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src3 and cmd_xbar_mux_003.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src4 and cmd_xbar_mux_004.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src5 and cmd_xbar_mux_005.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src6 and cmd_xbar_mux_006.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src7 and cmd_xbar_mux_007.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src9 and cmd_xbar_mux_009.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src10 and cmd_xbar_mux_010.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src11 and cmd_xbar_mux_011.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src0 and rsp_xbar_mux.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src1 and rsp_xbar_mux_001.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux_002.src0 and rsp_xbar_mux_001.sink2
+Info: Inserting clock-crossing logic between rsp_xbar_demux_003.src0 and rsp_xbar_mux_001.sink3
+Info: Inserting clock-crossing logic between rsp_xbar_demux_004.src0 and rsp_xbar_mux_001.sink4
+Info: Inserting clock-crossing logic between rsp_xbar_demux_005.src0 and rsp_xbar_mux_001.sink5
+Info: Inserting clock-crossing logic between rsp_xbar_demux_006.src0 and rsp_xbar_mux_001.sink6
+Info: Inserting clock-crossing logic between rsp_xbar_demux_007.src0 and rsp_xbar_mux_001.sink7
+Info: Inserting clock-crossing logic between rsp_xbar_demux_009.src0 and rsp_xbar_mux_001.sink9
+Info: Inserting clock-crossing logic between rsp_xbar_demux_010.src0 and rsp_xbar_mux_001.sink10
+Info: Inserting clock-crossing logic between rsp_xbar_demux_011.src0 and rsp_xbar_mux_001.sink11
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 129 modules, 511 connections
+Info: limiter_update_transform: After transform: 129 modules, 513 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 134 modules, 668 connections
+Info: merlin_hierarchy_transform: After transform: 14 modules, 49 connections
+Info: merlin_mm_transform: After transform: 14 modules, 49 connections
+Info: merlin_interrupt_mapper_transform: After transform: 15 modules, 53 connections
+Info: merlin_interrupt_sync_transform: After transform: 19 modules, 77 connections
+Info: reset_adaptation_transform: After transform: 24 modules, 99 connections
+Info: nios2_qsys: Starting RTL generation for module 'lt24_qsys_nios2_qsys'
+Info: nios2_qsys:   Generation command is [exec C:/altera/13.1/quartus/bin/eperlcmd.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=lt24_qsys_nios2_qsys --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0039_nios2_qsys_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0039_nios2_qsys_gen//lt24_qsys_nios2_qsys_processor_configuration.pl  --do_build_sim=0  ]
+Info: nios2_qsys: # 2014.06.20 18:10:55 (*) Starting Nios II generation
+Info: nios2_qsys: # 2014.06.20 18:10:55 (*)   Checking for plaintext license.
+Info: nios2_qsys: # 2014.06.20 18:10:56 (*)   Plaintext license not found.
+Info: nios2_qsys: # 2014.06.20 18:10:56 (*)   Checking for encrypted license (non-evaluation).
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)   Creating all objects for CPU
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)     Testbench
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)     Instruction decoding
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)       Instruction fields
+Info: nios2_qsys: # 2014.06.20 18:10:58 (*)       Instruction decodes
+Info: nios2_qsys: # 2014.06.20 18:10:59 (*)       Signals for RTL simulation waveforms
+Info: nios2_qsys: # 2014.06.20 18:10:59 (*)       Instruction controls
+Info: nios2_qsys: # 2014.06.20 18:10:59 (*)     Pipeline frontend
+Info: nios2_qsys: # 2014.06.20 18:10:59 (*)     Pipeline backend
+Info: nios2_qsys: # 2014.06.20 18:11:01 (*)   Generating RTL from CPU objects
+Info: nios2_qsys: # 2014.06.20 18:11:03 (*)   Creating encrypted RTL
+Info: nios2_qsys: # 2014.06.20 18:11:04 (*) Done Nios II generation
+Info: nios2_qsys: Done RTL generation for module 'lt24_qsys_nios2_qsys'
+Info: nios2_qsys: "lt24_qsys" instantiated altera_nios2_qsys "nios2_qsys"
+Info: jtag_uart: Starting RTL generation for module 'lt24_qsys_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=lt24_qsys_jtag_uart --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0040_jtag_uart_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0040_jtag_uart_gen//lt24_qsys_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'lt24_qsys_jtag_uart'
+Info: jtag_uart: "lt24_qsys" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: onchip_memory: Starting RTL generation for module 'lt24_qsys_onchip_memory'
+Info: onchip_memory:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=lt24_qsys_onchip_memory --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0041_onchip_memory_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0041_onchip_memory_gen//lt24_qsys_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory: Done RTL generation for module 'lt24_qsys_onchip_memory'
+Info: onchip_memory: "lt24_qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory"
+Info: LCD_RESET_N: Starting RTL generation for module 'lt24_qsys_LCD_RESET_N'
+Info: LCD_RESET_N:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lt24_qsys_LCD_RESET_N --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0042_LCD_RESET_N_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0042_LCD_RESET_N_gen//lt24_qsys_LCD_RESET_N_component_configuration.pl  --do_build_sim=0  ]
+Info: LCD_RESET_N: Done RTL generation for module 'lt24_qsys_LCD_RESET_N'
+Info: LCD_RESET_N: "lt24_qsys" instantiated altera_avalon_pio "LCD_RESET_N"
+Info: timer: Starting RTL generation for module 'lt24_qsys_timer'
+Info: timer:   Generation command is [exec C:/altera/13.1/quartus/bin//perl/bin/perl.exe -I C:/altera/13.1/quartus/bin//perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=lt24_qsys_timer --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0043_timer_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0043_timer_gen//lt24_qsys_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: timer: Done RTL generation for module 'lt24_qsys_timer'
+Info: timer: "lt24_qsys" instantiated altera_avalon_timer "timer"
+Info: touch_panel_spi: Starting RTL generation for module 'lt24_qsys_touch_panel_spi'
+Info: touch_panel_spi:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=lt24_qsys_touch_panel_spi --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0044_touch_panel_spi_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0044_touch_panel_spi_gen//lt24_qsys_touch_panel_spi_component_configuration.pl  --do_build_sim=0  ]
+Info: touch_panel_spi: Done RTL generation for module 'lt24_qsys_touch_panel_spi'
+Info: touch_panel_spi: "lt24_qsys" instantiated altera_avalon_spi "touch_panel_spi"
+Info: touch_panel_pen_irq_n: Starting RTL generation for module 'lt24_qsys_touch_panel_pen_irq_n'
+Info: touch_panel_pen_irq_n:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lt24_qsys_touch_panel_pen_irq_n --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0045_touch_panel_pen_irq_n_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0045_touch_panel_pen_irq_n_gen//lt24_qsys_touch_panel_pen_irq_n_component_configuration.pl  --do_build_sim=0  ]
+Info: touch_panel_pen_irq_n: Done RTL generation for module 'lt24_qsys_touch_panel_pen_irq_n'
+Info: touch_panel_pen_irq_n: "lt24_qsys" instantiated altera_avalon_pio "touch_panel_pen_irq_n"
+Info: touch_panel_busy: Starting RTL generation for module 'lt24_qsys_touch_panel_busy'
+Info: touch_panel_busy:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lt24_qsys_touch_panel_busy --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0046_touch_panel_busy_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0046_touch_panel_busy_gen//lt24_qsys_touch_panel_busy_component_configuration.pl  --do_build_sim=0  ]
+Info: touch_panel_busy: Done RTL generation for module 'lt24_qsys_touch_panel_busy'
+Info: touch_panel_busy: "lt24_qsys" instantiated altera_avalon_pio "touch_panel_busy"
+Info: altpll_sys: "lt24_qsys" instantiated altpll "altpll_sys"
+Info: key: Starting RTL generation for module 'lt24_qsys_key'
+Info: key:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lt24_qsys_key --dir=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0049_key_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt6241_3703493382347999323.dir/0049_key_gen//lt24_qsys_key_component_configuration.pl  --do_build_sim=0  ]
+Info: key: Done RTL generation for module 'lt24_qsys_key'
+Info: key: "lt24_qsys" instantiated altera_avalon_pio "key"
+Info: LT24_Controller_0: "lt24_qsys" instantiated LT24_Controller "LT24_Controller_0"
+Info: sysid_qsys: "lt24_qsys" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: pipeline_bridge_swap_transform: After transform: 121 modules, 437 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 121 modules, 437 connections
+Info: mm_interconnect_0: "lt24_qsys" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: irq_mapper: "lt24_qsys" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_synchronizer: "lt24_qsys" instantiated altera_irq_clock_crosser "irq_synchronizer"
+Info: rst_controller: "lt24_qsys" instantiated altera_reset_controller "rst_controller"
+Info: nios2_qsys_instruction_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_qsys_instruction_master_translator"
+Info: nios2_qsys_jtag_debug_module_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "nios2_qsys_jtag_debug_module_translator"
+Info: nios2_qsys_instruction_master_translator_avalon_universal_master_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_qsys_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_qsys_jtag_debug_module_translator_avalon_universal_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "nios2_qsys_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_qsys_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "nios2_qsys_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_0" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "mm_interconnect_0" instantiated altera_merlin_router "id_router_001"
+Info: id_router_002: "mm_interconnect_0" instantiated altera_merlin_router "id_router_002"
+Info: id_router_008: "mm_interconnect_0" instantiated altera_merlin_router "id_router_008"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: cmd_xbar_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_001"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_008: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux_008"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_001"
+Info: rsp_xbar_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_demux_008: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_008"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/Home/User/Desktop/DE2_115_LT24_Painter/lt24_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: lt24_qsys: Done "lt24_qsys" with 42 modules, 64 files, 3118343 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

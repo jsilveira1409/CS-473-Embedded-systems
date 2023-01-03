@@ -13,17 +13,18 @@ entity top is
 		
 		-- avalon slave interface
 		AS_Address : in std_logic_vector(15 downto 0);
-		AS_CS : in std_logic;
+		--AS_CS : in std_logic;
 		AS_Write : in std_logic;
 		AS_Read : in std_logic;
-		AS_DataWrite : in std_logic_vector(15 downto 0);
-		AS_DataRead : out std_logic_vector(15 downto 0);
+		AS_DataWrite : in std_logic_vector(31 downto 0);
+		AS_DataRead : out std_logic_vector(31 downto 0);
 
 		-- avalon master interface(DMA)
 		AM_Address : out std_logic_vector(31 downto 0);
-		AM_ByteEnable : out std_logic;
+		--AM_ByteEnable : out std_logic;
+		AM_ByteEnable : in std_logic;
 		AM_Read : out std_logic;
-		AM_ReadData : in std_logic_vector(7 downto 0);
+		AM_ReadData : in std_logic_vector(15 downto 0);
 		AM_ReadDataValid : in std_logic;
 		AM_WaitRequest : in std_logic;
 		
@@ -35,13 +36,14 @@ entity top is
 		CSX : out std_logic;
 
 		-- debug signals
+		debug : out std_logic;
 		--debug_fifo_out : out std_logic;
 		debug_fifo_out_empty : out std_logic;
 		debug_fifo_out_full : out std_logic;
 		debug_fifo_out_q : out std_logic_vector(15 downto 0);
 		debug_fifo_usedw : out std_logic_vector(7 downto 0);
-		debug_lcd_state : out LCDFSM;
-		debug_dma_state : out AcqState;
+		--debug_lcd_state : out LCDFSM;
+		--debug_dma_state : out AcqState;
 		debug_acq_data_transfer : out std_logic_vector(15 downto 0)
 
 	);
@@ -67,7 +69,7 @@ architecture top_architecture of top is
 	signal signal_nb_param : std_logic_vector(15 downto 0); 		-- signal to indicate the number of parameters
 	signal signal_param : RF(0 to 63); 			-- signal to indicate the parameters
 	signal signal_reset_flag_cmd : std_logic; 						-- signal to reset the flag command
-
+	signal signal_debug : std_logic; 							    -- debug signal
 	
 	component AcquModule port(
 			-- global signals
@@ -75,16 +77,16 @@ architecture top_architecture of top is
 			nReset : in std_logic;
 
 			--Acquisition signals from DMA
-			DataAcquisition : in std_logic_vector(7 downto 0);
+			DataAcquisition : in std_logic_vector(15 downto 0);
 			NewData : in std_logic := '0';
 						
 			-- Avalon Slave : 
 			AS_Address : in std_logic_vector(15 downto 0); 
-			AS_CS : in std_logic ; 
+			--AS_CS : in std_logic ; 
 			AS_Write : in std_logic ; 
 			AS_Read : in std_logic ; 
-			AS_DataWrite : in std_logic_vector(15 downto 0) ; 
-			AS_DataRead : out std_logic_vector(15 downto 0) ; 
+			AS_DataWrite : in std_logic_vector(31 downto 0) ; 
+			AS_DataRead : out std_logic_vector(31 downto 0) ; 
 
 			ResetFlagCMD : in std_logic ;
 			ResetFlagReset : in std_logic ;
@@ -100,7 +102,8 @@ architecture top_architecture of top is
 
 			-- Avalon Master : 
 			AM_Address : out std_logic_vector(31 downto 0);
-			AM_ByteEnable : out std_logic;
+			--AM_ByteEnable : out std_logic;
+			AM_ByteEnable : in std_logic;
 			AM_Read : out std_logic;
 			AM_WaitRequest : in std_logic;
 
@@ -110,7 +113,8 @@ architecture top_architecture of top is
 			FIFO_Almost_Full : in std_logic;
 
 			--debug signals
-			debug_dma_state : out AcqState
+--			debug_dma_state : out AcqState;
+			debug : out std_logic
 		);
 	end component;
 
@@ -153,10 +157,10 @@ architecture top_architecture of top is
 			param : in RF(0 to 63);
 		
 			reset_flag_reset : out std_logic;
-			reset_flag_cmd : out std_logic;
+			reset_flag_cmd : out std_logic
 
 			--debug signals
-			debug_lcd_state : out LCDFSM
+			--debug_lcd_state : out LCDFSM
 			
 			
 		);
@@ -169,6 +173,7 @@ architecture top_architecture of top is
 	debug_fifo_out_full <= signal_FIFO_Almost_Full;
 	debug_fifo_out_q <= signal_FIFO_Q;
 	debug_acq_data_transfer <= signal_DataTransfer;
+	debug <= signal_debug;
 
 	avalon_interface : component AcquModule
 	port map(
@@ -195,7 +200,7 @@ architecture top_architecture of top is
 
 	-- Avalon Slave interface
 		AS_Address => AS_Address,				-- cpu -> acquisition
-		AS_CS => AS_CS,							-- cpu -> acquisition
+		--AS_CS => AS_CS,							-- cpu -> acquisition
 		AS_Write => AS_Write,					-- cpu -> acquisition
 		AS_Read => AS_Read,						-- cpu -> acquisition
 		AS_DataWrite => AS_DataWrite,			-- cpu -> acquisition
@@ -207,7 +212,8 @@ architecture top_architecture of top is
 		FIFO_Almost_Full => signal_FIFO_Almost_Full,-- fifo -> acquisition
 	
 	-- Debug 
-		debug_dma_state => debug_dma_state
+		debug => signal_debug					-- acquisition -> cpu
+		--debug_dma_state => debug_dma_state
 	);
 
 	-- FIFO
@@ -248,10 +254,10 @@ architecture top_architecture of top is
 		nb_param_reg => signal_nb_param,		-- acquisition -> lcd_controller
 		param => signal_param,					-- acquisition -> lcd_controller
 		reset_flag_reset => signal_reset_reset,	-- lcd controller -> acquisition
-		reset_flag_cmd => signal_reset_cmd,		-- lcd controller -> acquisition
+		reset_flag_cmd => signal_reset_cmd		-- lcd controller -> acquisition
 
 		--debug signals
-		debug_lcd_state => debug_lcd_state
+		--debug_lcd_state => debug_lcd_state
 		
 	);
 

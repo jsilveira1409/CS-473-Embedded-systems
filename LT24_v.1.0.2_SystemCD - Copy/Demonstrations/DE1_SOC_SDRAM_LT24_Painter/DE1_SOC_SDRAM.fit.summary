@@ -1,0 +1,19 @@
+Fitter Status : Successful - Thu Jun 19 17:56:45 2014
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : DE1_SOC_SDRAM
+Top-level Entity Name : DE1_SOC_SDRAM
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,855 / 32,070 ( 6 % )
+Total registers : 2925
+Total pins : 196 / 457 ( 43 % )
+Total virtual pins : 0
+Total block memory bits : 65,600 / 4,065,280 ( 2 % )
+Total DSP Blocks : 2 / 87 ( 2 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

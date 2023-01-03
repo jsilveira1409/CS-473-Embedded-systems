@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project LT24_Test_SDRAM ****
+
+make all 
+Info: Building ../LT24_Test_SDRAM_bsp/
+make --no-print-directory -C ../LT24_Test_SDRAM_bsp/
+[BSP build complete]
+[LT24_Test_SDRAM build complete]
+
+**** Build Finished ****

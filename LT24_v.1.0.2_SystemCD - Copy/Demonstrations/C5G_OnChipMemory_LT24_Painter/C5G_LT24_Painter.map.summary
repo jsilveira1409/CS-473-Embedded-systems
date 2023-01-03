@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Jun 19 20:06:50 2014
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : C5G_LT24_Painter
+Top-level Entity Name : C5G_LT24_Painter
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 3535
+Total pins : 168
+Total virtual pins : 0
+Total block memory bits : 2,304,128
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 1
+Total DLLs : 0

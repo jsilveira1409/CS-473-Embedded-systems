@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'soc_system'
  * SOPC Builder design path: ../../soc_system.sopcinfo
  *
- * Generated: Tue Dec 27 20:39:38 CET 2022
+ * Generated: Tue Jan 03 16:55:18 CET 2023
  */
 
 /*
@@ -234,11 +234,11 @@
  */
 
 #define ALT_MODULE_CLASS_lcd_0 lcd
-#define LCD_0_BASE 0x10001000
+#define LCD_0_BASE 0x10040000
 #define LCD_0_IRQ -1
 #define LCD_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define LCD_0_NAME "/dev/lcd_0"
-#define LCD_0_SPAN 2048
+#define LCD_0_SPAN 262144
 #define LCD_0_TYPE "lcd"
 
 

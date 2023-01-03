@@ -1,0 +1,33 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst lt24_qsys.pll_0 -pg 1 -lvl 3 -y 250
+preplace inst lt24_qsys.LT24_Controller_0 -pg 1 -lvl 4 -y 800
+preplace inst lt24_qsys.onchip_memory -pg 1 -lvl 4 -y 30
+preplace inst lt24_qsys.nios2_qsys -pg 1 -lvl 2 -y 310
+preplace inst lt24_qsys.timer -pg 1 -lvl 4 -y 230
+preplace inst lt24_qsys.jtag_uart -pg 1 -lvl 4 -y 120
+preplace inst lt24_qsys.touch_panel_pen_irq_n -pg 1 -lvl 4 -y 430
+preplace inst lt24_qsys.sysid_qsys -pg 1 -lvl 4 -y 340
+preplace inst lt24_qsys.touch_panel_busy -pg 1 -lvl 4 -y 910
+preplace inst lt24_qsys.touch_panel_spi -pg 1 -lvl 4 -y 560
+preplace inst lt24_qsys.clk_50 -pg 1 -lvl 1 -y 350
+preplace inst lt24_qsys.key -pg 1 -lvl 4 -y 1020
+preplace inst lt24_qsys.altpll_0 -pg 1 -lvl 2 -y 490
+preplace inst lt24_qsys.LCD_RESET_N -pg 1 -lvl 4 -y 690
+preplace inst lt24_qsys -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)touch_panel_pen_irq_n.external_connection,(SLAVE)lt24_qsys.touch_panel_pen_irq_n_external_connection) 1 0 4 NJ 640 NJ 640 NJ 460 NJ
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)LT24_Controller_0.conduit_end,(SLAVE)lt24_qsys.lt24_controller_0_conduit_end) 1 0 4 NJ 850 NJ 850 NJ 850 NJ
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)clk_50.clk_in,(SLAVE)lt24_qsys.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)touch_panel_spi.external,(SLAVE)lt24_qsys.touch_panel_spi_external) 1 0 4 NJ 660 NJ 660 NJ 590 NJ
+preplace netloc INTERCONNECT<net_container>lt24_qsys</net_container>(SLAVE)jtag_uart.reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)nios2_qsys.reset_n,(SLAVE)key.reset,(SLAVE)sysid_qsys.reset,(MASTER)clk_50.clk_reset,(SLAVE)timer.reset,(SLAVE)onchip_memory.reset1,(SLAVE)pll_0.reset,(MASTER)nios2_qsys.jtag_debug_module_reset,(SLAVE)LCD_RESET_N.reset,(SLAVE)touch_panel_busy.reset,(SLAVE)LT24_Controller_0.reset,(SLAVE)touch_panel_spi.reset,(SLAVE)touch_panel_pen_irq_n.reset) 1 1 3 410 480 740 240 1000
+preplace netloc FAN_OUT<net_container>lt24_qsys</net_container>(SLAVE)touch_panel_spi.irq,(SLAVE)touch_panel_pen_irq_n.irq,(SLAVE)jtag_uart.irq,(MASTER)nios2_qsys.d_irq,(SLAVE)timer.irq) 1 2 2 NJ 220 1080
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)lt24_qsys.reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)lt24_qsys.lcd_reset_n,(SLAVE)LCD_RESET_N.external_connection) 1 0 4 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc FAN_OUT<net_container>lt24_qsys</net_container>(SLAVE)altpll_0.inclk_interface,(SLAVE)nios2_qsys.clk,(MASTER)clk_50.clk,(SLAVE)pll_0.refclk) 1 1 2 430 440 720
+preplace netloc POINT_TO_POINT<net_container>lt24_qsys</net_container>(SLAVE)sysid_qsys.clk,(MASTER)altpll_0.c1) 1 2 2 780 370 NJ
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)lt24_qsys.key_external_connection,(SLAVE)key.external_connection) 1 0 4 NJ 1050 NJ 1050 NJ 1050 NJ
+preplace netloc FAN_OUT<net_container>lt24_qsys</net_container>(SLAVE)onchip_memory.clk1,(SLAVE)LCD_RESET_N.clk,(MASTER)altpll_0.c0,(SLAVE)jtag_uart.clk,(SLAVE)touch_panel_spi.clk,(SLAVE)touch_panel_pen_irq_n.clk,(SLAVE)touch_panel_busy.clk,(SLAVE)timer.clk,(SLAVE)key.clk,(SLAVE)LT24_Controller_0.clock) 1 2 2 800 440 1020
+preplace netloc EXPORT<net_container>lt24_qsys</net_container>(SLAVE)touch_panel_busy.external_connection,(SLAVE)lt24_qsys.touch_panel_busy_external_connection) 1 0 4 NJ 940 NJ 940 NJ 940 NJ
+preplace netloc INTERCONNECT<net_container>lt24_qsys</net_container>(SLAVE)timer.s1,(SLAVE)onchip_memory.s1,(SLAVE)LT24_Controller_0.avalon_slave_0,(SLAVE)touch_panel_spi.spi_control_port,(MASTER)nios2_qsys.data_master,(SLAVE)LCD_RESET_N.s1,(SLAVE)touch_panel_busy.s1,(SLAVE)key.s1,(SLAVE)touch_panel_pen_irq_n.s1,(MASTER)nios2_qsys.instruction_master,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)nios2_qsys.jtag_debug_module,(SLAVE)sysid_qsys.control_slave) 1 1 3 450 460 760 350 1040
+levelinfo -pg 1 0 200 1290
+levelinfo -hier lt24_qsys 210 240 480 870 1120 1280

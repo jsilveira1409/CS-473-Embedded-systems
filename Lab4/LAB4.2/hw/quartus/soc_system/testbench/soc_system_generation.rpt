@@ -1,0 +1,512 @@
+Info: Starting: Create testbench Platform Designer system
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/soc_system/testbench/soc_system.ipx
+Info: qsys-generate C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\soc_system.qsys --testbench=STANDARD --output-directory=C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading quartus/soc_system.qsys
+Progress: Reading input file
+Progress: Adding address_span_extender_0 [altera_address_span_extender 18.1]
+Progress: Parameterizing module address_span_extender_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 18.1]
+Progress: Parameterizing module hps_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding lcd_0 [lcd 1.0]
+Progress: Parameterizing module lcd_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_leds [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_leds
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: soc_system.hps_0: Setting the slave port width of interface f2h_sdram0 to 32 results in bandwidth under-utilization.  Altera recommends you set the interface data width to 64-bit or greater.
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_system.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_system.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: soc_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/soc_system/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\soc_system\testbench\soc_system.ipx
+Progress: Loading quartus/lcd_hw.tcl
+Progress: Loading quartus/soc_system.qsys
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/* matched 20 files in 0.03 seconds
+Progress: Loading cmos_sensor_output_generator/cmos_sensor_output_generator_hw.tcl
+Progress: Loading i2c/i2c_hw.tcl
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/ip/**/* matched 8 files in 0.06 seconds
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/*/* matched 465 files in 0.02 seconds
+Info: C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\soc_system\testbench\soc_system.ipx described 0 plugins, 3 paths, in 0.12 seconds
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/soc_system/testbench/* matched 4 files in 0.12 seconds
+Info: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/soc_system/testbench/*/* matched 0 files in 0.00 seconds
+Info: C:/Users/osour/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
+Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.15 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.16 seconds
+Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
+Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.30 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.30 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: soc_system
+Info: TB_Gen: System design is: soc_system
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property hps_0_ddr EXPORT_OF
+Info: get_instance_property hps_0 CLASS_NAME
+Info: get_instance_assignment hps_0 testbench.partner.map.memory
+Info: get_interface_property hps_0_io EXPORT_OF
+Info: get_instance_property hps_0 CLASS_NAME
+Info: get_instance_assignment hps_0 testbench.partner.map.hps_io
+Info: get_interface_property lcd_0_output EXPORT_OF
+Info: get_instance_property lcd_0 CLASS_NAME
+Info: get_instance_assignment lcd_0 testbench.partner.map.output
+Info: get_interface_property pio_leds_external_connection EXPORT_OF
+Info: get_instance_property pio_leds CLASS_NAME
+Info: get_instance_assignment pio_leds testbench.partner.map.external_connection
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : soc_system_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : soc_system_tb with all standard BFMs
+Info: create_system soc_system_tb
+Info: add_instance soc_system_inst soc_system 
+Info: set_use_testbench_naming_pattern true soc_system
+Info: get_instance_interfaces soc_system_inst
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst hps_0_ddr CLASS_NAME
+Info: get_instance_interface_property soc_system_inst hps_0_io CLASS_NAME
+Info: get_instance_interface_property soc_system_inst lcd_0_output CLASS_NAME
+Info: get_instance_interface_property soc_system_inst pio_leds_external_connection CLASS_NAME
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: add_instance soc_system_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property soc_system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst clk clockRate
+Info: set_instance_parameter_value soc_system_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value soc_system_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property soc_system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_clk_bfm
+Info: get_instance_interface_property soc_system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection soc_system_inst_clk_bfm.clk soc_system_inst.clk
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: add_instance soc_system_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports soc_system_inst reset
+Info: get_instance_interface_port_property soc_system_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property soc_system_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value soc_system_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value soc_system_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_reset_bfm
+Info: get_instance_interface_property soc_system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst reset associatedClock
+Info: get_instance_interfaces soc_system_inst_clk_bfm
+Info: get_instance_interface_property soc_system_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: soc_system_inst_reset_bfm is not associated to any clock; connecting soc_system_inst_reset_bfm to 'soc_system_inst_clk_bfm.clk'
+Warning: TB_Gen: soc_system_inst_reset_bfm is not associated to any clock; connecting soc_system_inst_reset_bfm to 'soc_system_inst_clk_bfm.clk'
+Info: add_connection soc_system_inst_clk_bfm.clk soc_system_inst_reset_bfm.clk
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_reset_bfm
+Info: get_instance_interface_property soc_system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection soc_system_inst_reset_bfm.reset soc_system_inst.reset
+Info: get_instance_interface_property soc_system_inst hps_0_ddr CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: hps_0_ddr
+Info: TB_Gen: conduit_end found: hps_0_ddr
+Info: get_instance_interface_property soc_system_inst hps_0_ddr CLASS_NAME
+Info: add_instance soc_system_inst_hps_0_ddr_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_hps_0_ddr_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst hps_0_ddr associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst hps_0_ddr associatedReset
+Info: get_instance_interface_ports soc_system_inst hps_0_ddr
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_a ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_a WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_a DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ba ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ba WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ba DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cas_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cas_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cas_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ck_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cke ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cke WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cke DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cs_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cs_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_cs_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dm ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dm WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dm DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dq ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dq WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dq DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_dqs_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_odt ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_odt WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_odt DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ras_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ras_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_ras_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_reset_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_reset_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_reset_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_we_n ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_we_n WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_mem_we_n DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_oct_rzqin ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_oct_rzqin WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_ddr hps_0_ddr_oct_rzqin DIRECTION
+Info: set_instance_parameter_value soc_system_inst_hps_0_ddr_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_hps_0_ddr_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_hps_0_ddr_bfm SIGNAL_ROLES mem_a mem_ba mem_cas_n mem_ck mem_ck_n mem_cke mem_cs_n mem_dm mem_dq mem_dqs mem_dqs_n mem_odt mem_ras_n mem_reset_n mem_we_n oct_rzqin
+Info: set_instance_parameter_value soc_system_inst_hps_0_ddr_bfm SIGNAL_WIDTHS 15 3 1 1 1 1 1 4 32 4 4 1 1 1 1 1
+Info: set_instance_parameter_value soc_system_inst_hps_0_ddr_bfm SIGNAL_DIRECTIONS input input input input input input input input bidir bidir bidir input input input input output
+Info: get_instance_property soc_system_inst_hps_0_ddr_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst hps_0_ddr CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_hps_0_ddr_bfm
+Info: get_instance_interface_property soc_system_inst_hps_0_ddr_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_hps_0_ddr_bfm.conduit soc_system_inst.hps_0_ddr
+Info: get_instance_interface_property soc_system_inst hps_0_io CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: hps_0_io
+Info: TB_Gen: conduit_end found: hps_0_io
+Info: get_instance_interface_property soc_system_inst hps_0_io CLASS_NAME
+Info: add_instance soc_system_inst_hps_0_io_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_hps_0_io_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst hps_0_io associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst hps_0_io associatedReset
+Info: get_instance_interface_ports soc_system_inst hps_0_io
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDC ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDC WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDC DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDIO ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDIO WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_MDIO DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD0 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD0 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD0 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD1 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD1 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD1 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD2 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD2 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD2 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD3 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD3 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RXD3 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CLK ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CLK WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CLK DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CTL ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CTL WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_RX_CTL DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD0 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD0 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD0 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD1 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD1 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD1 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD2 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD2 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD2 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD3 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD3 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TXD3 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CLK ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CLK WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CLK DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CTL ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CTL WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_emac1_inst_TX_CTL DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO09 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO09 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO09 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO35 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO35 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO35 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO40 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO40 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO40 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO53 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO53 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO53 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO54 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO54 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO54 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO61 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO61 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_gpio_inst_GPIO61 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SCL ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SCL WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SCL DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SDA ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SDA WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c0_inst_SDA DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SCL ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SCL WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SCL DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SDA ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SDA WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_i2c1_inst_SDA DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CLK ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CLK WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CLK DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CMD ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CMD WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_CMD DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D0 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D0 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D0 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D1 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D1 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D1 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D2 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D2 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D2 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D3 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D3 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_sdio_inst_D3 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_CLK ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_CLK WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_CLK DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MISO ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MISO WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MISO DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MOSI ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MOSI WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_MOSI DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_SS0 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_SS0 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_spim1_inst_SS0 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_RX ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_RX WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_RX DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_TX ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_TX WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_uart0_inst_TX DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_CLK ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_CLK WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_CLK DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D0 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D0 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D0 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D1 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D1 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D1 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D2 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D2 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D2 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D3 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D3 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D3 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D4 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D4 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D4 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D5 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D5 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D5 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D6 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D6 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D6 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D7 ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D7 WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_D7 DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_DIR ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_DIR WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_DIR DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_NXT ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_NXT WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_NXT DIRECTION
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_STP ROLE
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_STP WIDTH
+Info: get_instance_interface_port_property soc_system_inst hps_0_io hps_0_io_hps_io_usb1_inst_STP DIRECTION
+Info: set_instance_parameter_value soc_system_inst_hps_0_io_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_hps_0_io_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_hps_0_io_bfm SIGNAL_ROLES hps_io_emac1_inst_MDC hps_io_emac1_inst_MDIO hps_io_emac1_inst_RXD0 hps_io_emac1_inst_RXD1 hps_io_emac1_inst_RXD2 hps_io_emac1_inst_RXD3 hps_io_emac1_inst_RX_CLK hps_io_emac1_inst_RX_CTL hps_io_emac1_inst_TXD0 hps_io_emac1_inst_TXD1 hps_io_emac1_inst_TXD2 hps_io_emac1_inst_TXD3 hps_io_emac1_inst_TX_CLK hps_io_emac1_inst_TX_CTL hps_io_gpio_inst_GPIO09 hps_io_gpio_inst_GPIO35 hps_io_gpio_inst_GPIO40 hps_io_gpio_inst_GPIO53 hps_io_gpio_inst_GPIO54 hps_io_gpio_inst_GPIO61 hps_io_i2c0_inst_SCL hps_io_i2c0_inst_SDA hps_io_i2c1_inst_SCL hps_io_i2c1_inst_SDA hps_io_sdio_inst_CLK hps_io_sdio_inst_CMD hps_io_sdio_inst_D0 hps_io_sdio_inst_D1 hps_io_sdio_inst_D2 hps_io_sdio_inst_D3 hps_io_spim1_inst_CLK hps_io_spim1_inst_MISO hps_io_spim1_inst_MOSI hps_io_spim1_inst_SS0 hps_io_uart0_inst_RX hps_io_uart0_inst_TX hps_io_usb1_inst_CLK hps_io_usb1_inst_D0 hps_io_usb1_inst_D1 hps_io_usb1_inst_D2 hps_io_usb1_inst_D3 hps_io_usb1_inst_D4 hps_io_usb1_inst_D5 hps_io_usb1_inst_D6 hps_io_usb1_inst_D7 hps_io_usb1_inst_DIR hps_io_usb1_inst_NXT hps_io_usb1_inst_STP
+Info: set_instance_parameter_value soc_system_inst_hps_0_io_bfm SIGNAL_WIDTHS 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+Info: set_instance_parameter_value soc_system_inst_hps_0_io_bfm SIGNAL_DIRECTIONS input bidir output output output output output output input input input input input input bidir bidir bidir bidir bidir bidir bidir bidir bidir bidir input bidir bidir bidir bidir bidir input output input input output input output bidir bidir bidir bidir bidir bidir bidir bidir output output input
+Info: get_instance_property soc_system_inst_hps_0_io_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst hps_0_io CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_hps_0_io_bfm
+Info: get_instance_interface_property soc_system_inst_hps_0_io_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_hps_0_io_bfm.conduit soc_system_inst.hps_0_io
+Info: get_instance_interface_property soc_system_inst lcd_0_output CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: lcd_0_output
+Info: TB_Gen: conduit_end found: lcd_0_output
+Info: get_instance_interface_property soc_system_inst lcd_0_output CLASS_NAME
+Info: add_instance soc_system_inst_lcd_0_output_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_lcd_0_output_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst lcd_0_output associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst lcd_0_output associatedReset
+Info: get_instance_interface_ports soc_system_inst lcd_0_output
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_csx ROLE
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_csx WIDTH
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_csx DIRECTION
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_d ROLE
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_d WIDTH
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_d DIRECTION
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_dcx ROLE
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_dcx WIDTH
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_dcx DIRECTION
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_resx ROLE
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_resx WIDTH
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_resx DIRECTION
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_wrx ROLE
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_wrx WIDTH
+Info: get_instance_interface_port_property soc_system_inst lcd_0_output lcd_0_output_wrx DIRECTION
+Info: set_instance_parameter_value soc_system_inst_lcd_0_output_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value soc_system_inst_lcd_0_output_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value soc_system_inst_lcd_0_output_bfm SIGNAL_ROLES csx d dcx resx wrx
+Info: set_instance_parameter_value soc_system_inst_lcd_0_output_bfm SIGNAL_WIDTHS 1 16 1 1 1
+Info: set_instance_parameter_value soc_system_inst_lcd_0_output_bfm SIGNAL_DIRECTIONS input input input input input
+Info: get_instance_property soc_system_inst_lcd_0_output_bfm CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_lcd_0_output_bfm
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm conduit CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm reset CLASS_NAME
+Info: get_instance_property soc_system_inst_lcd_0_output_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst lcd_0_output associatedClock
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_clk_bfm
+Info: get_instance_interface_property soc_system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection soc_system_inst_clk_bfm.clk soc_system_inst_lcd_0_output_bfm.clk
+Info: get_instance_interfaces soc_system_inst_lcd_0_output_bfm
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm conduit CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm reset CLASS_NAME
+Info: get_instance_property soc_system_inst_lcd_0_output_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst lcd_0_output associatedReset
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_reset_bfm
+Info: get_instance_interface_property soc_system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection soc_system_inst_reset_bfm.reset soc_system_inst_lcd_0_output_bfm.reset
+Info: get_instance_interface_property soc_system_inst lcd_0_output CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_lcd_0_output_bfm
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm conduit CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_lcd_0_output_bfm reset CLASS_NAME
+Info: add_connection soc_system_inst_lcd_0_output_bfm.conduit soc_system_inst.lcd_0_output
+Info: get_instance_interface_property soc_system_inst pio_leds_external_connection CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: pio_leds_external_connection
+Info: TB_Gen: conduit_end found: pio_leds_external_connection
+Info: get_instance_interface_property soc_system_inst pio_leds_external_connection CLASS_NAME
+Info: add_instance soc_system_inst_pio_leds_external_connection_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_pio_leds_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst pio_leds_external_connection associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst pio_leds_external_connection associatedReset
+Info: get_instance_interface_ports soc_system_inst pio_leds_external_connection
+Info: get_instance_interface_port_property soc_system_inst pio_leds_external_connection pio_leds_external_connection_export ROLE
+Info: get_instance_interface_port_property soc_system_inst pio_leds_external_connection pio_leds_external_connection_export WIDTH
+Info: get_instance_interface_port_property soc_system_inst pio_leds_external_connection pio_leds_external_connection_export DIRECTION
+Info: set_instance_parameter_value soc_system_inst_pio_leds_external_connection_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_pio_leds_external_connection_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_pio_leds_external_connection_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value soc_system_inst_pio_leds_external_connection_bfm SIGNAL_WIDTHS 8
+Info: set_instance_parameter_value soc_system_inst_pio_leds_external_connection_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property soc_system_inst_pio_leds_external_connection_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst pio_leds_external_connection CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_pio_leds_external_connection_bfm
+Info: get_instance_interface_property soc_system_inst_pio_leds_external_connection_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_pio_leds_external_connection_bfm.conduit soc_system_inst.pio_leds_external_connection
+Info: send_message Info TB_Gen: Saving testbench system: soc_system_tb.qsys
+Info: TB_Gen: Saving testbench system: soc_system_tb.qsys
+Info: save_system soc_system_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/soc_system/testbench/soc_system_tb.qsys
+Info: Done
+Info: qsys-generate C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\soc_system.qsys --simulation=VHDL --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VHDL --allow-mixed-language-testbench-simulation --output-directory=C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\soc_system\testbench\soc_system_tb\simulation --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading testbench/soc_system_tb.qsys
+Progress: Reading input file
+Progress: Adding soc_system_inst [soc_system 1.0]
+Progress: Parameterizing module soc_system_inst
+Progress: Adding soc_system_inst_clk_bfm [altera_avalon_clock_source 18.1]
+Progress: Parameterizing module soc_system_inst_clk_bfm
+Progress: Adding soc_system_inst_hps_0_ddr_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_hps_0_ddr_bfm
+Progress: Adding soc_system_inst_hps_0_io_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_hps_0_io_bfm
+Progress: Adding soc_system_inst_lcd_0_output_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_lcd_0_output_bfm
+Progress: Adding soc_system_inst_pio_leds_external_connection_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_pio_leds_external_connection_bfm
+Progress: Adding soc_system_inst_reset_bfm [altera_avalon_reset_source 18.1]
+Progress: Parameterizing module soc_system_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: soc_system_tb.soc_system_inst.hps_0: Setting the slave port width of interface f2h_sdram0 to 32 results in bandwidth under-utilization.  Altera recommends you set the interface data width to 64-bit or greater.
+Info: soc_system_tb.soc_system_inst.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_system_tb.soc_system_inst.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_system_tb.soc_system_inst.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_system_tb.soc_system_inst.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: soc_system_tb.soc_system_inst.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: soc_system_tb.soc_system_inst_clk_bfm: Elaborate: altera_clock_source
+Info: soc_system_tb.soc_system_inst_clk_bfm:            $Revision: #1 $
+Info: soc_system_tb.soc_system_inst_clk_bfm:            $Date: 2018/07/18 $
+Info: soc_system_tb.soc_system_inst_reset_bfm: Elaborate: altera_reset_source
+Info: soc_system_tb.soc_system_inst_reset_bfm:            $Revision: #1 $
+Info: soc_system_tb.soc_system_inst_reset_bfm:            $Date: 2018/07/18 $
+Info: soc_system_tb.soc_system_inst_reset_bfm: Reset is negatively asserted.
+Info: soc_system_tb: Generating soc_system_tb "soc_system_tb" for SIM_VHDL
+Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave hps_0.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 30 bit wide.
+Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave hps_0.f2h_sdram0_data because the master has burstcount signal 7 bit wide, but the slave is 8 bit wide.
+Info: soc_system_inst: "soc_system_tb" instantiated soc_system "soc_system_inst"
+Error: Generation stopped, 20 or more modules remaining
+Info: soc_system_tb: Done "soc_system_tb" with 19 modules, 4 files
+Error: qsys-generate failed with exit code 1: 1 Error, 3 Warnings
+Error: There were errors creating the testbench system.
+Info: Stopping: Create testbench Platform Designer system
