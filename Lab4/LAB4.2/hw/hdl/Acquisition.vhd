@@ -16,15 +16,12 @@ entity AcquModule is
 
     -- Avalon Slave : 
     AS_Address : in std_logic_vector(15 downto 0); 
-    --AS_CS : in std_logic ; 
     AS_Write : in std_logic ; 
     AS_Read : in std_logic ; 
-    AS_DataWrite : in std_logic_vector(31 downto 0) ; 
-    AS_DataRead : out std_logic_vector(31 downto 0) ; 
+    AS_DataWrite : in std_logic_vector(15 downto 0) ; 
+    AS_DataRead : out std_logic_vector(15 downto 0) ; 
 
-    ResetFlagCMD : in std_logic ;
-    ResetFlagReset : in std_logic ;
-
+    
     -- LCD controller and DMA registers
     Reg_ImgAddress: out std_logic_vector(31 downto 0);
     Reg_ImgLength : out std_logic_vector(31 downto 0);
@@ -35,7 +32,6 @@ entity AcquModule is
 
     -- Avalon Master : 
     AM_Address : out std_logic_vector(31 downto 0);
-    --AM_ByteEnable : out std_logic;
     AM_ByteEnable : in std_logic;
     AM_Read : out std_logic;
     AM_WaitRequest : in std_logic;
@@ -58,10 +54,14 @@ Architecture Comp of AcquModule is
 
 TYPE AcqState is (Idle, WaitData, WaitFifo, Request, AcqData); 
 
+
+type reg_array is array (natural range <>) of std_logic_vector(15 downto 0);
+signal regs: RF(0 to 70);
+signal addr: integer range 0 to 75;
+
 Signal AcqAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal AcqLength: STD_LOGIC_VECTOR(31 downto 0); 
-signal signal_reg_cmd : std_logic_vector(15 downto 0);
-signal signal_reg_nb_param : std_logic_vector(15 downto 0);
+
 Signal CntAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal CntLength: STD_LOGIC_VECTOR(31 downto 0); 
 Signal SM: work.lcd_package.AcqState; 
@@ -73,72 +73,51 @@ signal signal_debug : std_logic := '1';
 
 Begin 
 
--- Gestion des registres d'interface 
-process(clk, nReset)
-    variable tmp : RF(0 to 70);
-begin
-    if nReset ='1' then
-        tmp := (others => (others => '0'));
-        Reg_ImgAddress <= (others => '0');
-        Reg_ImgLength <= (others => '0');
-        Reg_Flags <= (others => '0');
-        Reg_Cmd <= (others => '0');
-        Reg_NbParam <= (others => '0');
-        Reg_Param <= (others => (others => '0'));
-        
-    elsif rising_edge(clk) then
-        --if AS_CS = '1' then
-            
-            if AS_Write = '1' then
-                -- invert debug signal
-                --signal_debug <= not signal_debug;
-                if AS_Address = x"0000" then                                       -- img address
-                    AcqAddress <= AS_DataWrite;
-                elsif AS_Address = x"0004" then                                    -- img length
-                    AcqLength <= AS_DataWrite;
-                elsif AS_Address = x"0008" then                                    -- flags
-                    flag <= AS_DataWrite(15 downto 0);
-                elsif AS_Address = x"000A" then                                    -- cmd  
-                    signal_reg_cmd <= AS_DataWrite(15 downto 0);               
-                elsif AS_Address = x"000C" then                                    -- nb param
-                    signal_reg_nb_param <= AS_DataWrite(15 downto 0);
-                elsif AS_Address >= x"000E" and AS_Address <= X"0043" then    -- params
-                    Reg_Param(to_integer(unsigned(AS_Address(8 downto 2)))) <= AS_DataWrite;
-                end if;
-            elsif AS_Read = '1' then
-                --signal_debug <= not signal_debug;
-                if AS_Address = x"0000" then                                       -- img address
-                    AS_DataRead <= AcqAddress;
-                elsif AS_Address = x"0004" then                                    -- img length
-                    AS_DataRead <= AcqLength;
-                elsif AS_Address = x"0008" then                                    -- flags
-                    AS_DataRead(15 downto 0) <= flag ;
-                elsif AS_Address = x"000A" then                                    -- cmd
-                    AS_DataRead(15 downto 0) <= signal_reg_cmd;
-                elsif AS_Address = x"000C" then                                    -- nb param
-                    AS_DataRead(15 downto 0) <= signal_reg_nb_param;
-                end if;    
-            end if;
-             
-            
-            Reg_ImgAddress <= AcqAddress;
-            Reg_ImgLength <= AcqLength;
-            Reg_Cmd <= signal_reg_cmd;
-            Reg_NbParam <= signal_reg_nb_param;
-            Reg_Flags <= flag;
-            lcd_enable <= flag(0);
-            
+	
 
-            if ResetFlagCMD = '0' then
-                Reg_Cmd <= (others => '0');
-                flag(1) <= '0';
-            end if;
-            if ResetFlagReset = '0' then
-                flag(2) <= '0';
-            end if;
+-- Gestion des registres d'interface 
+process (clk, nReset)
+
+Begin 
+
+    if rising_edge(clk) then
+        -- decode address
+        addr <= to_integer(unsigned(AS_Address));
+        debug <= AS_Write;
+        -- read operation
+        if (AS_Read = '1') then
+            case addr is
+                when 0 => AS_DataRead <= regs(addr);
+                when 1 => AS_DataRead <= regs(addr);
+                when 2 => AS_DataRead <= regs(addr);
+                when 3 => AS_DataRead <= regs(addr);
+                when 4 => AS_DataRead <= regs(addr);
+                when others => AS_DataRead <= regs(addr);
+            end case;
         end if;
+
+        -- write operation
+        if (AS_Write = '1') then
+            case addr is
+                when 0 => regs(addr) <= AS_DataWrite;
+                when 1 => regs(addr) <= AS_DataWrite;
+                when 2 => regs(addr) <= AS_DataWrite;
+                when 3 => regs(addr) <= AS_DataWrite;
+                when 4 => regs(addr) <= AS_DataWrite;
+                when others => regs(addr) <= AS_DataWrite;
+            end case;
+        end if;
+
+        AcqAddress <= regs(0) & regs(1);
+        AcqLength <= regs(2) & regs(3);
+        Reg_Flags <= regs(4);
+        Reg_Cmd <= regs(5);
+        Reg_NbParam <= regs(6);
+        Reg_Param <= regs(7 to 70);
+        lcd_enable <= regs(4)(0);
         
-    --end if;
+    end if;
+
 end process;
 
 
@@ -159,17 +138,12 @@ Begin
         AM_Write <= '0'; 
         AM_Read <= '0'; 
         AM_Address <= (others => '0');
-        --AM_ByteEnable <= '0'; 
         CntAddress <= (others => '0'); 
         CntLength <= (others => '0'); 
         DataTransfer <= (others => '0');
-        debug <= '0';
     elsif rising_edge(clk) then 
-        debug_dma_state <= SM;
-        AM_Read <= '0'; 
-        debug <= signal_debug;    
+        AM_Read <= '0';     
         if lcd_enable = '1' then
-            signal_debug <= not signal_debug;
             case SM is 
                 when Idle => 
                     if AcqLength /= X"0000_0000" then 
@@ -178,6 +152,7 @@ Begin
                         CntLength <= AcqLength; 
                     end if; 
                 when WaitData => 
+                    AM_Read <= '0';
                     if NewData = '1' then 
                         SM <= WaitFifo; 
                         AM_Address <= CntAddress; 
@@ -201,7 +176,6 @@ Begin
                     if AM_WaitRequest = '0' then 
                         SM <= AcqData; 
                         AM_Write <= '0'; 
-                        --AM_ByteEnable <= '0'; 
                         --DataAck <= '1'; 
                     end if; 
                 when AcqData => 

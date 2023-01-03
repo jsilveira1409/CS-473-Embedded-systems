@@ -18,8 +18,8 @@ architecture test of tb_top is
     SIGNAL AS_CS :  std_logic;
     SIGNAL AS_Write :  std_logic;
     SIGNAL AS_Read :  std_logic;
-    SIGNAL AS_DataWrite :  std_logic_vector(31 downto 0);
-    SIGNAL AS_DataRead :  std_logic_vector(31 downto 0);
+    SIGNAL AS_DataWrite :  std_logic_vector(15 downto 0);
+    SIGNAL AS_DataRead :  std_logic_vector(15 downto 0);
     -- avalon master terface(DMA)
     SIGNAL AM_Address :  std_logic_vector(31 downto 0);
     SIGNAL AM_ByteEnable :  std_logic;
@@ -94,9 +94,9 @@ top : entity work.top
     begin
         wait until rising_edge(clk);
         wait for CLK_PERIOD / 4;
-        nReset <= '0';
-        wait for CLK_PERIOD / 2;
         nReset <= '1';
+        wait for CLK_PERIOD / 2;
+        nReset <= '0';
         --Flags <= x"0000";
         --CommandReg <= x"0000";
         --NParamReg <= x"0000";
@@ -160,7 +160,7 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0000AA11";  
+    AS_DataWrite <= x"AA11";  
     wait for CLK_PERIOD * 2;
     --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
@@ -169,7 +169,7 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000000";    -- 0b0000000000000000
+    AS_DataWrite <= x"0000";    -- 0b0000000000000000
     wait for CLK_PERIOD * 2;
     --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
@@ -188,12 +188,12 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000002";    -- 0b0000000000000001
+    AS_DataWrite <= x"0002";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     wait for CLK_PERIOD * 4;   
-
+	
 
 
 -- Image address register 
@@ -201,7 +201,7 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0000000A";    -- 0b0000000000001010
+    AS_DataWrite <= x"000A";    -- 0b0000000000001010
     wait for CLK_PERIOD * 2;
     --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
@@ -212,7 +212,7 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000020";    
+    AS_DataWrite <= x"0020";    
     wait for CLK_PERIOD * 2;
     --AS_CS <= '0';
     wait for CLK_PERIOD * 4;
@@ -224,7 +224,7 @@ top : entity work.top
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"00000001";    -- 0b0000000000000001
+    AS_DataWrite <= x"0001";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
     --AS_CS <= '0';
@@ -238,7 +238,6 @@ top : entity work.top
     AM_ReadData <= x"0011";       -- 0b00010001
     wait for CLK_PERIOD * 2;
     AM_ReadDatavalid <= '0';
-    
     wait for CLK_PERIOD * 4;
     AM_ReadDatavalid <= '1';
     wait for CLK_PERIOD;
