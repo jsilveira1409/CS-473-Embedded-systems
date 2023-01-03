@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1
 Eacqumodule
-Z0 w1672779572
+Z0 w1672781446
 Z1 DPx4 work 11 lcd_package 0 22 54D3@MV9D_UbKUBJbTFia1
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
@@ -21,13 +21,13 @@ Z8 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
 Z9 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
 l0
 L8
-VDPT17[;7h`Y4?JAUZkO8^3
-!s100 8I`_`z^@L6eS<Wz@oLhm92
+Ve9OX00EaHSA:Wh_jeiQGK3
+!s100 Dz_YjZI3cNY=iR34:E:L<3
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1672780070
+Z11 !s110 1672781450
 !i10b 1
-Z12 !s108 1672780070.000000
+Z12 !s108 1672781450.000000
 Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
 Z14 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
 !i113 1
@@ -40,11 +40,11 @@ R3
 R4
 R5
 R6
-DEx4 work 10 acqumodule 0 22 DPT17[;7h`Y4?JAUZkO8^3
-l74
-L53
-VMgW<Lh^_^_7TLO>_fzzjB2
-!s100 >NDdoQa8C[YHmIJ3:RX[^2
+DEx4 work 10 acqumodule 0 22 e9OX00EaHSA:Wh_jeiQGK3
+l76
+L55
+VFWf35Bid^z87X2S5QZ1512
+!s100 oBEhBK7D>@Mb>8IH==fm:2
 R10
 32
 R11
@@ -176,14 +176,14 @@ R10
 32
 R11
 !i10b 1
-R12
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
-Z30 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
+Z29 !s108 1672781449.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
+Z31 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
 !i113 1
 R15
 R16
 Atest
-Z31 DEx4 work 3 top 0 22 :]Q[7D59OL<Qg2]5<zBD:2
+Z32 DEx4 work 3 top 0 22 :]Q[7D59OL<Qg2]5<zBD:2
 R1
 R4
 R5
@@ -197,21 +197,21 @@ R10
 32
 R11
 !i10b 1
-R12
 R29
 R30
+R31
 !i113 1
 R15
 R16
 Etop
-Z32 w1672779867
+Z33 w1672780562
 R1
 R4
 R5
 R6
 R7
-Z33 8C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab4\LAB4.2\hw\hdl\top.vhd
-Z34 FC:\Users\maxim\OneDrive\Desktop\EmbSys\Lab4\LAB4.2\hw\hdl\top.vhd
+Z34 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Z35 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
 l0
 L7
 V:]Q[7D59OL<Qg2]5<zBD:2
@@ -221,8 +221,8 @@ R10
 R11
 !i10b 1
 R12
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab4\LAB4.2\hw\hdl\top.vhd|
-Z36 !s107 C:\Users\maxim\OneDrive\Desktop\EmbSys\Lab4\LAB4.2\hw\hdl\top.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
+Z37 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
 !i113 1
 R15
 R16
@@ -231,7 +231,7 @@ R1
 R4
 R5
 R6
-R31
+R32
 l169
 L55
 VI`XIUeI28b2C^Yhh5=_]62
@@ -241,8 +241,8 @@ R10
 R11
 !i10b 1
 R12
-R35
 R36
+R37
 !i113 1
 R15
 R16

@@ -29,6 +29,8 @@ entity AcquModule is
     Reg_Cmd : out std_logic_vector(15 downto 0);
     Reg_NbParam : out std_logic_vector(15 downto 0);
     Reg_Param : out RF(0 to 63);
+    ResetFlagCMD : in std_logic;
+    ResetFlagReset : in std_logic;
 
     -- Avalon Master : 
     AM_Address : out std_logic_vector(31 downto 0);
