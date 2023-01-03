@@ -16,8 +16,8 @@ entity top is
 		--AS_CS : in std_logic;
 		AS_Write : in std_logic;
 		AS_Read : in std_logic;
-		AS_DataWrite : in std_logic_vector(31 downto 0);
-		AS_DataRead : out std_logic_vector(31 downto 0);
+		AS_DataWrite : in std_logic_vector(15 downto 0);
+		AS_DataRead : out std_logic_vector(15 downto 0);
 
 		-- avalon master interface(DMA)
 		AM_Address : out std_logic_vector(31 downto 0);
@@ -85,8 +85,8 @@ architecture top_architecture of top is
 			--AS_CS : in std_logic ; 
 			AS_Write : in std_logic ; 
 			AS_Read : in std_logic ; 
-			AS_DataWrite : in std_logic_vector(31 downto 0) ; 
-			AS_DataRead : out std_logic_vector(31 downto 0) ; 
+			AS_DataWrite : in std_logic_vector(15 downto 0) ; 
+			AS_DataRead : out std_logic_vector(15 downto 0) ; 
 
 			ResetFlagCMD : in std_logic ;
 			ResetFlagReset : in std_logic ;

@@ -16,15 +16,12 @@ entity AcquModule is
 
     -- Avalon Slave : 
     AS_Address : in std_logic_vector(15 downto 0); 
-    --AS_CS : in std_logic ; 
     AS_Write : in std_logic ; 
     AS_Read : in std_logic ; 
-    AS_DataWrite : in std_logic_vector(31 downto 0) ; 
-    AS_DataRead : out std_logic_vector(31 downto 0) ; 
+    AS_DataWrite : in std_logic_vector(15 downto 0) ; 
+    AS_DataRead : out std_logic_vector(15 downto 0) ; 
 
-    ResetFlagCMD : in std_logic ;
-    ResetFlagReset : in std_logic ;
-
+    
     -- LCD controller and DMA registers
     Reg_ImgAddress: out std_logic_vector(31 downto 0);
     Reg_ImgLength : out std_logic_vector(31 downto 0);
@@ -32,10 +29,11 @@ entity AcquModule is
     Reg_Cmd : out std_logic_vector(15 downto 0);
     Reg_NbParam : out std_logic_vector(15 downto 0);
     Reg_Param : out RF(0 to 63);
+    ResetFlagCMD : in std_logic;
+    ResetFlagReset : in std_logic;
 
     -- Avalon Master : 
     AM_Address : out std_logic_vector(31 downto 0);
-    --AM_ByteEnable : out std_logic;
     AM_ByteEnable : in std_logic;
     AM_Read : out std_logic;
     AM_WaitRequest : in std_logic;
@@ -60,13 +58,12 @@ TYPE AcqState is (Idle, WaitData, WaitFifo, Request, AcqData);
 
 
 type reg_array is array (natural range <>) of std_logic_vector(15 downto 0);
-signal regs: reg_array(6 to 70);
+signal regs: RF(0 to 70);
 signal addr: integer range 0 to 75;
 
 Signal AcqAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal AcqLength: STD_LOGIC_VECTOR(31 downto 0); 
-signal signal_reg_cmd : std_logic_vector(15 downto 0);
-signal signal_reg_nb_param : std_logic_vector(15 downto 0);
+
 Signal CntAddress: STD_LOGIC_VECTOR(31 downto 0); 
 Signal CntLength: STD_LOGIC_VECTOR(31 downto 0); 
 Signal SM: work.lcd_package.AcqState; 
@@ -78,39 +75,51 @@ signal signal_debug : std_logic := '1';
 
 Begin 
 
-	debug <= AS_Write;
+	
 
 -- Gestion des registres d'interface 
-begin process (clk, nReset)
-    -- decode address
-    addr <= to_integer(unsigned(av_s_addr));
+process (clk, nReset)
 
-    -- read operation
-    av_s_ack <= '1' when av_s_rd = '1' else '0';
-    av_s_dataout <= (others => 'Z');
-    av_s_stall <= '0';
-    if (av_s_rd = '1') then
-        case addr is
-            when 0 => av_s_dataout <= regs(addr);
-            when 1 => av_s_dataout <= regs(addr);
-            when 2 => av_s_dataout <= regs(addr);
-            when 3 => av_s_dataout <= regs(addr);
-            when 4 => av_s_dataout <= regs(addr);
-            when others => av_s_stall <= '1';
-        end case;
+Begin 
+
+    if rising_edge(clk) then
+        -- decode address
+        addr <= to_integer(unsigned(AS_Address));
+        debug <= AS_Write;
+        -- read operation
+        if (AS_Read = '1') then
+            case addr is
+                when 0 => AS_DataRead <= regs(addr);
+                when 1 => AS_DataRead <= regs(addr);
+                when 2 => AS_DataRead <= regs(addr);
+                when 3 => AS_DataRead <= regs(addr);
+                when 4 => AS_DataRead <= regs(addr);
+                when others => AS_DataRead <= regs(addr);
+            end case;
+        end if;
+
+        -- write operation
+        if (AS_Write = '1') then
+            case addr is
+                when 0 => regs(addr) <= AS_DataWrite;
+                when 1 => regs(addr) <= AS_DataWrite;
+                when 2 => regs(addr) <= AS_DataWrite;
+                when 3 => regs(addr) <= AS_DataWrite;
+                when 4 => regs(addr) <= AS_DataWrite;
+                when others => regs(addr) <= AS_DataWrite;
+            end case;
+        end if;
+
+        AcqAddress <= regs(0) & regs(1);
+        AcqLength <= regs(2) & regs(3);
+        Reg_Flags <= regs(4);
+        Reg_Cmd <= regs(5);
+        Reg_NbParam <= regs(6);
+        Reg_Param <= regs(7 to 70);
+        lcd_enable <= regs(4)(0);
+        
     end if;
 
-    -- write operation
-    if (av_s_wr = '1') then
-        case addr is
-            when 0 => regs(addr) <= av_s_data;
-            when 1 => regs(addr) <= av_s_data;
-            when 2 => regs(addr) <= av_s_data;
-            when 3 => regs(addr) <= av_s_data;
-            when 4 => regs(addr) <= av_s_data;
-            when others => null;
-        end case;
-    end if;
 end process;
 
 
@@ -131,7 +140,6 @@ Begin
         AM_Write <= '0'; 
         AM_Read <= '0'; 
         AM_Address <= (others => '0');
-        --AM_ByteEnable <= '0'; 
         CntAddress <= (others => '0'); 
         CntLength <= (others => '0'); 
         DataTransfer <= (others => '0');
@@ -146,6 +154,7 @@ Begin
                         CntLength <= AcqLength; 
                     end if; 
                 when WaitData => 
+                    AM_Read <= '0';
                     if NewData = '1' then 
                         SM <= WaitFifo; 
                         AM_Address <= CntAddress; 
@@ -169,7 +178,6 @@ Begin
                     if AM_WaitRequest = '0' then 
                         SM <= AcqData; 
                         AM_Write <= '0'; 
-                        --AM_ByteEnable <= '0'; 
                         --DataAck <= '1'; 
                     end if; 
                 when AcqData => 
