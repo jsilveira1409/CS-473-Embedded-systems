@@ -227,7 +227,7 @@ begin
     port map(
         clk_clk                             => FPGA_CLK1_50,
         --reset_reset_n                       => '1',
-		  reset_reset_n							=> KEY_N(0),
+		reset_reset_n							=> KEY_N(0),
         hps_0_ddr_mem_a                     => HPS_DDR3_ADDR,
         hps_0_ddr_mem_ba                    => HPS_DDR3_BA,
         hps_0_ddr_mem_ck                    => HPS_DDR3_CK_P,

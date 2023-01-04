@@ -1,9 +1,22 @@
-10:45:40 **** Incremental Build of configuration Nios II for project lab ****
+17:53:10 **** Incremental Build of configuration Nios II for project lab ****
 make all 
 Info: Building ../lab_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
 [BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab_bsp//HAL/inc -I../lab_bsp/ -I../lab_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'start_lcd':
+hello_world.c:95:11: warning: unused variable 'reg_flags_val' [-Wunused-variable]
+  uint16_t reg_flags_val = IORD_16DIRECT(LCD_0_BASE, LCD_REG_FLAGS);
+           ^
+Info: Linking lab.elf
+nios2-elf-g++  -T'../lab_bsp//linker.x' -msys-crt0='../lab_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab_bsp/   -Wl,-Map=lab.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert lab.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name soc_system --quartus_project_dir "C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus" --jdi ../..//output_files/ES_mini_project_TRDB_D5M_LT24.jdi --sopcinfo C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/software/lab_bsp/../../soc_system.sopcinfo
+Info: (lab.elf) 73 KBytes program size (code + initialized data).
+Info:           47 KBytes free for stack + heap.
+Info: Creating lab.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab.elf >lab.objdump
 [lab build complete]
 
-10:45:40 Build Finished (took 814ms)
+17:53:12 Build Finished (took 1s.623ms)
 

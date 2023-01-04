@@ -22,7 +22,6 @@ architecture test of tb_top is
     SIGNAL AS_DataRead :  std_logic_vector(15 downto 0);
     -- avalon master terface(DMA)
     SIGNAL AM_Address :  std_logic_vector(31 downto 0);
-    SIGNAL AM_ByteEnable :  std_logic;
     SIGNAL AM_Read :  std_logic;
     SIGNAL AM_ReadData :  std_logic_vector(15 downto 0);
     SIGNAL AM_ReadDataValid :  std_logic;
@@ -59,7 +58,6 @@ top : entity work.top
         AS_DataRead => AS_DataRead,
 
         AM_Address => AM_Address,
-        AM_ByteEnable => AM_ByteEnable,
         AM_Read => AM_Read,
         AM_ReadData => AM_ReadData,
         AM_ReadDataValid => AM_ReadDataValid,
@@ -94,9 +92,9 @@ top : entity work.top
     begin
         wait until rising_edge(clk);
         wait for CLK_PERIOD / 4;
-        nReset <= '1';
-        wait for CLK_PERIOD / 2;
         nReset <= '0';
+        wait for CLK_PERIOD * 2;
+        nReset <= '1';
         --Flags <= x"0000";
         --CommandReg <= x"0000";
         --NParamReg <= x"0000";
@@ -134,45 +132,29 @@ top : entity work.top
 
 -- async reset
     async_reset;
-
--- Restart display
-   -- AS_Address <= x"0008";
-   -- AS_CS <= '1';
-   -- AS_Write <= '1';
-   -- AS_Read <= '0';
-   -- AS_DataWrite <= x"0004";
-   -- wait for CLK_PERIOD * 2;
-   -- AS_CS <= '0';
-   -- wait for CLK_PERIOD * 10;
-   -- AS_Address <= x"0008";
-   -- AS_CS <= '1';
-   -- AS_Write <= '1';
-   -- AS_Read <= '0';
-   -- AS_DataWrite <= x"0000";
-   -- wait for CLK_PERIOD * 2;
-   -- AS_CS <= '0';
-   -- wait for CLK_PERIOD * 10;
-   -- wait for 20ms;
- 
 -- send command
     --set cmd reg to cmd 0x11
-    AS_Address <= x"000A";      -- 0b0000000000001010
+    AS_Address <= x"0005";      -- 0b0000000000001010
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
     AS_DataWrite <= x"AA11";  
     wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    wait for CLK_PERIOD * 4;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
     -- set cmd nb param to 0
-    AS_Address <= x"000C";      -- 0b0000000000001010
+    AS_Address <= x"0006";      -- 0b0000000000001010
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
     AS_DataWrite <= x"0000";    -- 0b0000000000000000
     wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    wait for CLK_PERIOD * 4;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
     -- set cmd param to 0
     --AS_Address <= x"000E";      -- 0b0000000000001010
     --AS_CS <= '1';
@@ -184,16 +166,17 @@ top : entity work.top
     --wait for CLK_PERIOD * 4;
     
     -- send command flag
-    AS_Address <= x"0008";      -- 0b0000000000001000
+    AS_Address <= x"0004";      -- 0b0000000000001000
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0002";    -- 0b0000000000000001
+    AS_DataWrite <= x"0002";    -- 0b0000000000000010
     
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
-    wait for CLK_PERIOD * 4;   
-	
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
 
 
 -- Image address register 
@@ -203,32 +186,51 @@ top : entity work.top
     AS_Read <= '0';
     AS_DataWrite <= x"000A";    -- 0b0000000000001010
     wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    wait for CLK_PERIOD * 4;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
 
 -- Image length register 
     --set to 10 (bytes ? )
-    AS_Address <= x"0004";      -- 0b0000000000000100
+    AS_Address <= x"0002";      -- 0b0000000000000010
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
-    AS_DataWrite <= x"0020";    
+    AS_DataWrite <= x"C000";    
     wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    wait for CLK_PERIOD * 4;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
+
+-- Image length register 
+    --set to 10 (bytes ? )
+    AS_Address <= x"0003";      -- 0b0000000000000010
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    AS_Read <= '0';
+    AS_DataWrite <= x"0012";    
+    wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';    
 
 
 -- AS flag register
     -- set lcd enable bit( = flag_reg(0)) to 1 in AS
-    AS_Address <= x"0008";      -- 0b0000000000001000
+    AS_Address <= x"0004";      -- 0b0000000000001000
     --AS_CS <= '1';
     AS_Write <= '1';
     AS_Read <= '0';
     AS_DataWrite <= x"0001";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
-    --AS_CS <= '0';
-    wait for CLK_PERIOD * 4;   
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	--AS_Read <= '0'; 
 
 
   --  -- Simulating Slave response to DMA request
