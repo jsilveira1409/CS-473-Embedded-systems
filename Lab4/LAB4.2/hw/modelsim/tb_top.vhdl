@@ -35,6 +35,7 @@ architecture test of tb_top is
     SIGNAL CSX :  std_logic;
     
     -- debug
+    signal debug : std_logic_vector(15 downto 0);
     SIGNAL debug_fifo_out_empty : std_logic;
     SIGNAL debug_fifo_out_full : std_logic;
     signal debug_fifo_out_q : std_logic_vector(15 downto 0);
@@ -68,7 +69,7 @@ top : entity work.top
         WRX => WRX,
         RESX => RESX,
         CSX => CSX,
-
+        debug => debug,
         debug_fifo_out_empty => debug_fifo_out_empty,
         debug_fifo_out_full => debug_fifo_out_full,
         debug_lcd_state => debug_lcd_state,
@@ -137,24 +138,24 @@ top : entity work.top
     AS_Address <= x"0005";      -- 0b0000000000001010
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
+    --AS_Read <= '0';
     AS_DataWrite <= x"AA11";  
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     AS_Read <= '1';
     wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';
+	--AS_Read <= '0';
     -- set cmd nb param to 0
     AS_Address <= x"0006";      -- 0b0000000000001010
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
+    --AS_Read <= '0';
     AS_DataWrite <= x"0000";    -- 0b0000000000000000
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     AS_Read <= '1';
     wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';
+	--AS_Read <= '0';
     -- set cmd param to 0
     --AS_Address <= x"000E";      -- 0b0000000000001010
     --AS_CS <= '1';
@@ -169,62 +170,61 @@ top : entity work.top
     AS_Address <= x"0004";      -- 0b0000000000001000
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
+    --AS_Read <= '0';
     AS_DataWrite <= x"0002";    -- 0b0000000000000010
     
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     AS_Read <= '1';
     wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';
+	--AS_Read <= '0';
 
 
 -- Image address register 
     AS_Address <= x"0000";      -- 0b0000000000000100
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
+    --AS_Read <= '0';
     AS_DataWrite <= x"000A";    -- 0b0000000000001010
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     AS_Read <= '1';
     wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';
+	--AS_Read <= '0';
+
+-- Image length register 
+    --set to 10 (bytes ? )
+    AS_Address <= x"0001";      -- 0b0000000000000010
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    --AS_Read <= '0';
+    AS_DataWrite <= x"0010";    
+    wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	--AS_Read <= '0';
 
 -- Image length register 
     --set to 10 (bytes ? )
     AS_Address <= x"0002";      -- 0b0000000000000010
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
-    AS_DataWrite <= x"C000";    
+    --AS_Read <= '0';
+    AS_DataWrite <= x"0000";    
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
     AS_Read <= '1';
     wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';
-
--- Image length register 
-    --set to 10 (bytes ? )
-    AS_Address <= x"0003";      -- 0b0000000000000010
-    --AS_CS <= '1';
-    AS_Write <= '1';
-    AS_Read <= '0';
-    AS_DataWrite <= x"0012";    
-    wait for CLK_PERIOD * 2;
-   -- AS_CS <= '0';
-    AS_Read <= '1';
-    wait for CLK_PERIOD * 2;   
-	AS_Read <= '0';    
-
+	--AS_Read <= '0';    
 
 -- AS flag register
     -- set lcd enable bit( = flag_reg(0)) to 1 in AS
-    AS_Address <= x"0004";      -- 0b0000000000001000
+    AS_Address <= x"0003";      -- 0b0000000000001000
     --AS_CS <= '1';
     AS_Write <= '1';
-    AS_Read <= '0';
-    AS_DataWrite <= x"0001";    -- 0b0000000000000001
+    --AS_Read <= '0';
+    AS_DataWrite <= x"00FF";    -- 0b0000000000000001
     
     wait for CLK_PERIOD * 2;
    -- AS_CS <= '0';
@@ -232,16 +232,27 @@ top : entity work.top
     wait for CLK_PERIOD * 2;   
 	--AS_Read <= '0'; 
 
+    AS_Address <= x"0004";      -- 0b0000000000001000
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    --AS_Read <= '0';
+    AS_DataWrite <= x"0001";    -- 0b0000000000000010
+    
+    wait for CLK_PERIOD * 2;
+   -- AS_CS <= '0';
+    AS_Read <= '1';
+    wait for CLK_PERIOD * 2;   
+	AS_Read <= '0';
 
   --  -- Simulating Slave response to DMA request
  --  wait until read = '1';
     AM_ReadDatavalid <= '1';
     AM_WaitRequest <= '0';
     AM_ReadData <= x"0011";       -- 0b00010001
-    wait for CLK_PERIOD * 2;
-    AM_ReadDatavalid <= '0';
-    wait for CLK_PERIOD * 4;
-    AM_ReadDatavalid <= '1';
+    --wait for CLK_PERIOD * 2;
+    --AM_ReadDatavalid <= '0';
+   -- wait for CLK_PERIOD * 4;
+    --AM_ReadDatavalid <= '1';
     wait for CLK_PERIOD;
     AM_ReadData <= x"0022";       -- 0b00010010
     wait for CLK_PERIOD;
@@ -271,14 +282,13 @@ top : entity work.top
     wait for CLK_PERIOD;
     AM_ReadData <= x"00FF";       -- 0b00011111
     wait for CLK_PERIOD;
-    AM_ReadData <= x"00CD";       -- 0b00000000
-    wait for CLK_PERIOD;
-    
+    AM_ReadDatavalid <= '0';
+    wait for CLK_PERIOD*2;
+    AM_ReadDatavalid <= '1';
   --  -- Second burst of pixels
     wait for CLK_PERIOD * 2;
     AM_WaitRequest <= '0';
     AM_ReadData <= x"0011";
-    wait for CLK_PERIOD * 4;
     wait for CLK_PERIOD;
     AM_ReadData <= x"0022";
     wait for CLK_PERIOD;
