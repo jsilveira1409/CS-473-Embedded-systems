@@ -69,7 +69,6 @@ Signal CntLength: STD_LOGIC_VECTOR(31 downto 0);
 Signal SM: work.lcd_package.AcqState; 
 signal lcd_enable : std_logic;
 signal registers : RF (0 to 70);
-signal flag : std_logic_vector(15 downto 0);
 signal signal_debug : std_logic := '1';
 
 
@@ -82,41 +81,44 @@ process (clk, nReset)
 
 Begin 
 
+    
+
     if rising_edge(clk) then
         -- decode address
         addr <= to_integer(unsigned(AS_Address));
         debug <= AS_Write;
+        
         -- read operation
         if (AS_Read = '1') then
-            case addr is
-                when 0 => AS_DataRead <= regs(addr);
-                when 1 => AS_DataRead <= regs(addr);
-                when 2 => AS_DataRead <= regs(addr);
-                when 3 => AS_DataRead <= regs(addr);
-                when 4 => AS_DataRead <= regs(addr);
-                when others => AS_DataRead <= regs(addr);
-            end case;
+            AS_DataRead <= regs(addr);
         end if;
 
         -- write operation
         if (AS_Write = '1') then
-            case addr is
-                when 0 => regs(addr) <= AS_DataWrite;
-                when 1 => regs(addr) <= AS_DataWrite;
-                when 2 => regs(addr) <= AS_DataWrite;
-                when 3 => regs(addr) <= AS_DataWrite;
-                when 4 => regs(addr) <= AS_DataWrite;
-                when others => regs(addr) <= AS_DataWrite;
-            end case;
+            regs(addr) <= AS_DataWrite;
         end if;
 
+        
         AcqAddress <= regs(0) & regs(1);
         AcqLength <= regs(2) & regs(3);
-        Reg_Flags <= regs(4);
+    
         Reg_Cmd <= regs(5);
         Reg_NbParam <= regs(6);
         Reg_Param <= regs(7 to 70);
         lcd_enable <= regs(4)(0);
+        Reg_Flags <= regs(4)
+
+        if ResetFlagCMD = '1' then
+            Reg_Flags(1) <= '0';
+        end if;
+        if ResetFlagReset = '1' then
+            Reg_Flags(2) <= '0';
+        end if;
+
+
+        regs(4)(1) <= ResetFlagCMD ;
+        regs(4)(3) <= ResetFlagReset;
+        
         
     end if;
 
@@ -143,55 +145,52 @@ Begin
         CntAddress <= (others => '0'); 
         CntLength <= (others => '0'); 
         DataTransfer <= (others => '0');
-    elsif rising_edge(clk) then 
-        AM_Read <= '0';     
-        if lcd_enable = '1' then
-            case SM is 
-                when Idle => 
-                    if AcqLength /= X"0000_0000" then 
-                        SM <= WaitData; 
-                        CntAddress <= AcqAddress; 
-                        CntLength <= AcqLength; 
-                    end if; 
-                when WaitData => 
-                    AM_Read <= '0';
-                    if NewData = '1' then 
-                        SM <= WaitFifo; 
-                        AM_Address <= CntAddress; 
-                        AM_Write <= '1'; 
-                        --AM_DataWrite(15 downto 8) <= DataAcquisition;
-                        --AM_DataWrite(7 downto 0) <= DataAcquisition(7 downto 0);                
-                        --DataTransfer(7 downto 0) <= DataAcquisition;
-                        --DataTransfer(15 downto 8) <= DataAcquisition;
-                        --AM_ByteEnable <= '0'; 
-  --                      Indice := CntAddress(0); 
+    elsif rising_edge(clk) then    
+        case SM is 
+            when Idle => 
+                if AcqLength /= X"0000_0000" and lcd_enable = '1' then 
+                    SM <= WaitData; 
+                    CntAddress <= AcqAddress; 
+                    CntLength <= AcqLength; 
+                end if; 
+            when WaitData => 
+                AM_Read <= '0';
+                if NewData = '1' then 
+                    SM <= WaitFifo; 
+                    AM_Address <= CntAddress; 
+                    AM_Write <= '1'; 
+                    --AM_DataWrite(15 downto 8) <= DataAcquisition;
+                    --AM_DataWrite(7 downto 0) <= DataAcquisition(7 downto 0);                
+                    --DataTransfer(7 downto 0) <= DataAcquisition;
+                    --DataTransfer(15 downto 8) <= DataAcquisition;
+                    --AM_ByteEnable <= '0'; 
+--                      Indice := CntAddress(0); 
 --                        AM_ByteEnable <= Indice;
-                    --elsif AcqLength = X"0000_0000" then 
-                    --    SM <= Idle;
-                    end if; 
-                when WaitFifo =>
-                    if FIFO_Almost_Full = '0' then
-                        SM <= Request;
-                    end if;
-                when Request => 
-                    AM_Read <= '1';
-                    if AM_WaitRequest = '0' then 
-                        SM <= AcqData; 
-                        AM_Write <= '0'; 
-                        --DataAck <= '1'; 
-                    end if; 
-                when AcqData => 
-                    if to_integer(unsigned(CntLength)) = 0 then
-                        SM <= Idle;
-                        AM_Address <= (others => '0');
-                    elsif NewData = '1' then 
-                        SM <= WaitData; 
-                        --DataAck <= '0'; 
-                        CntAddress <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntAddress)) + 2,CntAddress'length)); 
-                        CntLength <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntLength)) - 2,CntLength'length)); 
-                    end if; 
-            end case; 
-        end if;
+                --elsif AcqLength = X"0000_0000" then 
+                --    SM <= Idle;
+                end if; 
+            when WaitFifo =>
+                if FIFO_Almost_Full = '0' then
+                    SM <= Request;
+                end if;
+            when Request => 
+                AM_Read <= '1';
+                if AM_WaitRequest = '0' then 
+                    SM <= AcqData; 
+                    AM_Write <= '0'; 
+                    --DataAck <= '1'; 
+                end if; 
+            when AcqData => 
+                if to_integer(unsigned(CntLength)) = 0 then
+                    SM <= Idle;
+                    AM_Address <= (others => '0');
+                elsif NewData = '1' then 
+                    SM <= WaitData; 
+                    --DataAck <= '0'; 
+                    CntAddress <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntAddress)) + 2,CntAddress'length)); 
+                    CntLength <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntLength)) - 2,CntLength'length)); 
+                end if; 
+        end case; 
     end if; 
 
 end process; 

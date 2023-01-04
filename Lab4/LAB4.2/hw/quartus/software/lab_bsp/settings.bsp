@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>3 janv. 2023 18:14:34</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1672766074556</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>4 janv. 2023 10:37:36</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1672825056629</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\quartus\software\lab_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\soc_system.sopcinfo</SopcDesignFile>
@@ -930,8 +930,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>lcd_0</slaveDescriptor>
-                <addressRange>0x10040000 - 0x1007FFFF</addressRange>
-                <addressSpan>262144</addressSpan>
+                <addressRange>0x10020000 - 0x1003FFFF</addressRange>
+                <addressSpan>131072</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>

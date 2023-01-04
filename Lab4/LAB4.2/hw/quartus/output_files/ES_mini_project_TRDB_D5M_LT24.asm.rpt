@@ -1,5 +1,5 @@
 Assembler report for ES_mini_project_TRDB_D5M_LT24
-Tue Jan 03 22:40:24 2023
+Wed Jan 04 10:35:41 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,7 +11,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof
+  6. Assembler Device Options: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jan 03 22:40:24 2023 ;
+; Assembler Status      ; Successful - Wed Jan 04 10:35:41 2023 ;
 ; Revision Name         ; ES_mini_project_TRDB_D5M_LT24         ;
 ; Top-level Entity Name ; DE0_Nano_SoC_TRDB_D5M_LT24_top_level  ;
 ; Family                ; Cyclone V                             ;
@@ -63,23 +63,23 @@ refer to the applicable agreement for further details.
 +--------+------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof ;
-+--------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; File Name                                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof ;
++-----------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                               ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x03402F53                                                                                                            ;
-; Checksum       ; 0x03402F53                                                                                                            ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/output_files/ES_mini_project_TRDB_D5M_LT24.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                      ;
++----------------+--------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x033CB55A                                                                                                   ;
+; Checksum       ; 0x033CB55A                                                                                                   ;
++----------------+--------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -88,15 +88,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 03 22:40:11 2023
+    Info: Processing started: Wed Jan 04 10:35:30 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ES_mini_project_TRDB_D5M_LT24 -c ES_mini_project_TRDB_D5M_LT24
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info (11878): Hard Processor Subsystem configuration has not changed and a Preloader software update is not required
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4912 megabytes
-    Info: Processing ended: Tue Jan 03 22:40:24 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Wed Jan 04 10:35:42 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:09
 
 
