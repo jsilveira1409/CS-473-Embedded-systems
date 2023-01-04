@@ -36,7 +36,7 @@ entity top is
 		CSX : out std_logic;
 
 		-- debug signals
-		debug : out std_logic;
+		debug : out std_logic_vector(15 downto 0);
 		--debug_fifo_out : out std_logic;
 		debug_fifo_out_empty : out std_logic;
 		debug_fifo_out_full : out std_logic;
@@ -69,7 +69,7 @@ architecture top_architecture of top is
 	signal signal_nb_param : std_logic_vector(15 downto 0); 		-- signal to indicate the number of parameters
 	signal signal_param : RF(0 to 63); 			-- signal to indicate the parameters
 	signal signal_reset_flag_cmd : std_logic; 						-- signal to reset the flag command
-	signal signal_debug : std_logic; 							    -- debug signal
+	signal signal_debug : std_logic_vector(15 downto 0); 							    -- debug signal
 	
 	component AcquModule port(
 			-- global signals
@@ -114,7 +114,7 @@ architecture top_architecture of top is
 
 			--debug signals
 			debug_dma_state : out AcqState;
-			debug : out std_logic
+			debug : out std_logic_vector(15 downto 0)
 		);
 	end component;
 

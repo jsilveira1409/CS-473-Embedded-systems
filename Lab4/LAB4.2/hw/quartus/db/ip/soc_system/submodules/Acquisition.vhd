@@ -38,8 +38,8 @@ entity AcquModule is
     --AM_ByteEnable : in std_logic;
     AM_Read : out std_logic;
     AM_WaitRequest : in std_logic;
-    AM_Write : out std_logic ; 
-    AM_DataWrite : out std_logic_vector(31 downto 0) ;
+    --AM_Write : out std_logic ; 
+    --AM_DataWrite : out std_logic_vector(31 downto 0) ;
 
     -- Output signals to FIFO
     DataAck : out std_logic ;
@@ -48,7 +48,7 @@ entity AcquModule is
 
     --debug signals
     debug_dma_state : out AcqState;
-    debug : out std_logic
+    debug : out std_logic_vector(15 downto 0)
     );
 
 end AcquModule;
@@ -75,11 +75,13 @@ signal reset_lcd_enable : std_logic := '0';
 
 Begin 
 
-	
+debug_dma_state <= SM;	
 
--- Gestion des registres d'interface 
+-- Gestion des registres    d'interface 
 process (clk, nReset)
     variable temp_regs : RF(0 to 70) := (others => (others => '0'));
+    variable written : std_logic := '0';
+    variable prev_addr : integer;
 Begin     
 
     if     nReset ='0' THEN
@@ -97,11 +99,15 @@ Begin
         temp_regs := regs;
 
         addr <= to_integer(unsigned(AS_Address));
-        debug <= AS_Write;
-
         -- write operation
         if (AS_Write = '1') then
-            temp_regs(addr) := AS_DataWrite;
+            if written = '0' then
+                temp_regs(addr) := AS_DataWrite;
+                prev_addr := addr;
+                written := '1';
+            elsif prev_addr /= addr then
+                written := '0';
+            end if;
         end if;
 
         if ResetFlagCMD = '0' then
@@ -115,6 +121,7 @@ Begin
         end if;
         
         regs <= temp_regs;
+
     end if;
 
 end process;
@@ -125,19 +132,20 @@ Reg_Flags <= regs(4);
 Reg_Cmd <= regs(5);
 Reg_NbParam <= regs(6);
 Reg_Param <= regs(7 to 70);
+debug <= regs(4);
 
 -- Avalon slave read from registers.
 PROCESS (clk)
-variable temp_regs : RF(0 to 70) := (others => (others => '0'));
+variable tempe_regs : RF(0 to 70) := (others => (others => '0'));
     BEGIN
         
-        IF rising_edge(clk) THEN
-            temp_regs := regs;
+        --IF rising_edge(clk) THEN
+            tempe_regs := regs;
             AS_DataRead <= (OTHERS => '0');
             IF AS_Read = '1' THEN
-                AS_DataRead <= temp_regs(to_integer(unsigned(AS_Address)));
+                AS_DataRead <= tempe_regs(to_integer(unsigned(AS_Address)));
             END IF;
-        END IF;
+        --END IF;
 END PROCESS;
 
 
@@ -153,7 +161,7 @@ Begin
     if nReset = '0' then 
         --DataAck <= '0'; 
         SM <= Idle; 
-        AM_Write <= '0'; 
+        --AM_Write <= '0'; 
         AM_Read <= '0'; 
         AM_Address <= (others => '0');
         CntAddress <= (others => '0'); 
@@ -168,21 +176,21 @@ Begin
                     CntAddress <= AcqAddress; 
                     CntLength <= AcqLength; 
                 end if; 
-            when WaitData => 
-                AM_Read <= '0';
-                AM_Address <= x"00000000";
-                if NewData = '1' then 
-                    SM <= AcqData; 
-                end if; 
             when WaitFifo =>
                 if FIFO_Almost_Full = '0' then
                     SM <= Request;
                 end if;
             when Request => 
                 AM_Read <= '1';
-                AM_Address <= CntAddress; 
+                AM_Address <= x"00000000";
                 if AM_WaitRequest = '0' then 
                     SM <= WaitData; 
+                end if; 
+            when WaitData => 
+                AM_Read <= '0';
+                AM_Address <= CntAddress; 
+                if NewData = '1' then 
+                    SM <= AcqData; 
                 end if; 
             when AcqData => 
                 if to_integer(unsigned(CntLength)) = 0 then
@@ -192,6 +200,7 @@ Begin
                 elsif NewData = '1' then 
                     CntAddress <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntAddress)) + 2,CntAddress'length)); 
                     CntLength <=  std_logic_vector(to_unsigned(to_integer(unsigned(CntLength)) - 2,CntLength'length)); 
+                    AM_Address <= CntAddress; 
                 else
                     SM <= WaitData; 
                 end if; 
