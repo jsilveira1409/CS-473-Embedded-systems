@@ -65,14 +65,14 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
-			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
-			reset_reset_n                       : in    std_logic                     := 'X';             -- reset_n
 			lcd_0_output_csx                    : out   std_logic;                                        -- csx
 			lcd_0_output_dcx                    : out   std_logic;                                        -- dcx
 			lcd_0_output_d                      : out   std_logic_vector(15 downto 0);                    -- d
 			lcd_0_output_resx                   : out   std_logic;                                        -- resx
 			lcd_0_output_wrx                    : out   std_logic;                                        -- wrx
-			lcd_0_output_debug                  : out   std_logic                                         -- debug
+			lcd_0_output_debug                  : out   std_logic;                                        -- debug
+			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
+			reset_reset_n                       : in    std_logic                     := 'X'              -- reset_n
 		);
 	end component soc_system;
 

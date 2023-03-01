@@ -48,7 +48,8 @@ entity AcquModule is
 
     --debug signals
     debug_dma_state : out AcqState;
-    debug : out std_logic_vector(15 downto 0)
+    debug : out std_logic_vector(15 downto 0);
+    debug_write : out std_logic
     );
 
 end AcquModule;
@@ -69,13 +70,14 @@ Signal CntAddress: STD_LOGIC_VECTOR(31 downto 0);
 Signal CntLength: STD_LOGIC_VECTOR(31 downto 0); 
 Signal SM: work.lcd_package.AcqState := Idle; 
 signal registers : RF (0 to 70);
-signal signal_debug : std_logic := '1';
+signal signal_debug : std_logic := '0';
 signal reset_lcd_enable : std_logic := '0';
 
 
 Begin 
 
-debug_dma_state <= SM;	
+debug_dma_state <= SM;
+debug_write <= signal_debug;	
 
 -- Gestion des registres    d'interface 
 process (clk, nReset)
@@ -101,6 +103,7 @@ Begin
         addr <= to_integer(unsigned(AS_Address));
         -- write operation
         if (AS_Write = '1') then
+            signal_debug <= not signal_debug;
             if written = '0' then
                 temp_regs(addr) := AS_DataWrite;
                 prev_addr := addr;

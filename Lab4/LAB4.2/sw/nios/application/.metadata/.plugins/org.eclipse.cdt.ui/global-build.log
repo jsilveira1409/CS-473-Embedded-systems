@@ -1976,3 +1976,94 @@ Info:           47 KBytes free for stack + heap.
 Info: Creating lab.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source lab.elf >lab.objdump
 [lab build complete]
+00:18:54 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab_bsp//HAL/inc -I../lab_bsp/ -I../lab_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:53:2: warning: implicit declaration of function 'init_image' [-Wimplicit-function-declaration]
+  init_image(img_address, 320, 240);
+  ^
+hello_world.c:55:2: warning: implicit declaration of function 'configure_image' [-Wimplicit-function-declaration]
+  configure_image(img_address, img_length);
+  ^
+hello_world.c: In function 'cmd_send':
+hello_world.c:117:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("command sent \n", (unsigned long)reg_flags,"\n");
+         ^
+hello_world.c:117:9: warning: too many arguments for format [-Wformat-extra-args]
+hello_world.c: At top level:
+hello_world.c:179:6: warning: conflicting types for 'configure_image'
+ void configure_image(uint32_t image_address, uint32_t image_size){
+      ^
+hello_world.c:55:2: note: previous implicit declaration of 'configure_image' was here
+  configure_image(img_address, img_length);
+  ^
+hello_world.c:195:6: warning: conflicting types for 'init_image'
+ void init_image(uint32_t image_address, uint32_t rows, uint32_t cols){
+      ^
+hello_world.c:53:2: note: previous implicit declaration of 'init_image' was here
+  init_image(img_address, 320, 240);
+  ^
+Info: Linking lab.elf
+nios2-elf-g++  -T'../lab_bsp//linker.x' -msys-crt0='../lab_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab_bsp/   -Wl,-Map=lab.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert lab.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name soc_system --quartus_project_dir "C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus" --jdi ../..//output_files/ES_mini_project_TRDB_D5M_LT24.jdi --sopcinfo C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/quartus/software/lab_bsp/../../soc_system.sopcinfo
+Info: (lab.elf) 73 KBytes program size (code + initialized data).
+Info:           47 KBytes free for stack + heap.
+Info: Creating lab.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab.elf >lab.objdump
+[lab build complete]
+00:20:04 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+10:39:25 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+10:39:41 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+10:40:06 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+10:43:04 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+11:13:05 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+11:13:07 **** Build of configuration Nios II for project lab_bsp ****
+make all 
+[BSP build complete]
+11:13:35 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]
+11:27:39 **** Incremental Build of configuration Nios II for project lab ****
+make all 
+Info: Building ../lab_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab_bsp/
+[BSP build complete]
+[lab build complete]

@@ -65,14 +65,14 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
-			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
-			reset_reset_n                       : in    std_logic                     := 'X';             -- reset_n
 			lcd_0_output_csx                    : out   std_logic;                                        -- csx
 			lcd_0_output_dcx                    : out   std_logic;                                        -- dcx
 			lcd_0_output_d                      : out   std_logic_vector(15 downto 0);                    -- d
 			lcd_0_output_resx                   : out   std_logic;                                        -- resx
 			lcd_0_output_wrx                    : out   std_logic;                                        -- wrx
-			lcd_0_output_debug                  : out   std_logic                                         -- debug
+			lcd_0_output_debug                  : out   std_logic;                                        -- debug
+			pio_leds_external_connection_export : out   std_logic_vector(7 downto 0);                     -- export
+			reset_reset_n                       : in    std_logic                     := 'X'              -- reset_n
 		);
 	end component soc_system;
 
@@ -143,13 +143,13 @@
 			hps_0_io_hps_io_gpio_inst_GPIO53    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO53,    --                             .hps_io_gpio_inst_GPIO53
 			hps_0_io_hps_io_gpio_inst_GPIO54    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO54,    --                             .hps_io_gpio_inst_GPIO54
 			hps_0_io_hps_io_gpio_inst_GPIO61    => CONNECTED_TO_hps_0_io_hps_io_gpio_inst_GPIO61,    --                             .hps_io_gpio_inst_GPIO61
-			pio_leds_external_connection_export => CONNECTED_TO_pio_leds_external_connection_export, -- pio_leds_external_connection.export
-			reset_reset_n                       => CONNECTED_TO_reset_reset_n,                       --                        reset.reset_n
 			lcd_0_output_csx                    => CONNECTED_TO_lcd_0_output_csx,                    --                 lcd_0_output.csx
 			lcd_0_output_dcx                    => CONNECTED_TO_lcd_0_output_dcx,                    --                             .dcx
 			lcd_0_output_d                      => CONNECTED_TO_lcd_0_output_d,                      --                             .d
 			lcd_0_output_resx                   => CONNECTED_TO_lcd_0_output_resx,                   --                             .resx
 			lcd_0_output_wrx                    => CONNECTED_TO_lcd_0_output_wrx,                    --                             .wrx
-			lcd_0_output_debug                  => CONNECTED_TO_lcd_0_output_debug                   --                             .debug
+			lcd_0_output_debug                  => CONNECTED_TO_lcd_0_output_debug,                  --                             .debug
+			pio_leds_external_connection_export => CONNECTED_TO_pio_leds_external_connection_export, -- pio_leds_external_connection.export
+			reset_reset_n                       => CONNECTED_TO_reset_reset_n                        --                        reset.reset_n
 		);
 

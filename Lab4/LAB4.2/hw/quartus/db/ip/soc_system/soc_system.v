@@ -74,7 +74,8 @@ module soc_system (
 		output wire [15:0] lcd_0_output_d,                      //                             .d
 		output wire        lcd_0_output_resx,                   //                             .resx
 		output wire        lcd_0_output_wrx,                    //                             .wrx
-		output wire        lcd_0_output_debug,                  //                             .debug
+		output wire [15:0] lcd_0_output_debug,                  //                             .debug
+		output wire        lcd_0_output_debug_write,            //                             .debug_write
 		output wire [7:0]  pio_leds_external_connection_export, // pio_leds_external_connection.export
 		input  wire        reset_reset_n                        //                        reset.reset_n
 	);
@@ -311,6 +312,7 @@ module soc_system (
 		.RESX             (lcd_0_output_resx),                    //            .resx
 		.WRX              (lcd_0_output_wrx),                     //            .wrx
 		.debug            (lcd_0_output_debug),                   //            .debug
+		.debug_write      (lcd_0_output_debug_write),             //            .debug_write
 		.AS_Address       (mm_interconnect_0_lcd_0_as_address),   //          as.address
 		.AS_Write         (mm_interconnect_0_lcd_0_as_write),     //            .write
 		.AS_Read          (mm_interconnect_0_lcd_0_as_read),      //            .read

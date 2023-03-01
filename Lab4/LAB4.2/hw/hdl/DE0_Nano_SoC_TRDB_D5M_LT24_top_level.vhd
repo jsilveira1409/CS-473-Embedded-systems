@@ -201,6 +201,7 @@ architecture rtl of DE0_Nano_SoC_TRDB_D5M_LT24_top_level is
 			lcd_0_output_dcx                       : out   std_logic;                                        -- id3
 			lcd_0_output_d                        : out   std_logic_vector(15 downto 0);                    -- id2
 			lcd_0_output_resx                      : out   std_logic;                                        -- id4
+            lcd_0_output_debug_write            : out   std_logic;                                        -- debug_write
 			lcd_0_output_wrx                       : out   std_logic                                       -- id5
             
 
@@ -291,7 +292,7 @@ begin
         hps_0_io_hps_io_gpio_inst_GPIO40    => HPS_LTC_GPIO,
         hps_0_io_hps_io_gpio_inst_GPIO53    => HPS_LED,
         hps_0_io_hps_io_gpio_inst_GPIO54    => HPS_KEY_N,
-        hps_0_io_hps_io_gpio_inst_GPIO61    => HPS_GSENSOR_INT,
+        hps_0_io_hps_io_gpio_inst_GPIO61    => HPS_GSENS    OR_INT,
         pio_leds_external_connection_export => LED,
 		  
 		  
@@ -302,11 +303,12 @@ begin
         --    GPIO_0_LT24_ADC_DIN      -- not used
         --    GPIO_0_LT24_ADC_DOUT     --
         --    GPIO_0_LT24_ADC_PENIRQ_N -- not used    
-        lcd_0_output_debug    =>      GPIO_1_D5M_RESET_N,
+        --lcd_0_output_debug    =>      GPIO_1_D5M_RESET_N,
 		lcd_0_output_csx    =>      GPIO_0_LT24_CS_N,         -- chip select active low
         lcd_0_output_d      =>      GPIO_0_LT24_D,            -- data bus
         lcd_0_output_resx   =>      GPIO_0_LT24_RESET_N,      -- lcd reset active low
         lcd_0_output_wrx    =>      GPIO_0_LT24_WR_N,         -- write signal active low
+        lcd_0_output_debug_write            => GPIO_1_D5M_RESET_N,            --                             .debug_write
         lcd_0_output_dcx     =>      GPIO_0_LT24_RS           -- data/command select    
 		  
         

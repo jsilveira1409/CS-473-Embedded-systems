@@ -133,6 +133,21 @@ top : entity work.top
 
 -- async reset
     async_reset;
+    AS_Address <= x"0004";      -- 0b0000000000001010
+    --AS_CS <= '1';
+    AS_Write <= '1';
+    --AS_Read <= '0';
+    AS_DataWrite <= x"0004";  
+    wait for 10000us;
+
+
+
+
+
+
+
+
+
 -- send command
     --set cmd reg to cmd 0x11
     AS_Address <= x"0005";      -- 0b0000000000001010

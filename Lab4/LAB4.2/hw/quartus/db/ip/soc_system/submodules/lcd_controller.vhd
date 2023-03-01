@@ -223,14 +223,13 @@ entity lcd_controller is
 								clock_cycles <= "000";
 							end if;
 						elsif LCD_Empty = '0' then
-							-- Can it happen that the fifo empties while we are waiting the 4cc?
 							if (clock_cycles) < 4 then
 								clock_cycles <= clock_cycles + 1;
 								current_state <= PIXEL_WRITE;
 							else
 								current_state <= PIXEL_GET;
 								clock_cycles <= "000";
-								bytes_remaining <= bytes_remaining - 2; --potential problem here... we are decrementing even when we first send the command
+								bytes_remaining <= bytes_remaining - 2; 
 							end if;
 						else
 							current_state <= PIXEL_WRITE;

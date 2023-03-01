@@ -39,11 +39,12 @@ entity top is
 		debug : out std_logic_vector(15 downto 0);
 		--debug_fifo_out : out std_logic;
 		debug_fifo_out_empty : out std_logic;
+		debug_write : out std_logic;
 		debug_fifo_out_full : out std_logic;
 		debug_fifo_out_q : out std_logic_vector(15 downto 0);
 		debug_fifo_usedw : out std_logic_vector(7 downto 0);
-		debug_lcd_state : out LCDFSM;
-		debug_dma_state : out AcqState;
+		--debug_lcd_state : out LCDFSM;
+		--debug_dma_state : out AcqState;
 		debug_acq_data_transfer : out std_logic_vector(15 downto 0)
 
 	);
@@ -114,7 +115,9 @@ architecture top_architecture of top is
 
 			--debug signals
 			debug_dma_state : out AcqState;
-			debug : out std_logic_vector(15 downto 0)
+			debug : out std_logic_vector(15 downto 0);
+			debug_write : out std_logic
+
 		);
 	end component;
 
@@ -212,7 +215,8 @@ architecture top_architecture of top is
 	
 	-- Debug 
 		debug => signal_debug,					-- acquisition -> cpu
-		debug_dma_state => debug_dma_state
+		--debug_dma_state => debug_dma_state,
+		debug_write => debug_write
 	);
 
 	-- FIFO
@@ -253,10 +257,10 @@ architecture top_architecture of top is
 		nb_param_reg => signal_nb_param,		-- acquisition -> lcd_controller
 		param => signal_param,					-- acquisition -> lcd_controller
 		reset_flag_reset => signal_reset_reset,	-- lcd controller -> acquisition
-		reset_flag_cmd => signal_reset_cmd,		-- lcd controller -> acquisition
+		reset_flag_cmd => signal_reset_cmd		-- lcd controller -> acquisition
 
 		--debug signals
-		debug_lcd_state => debug_lcd_state
+		--debug_lcd_state => debug_lcd_state
 		
 	);
 

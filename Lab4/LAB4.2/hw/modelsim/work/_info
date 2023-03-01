@@ -9,27 +9,27 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1
 Eacqumodule
-Z0 w1672872530
+Z0 w1672873081
 Z1 DPx4 work 11 lcd_package 0 22 54D3@MV9D_UbKUBJbTFia1
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z7 dC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim
-Z8 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
-Z9 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
+Z7 dC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim
+Z8 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
+Z9 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd
 l0
 L8
 V_ZK2<2HBXEhzIc1k;jTo>1
 !s100 _71j6_I><FMh8Y<AhR`:23
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1672872703
+Z11 !s110 1672876204
 !i10b 1
-Z12 !s108 1672872703.000000
-Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
-Z14 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
+Z12 !s108 1672876204.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
+Z14 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/Acquisition.vhd|
 !i113 1
 Z15 o-work work -2002 -explicit
 Z16 tExplicit 1 CvgOpt 0
@@ -43,8 +43,8 @@ R6
 DEx4 work 10 acqumodule 0 22 _ZK2<2HBXEhzIc1k;jTo>1
 l76
 L56
-VeN]G9^GzjDYAWN]ZaVCin2
-!s100 7zzSPz1dUGlY>GM>AcboK0
+VT`^<l_BMk@f^:=Mm3[SCz2
+!s100 j[_E4<B1aVHUSOUYR3H3J2
 R10
 32
 R11
@@ -56,12 +56,12 @@ R14
 R15
 R16
 Efifo
-Z17 w1672831554
+Z17 w1672827914
 R5
 R6
 R7
-Z18 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd
-Z19 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd
+Z18 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd
+Z19 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd
 l0
 L42
 VC_cCBYKNgln?VFWzcjCn11
@@ -71,8 +71,8 @@ R10
 R11
 !i10b 1
 R12
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd|
-Z21 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd|
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd|
+Z21 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/fifo.vhd|
 !i113 1
 R15
 R16
@@ -95,14 +95,14 @@ R21
 R15
 R16
 Elcd_controller
-Z22 w1672859710
+Z22 w1672874254
 R1
 R4
 R5
 R6
 R7
-Z23 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd
-Z24 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd
+Z23 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd
+Z24 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd
 l0
 L7
 V0C8WmgYA15m]T?<=PZf`?2
@@ -112,8 +112,8 @@ R10
 R11
 !i10b 1
 R12
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd|
-Z26 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd|
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd|
+Z26 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_controller.vhd|
 !i113 1
 R15
 R16
@@ -125,8 +125,8 @@ R6
 DEx4 work 14 lcd_controller 0 22 0C8WmgYA15m]T?<=PZf`?2
 l53
 L43
-VFMF7V=XJ5`6o^JhOHEzj`1
-!s100 _aJ>P0a:>djmLR_AcVW5^3
+VbjDz2zKS__[IY5F0nT3bR1
+!s100 ^RcmzA9nz5M3m?Pf?AB=h1
 R10
 32
 R11
@@ -141,10 +141,10 @@ Plcd_package
 R4
 R5
 R6
-w1672650581
+w1672269074
 R7
-8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd
-FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd
+8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd
+FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd
 l0
 L5
 V54D3@MV9D_UbKUBJbTFia1
@@ -154,20 +154,20 @@ R10
 R11
 !i10b 1
 R12
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
-!s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
+!s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/lcd_pkg.vhd|
 !i113 1
 R15
 R16
 Etb_top
-Z27 w1672872700
+Z27 w1672876199
 R1
 R4
 R5
 R6
 R7
-Z28 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl
-Z29 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl
+Z28 8C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\modelsim\tb_top.vhdl
+Z29 FC:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\modelsim\tb_top.vhdl
 l0
 L6
 VX9he6:cB@ES6V?zZH_KOa3
@@ -177,8 +177,8 @@ R10
 R11
 !i10b 1
 R12
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
-Z31 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/modelsim/tb_top.vhdl|
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\modelsim\tb_top.vhdl|
+Z31 !s107 C:\Users\osour\Desktop\EmbSys\Lab4\LAB4.2\hw\modelsim\tb_top.vhdl|
 !i113 1
 R15
 R16
@@ -188,11 +188,11 @@ R1
 R4
 R5
 R6
-DEx4 work 6 tb_top 0 22 X9he6:cB@ES6V?zZH_KOa3
+Z33 DEx4 work 6 tb_top 0 22 X9he6:cB@ES6V?zZH_KOa3
 l47
 L9
-VcfIX]?GOW?PkQdoNFOAmb2
-!s100 i;EfNW<h[3Vk4ikIAlfDa1
+V00HFRkNlf`XI<d8>0L5jV2
+!s100 <A=R^MmMk5Q9J;o;@LBm_1
 R10
 32
 R11
@@ -204,14 +204,14 @@ R31
 R15
 R16
 Etop
-Z33 w1672872336
+R0
 R1
 R4
 R5
 R6
 R7
-Z34 8C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
-Z35 FC:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Z34 8C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
+Z35 FC:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd
 l0
 L7
 VTYd71adD^za6LjOPlK2iC3
@@ -221,8 +221,8 @@ R10
 R11
 !i10b 1
 R12
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
-Z37 !s107 C:/Users/maxim/OneDrive/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
+Z37 !s107 C:/Users/osour/Desktop/EmbSys/Lab4/LAB4.2/hw/hdl/top.vhd|
 !i113 1
 R15
 R16
